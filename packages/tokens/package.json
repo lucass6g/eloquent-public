@@ -1,0 +1,12 @@
+{
+  "name": "@eloquent/tokens",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "types": "index.ts",
+  "license": "MIT",
+  "private": false,
+  "exports": {
+    ".": "./index.ts"
+  }
+}

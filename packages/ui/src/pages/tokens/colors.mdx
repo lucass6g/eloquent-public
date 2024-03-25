@@ -1,0 +1,47 @@
+import {Meta, ColorPalette, ColorItem} from '@storybook/blocks'
+import {COLORS} from "@eloquent/tokens"
+
+<Meta title="Tokens/Colors"/>
+
+<ColorPalette>
+    <ColorItem
+        title="base"
+        subtitle="light"
+        colors={COLORS.base.light}
+    />
+    <ColorItem
+        title={"base"}
+        subtitle="dark"
+        colors={COLORS.base.dark}
+    />
+    <ColorItem
+        title="feedback"
+        subtitle="positive"
+        colors={COLORS.feedback.positive}
+    />
+    <ColorItem
+        title="feedback"
+       subtitle="negative"
+        colors={COLORS.feedback.negative}
+    />
+    <ColorItem
+        title="feedback"
+       subtitle="informative"
+        colors={COLORS.feedback.informative}
+    />
+    <ColorItem
+        title="brand"
+       subtitle="primary"
+        colors={COLORS.brand.primary}
+    />
+    <ColorItem
+        title="brand"
+       subtitle="secondary"
+        colors={COLORS.brand.secondary}
+    />
+    <ColorItem
+        title="brand"
+       subtitle="tertiary"
+        colors={COLORS.brand.tertiary}
+    />
+</ColorPalette>
