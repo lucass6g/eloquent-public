@@ -21,12 +21,9 @@ module.exports = function (app) {
         spacing: SPACING,
         gap:  SPACING,
         screens: {
-          //TODO: substituir por mobile
           xsm: "500px",
-          //TODO: substituir por tablet
           sm: "640px",
           md: "768px",
-          //TODO: Substituir por laptop
           lg: "1024px",
 
           mobile: {
