@@ -26,13 +26,7 @@ stages:
               key: "pnpm | pnpm-lock.yaml"
               path: $(pnpm_config_cache)
               displayName: Cache pnpm
-          - script: |
-              npm install -g corepack
-            displayName: 'Install corepack'
-          - script: |
-              corepack enable
-              corepack prepare pnpm@latest-8 --activate
-            displayName: 'Setup pnpm'
+
           - task: UseNode@1
             inputs:
               version: '20.x'
@@ -40,6 +34,14 @@ stages:
 #          - script: |
 #              npm install -g pnpm
 #            displayName: 'npm install pnpm'
+
+          - script: |
+              echo "Install Corepack"
+              npm install -g corepack
+              corepack enable
+              corepack prepare pnpm@latest-8 --activate
+              displayName: 'Setup pnpm'
+
           - script: |
               pnpm config set store-dir $(pnpm_config_cache)
               displayName: 'Set pnpm config'
