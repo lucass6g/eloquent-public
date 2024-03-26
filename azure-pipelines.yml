@@ -30,7 +30,7 @@ stages:
           - task: UseNode@1
             inputs:
               version: '20.x'
-              displayName: 'Install Node.js'
+            displayName: 'Install Node.js'
 #          - script: |
 #              npm install -g pnpm
 #            displayName: 'npm install pnpm'
