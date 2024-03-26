@@ -37,7 +37,7 @@ stages:
 
           - script: |
               echo "Install Corepack"
-              npm install -g corepack
+              apt install npm
               corepack enable
               corepack prepare pnpm@latest-8 --activate
               displayName: 'Setup pnpm'
