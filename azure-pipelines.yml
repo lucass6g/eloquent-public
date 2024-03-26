@@ -28,6 +28,7 @@ stages:
               displayName: Cache pnpm
 
           - script: |
+              npm install -g corepack
               corepack enable
               corepack prepare pnpm@latest-8 --activate
               displayName: 'Setup pnpm'
