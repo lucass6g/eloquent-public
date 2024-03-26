@@ -31,19 +31,17 @@ stages:
             inputs:
               version: '20.x'
               displayName: 'Install Node.js'
-              
+#          - script: |
+#              npm install -g pnpm
+#            displayName: 'npm install pnpm'
+
           - script: |
+              echo "Install Corepack"
               npm install -g corepack
               corepack enable
               corepack prepare pnpm@latest-8 --activate
               displayName: 'Setup pnpm'
-          - task: UseNode@1
-            inputs:
-              version: '20.x'
-              displayName: 'Install Node.js'
-#          - script: |
-#              npm install -g pnpm
-#            displayName: 'npm install pnpm'
+
           - script: |
               pnpm config set store-dir $(pnpm_config_cache)
               displayName: 'Set pnpm config'
