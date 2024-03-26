@@ -42,4 +42,4 @@ stages:
 #             command: publish
 #             publishRegistry: useExternalRegistry
 #             publishEndpoint: 'nexus-npmrepo-$(System.TeamProject)'
-#             customCommand: pnpm run publish
+
