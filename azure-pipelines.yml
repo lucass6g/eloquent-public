@@ -51,6 +51,10 @@ stages:
             displayName: 'pnpm install and build'
 
           - script: |
+              output=$(pnpm run version --yes)
+              if echo "$output" | grep -q "No unreleased changesets found"; then
+                echo "No changes detected"
+              fi
               pnpm run version --yes
             displayName: 'pnpm version'
 
