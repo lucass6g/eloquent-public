@@ -32,6 +32,8 @@ stages:
             pnpm run build
            displayName: 'pnpm build'
          - script: |
+            sed -i 's/@orb-design-system://g' .npmrc
+            sed -i 's/_NEXUS_PRIVATE_TOKEN_/${NEXUS_PRIVATE_TOKEN}/g' .npmrc
             pnpm run publish
 
 #         - task: Npm@1
