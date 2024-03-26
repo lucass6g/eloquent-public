@@ -50,13 +50,13 @@ stages:
               pnpm run build
             displayName: 'pnpm install and build'
 
-          - script: |
-              output=$(pnpm run version --yes)
-              if echo "$output" | grep -q "No unreleased changesets found"; then
-                echo "No changes detected"
-              fi
-              pnpm run version --yes
-            displayName: 'pnpm version'
+#          - script: |
+#              output=$(pnpm run version --yes)
+#              if echo "$output" | grep -q "No unreleased changesets found"; then
+#                echo "No changes detected"
+#              fi
+#              pnpm run version --yes
+#            displayName: 'pnpm version'
 
           #            sed -i 's/@orb-design-system://g' .npmrc
           #            sed -i 's/_NEXUS_PRIVATE_TOKEN_/${NEXUS_PRIVATE_TOKEN}/g' .npmrc
