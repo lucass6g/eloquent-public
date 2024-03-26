@@ -44,7 +44,7 @@ stages:
 
           - script: |
               pnpm config set store-dir $(pnpm_config_cache)
-              displayName: 'Set pnpm config'
+            displayName: 'Set pnpm config'
           - script: |
               pnpm install --frozen-lockfile
               pnpm run build
