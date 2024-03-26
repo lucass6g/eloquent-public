@@ -40,7 +40,7 @@ stages:
               apt install npm -y
               corepack enable
               corepack prepare pnpm@latest-8 --activate
-              displayName: 'Setup pnpm'
+            displayName: 'Setup pnpm'
 
           - script: |
               pnpm config set store-dir $(pnpm_config_cache)
