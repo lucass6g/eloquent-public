@@ -8,8 +8,8 @@
     "web": "pnpm --filter web --",
     "workshop": "pnpm --filter workshop -- build",
     "changeset": "changeset",
-    "publish:packages": "changeset publish",
-    "version:packages": "changeset version"
+    "publish": "changeset publish",
+    "version": "changeset version"
   },
   "workspaces": [
     "packages/*"
