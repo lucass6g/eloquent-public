@@ -25,10 +25,10 @@ stages:
               key: "pnpm | ${Agent.OS} | pnpm-lock.yaml"
               path: $(pnpm_config_cache)
               displayName: Cache pnpm
+
           - script: |
               corepack enable
               corepack prepare pnpm@latest-8 --activate
-              pnpm config set store-dir $(pnpm_config_cache)
               displayName: 'Setup pnpm'
           - task: UseNode@1
             inputs:
@@ -38,10 +38,13 @@ stages:
 #              npm install -g pnpm
 #            displayName: 'npm install pnpm'
           - script: |
-              pnpm install --frozen-lockfile
+              pnpm config set store-dir $(pnpm_config_cache)
+              displayName: 'Set pnpm config'
           - script: |
+              pnpm install --frozen-lockfile
               pnpm run build
-            displayName: 'pnpm build'
+            displayName: 'pnpm install and build'
+
           - script: |
               pnpm run version
 
@@ -56,5 +59,3 @@ stages:
               publishRegistry: useExternalRegistry
               publishEndpoint: 'nexus-npmrepo-$(System.TeamProject)'
 #             customCommand: version
-
-
