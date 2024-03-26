@@ -10,7 +10,8 @@ parameters:
 variables:
   - group: BASE
   - group: ${{ variables['Build.Repository.Name'] }}
-    pnpm_config_cache: $(Pipeline.Workspace)/.pnpm-store
+  - name:  pnpm_config_cache
+    value: $(Pipeline.Workspace)/.pnpm-store
 
 stages:
   - stage: BuildAndPublish
