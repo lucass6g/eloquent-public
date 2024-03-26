@@ -31,7 +31,9 @@ stages:
          - script: |
             pnpm run build
            displayName: 'pnpm build'
-#         - script: |
+         - script: |
+            pnpm run version
+            
 #            sed -i 's/@orb-design-system://g' .npmrc
 #            sed -i 's/_NEXUS_PRIVATE_TOKEN_/${NEXUS_PRIVATE_TOKEN}/g' .npmrc
 #            pnpm run publish
@@ -42,6 +44,6 @@ stages:
              command: publish
              publishRegistry: useExternalRegistry
              publishEndpoint: 'nexus-npmrepo-$(System.TeamProject)'
-             customCommand: version
+#             customCommand: version
 
 
