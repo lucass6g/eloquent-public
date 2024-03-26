@@ -27,6 +27,11 @@ stages:
               path: $(pnpm_config_cache)
               displayName: Cache pnpm
 
+          - task: UseNode@1
+            inputs:
+              version: '20.x'
+              displayName: 'Install Node.js'
+              
           - script: |
               npm install -g corepack
               corepack enable
