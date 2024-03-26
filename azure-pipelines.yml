@@ -39,8 +39,8 @@ stages:
          - task: Npm@1
            displayName: Publish to npm-private
            inputs:
-             command: publish
+             command: run publish
              publishRegistry: useExternalRegistry
              publishEndpoint: 'nexus-npmrepo-$(System.TeamProject)'
-             customCommand: run publish
+
 
