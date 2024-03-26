@@ -29,13 +29,15 @@ stages:
          - script: |
             pnpm install --no-lock
          - script: |
-             pnpm run build
+            pnpm run build
            displayName: 'pnpm build'
+         - script: |
+            pnpm run publish
 
-         - task: Npm@1
-           displayName: Publish to npm-private
-           inputs:
-             command: publish
-             publishRegistry: useExternalRegistry
-             publishEndpoint: 'nexus-npmrepo-$(System.TeamProject)'
-             customCommand: pnpm run publish
+#         - task: Npm@1
+#           displayName: Publish to npm-private
+#           inputs:
+#             command: publish
+#             publishRegistry: useExternalRegistry
+#             publishEndpoint: 'nexus-npmrepo-$(System.TeamProject)'
+#             customCommand: pnpm run publish
