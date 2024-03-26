@@ -27,6 +27,8 @@ stages:
              npm install -g pnpm
            displayName: 'npm install pnpm'
          - script: |
+            pnpm install --no-lock
+         - script: |
              pnpm run build
            displayName: 'pnpm build'
 
