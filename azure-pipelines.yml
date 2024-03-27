@@ -54,7 +54,6 @@ stages:
             displayName: 'pnpm install and build'
 
           - bash: |
-              pnpm changeset status --since=main
               pnpm changeset version
             displayName: 'pnpm version'
 
