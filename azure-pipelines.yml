@@ -10,7 +10,7 @@ parameters:
 variables:
   - group: BASE
   - group: ${{ variables['Build.Repository.Name'] }}
-  - name:  pnpm_config_cache
+  - name: pnpm_config_cache
     value: $(Pipeline.Workspace)/.pnpm-store
 
 stages:
@@ -31,9 +31,9 @@ stages:
             inputs:
               version: '20.x'
             displayName: 'Install Node.js'
-#          - script: |
-#              npm install -g pnpm
-#            displayName: 'npm install pnpm'
+          #          - script: |
+          #              npm install -g pnpm
+          #            displayName: 'npm install pnpm'
 
           - script: |
               echo "Install Corepack"
@@ -50,13 +50,14 @@ stages:
               pnpm run build
             displayName: 'pnpm install and build'
 
-#          - script: |
-#              output=$(pnpm run version --yes)
-#              if echo "$output" | grep -q "No unreleased changesets found"; then
-#                echo "No changes detected"
-#              fi
-#              pnpm run version --yes
-#            displayName: 'pnpm version'
+          - checkout: self
+            fetchDepth: 0
+            clean: true
+
+          - bash: |
+              pnpm changeset status --since=main
+              pnpm changeset version
+            displayName: 'pnpm version'
 
           #            sed -i 's/@orb-design-system://g' .npmrc
           #            sed -i 's/_NEXUS_PRIVATE_TOKEN_/${NEXUS_PRIVATE_TOKEN}/g' .npmrc
