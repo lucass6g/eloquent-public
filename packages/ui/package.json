@@ -27,6 +27,10 @@
     "test:ui": "vitest  --ui"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^14.2.1",
+    "@vitejs/plugin-react": "^4.2.1",
+    "resize-observer-polyfill": "^1.5.1",
     "@types/node": "^20.11.22",
     "@types/react": "^18.2.60",
     "@types/react-dom": "^18.2.19",
@@ -59,7 +63,6 @@
     "@storybook/addon-docs": "^7.6.17",
     "@storybook/blocks": "^7.6.17",
     "@storybook/react": "^7.6.17",
-    "@testing-library/react": "^14.2.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "jsdom": "^24.0.0",
