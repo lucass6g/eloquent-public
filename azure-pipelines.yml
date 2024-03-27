@@ -50,9 +50,9 @@ stages:
               pnpm run build
             displayName: 'pnpm install and build'
 
-          - checkout: self
-            fetchDepth: 0
-            clean: true
+#          - checkout: self
+#            fetchDepth: 0
+#            clean: true
 
           - bash: |
               pnpm changeset status --since=main
