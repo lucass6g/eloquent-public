@@ -41,3 +41,4 @@ yarn-error.log*
 !/packages/ui/html/
 !/packages/ui/dist/
 /packages/ui/dist/*
+/packages/react/*

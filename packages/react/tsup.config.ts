@@ -1,7 +1,7 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-	name: "@eloquent/ui",
+	name: "@eloquent/react",
 	entry: ["src/index.ts"],
 	outDir: "dist",
 	target: "es2022",
@@ -12,5 +12,4 @@ export default defineConfig({
 	dts: true,
 	external: ["react", 'react-dom', 'react/jsx-runtime'],
 	cjsInterop: true,
-	tsconfig: "tsconfig.json",
 })

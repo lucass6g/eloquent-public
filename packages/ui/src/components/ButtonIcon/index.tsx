@@ -1,7 +1,7 @@
 "use client";
 import { forwardRef }                         from "react";
 import { ButtonIconElement, ButtonIconProps } from './button-icon.ts'
-import { cn }                                 from '../../../lib/utils.ts';
+import { cn }                                 from '../../lib/utils.ts';
 import { Icon }                                 from "../Icon"
 import { buttonClasses, roundIconClasses } from "./styles.ts";
 

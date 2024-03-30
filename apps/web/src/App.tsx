@@ -1,8 +1,11 @@
-import { ProgressIndicator } from "@eloquent/ui";
+import { Button, Typography } from "@eloquent/ui";
 
 function App() {
   return (
-      <ProgressIndicator size={2} activeIndex={1}/>
+    <>
+      <Typography.Heading size={"medium"}>Testando Heading</Typography.Heading>
+      <Button variant="primary" onClick={() => console.log('Clicando')}>Testando Button</Button>
+    </>
   )
 }
 

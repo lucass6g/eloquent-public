@@ -1,6 +1,6 @@
 import { headingStyleClasses }                    from './styles.ts'
 import { forwardRef} from 'react'
-import { cn }                                     from "../../../../lib/utils";
+import { cn }                                     from "../../../lib/utils";
 import { HeadingElement, HeadingProps } from './Heading.ts';
 
 export const Heading = forwardRef<HeadingElement, HeadingProps>(

@@ -1,5 +1,5 @@
 import { forwardRef }                           from "react";
-import { cn }                                   from "../../../../lib/utils";
+import { cn }                                   from '../../../lib/utils.ts';
 import { DescriptionElement, DescriptionProps } from './Description.ts';
 import { descriptionStyleClasses }              from "./styles.ts";
 

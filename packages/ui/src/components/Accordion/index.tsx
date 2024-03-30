@@ -2,10 +2,10 @@
 import * as AccordionPrimitive   from '@radix-ui/react-accordion'
 import { ChevronDown }           from 'lucide-react';
 import * as React                from 'react'
-import { ComponentProps }        from 'react'
-import * as Styles               from './styles'
-import { Typography }            from '../Typography';
-import {AccordionTriggerProps, AccordionContentProps}   from './Accordion.ts'
+import { ComponentProps }                             from 'react'
+import * as Styles                                    from './styles.ts'
+import { Typography }                                 from '../Typography';
+import {AccordionTriggerProps, AccordionContentProps} from './Accordion.ts'
 const Root = (
 	props: ComponentProps<typeof AccordionPrimitive.Root>,
 ) => {
