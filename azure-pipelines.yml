@@ -1,0 +1,70 @@
+##############
+###  LIBS  ###
+##############
+
+parameters:
+  - name: TARGETENV
+    type: string
+    default: none
+
+variables:
+  - group: BASE
+  - group: ${{ variables['Build.Repository.Name'] }}
+  - name: pnpm_config_cache
+    value: $(Pipeline.Workspace)/.pnpm-store
+
+stages:
+  - stage: BuildAndPublish
+    pool: AKS-Self-Hosted
+    jobs:
+      - job: BuildAndPublish
+        displayName: BuildAndPublish
+        condition: not(or(failed(), canceled()))
+        steps:
+          - checkout: self
+            fetchDepth: 0
+
+          - task: Cache@2
+            inputs:
+              key: "pnpm | pnpm-lock.yaml"
+              path: $(pnpm_config_cache)
+              displayName: Cache pnpm
+
+          - task: UseNode@1
+            inputs:
+              version: '20.x'
+            displayName: 'Install Node.js'
+          #          - script: |
+          #              npm install -g pnpm
+          #            displayName: 'npm install pnpm'
+
+          - script: |
+              echo "Install Corepack"
+              apt install npm -y
+              corepack enable
+              corepack prepare pnpm@latest-8 --activate
+            displayName: 'Setup pnpm'
+
+          - script: |
+              pnpm config set store-dir $(pnpm_config_cache)
+            displayName: 'Set pnpm config'
+          - script: |
+              pnpm install --no-frozen-lockfile
+              pnpm run build
+            displayName: 'pnpm install and build'
+
+          - bash: |
+              pnpm changeset version
+            displayName: 'pnpm version'
+
+          #            sed -i 's/@orb-design-system://g' .npmrc
+          #            sed -i 's/_NEXUS_PRIVATE_TOKEN_/${NEXUS_PRIVATE_TOKEN}/g' .npmrc
+          #            pnpm run publish
+
+          - task: Npm@1
+            displayName: Publish to npm-private
+            inputs:
+              command: publish
+              publishRegistry: useExternalRegistry
+              publishEndpoint: 'nexus-npmrepo-$(System.TeamProject)'
+#             customCommand: version
