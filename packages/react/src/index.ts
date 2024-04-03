@@ -1,1 +1,1 @@
-export {Switch, Case, Default} from './components/conditional-switch'
+export {Default, Case,Switch}  from './components/conditional-switch'
