@@ -1,16 +1,22 @@
 import { defineConfig } from 'tsup';
 
-export default defineConfig({
-	name: "@eloquent/ui",
-	entry: ["src/index.ts"],
-	outDir: "dist",
-	target: "es2022",
-	format: ["cjs", "esm"],
-	splitting: false,
-	sourcemap: true,
-	clean: true,
-	dts: true,
-	external: ["react", 'react-dom', 'react/jsx-runtime'],
-	cjsInterop: true,
-	tsconfig: "tsconfig.json",
-})
+export default defineConfig( ( options) => {
+	console.log(options.format);
+	const formatString = Array.isArray(options.format)
+		? options.format.join("-")
+		: options.format ?? "esm";
+
+	return {
+		entry:      [ "src/index.ts" ],
+		name:       "@eloquent/ui",
+		tsconfig: `tsconfig-${formatString ?? "esm"}.json`,
+		clean:      true,
+		dts:        true,
+		format: options.format ?? ["esm"],
+		minify:     true,
+		target:     "es2022",
+		silent:     false,
+		sourcemap:  true,
+		outDir: `dist/${formatString ?? "esm"}`,
+	}
+} )

@@ -12,4 +12,5 @@ export default defineConfig({
 	dts: true,
 	external: ["react", 'react-dom', 'react/jsx-runtime'],
 	cjsInterop: true,
+	treeshake: true,
 })
