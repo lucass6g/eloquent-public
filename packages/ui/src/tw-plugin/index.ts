@@ -1,0 +1,1 @@
+export { eloquentPlugin } from "./plugin";
