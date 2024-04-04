@@ -1,5 +1,11 @@
 # @eloquent/ui
 
+## 0.0.0-20240404004629
+
+### Major Changes
+
+- change dist
+
 ## 2.0.0
 
 ### Major Changes
