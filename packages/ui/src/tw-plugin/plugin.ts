@@ -1,7 +1,8 @@
 import { SPACING, COLORS, FONT_WEIGHT, FONT_FAMILY, FONT_SIZE } from "@eloquent/tokens";
+import plugin from 'tailwindcss/plugin';
 
-export const eloquentPlugin = {
-  theme: {
+export const eloquentPlugin = plugin(({ addBase }) => {
+  addBase({
     extend: {
       colors: COLORS,
       spacing: SPACING,
@@ -9,5 +10,5 @@ export const eloquentPlugin = {
       fontWeight: FONT_WEIGHT,
       fontFamily: FONT_FAMILY,
     },
-  },
-};
+  });
+});
