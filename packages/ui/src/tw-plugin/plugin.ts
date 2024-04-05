@@ -2,7 +2,7 @@ import { COLORS, FONT_FAMILY, FONT_SIZE, FONT_WEIGHT, SPACING } from '@eloquent/
 
 import plugin from 'tailwindcss/plugin';
 
-module.exports = plugin( function() {},
+export const eloquentPlugin = module.exports =  plugin( function() {},
 	{
 	  theme: {
 		  extend: {
