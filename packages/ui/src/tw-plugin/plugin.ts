@@ -1,10 +1,8 @@
 import { COLORS, FONT_FAMILY, FONT_SIZE, FONT_WEIGHT, SPACING } from '@eloquent/tokens';
 
-const plugin = require( 'tailwindcss/plugin' )
+import plugin from 'tailwindcss/plugin';
 
-module.exports = plugin( function() {
-
-	},
+module.exports = plugin( function() {},
 	{
 	  theme: {
 		  extend: {
