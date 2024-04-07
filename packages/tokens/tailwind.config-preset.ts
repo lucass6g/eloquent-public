@@ -1,8 +1,9 @@
-// eloquent/packages/tokens/tailwind.config.ts
-
 import {FONT_SIZE, FONT_FAMILY, FONT_WEIGHT, COLORS, SPACING} from "./"
 
 const config = {
+    content: [
+        "node_modules/@eloquent/ui/dist/**/*.{js,ts,jsx,tsx}",
+    ],
     theme: {
         extend: {
             colors: COLORS,
