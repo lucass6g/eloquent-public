@@ -1,6 +1,8 @@
-import {FONT_SIZE, FONT_FAMILY, FONT_WEIGHT, COLORS, SPACING} from "../index"
+// eloquent/packages/tokens/tailwind.config.ts
 
-module.exports = {
+import {FONT_SIZE, FONT_FAMILY, FONT_WEIGHT, COLORS, SPACING} from "./"
+
+const config = {
     theme: {
         extend: {
             colors: COLORS,
@@ -11,3 +13,5 @@ module.exports = {
         }
     },
 }
+
+export default config;
