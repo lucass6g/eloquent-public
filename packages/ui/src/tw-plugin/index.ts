@@ -1,1 +1,1 @@
-export {eloquentPlugin} from "./plugin";
+export {eloquentTW} from "./plugin";

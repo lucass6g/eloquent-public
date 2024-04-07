@@ -1,4 +1,6 @@
-export const COLORS = {
+export type ColorsType = Record<string, string> | {}
+
+export const COLORS:ColorsType = {
   transparent: "transparent",
   base: {
     dark: {
@@ -58,3 +60,4 @@ export const COLORS = {
     }
   },
 };
+
