@@ -1,6 +1,6 @@
 {
   "name": "@eloquent/tokens",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.ts",
   "types": "index.ts",
@@ -8,5 +8,8 @@
   "private": false,
   "exports": {
     ".": "./index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.5"
   }
 }
