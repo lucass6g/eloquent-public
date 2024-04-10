@@ -50,6 +50,7 @@ stages:
             displayName: 'Set pnpm config'
           - script: |
               pnpm install --no-frozen-lockfile
+              pnpm run build:css
               pnpm run build
             displayName: 'pnpm install and build'
 

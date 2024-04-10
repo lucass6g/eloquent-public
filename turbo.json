@@ -2,6 +2,10 @@
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["**/.env.*local"],
   "pipeline": {
+    "build:css": {
+      "dependsOn": ["^build"],
+      "outputs": ["style.css"]
+    },
     "build": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**", "storybook-static/**"]
