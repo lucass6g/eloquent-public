@@ -55,7 +55,6 @@ stages:
             displayName: 'Install dependencies'
 
           - script: |
-              pnpm run build:css
               pnpm run build
             displayName: 'Build package'
 
