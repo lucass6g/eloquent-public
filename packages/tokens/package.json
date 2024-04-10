@@ -1,6 +1,6 @@
 {
   "name": "@eloquent/tokens",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "main": "index.ts",
   "types": "index.ts",
@@ -9,14 +9,14 @@
   "files": [
     "index.ts",
     "colors.ts",
-    "fonts.ts",
+    "font.ts",
     "spacing.ts",
     "tailwind.config-preset.ts"
   ],
   "exports": {
     ".": "./index.ts",
     "./colors": "./colors.ts",
-    "./fonts": "./fonts.ts",
+    "./font": "./font.ts",
     "./spacing": "./spacing.ts",
     "./tailwind.config-preset": "./tailwind.config-preset.ts"
   },
