@@ -1,6 +1,6 @@
 {
   "name": "@eloquent/ui",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "license": "MIT",
   "main": "./dist/cjs/index.js",
   "private": false,
@@ -24,7 +24,8 @@
     },
     "./tailwind": "./tailwind.config.js",
     "./postcss": "./postcss.config.js",
-    "./style": "./style/styles.css"
+    "./styles": "./style/styles.css",
+    "./style": "./style.css"
   },
   "scripts": {
     "lint": "eslint src --cache",
