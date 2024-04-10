@@ -1,13 +1,24 @@
 {
   "name": "@eloquent/tokens",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "index.ts",
   "types": "index.ts",
   "license": "MIT",
   "private": false,
+  "files": [
+    "index.ts",
+    "colors.ts",
+    "fonts.ts",
+    "spacing.ts",
+    "tailwind.config-preset.ts"
+  ],
   "exports": {
-    ".": "./index.ts"
+    ".": "./index.ts",
+    "./colors": "./colors.ts",
+    "./fonts": "./fonts.ts",
+    "./spacing": "./spacing.ts",
+    "./tailwind.config-preset": "./tailwind.config-preset.ts"
   },
   "devDependencies": {
     "@types/node": "^20.12.5"
