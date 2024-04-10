@@ -1,6 +1,6 @@
 {
   "name": "@eloquent/ui",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "license": "MIT",
   "main": "./dist/cjs/index.js",
   "private": false,
@@ -8,7 +8,7 @@
     "dist",
     "tailwind.config.ts",
     "postcss.config.js",
-    "style.css"
+    "./style.css"
   ],
   "types": "./dist/cjs/index.d.ts",
   "exports": {
@@ -26,7 +26,10 @@
     "./tailwind": "./tailwind.config.js",
     "./postcss": "./postcss.config.js",
     "./styles": "./style/styles.css",
-    "./style": "./style.css"
+    "./style": {
+        "import": "./styles.css",
+        "require": "./styles.css"
+    }
   },
   "scripts": {
     "lint": "eslint src --cache",
