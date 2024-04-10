@@ -34,20 +34,22 @@ stages:
             inputs:
               version: '20.x'
             displayName: 'Install Node.js'
-          #          - script: |
-          #              npm install -g pnpm
-          #            displayName: 'npm install pnpm'
+
+#              - script: |
+#                npm install -g pnpm
+#              displayName: 'npm install pnpm'
 
           - script: |
               echo "Install Corepack"
 #              apt install npm -y
+              npm install -g corepack
               corepack enable
               corepack prepare pnpm@latest-8 --activate
             displayName: 'Setup pnpm'
-
-          - script: |
-              pnpm config set store-dir $(pnpm_config_cache)
-            displayName: 'Set pnpm config'
+#
+#          - script: |
+#              pnpm config set store-dir $(pnpm_config_cache)
+#            displayName: 'Set pnpm config'
 
           - script: |
               pnpm install --no-frozen-lockfile
