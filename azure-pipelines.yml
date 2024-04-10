@@ -40,7 +40,7 @@ stages:
 
           - script: |
               echo "Install Corepack"
-              apt install npm -y
+#              apt install npm -y
               corepack enable
               corepack prepare pnpm@latest-8 --activate
             displayName: 'Setup pnpm'
@@ -48,19 +48,19 @@ stages:
           - script: |
               pnpm config set store-dir $(pnpm_config_cache)
             displayName: 'Set pnpm config'
+
           - script: |
               pnpm install --no-frozen-lockfile
+            displayName: 'Install dependencies'
+
+          - script: |
               pnpm run build:css
               pnpm run build
-            displayName: 'pnpm install and build'
+            displayName: 'Build package'
 
           - bash: |
               pnpm changeset version
             displayName: 'pnpm version'
-
-          #            sed -i 's/@orb-design-system://g' .npmrc
-          #            sed -i 's/_NEXUS_PRIVATE_TOKEN_/${NEXUS_PRIVATE_TOKEN}/g' .npmrc
-          #            pnpm run publish
 
           - task: Npm@1
             displayName: Publish to npm-private

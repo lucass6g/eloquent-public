@@ -32,9 +32,9 @@
     "lint": "eslint src --cache",
     "typecheck": "tsc -b",
     "build:css": "npx tailwindcss -o src/styles.css",
-    "build:cjs": "tsup --format cjs --external react && npm run build:css",
+    "build:cjs": "tsup --format cjs --external react",
     "build:esm": "tsup --format esm --external react && npx tailwindcss -o dist/esm/styles.css",
-    "build": "concurrently \"npm run build:cjs\"  \"npm run build:esm\"",
+    "build": "concurrently \"npm run build:cjs\"  \"npm run build:esm\" \"npm run build:css\"",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "test:ui": "vitest  --ui"
