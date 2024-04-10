@@ -1,14 +1,14 @@
 {
   "name": "@eloquent/ui",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "license": "MIT",
   "main": "./dist/cjs/index.js",
   "private": false,
   "files": [
     "dist",
-    "tailwind.config.js",
+    "tailwind.config.ts",
     "postcss.config.js",
-    "style"
+    "style.css"
   ],
   "types": "./dist/cjs/index.d.ts",
   "exports": {
@@ -29,8 +29,9 @@
   "scripts": {
     "lint": "eslint src --cache",
     "typecheck": "tsc -b",
-    "build:cjs": "tsup --format cjs --external react",
-    "build:esm": "tsup --format esm --external react",
+    "build:css": "npx tailwindcss -o dist/styles.css",
+    "build:cjs": "tsup --format cjs --external react && npx tailwindcss -o dist/cjs/styles.css",
+    "build:esm": "tsup --format esm --external react && npx tailwindcss -o dist/esm/styles.css",
     "build": "concurrently \"npm run build:cjs\"  \"npm run build:esm\"",
     "test": "vitest",
     "coverage": "vitest run --coverage",

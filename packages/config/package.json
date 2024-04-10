@@ -1,10 +1,14 @@
 {
   "name": "@eloquent/config",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "exports": {
     "./*": "./*",
-    "./vite": "./vite"
+    "./vite": "./vite",
+    "./tailwind": "./tailwind"
   },
+  "files": [
+    "tailwind/*"
+  ],
   "scripts": {
     "lint": "eslint . --cache"
   },
