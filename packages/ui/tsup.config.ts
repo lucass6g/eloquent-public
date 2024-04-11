@@ -7,7 +7,7 @@ export default defineConfig( ( options) => {
 		: options.format ?? "esm";
 
 	return {
-		entry:      [ "src/index.ts", "src/style.css" ],
+		entry:      [ "src/index.ts", "style.css" ],
 		injectStyle: true,
 		name:       "@eloquent/ui",
 		tsconfig: `tsconfig-${formatString ?? "esm"}.json`,
@@ -19,5 +19,8 @@ export default defineConfig( ( options) => {
 		silent:     false,
 		sourcemap:  true,
 		outDir: `dist/${formatString ?? "esm"}`,
+		banner: {
+			js: '"use client";'
+		}
 	}
 } )
