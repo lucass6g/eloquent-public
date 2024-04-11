@@ -1,4 +1,3 @@
-"use client";
 import { forwardRef }                       from 'react'
 import { ParagraphElement, ParagraphProps } from './Paragraph.ts'
 import { paragraphStyleClasses }            from './styles.ts';

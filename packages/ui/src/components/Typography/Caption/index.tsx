@@ -1,4 +1,3 @@
-"use client";
 import { forwardRef }                                                       from 'react'
 import { CaptionElement, CaptionProps, ValidAsValuesProps } from './Caption.ts';
 import { captionStyleClasses }                                              from './styles.ts'

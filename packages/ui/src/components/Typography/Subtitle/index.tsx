@@ -1,4 +1,3 @@
-"use client";
 import { forwardRef }                     from 'react'
 import { SubtitleElement, SubtitleProps } from './Subtitle'
 
