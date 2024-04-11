@@ -16,8 +16,9 @@ export default defineConfig( ( options) => {
 		format: options.format ?? ["esm"],
 		minify:     true,
 		target:     "es2022",
-		silent:     false,
+		silent:     true,
 		sourcemap:  true,
 		outDir: `dist/${formatString ?? "esm"}`,
+		banner: { js: '"use client";' },
 	}
 } )
