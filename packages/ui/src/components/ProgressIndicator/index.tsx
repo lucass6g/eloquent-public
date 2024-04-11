@@ -1,3 +1,4 @@
+"use client";
 import { cn } from '../../lib/utils.ts';
 import { stepClasses } from "./styles.ts";
 import { ProgressIndicatorProps } from "./ProgressIndicator.ts";

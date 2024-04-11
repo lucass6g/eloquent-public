@@ -1,3 +1,4 @@
+"use client";
 import { Case, Switch, Default }                                                        from "@eloquent/react";
 import * as Progress                                                           from '@radix-ui/react-progress';
 import { progressIndicatorClasses, progressLabelClasses, progressRootClasses } from './styles.ts';

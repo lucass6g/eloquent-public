@@ -1,3 +1,4 @@
+"use client";
 import { headingStyleClasses }                    from './styles.ts'
 import { forwardRef} from 'react'
 import { cn }                                     from "../../../lib/utils";
