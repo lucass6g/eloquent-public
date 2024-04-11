@@ -19,6 +19,5 @@ export default defineConfig( ( options) => {
 		silent:     true,
 		sourcemap:  true,
 		outDir: `dist/${formatString ?? "esm"}`,
-		banner: { js: '"use client";' },
 	}
 } )
