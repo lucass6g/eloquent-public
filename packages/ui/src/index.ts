@@ -7,5 +7,3 @@ export {ButtonIcon} from  './components/ButtonIcon'
 export {ProgressBar} from './components/ProgressBar'
 export {ProgressIndicator} from './components/ProgressIndicator'
 export {Accordion} from './components/Accordion'
-
-export * from './tw-plugin'
