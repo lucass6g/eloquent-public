@@ -1,6 +1,6 @@
 {
   "name": "@eloquent/ui",
-  "version": "1.0.27",
+  "version": "1.0.28",
   "license": "MIT",
   "main": "./dist/cjs/index.js",
   "private": false,
@@ -26,7 +26,7 @@
     "./postcss": "./postcss.config.js",
     "./styles": "./style/styles.css",
     "./style": {
-        "import": "./tyles.css",
+        "import": "./styles.css",
         "require": "./styles.css"
     }
   },
@@ -35,7 +35,7 @@
     "typecheck": "tsc -b",
     "build:css": "npx tailwindcss -o styles.css",
     "build:cjs": "tsup --format cjs --external react",
-    "build:esm": "tsup --format esm --external react && npx tailwindcss -o dist/esm/styles.css",
+    "build:esm": "tsup --format esm --external react",
     "build": "concurrently \"npm run build:cjs\"  \"npm run build:esm\" \"npm run build:css\"",
     "test": "vitest",
     "coverage": "vitest run --coverage",

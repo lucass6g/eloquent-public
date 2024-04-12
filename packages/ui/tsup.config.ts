@@ -14,7 +14,7 @@ export default defineConfig( ( options) => {
 		clean:      true,
 		dts:        true,
 		format: options.format ?? ["esm"],
-		minify:     true,
+		minify:     false,
 		target:     "es2022",
 		silent:     true,
 		sourcemap:  true,
