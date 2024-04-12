@@ -1,6 +1,6 @@
 import {FONT_SIZE, FONT_FAMILY, FONT_WEIGHT, COLORS, SPACING} from "./"
 
-const config = {
+export const config = {
     content: [
         "node_modules/@eloquent/ui/dist/**/*.{js,ts,jsx,tsx}",
     ],
@@ -14,5 +14,3 @@ const config = {
         }
     },
 }
-
-export default config;
