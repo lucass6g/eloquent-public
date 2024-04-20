@@ -1,5 +1,5 @@
-import { COLORS, FONT_FAMILY, FONT_SIZE, FONT_WEIGHT, SPACING } from "@eloquent/tokens";
-import type { Config }                                          from "tailwindcss";
+import { COLORS, FONT_FAMILY, FONT_SIZE, FONT_WEIGHT, SCREENS, SPACING } from "@eloquent/tokens";
+import type { Config }                                                   from "tailwindcss";
 
 module.exports = {
 	darkMode: [ "class" ],
@@ -18,31 +18,7 @@ module.exports = {
 			padding:                  SPACING,
 			spacing:                  SPACING,
 			gap:                      SPACING,
-			screens:                  {
-				xsm: "500px",
-				sm:  "640px",
-				md:  "768px",
-				lg:  "1024px",
-
-				mobile:  {
-					min: "0",
-					max: "599px",
-				},
-				tablet:  {
-					min: "600px",
-					max: "959px",
-				},
-				laptop:  {
-					min: "960px",
-					max: "1271px",
-				},
-				desktop: {
-					min: "1272px",
-					max: "1769px",
-				},
-				full:    "1680px",
-				print:   { raw: "print" },
-			},
+			screens:                  SCREENS,
 			fontSize:                 FONT_SIZE,
 			fontWeight:               FONT_WEIGHT,
 			fontFamily:               FONT_FAMILY,

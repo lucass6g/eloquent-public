@@ -552,15 +552,9 @@ video {
   padding-left: 2rem;
 }
 
-@media (min-width: 0) {
+@media (min-width: 0px) {
   .container {
-    max-width: 0;
-  }
-}
-
-@media (min-width: 500px) {
-  .container {
-    max-width: 500px;
+    max-width: 0px;
   }
 }
 

@@ -266,16 +266,19 @@ importers:
       '@types/node':
         specifier: ^20.12.5
         version: 20.12.5
+      tsup:
+        specifier: ^8.0.2
+        version: 8.0.2(postcss@8.4.38)(typescript@5.4.3)
 
   packages/tsconfig: {}
 
   packages/ui:
     dependencies:
       '@eloquent/react':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../react
       '@eloquent/tokens':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../tokens
       '@radix-ui/react-accordion':
         specifier: ^1.1.2

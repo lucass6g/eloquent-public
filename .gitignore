@@ -42,3 +42,4 @@ yarn-error.log*
 !/packages/ui/dist/
 /packages/ui/dist/*
 /packages/react/*
+/packages/tokens/dist/*
