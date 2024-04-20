@@ -1,4 +1,4 @@
-import { PALETTE_COLORS, FONT_FAMILY, FONT_SIZE, FONT_WEIGHT, SPACING } from "@/index"
+import { PALETTE_COLORS, FONT_FAMILY, FONT_SIZE, FONT_WEIGHT, SPACING, BORDER_WIDTH, SCREENS } from "./"
 
 export const config = {
 	content: [
@@ -11,6 +11,11 @@ export const config = {
 			fontFamily: FONT_FAMILY,
 			fontWeight: FONT_WEIGHT,
 			spacing:    SPACING,
+			margin:     SPACING,
+			padding:    SPACING,
+			gap:        SPACING,
+			borderWidth: BORDER_WIDTH,
+			screens:    SCREENS,
 		},
 	},
 }
