@@ -1,47 +1,67 @@
-import {Meta, ColorPalette, ColorItem} from '@storybook/blocks'
-import {COLORS} from "@eloquent/tokens"
+import {ColorItem, ColorPalette, Meta} from '@storybook/blocks'
+import {PALETTE_COLORS as COLORS} from "@eloquent/tokens"
 
 <Meta title="Tokens/Colors"/>
 
 <ColorPalette>
     <ColorItem
-        title="base"
-        subtitle="light"
-        colors={COLORS.base.light}
+        title="Neutral"
+        subtitle=""
+        colors={COLORS.neutral}
     />
+
     <ColorItem
-        title={"base"}
-        subtitle="dark"
-        colors={COLORS.base.dark}
+        title="Green forest"
+        subtitle=""
+        colors={COLORS.green.forest}
     />
+
+    <ColorItem
+        title="Green sea"
+        subtitle=""
+        colors={COLORS.green.sea}
+    />
+
+    <ColorItem
+        title="Blue sky"
+        subtitle=""
+        colors={COLORS.blue.sky}
+    />
+
+    <ColorItem
+        title="Yellow sun"
+        subtitle=""
+        colors={COLORS.yellow.sun}
+    />
+
+    <ColorItem
+        title="Red land"
+        subtitle=""
+        colors={COLORS.red.land}
+    />
+
+    <ColorItem
+        title="Positive"
+        subtitle=""
+        colors={COLORS.positive}
+    />
+
+    <ColorItem
+        title="Negative"
+        subtitle=""
+        colors={COLORS.negative}
+    />
+
     <ColorItem
         title="feedback"
-        subtitle="positive"
-        colors={COLORS.feedback.positive}
+        subtitle="informative"
+        colors={COLORS.informative}
     />
-    <ColorItem
-        title="feedback"
-       subtitle="negative"
-        colors={COLORS.feedback.negative}
-    />
-    <ColorItem
-        title="feedback"
-       subtitle="informative"
-        colors={COLORS.feedback.informative}
-    />
+
     <ColorItem
         title="brand"
-       subtitle="primary"
-        colors={COLORS.brand.primary}
+        subtitle=""
+        colors={COLORS.brand}
     />
-    <ColorItem
-        title="brand"
-       subtitle="secondary"
-        colors={COLORS.brand.secondary}
-    />
-    <ColorItem
-        title="brand"
-       subtitle="tertiary"
-        colors={COLORS.brand.tertiary}
-    />
+
 </ColorPalette>
