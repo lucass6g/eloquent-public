@@ -1,4 +1,4 @@
-import { PALLETE, FONT_FAMILY, FONT_SIZE, FONT_WEIGHT, SPACING } from "@/index"
+import { PALETTE_COLORS, FONT_FAMILY, FONT_SIZE, FONT_WEIGHT, SPACING } from "@/index"
 
 export const config = {
 	content: [
@@ -6,7 +6,7 @@ export const config = {
 	],
 	theme:   {
 		extend: {
-			colors:     PALLETE,
+			colors:     PALETTE_COLORS,
 			fontSize:   FONT_SIZE,
 			fontFamily: FONT_FAMILY,
 			fontWeight: FONT_WEIGHT,
