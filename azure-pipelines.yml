@@ -1,71 +1,29 @@
-##############
-###  LIBS  ###
-##############
+##################
+###  GIT-FLOW  ###
+##################
 
-parameters:
-  - name: TARGETENV
-    type: string
-    default: none
+name: Pipeline-$(SourceBranchName)
 
-variables:
-  - group: BASE
-  - group: ${{ variables['Build.Repository.Name'] }}
-  - name: pnpm_config_cache
-    value: $(Pipeline.Workspace)/.pnpm-store
+trigger:
+  branches:
+    include:
+      - ti
+      - dev
+      - hml
+      - pre-prod
+      - main
+      - master
 
-stages:
-  - stage: BuildAndPublish
-    pool: AKS-Self-Hosted
-    jobs:
-      - job: BuildAndPublish
-        displayName: BuildAndPublish
-        condition: not(or(failed(), canceled()))
-        steps:
-          - checkout: self
-            fetchDepth: 0
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: CICD/templates
+      ref: main
+    - repository: manifests
+      type: git
+      name: CICD/manifests
+      ref: main
 
-          - task: Cache@2
-            inputs:
-              key: "pnpm | pnpm-lock.yaml"
-              path: $(pnpm_config_cache)
-              displayName: Cache pnpm
-
-          - task: UseNode@1
-            inputs:
-              version: '20.x'
-            displayName: 'Install Node.js'
-
-#              - script: |
-#                npm install -g pnpm
-#              displayName: 'npm install pnpm'
-
-
-#
-#          - script: |
-#              pnpm config set store-dir $(pnpm_config_cache)
-#            displayName: 'Set pnpm config'
-          - script: |
-              echo "Install Corepack"
-              apt install npm -y
-              corepack enable
-              corepack prepare pnpm@latest-8 --activate
-            displayName: 'Setup pnpm'
-          - script: |
-              pnpm install --no-frozen-lockfile
-            displayName: 'Install dependencies'
-
-          - script: |
-              pnpm run build
-            displayName: 'Build package'
-
-          - bash: |
-              pnpm changeset version
-            displayName: 'pnpm version'
-
-          - task: Npm@1
-            displayName: Publish to npm-private
-            inputs:
-              command: publish
-              publishRegistry: useExternalRegistry
-              publishEndpoint: 'nexus-npmrepo-$(System.TeamProject)'
-#             customCommand: version
+extends:
+  template: /gitflow/cross/azure-pipelines-flow-eloquent.yml@templates
