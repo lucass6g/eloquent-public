@@ -52,3 +52,12 @@ cd design-system-template
 pnpm install
 git init . && git add . && git commit -m "Init"
 ```
+
+## Running storybook-static website on your local machine
+
+- Install all dependencies with: `pnpm install`
+- Run `pnpm build`
+- Make sure you have docker daemon running with `colima status`. If it is not, run `colima start`
+- Run `docker image build -t storybook:1.0 .` to build the image locally
+- Run `docker container run -d --name storybook -p 80:8080 storybook:1.0`
+- Access the website content on http://localhost:80
