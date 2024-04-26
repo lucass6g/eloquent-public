@@ -7,7 +7,7 @@ RUN adduser --system --uid 1000 --no-create-home --disabled-login --group nginxu
 # Remove default nginx
 RUN rm /usr/share/nginx/html/*
 
-COPY /apps/workshop/storybook-static /etc/nginx/html/
+COPY /storybook-static /etc/nginx/html/
 
 RUN chown -R nginxuser:nginxuser /var/cache/nginx \
     && chown -R nginxuser:nginxuser /var/log/nginx \
