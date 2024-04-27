@@ -1,4 +1,3 @@
-'use client';
 import { Caption } from "./Caption";
 import { Description } from "./Description";
 import { Heading } from "./Heading";

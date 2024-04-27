@@ -2,12 +2,12 @@ import { cva } from 'class-variance-authority'
 
 export const paragraphStyleClasses = cva(
   [
-    'font-sans',
+    'font-barlow',
     'max-w-full',
     'text-sm',
     'text-xs',
-    'xs:text-xs',
-    'sm:text-sm',
+    'xs:text-10',
+    'sm:text-6',
     'font-regular',
     'leading-distant',
     'break-words',

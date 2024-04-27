@@ -1,6 +1,6 @@
 {
   "name": "@eloquent/tokens",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "",
   "license": "MIT",
   "private": false,
@@ -23,7 +23,14 @@
       }
     },
     "./tailwind.config-preset": {
-      "default": "./dist/tailwind.config-preset.ts"
+      "import": {
+        "default": "./dist/tailwind.config-preset.mjs",
+        "types": "./dist/tailwind.config-preset.d.mts"
+      },
+      "require": {
+        "default": "./dist/tailwind.config-preset.js",
+        "types": "./dist/tailwind.config-preset.d.ts"
+      }
     }
   },
   "scripts": {

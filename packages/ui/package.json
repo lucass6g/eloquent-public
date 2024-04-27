@@ -1,6 +1,6 @@
 {
   "name": "@eloquent/ui",
-  "version": "1.0.29",
+  "version": "1.0.30",
   "license": "MIT",
   "main": "./dist/cjs/index.js",
   "private": false,
@@ -27,6 +27,16 @@
     "./styles": {
       "import": "./styles.css",
       "require": "./styles.css"
+    },
+    "./typography": {
+      "import": {
+        "types": "./dist/esm/components/index.d.mts",
+        "default": "./dist/esm/components/index.mjs"
+      },
+      "require": {
+        "types": "./dist/cjs/components/index.d.ts",
+        "default": "./dist/cjs/components/index.js"
+      }
     }
   },
   "scripts": {

@@ -7,7 +7,7 @@ export default defineConfig( ( options) => {
 		: options.format ?? "esm";
 
 	return {
-		entry:      [ "src/index.ts"],
+		entry:      [ "src/index.ts", "src/components/Typography/index.tsx"],
 		injectStyle: true,
 		name:       "@eloquent/ui",
 		tsconfig: `tsconfig-${formatString ?? "esm"}.json`,
