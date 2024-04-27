@@ -1,4 +1,5 @@
-import "@eloquent/ui/styles"
+import "../../../packages/ui/global.css"
+import "../../../packages/ui/styles.css"
 import {Preview} from '@storybook/react'
 
 const preview: Preview = {

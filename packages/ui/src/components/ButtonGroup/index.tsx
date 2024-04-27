@@ -1,6 +1,5 @@
 import { HTMLAttributes } from 'react';
-import { buttonGroupClasses } from './styles.ts';
 
 type ButtonElement =  HTMLAttributes<HTMLDivElement>
 type ButtonGroupProps = {}  & Omit<ButtonElement, 'className'>
-export const ButtonGroup = ({ ...rest}:ButtonGroupProps) => <div className={buttonGroupClasses()}  {...rest}/>
+export const ButtonGroup = ({ ...rest}:ButtonGroupProps) => <div className="flex flex-col md:flex-row gap-2 "  {...rest}/>

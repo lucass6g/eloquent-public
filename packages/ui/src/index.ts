@@ -1,4 +1,4 @@
-import "../style/styles.css";
+import "../global.css";
 
 // component exports
 export {  Button } from "./components/Button"
