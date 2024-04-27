@@ -1,72 +1,80 @@
 import {ColorItem, ColorPalette, Meta} from '@storybook/blocks'
-import {PALETTE_COLORS as COLORS} from "@eloquent/tokens"
+import {
+    BLUE,
+    GREEN_DARK,
+    GREEN_LIGHT,
+    INFORMATIVE,
+    NEGATIVE,
+    NEUTRAL,
+    POSITIVE,
+    RED,
+    YELLOW
+} from "@eloquent/tokens/colors";
+
 
 <Meta title="Tokens/Colors"/>
 
 <ColorPalette>
+
     <ColorItem
         title="Neutral"
         subtitle=""
-        colors={COLORS.neutral.light}
-    />
-    <ColorItem
-        title="Neutral"
-        subtitle=""
-        colors={COLORS.neutral.black}
+        colors={NEUTRAL}
     />
 
     <ColorItem
         title="Green forest"
         subtitle=""
-        colors={COLORS.green.forest}
+        colors={GREEN_DARK}
     />
+
 
     <ColorItem
         title="Green sea"
         subtitle=""
-        colors={COLORS.green.sea}
+        colors={GREEN_LIGHT}
     />
+
 
     <ColorItem
         title="Blue sky"
         subtitle=""
-        colors={COLORS.blue.sky}
+        colors={BLUE}
     />
+
 
     <ColorItem
         title="Yellow sun"
         subtitle=""
-        colors={COLORS.yellow.sun}
+        colors={YELLOW}
     />
+
 
     <ColorItem
         title="Red land"
         subtitle=""
-        colors={COLORS.red.land}
+        colors={RED}
     />
+
 
     <ColorItem
         title="Positive"
         subtitle=""
-        colors={COLORS.positive}
+        colors={POSITIVE}
     />
+
 
     <ColorItem
         title="Negative"
         subtitle=""
-        colors={COLORS.negative}
+        colors={NEGATIVE}
     />
+
 
     <ColorItem
         title="feedback"
         subtitle="informative"
-        colors={COLORS.informative}
-    />
-
-    <ColorItem
-        title="brand"
-        subtitle=""
-        colors={COLORS.brand}
+        colors={INFORMATIVE}
     />
 
 </ColorPalette>

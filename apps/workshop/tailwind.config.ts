@@ -1,4 +1,4 @@
-import { eloquentPreset} from '@eloquent/tokens';
+import {config as EloquentPreset} from "../../packages/tokens/src/tailwind.config-preset"
 import type { Config }                                                                                         from "tailwindcss";
 
 module.exports = {
@@ -144,5 +144,5 @@ module.exports = {
 		}
 	},
 	plugins:  [ require( "tailwindcss-animate" ) ],
-	preset:   [eloquentPreset],
+	preset:   [EloquentPreset],
 } satisfies Config;

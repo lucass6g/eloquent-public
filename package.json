@@ -5,11 +5,11 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "web": "pnpm --filter web --",
     "workshop": "pnpm --filter workshop -- build",
     "changeset": "changeset",
     "publish": "changeset publish",
-    "version": "changeset version"
+    "version": "changeset version",
+    "clean": "turbo run clean"
   },
   "workspaces": [
     "packages/*"

@@ -35,15 +35,15 @@ export const buttonVariants = cva<ClassVariantsProps>(
 		variants: {
 			variant: {
 				primary: [
-					'text-base-light-pure',
+					'text-neutral-100',
 					'border-transparent',
-					'bg-base-dark-pure',
-					'hover:bg-base-dark-02',
+					'bg-positive-100',
+					'hover:bg-neutral-200',
 					'active:bg-base-light-01 active:text-base-dark-01',
 				],
 				secondary: [
-					'bg-base-dark-pure',
-					'text-base-dark-pure',
+					'bg-neutral-dark-100',
+					'text-neutral-dark-1000',
 					'border-base-light-02',
 					'hover:bg-base-light-02',
 					'active:border-base-light-02 bg-base-light-01',
@@ -76,8 +76,8 @@ export const buttonVariants = cva<ClassVariantsProps>(
 				variant: 'primary',
 				inverse: true,
 				class: [
-					'bg-base-light-pure',
-					'text-base-dark-pure',
+					'bg-neutral-100',
+					'text-neutral-1000',
 					'hover:bg-base-light-02',
 					'active:bg-base-light-03 active:text-base-dark-03',
 				],
@@ -87,11 +87,11 @@ export const buttonVariants = cva<ClassVariantsProps>(
 				inverse: true,
 				class: [
 					'bg-transparent',
-					'border-base-light-pure',
-					'text-base-light-pure',
+					'border-neutral-100',
+					'text-neutral-100',
 					'hover:bg-base-dark-03',
 					'active:bg-base-dark-01 active:text-base-light-01',
-					'disabled:bg-base-dark-pure disabled:opacity-50 disabled:border-base-light-02',
+					'disabled:bg-neutral-1000 disabled:opacity-50 disabled:border-base-light-02',
 				],
 			},
 		],

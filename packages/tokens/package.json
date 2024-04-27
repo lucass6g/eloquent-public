@@ -7,7 +7,6 @@
   "main": "./dist/index.js",
   "files": [
     "dist",
-    "src/colors/index.ts",
     "tailwind.config-preset.ts"
   ],
   "types": "./dist/index.d.ts",
@@ -22,6 +21,16 @@
         "types": "./dist/index.d.ts"
       }
     },
+    "./colors": {
+      "import": {
+        "default": "./dist/colors/index.mjs",
+        "types": "./dist/colors/index.d.mts"
+      },
+      "require": {
+        "default": "./dist/colors/index.js",
+        "types": "./dist/colors/index.d.ts"
+      }
+    },
     "./tailwind.config-preset": {
       "import": {
         "default": "./dist/tailwind.config-preset.mjs",
@@ -34,7 +43,8 @@
     }
   },
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "clean": "rm -rf dist"
   },
   "devDependencies": {
     "tsup": "^8.0.2",

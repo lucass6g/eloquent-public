@@ -30,12 +30,12 @@
     },
     "./typography": {
       "import": {
-        "types": "./dist/esm/components/index.d.mts",
-        "default": "./dist/esm/components/index.mjs"
+        "types": "./dist/esm/components/Typography/index.d.mts",
+        "default": "./dist/esm/components/Typography/index.mjs"
       },
       "require": {
-        "types": "./dist/cjs/components/index.d.ts",
-        "default": "./dist/cjs/components/index.js"
+        "types": "./dist/cjs/components/Typography/index.d.ts",
+        "default": "./dist/cjs/components/Typography/index.js"
       }
     }
   },
@@ -48,7 +48,8 @@
     "build": "concurrently \"npm run build:cjs\"  \"npm run build:esm\" \"npm run build:css\"",
     "test": "vitest",
     "coverage": "vitest run --coverage",
-    "test:ui": "vitest  --ui"
+    "test:ui": "vitest  --ui",
+    "clean": "rm -rf dist"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.2",

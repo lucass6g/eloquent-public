@@ -1,4 +1,4 @@
-import {ALERT, GREEN_DARK, GREEN_LIGHT, INFORMATIVE, NEGATIVE, NEUTRAL, POSITIVE, RED, BLUE, YELLOW} from './colors'
+import {ALERT, GREEN_DARK, GREEN_LIGHT, INFORMATIVE, NEGATIVE, NEUTRAL, POSITIVE, RED, BLUE, YELLOW} from './colors/'
 import {LINE_HEIGHT} from './line-height.ts'
 import {BORDER_WIDTH} from './border.ts'
 import {SPACING} from './spacing.ts'
