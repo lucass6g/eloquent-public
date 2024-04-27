@@ -11,9 +11,3 @@
     src: url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap') format('woff2');
     font-weight: 400;
 }
-
-@layer base {
-    p {
-        @apply text-4 leading-large font-barlow font-400
-    }
-}
