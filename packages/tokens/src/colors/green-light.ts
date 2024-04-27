@@ -1,4 +1,4 @@
-export const GREEN_SEA = {
+export const GREEN_LIGHT = {
 	100: "#DEF8E0",
 	200: "#BDF0C1",
 	300: "#A9F0AF",
@@ -9,4 +9,4 @@ export const GREEN_SEA = {
 	800: "#238E3A",
 	900: "#166D26",
 	1000: "#074E14"
-}
+} as const

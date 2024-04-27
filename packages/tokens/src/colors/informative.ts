@@ -4,4 +4,4 @@ export const INFORMATIVE = {
 	100: "#CCDDFF",
 	200: "#669AFF",
 	300: "#003499",
-}
+} as const

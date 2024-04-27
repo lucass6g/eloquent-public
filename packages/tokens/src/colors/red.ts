@@ -1,4 +1,4 @@
-export const RED_LAND = {
+export const RED = {
 	100: "#F7C2BB",
 	200: "#F19580",
 	300: "#F08679",
@@ -9,4 +9,4 @@ export const RED_LAND = {
 	800: "#A22320",
 	900: "#811519",
 	1000: "#600810"
-}
+} as const

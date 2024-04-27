@@ -3,4 +3,4 @@ export const ALERT = {
 	100: "#FFCE6E",
 	200: "#EEC800",
 	300: "#D98F00"
-}
+} as const

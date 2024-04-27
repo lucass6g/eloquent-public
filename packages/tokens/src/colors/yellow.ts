@@ -1,4 +1,4 @@
-export const YELLOW_SUN = {
+export const YELLOW = {
 	100: "#FFFFEB",
 	200: "#FBF8C9",
 	300: "#FAEFA7",
@@ -9,4 +9,4 @@ export const YELLOW_SUN = {
 	800: "#B78B1D",
 	900: "#936B13",
 	1000: "#6F4E09",
-}
+} as const

@@ -12,15 +12,15 @@ export const FONT_FAMILY = {
 };
 
 export const FONT_SIZE = {
-  xxxs: "12px",
-  xxs: "14px",
-  xs: "16px",
-  sm: "20px",
-  md: "24px",
-  lg: "32px",
-  xl: "40px",
-  xxl: "48px",
-  xxxl: "56px",
-  display: "64px",
-  giant: "80px",
+  3: "12px",
+  3.5: "14px",
+  4: "16px",
+  5: "20px",
+  6: "24px",
+  8: "32px",
+  10: "40px",
+  12: "48px",
+  14: "56px",
+  16: "64px",
+  20: "80px",
 };
