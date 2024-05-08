@@ -11,3 +11,13 @@
     src: url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap') format('woff2');
     font-weight: 400;
 }
+
+@layer base {
+    .font-barlow {
+        font-family: 'Barlow', sans-serif;
+    }
+
+    .font-clamp {
+        font-size: 10px
+    }
+}

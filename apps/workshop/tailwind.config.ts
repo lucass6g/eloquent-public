@@ -1,8 +1,7 @@
-import {config as EloquentPreset} from "../../packages/tokens/src/tailwind.config-preset"
+import {EloquentPreset} from "../../packages/tokens/src/tailwind.config-preset"
 import type { Config }                                                                                         from "tailwindcss";
 
 module.exports = {
-	darkMode: [ "class" ],
 	content:  [
 		"./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
 		"./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,67 +9,17 @@ module.exports = {
 		"node_modules/@eloquent/ui/dist/**/*.{js,ts,jsx,tsx}",
 	],
 	theme:    {
-		container: {
-			center:  true,
-			padding: "2rem",
-		},
 		extend: {
-			spacing: {
-				"inline-1": "4px",
-				"inline-2": "8px",
-				"inline-4": "16px",
-				"inline-6": "24px",
-				"inline-8": "32px",
-				"inline-10": "40px",
-				"inline-12": "48px",
-				"inline-16": "64px",
-				"inline-20": "80px",
-				"stack-1": "4px",
-				"stack-2": "8px",
-				"stack-4": "16px",
-				"stack-6": "24px",
-				"stack-8": "32px",
-				"stack-10": "40px",
-				"stack-12": "48px",
-				"stack-14": "56px",
-				"stack-16": "64px",
-				"stack-20": "80px",
-				"stack-30": "120px",
-				"stack-40": "160px",
-				"stack-50": "200px",
-			} ,
-			screens: {
-				"tablet":"600px",
-				"laptop":"960px",
-				"desktop": "1272px",
-				"full":    "1680px",
-			},
 			letterSpacing:            {
 				small:  "-1px",
 				medium: "-2px",
 				large:  "-3px",
-			},
-			lineHeight:               {
-				default:      "100%",
-				tiny:         "115%",
-				medium:       "120%",
-				large:        "133%",
-				distant:      "150%",
-				superdistant: "170%",
 			},
 			transitionTimingFunction: {
 				DEFAULT: "cubic-bezier(0.48, 0, 0.48, 1)",
 			},
 			transitionDuration:       {
 				DEFAULT: "0.275s",
-			},
-			borderRadius:             {
-				none:   "0px",
-				pill:   "500px",
-				circle: "50%",
-				lg:     "var(--radius)",
-				md:     "calc(var(--radius) - 2px)",
-				sm:     "calc(var(--radius) - 4px)",
 			},
 			opacity:                  {
 				0:               "0",

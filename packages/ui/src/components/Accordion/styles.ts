@@ -5,8 +5,8 @@ type ClassVariants = {
 }
 
 export const accordionTriggerClasses = cva([
-  'border-r-base-dark-01',
-  'text-base-dark-pure font-regular leading-distant',
+  'border-r-feedback-informative-100',
+  'text-feedback-informative-100 font-regular leading-distant',
   'w-full',
   'opacity-100',
   'transition duration-300 group ease-[cubic-bezier(0.87,_0,_0.13,_1)]',
@@ -15,8 +15,8 @@ export const accordionTriggerClasses = cva([
 export const accordionContentClasses = cva<ClassVariants>([] as string[], {
   variants: {
     inverse: {
-      true: ['text-base-light-pure'] as string[],
-      false: ['text-base-dark-pure'] as string[],
+      true: ['feedback-informative-pure bg-feedback-informative-pure'] as string[],
+      false: ['bg-feedback-informative-pure'] as string[],
     },
   },
 })
@@ -26,8 +26,8 @@ export const accordionDividerClasses = cva<ClassVariants>(
   {
     variants: {
       inverse: {
-        true: ['bg-base-light-pure'] as string[],
-        false: ['bg-base-dark-pure'] as string[],
+        true: ['bg-neutral-100'] as string[],
+        false: ['bg-neutral-1000'] as string[],
       },
     },
   },

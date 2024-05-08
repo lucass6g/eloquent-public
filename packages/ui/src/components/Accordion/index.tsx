@@ -64,3 +64,4 @@ export const Accordion = {
 	Trigger: AccordionTrigger,
 	Content: AccordionContent,
 }
+

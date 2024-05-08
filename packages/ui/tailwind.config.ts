@@ -1,6 +1,6 @@
 import type { Config} from "tailwindcss";
 import {fontSize} from "tailwindcss/defaultTheme";
-import {config as EloquentPreset} from "../tokens/src/tailwind.config-preset"
+import {EloquentPreset} from "../tokens/src/tailwind.config-preset"
 
 module.exports = {
     content: [
@@ -12,7 +12,7 @@ module.exports = {
         extend: {
 			fontSize: fontSize,
             fontFamily: {
-                barlow: ['"Barlow"', "sans-serif"],
+                barlow: ["Barlow", "sans-serif"],
             },
             fontWeight: {
                 300: "300",
@@ -113,5 +113,4 @@ module.exports = {
     },
     plugins: [require("tailwindcss-animate")],
     presets: [EloquentPreset],
-    important: true,
 } satisfies Config;
