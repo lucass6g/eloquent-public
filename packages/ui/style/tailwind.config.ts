@@ -1,4 +1,4 @@
-import { SPACING, COLORS, FONT_WEIGHT, FONT_FAMILY, FONT_SIZE } from "@eloquent/tokens";
+import { SPACING, FONT_WEIGHT, FONT_FAMILY, FONT_SIZE, COLORS } from "@eloquent/tokens";
 import type { Config } from "tailwindcss";
 
 module.exports = function (app) {
