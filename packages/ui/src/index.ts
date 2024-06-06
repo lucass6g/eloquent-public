@@ -1,9 +1,6 @@
 import "../style/styles.css";
 
-// component exports
-// export {  Button } from "./components/Button"
-// export {Typography} from './components/Typography'
-// export {ButtonIcon} from  './components/ButtonIcon'
-// export {ProgressBar} from './components/ProgressBar'
-// export {ProgressIndicator} from './components/ProgressIndicator'
-// export {Accordion} from './components/Accordion'
+export * as Accordion from "./components/accordion";
+export * as Avatar from "./components/avatar";
+export * as Breadcrumb from "./components/breadcrumb";
+export * as Button from "./components/button";
