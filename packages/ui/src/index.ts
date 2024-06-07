@@ -1,8 +1,25 @@
-import "../global.css";
+import "../style/styles.css";
 
-// component exports
-export {  Button } from "./components/Button"
-export {ButtonIcon} from  './components/ButtonIcon'
-export {ProgressBar} from './components/ProgressBar'
-export {ProgressIndicator} from './components/ProgressIndicator'
-export {Accordion} from './components/Accordion'
+export * as Accordion from "./components/accordion";
+export * as Avatar from "./components/avatar";
+export * as Breadcrumb from "./components/breadcrumb";
+export { Button } from "./components/button";
+export { Calendar } from "./components/calendar";
+export * as Carousel from "./components/carousel";
+export * as Checkbox from "./components/checkbox";
+export * as Dialog from "./components/dialog";
+export * as DropdownMenu from "./components/dropdown-menu";
+export { Input } from "./components/input";
+export { Label } from "./components/label";
+export * as Menubar from "./components/menubar";
+export { Progress } from "./components/progress";
+export * as RadioGroup from "./components/radio-group";
+export * as Select from "./components/select";
+export { Separator } from "./components/separator";
+export * as Sheet from "./components/sheet";
+export { Toaster } from "./components/sonner";
+export { Switch } from "./components/switch";
+export * as Table from "./components/table";
+export * as Tabs from "./components/tabs";
+export { Textarea } from "./components/textarea";
+export * as Tooltip from "./components/tooltip";

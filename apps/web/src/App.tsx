@@ -1,11 +1,7 @@
-import { Button } from "@eloquent/ui";
-import {Typography} from "@eloquent/ui/typography"
 
 function App() {
   return (
-    <div>
-      <Typography.Heading size={"large"}>Testando Heading</Typography.Heading>
-      <Button variant="secondary" onClick={() => console.log('Clicando')}>Testando Button</Button>
+    <div className={"bg-red-100 w-[100px] h-[100px]"}>
     </div>
   )
 }

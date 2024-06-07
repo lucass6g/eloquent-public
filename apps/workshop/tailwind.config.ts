@@ -5,6 +5,7 @@ module.exports = {
 	content:  [
 		"./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
 		"./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+		"./src/components/stories/**/*.{js,ts,jsx,tsx,mdx}",
 		"./src/**/*.{js,ts,jsx,tsx,mdx}",
 		"node_modules/@eloquent/ui/dist/**/*.{js,ts,jsx,tsx}",
 	],
