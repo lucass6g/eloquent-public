@@ -24,7 +24,6 @@
     },
     "./tailwind": "./tailwind.config.js",
     "./postcss": "./postcss.config.js",
-    "./styles": "./style/styles.css",
     "./style": {
       "import": "./tw.css",
       "require": "./tw.css"
