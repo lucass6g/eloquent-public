@@ -13,7 +13,7 @@
     "lint": "eslint . --cache"
   },
   "devDependencies": {
-    "@eloquent/tokens": "^1.0.0",
+    "@eloquent/tokens": "workspace:*",
     "tailwindcss": "^3.4.3",
     "autoprefixer": "^10.4.19",
     "@types/node": "^20.11.22",

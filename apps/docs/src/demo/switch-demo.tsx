@@ -1,5 +1,4 @@
-import { Switch } from "../switch";
-import { Label } from "../label";
+import { Switch, Label } from "@eloquent/ui";
 import { useState } from "react";
 
 export function SwitchDemo() {

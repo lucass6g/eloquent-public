@@ -1,4 +1,4 @@
-import { Button, type ButtonProps } from "../button";
+import { Button, type ButtonProps } from "@eloquent/ui";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Plus } from "lucide-react";
 
@@ -71,7 +71,7 @@ const meta: Meta<ButtonProps> = {
       description: "Se o botão está desabilitado",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: false },
+        defaultValue: { summary: "s" },
       },
     },
   },
@@ -132,7 +132,7 @@ export const Icon: Story = {
   },
   argTypes: {
     children: {
-      control: { type: "none" },
+      control: { type: "text" },
     },
   },
 };

@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Calendar as CalendarComponent } from "../calendar";
+import { Calendar as CalendarComponent } from "@eloquent/ui";
 
 //meta
 const meta = {
