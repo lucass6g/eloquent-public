@@ -18,105 +18,94 @@ import {
 import { Button } from "../button";
 import {
   DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuPortal,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
 } from "../dropdown-menu";
 
 export function DropdownMenuDemo() {
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
+    <DropdownMenu.Root>
+      <DropdownMenu.Trigger asChild>
         <Button variant="outline">Clique aqui</Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent className="w-56">
-        <DropdownMenuLabel>Minha conta</DropdownMenuLabel>
-        <DropdownMenuSeparator />
-        <DropdownMenuGroup>
-          <DropdownMenuItem>
+      </DropdownMenu.Trigger>
+      <DropdownMenu.Content className="w-56">
+        <DropdownMenu.Label>Minha conta</DropdownMenu.Label>
+        <DropdownMenu.Separator />
+        <DropdownMenu.Group>
+          <DropdownMenu.Item>
             <User className="mr-2 h-4 w-4" />
             <span>Perfil</span>
-            <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
+            <DropdownMenu.Shortcut>⇧⌘P</DropdownMenu.Shortcut>
+          </DropdownMenu.Item>
+          <DropdownMenu.Item>
             <CreditCard className="mr-2 h-4 w-4" />
             <span>Contas</span>
-            <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
+            <DropdownMenu.Shortcut>⌘B</DropdownMenu.Shortcut>
+          </DropdownMenu.Item>
+          <DropdownMenu.Item>
             <Settings className="mr-2 h-4 w-4" />
             <span>Configurações</span>
-            <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
+            <DropdownMenu.Shortcut>⌘S</DropdownMenu.Shortcut>
+          </DropdownMenu.Item>
+          <DropdownMenu.Item>
             <Keyboard className="mr-2 h-4 w-4" />
             <span>Atalhos de teclado</span>
-            <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
-          </DropdownMenuItem>
-        </DropdownMenuGroup>
-        <DropdownMenuSeparator />
-        <DropdownMenuGroup>
-          <DropdownMenuItem>
+            <DropdownMenu.Shortcut>⌘K</DropdownMenu.Shortcut>
+          </DropdownMenu.Item>
+        </DropdownMenu.Group>
+        <DropdownMenu.Separator />
+        <DropdownMenu.Group>
+          <DropdownMenu.Item>
             <Users className="mr-2 h-4 w-4" />
             <span>Time</span>
-          </DropdownMenuItem>
-          <DropdownMenuSub>
-            <DropdownMenuSubTrigger>
+          </DropdownMenu.Item>
+          <DropdownMenu.Sub>
+            <DropdownMenu.SubTrigger>
               <UserPlus className="mr-2 h-4 w-4" />
               <span>Convidar amigos</span>
-            </DropdownMenuSubTrigger>
-            <DropdownMenuPortal>
-              <DropdownMenuSubContent>
-                <DropdownMenuItem>
+            </DropdownMenu.SubTrigger>
+            <DropdownMenu.Portal>
+              <DropdownMenu.SubContent>
+                <DropdownMenu.Item>
                   <Mail className="mr-2 h-4 w-4" />
                   <span>Email</span>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
+                </DropdownMenu.Item>
+                <DropdownMenu.Item>
                   <MessageSquare className="mr-2 h-4 w-4" />
                   <span>Messagem</span>
-                </DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem>
+                </DropdownMenu.Item>
+                <DropdownMenu.Separator />
+                <DropdownMenu.Item>
                   <PlusCircle className="mr-2 h-4 w-4" />
                   <span>Expandir...</span>
-                </DropdownMenuItem>
-              </DropdownMenuSubContent>
-            </DropdownMenuPortal>
-          </DropdownMenuSub>
-          <DropdownMenuItem>
+                </DropdownMenu.Item>
+              </DropdownMenu.SubContent>
+            </DropdownMenu.Portal>
+          </DropdownMenu.Sub>
+          <DropdownMenu.Item>
             <Plus className="mr-2 h-4 w-4" />
             <span>Novo time</span>
-            <DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
-          </DropdownMenuItem>
-        </DropdownMenuGroup>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem>
+            <DropdownMenu.Shortcut>⌘+T</DropdownMenu.Shortcut>
+          </DropdownMenu.Item>
+        </DropdownMenu.Group>
+        <DropdownMenu.Separator />
+        <DropdownMenu.Item>
           <Github className="mr-2 h-4 w-4" />
           <span>GitHub</span>
-        </DropdownMenuItem>
-        <DropdownMenuItem>
+        </DropdownMenu.Item>
+        <DropdownMenu.Item>
           <LifeBuoy className="mr-2 h-4 w-4" />
           <span>Suporte</span>
-        </DropdownMenuItem>
-        <DropdownMenuItem disabled>
+        </DropdownMenu.Item>
+        <DropdownMenu.Item disabled>
           <Cloud className="mr-2 h-4 w-4" />
           <span>API</span>
-        </DropdownMenuItem>
-        <DropdownMenuSeparator />
-        <DropdownMenuItem>
+        </DropdownMenu.Item>
+        <DropdownMenu.Separator />
+        <DropdownMenu.Item>
           <LogOut className="mr-2 h-4 w-4" />
           <span>Log out</span>
-          <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
-        </DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+          <DropdownMenu.Shortcut>⇧⌘Q</DropdownMenu.Shortcut>
+        </DropdownMenu.Item>
+      </DropdownMenu.Content>
+    </DropdownMenu.Root>
   );
 }
