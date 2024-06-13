@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "../../packages/config/base.tsconfig.json",
-  "include": ["src", "setup.ts"],
+  "include": ["."],
   "exclude": ["dist", "build", "node_modules"],
   "display": "Default",
   "compilerOptions": {
@@ -25,7 +25,10 @@
 
     "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",
-
+    "paths": {
+      "@ui/*": ["./src/*"],
+      "@ui/components/ui/*": ["./src/components/ui/*"],
+    },
     "incremental": false,
     "isolatedModules": true
   }

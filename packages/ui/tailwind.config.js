@@ -1,16 +1,13 @@
-import type { Config} from "tailwindcss";
-import {fontSize} from "tailwindcss/defaultTheme";
-import {EloquentPreset} from "../tokens/src/tailwind.config-preset"
-
+import {EloquentPreset} from '../tokens/src/tailwind.config-preset'
 module.exports = {
     content: [
         "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/**/*.{js,ts,jsx,tsx,mdx}",
+        "node_modules/@eloquent/ui/dist/**/*.{js,ts,jsx,tsx}"
     ],
     theme: {
         extend: {
-			fontSize: fontSize,
             fontFamily: {
                 barlow: ["Barlow", "sans-serif"],
             },
@@ -39,4 +36,4 @@ module.exports = {
     },
     plugins: [require("tailwindcss-animate")],
     presets: [EloquentPreset],
-} satisfies Config;
+}

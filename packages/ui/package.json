@@ -6,7 +6,7 @@
   "private": false,
   "files": [
     "dist",
-    "tailwind.config.ts",
+    "tailwind.config.js",
     "postcss.config.js",
     "style.css"
   ],

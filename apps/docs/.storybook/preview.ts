@@ -1,4 +1,4 @@
-import "../../../packages/ui/global.css"
+import "../../../packages/ui/src/global.css"
 import {Preview} from '@storybook/react'
 
 const preview: Preview = {
