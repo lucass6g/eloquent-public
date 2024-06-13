@@ -10,7 +10,7 @@ import {
 
 import { cn } from "../lib/utils"
 
-const ContextMenu = ContextMenuPrimitive.Root
+const Root = ContextMenuPrimitive.Root
 
 const ContextMenuTrigger = ContextMenuPrimitive.Trigger
 
@@ -185,20 +185,20 @@ const ContextMenuShortcut = ({
 }
 ContextMenuShortcut.displayName = "ContextMenuShortcut"
 
-export {
-  ContextMenu,
-  ContextMenuTrigger,
-  ContextMenuContent,
-  ContextMenuItem,
-  ContextMenuCheckboxItem,
-  ContextMenuRadioItem,
-  ContextMenuLabel,
-  ContextMenuSeparator,
-  ContextMenuShortcut,
-  ContextMenuGroup,
-  ContextMenuPortal,
-  ContextMenuSub,
-  ContextMenuSubContent,
-  ContextMenuSubTrigger,
-  ContextMenuRadioGroup,
+export const ContextMenu = {
+  Root,
+  Trigger: ContextMenuTrigger,
+  Content: ContextMenuContent,
+  Item: ContextMenuItem,
+  CheckboxItem: ContextMenuCheckboxItem,
+  RadioItem: ContextMenuRadioItem,
+  Label: ContextMenuLabel,
+  Separator: ContextMenuSeparator,
+  Shortcut: ContextMenuShortcut,
+  Group: ContextMenuGroup,
+  Portal: ContextMenuPortal,
+  Sub: ContextMenuSub,
+  SubContent: ContextMenuSubContent,
+  SubTrigger: ContextMenuSubTrigger,
+  RadioGroup: ContextMenuRadioGroup,
 }

@@ -6,7 +6,7 @@ import { OTPInput, OTPInputContext } from "input-otp"
 
 import { cn } from "../lib/utils"
 
-const InputOTP = React.forwardRef<
+const Root = React.forwardRef<
   React.ElementRef<typeof OTPInput>,
   React.ComponentPropsWithoutRef<typeof OTPInput>
 >(({ className, containerClassName, ...props }, ref) => (
@@ -20,7 +20,7 @@ const InputOTP = React.forwardRef<
     {...props}
   />
 ))
-InputOTP.displayName = "InputOTP"
+Root.displayName = "InputOTP.Root"
 
 const InputOTPGroup = React.forwardRef<
   React.ElementRef<"div">,
@@ -28,7 +28,7 @@ const InputOTPGroup = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div ref={ref} className={cn("flex items-center", className)} {...props} />
 ))
-InputOTPGroup.displayName = "InputOTPGroup"
+InputOTPGroup.displayName = "InputOTP.Group"
 
 const InputOTPSlot = React.forwardRef<
   React.ElementRef<"div">,
@@ -57,7 +57,7 @@ const InputOTPSlot = React.forwardRef<
     </div>
   )
 })
-InputOTPSlot.displayName = "InputOTPSlot"
+InputOTPSlot.displayName = "InputOTP.Slot"
 
 const InputOTPSeparator = React.forwardRef<
   React.ElementRef<"div">,
@@ -67,6 +67,11 @@ const InputOTPSeparator = React.forwardRef<
     <DashIcon />
   </div>
 ))
-InputOTPSeparator.displayName = "InputOTPSeparator"
+InputOTPSeparator.displayName = "InputOTP.Separator"
 
-export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
+export const InputOTP = {
+    Root,
+    Group: InputOTPGroup,
+    Slot: InputOTPSlot,
+    Separator: InputOTPSeparator
+}

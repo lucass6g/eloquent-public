@@ -5,7 +5,7 @@ import * as ScrollAreaPrimitive from "@radix-ui/react-scroll-area"
 
 import { cn } from "../lib/utils"
 
-const ScrollArea = React.forwardRef<
+const RootScrollArea = React.forwardRef<
   React.ElementRef<typeof ScrollAreaPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof ScrollAreaPrimitive.Root>
 >(({ className, children, ...props }, ref) => (
@@ -21,7 +21,7 @@ const ScrollArea = React.forwardRef<
     <ScrollAreaPrimitive.Corner />
   </ScrollAreaPrimitive.Root>
 ))
-ScrollArea.displayName = ScrollAreaPrimitive.Root.displayName
+RootScrollArea.displayName = ScrollAreaPrimitive.Root.displayName
 
 const ScrollBar = React.forwardRef<
   React.ElementRef<typeof ScrollAreaPrimitive.ScrollAreaScrollbar>,
@@ -45,4 +45,7 @@ const ScrollBar = React.forwardRef<
 ))
 ScrollBar.displayName = ScrollAreaPrimitive.ScrollAreaScrollbar.displayName
 
-export { ScrollArea, ScrollBar }
+export const ScrollArea = {
+  Root: RootScrollArea,
+  ScrollBar
+}

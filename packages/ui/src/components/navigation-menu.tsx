@@ -5,7 +5,7 @@ import { cva } from "class-variance-authority"
 
 import { cn } from "../lib/utils"
 
-const NavigationMenu = React.forwardRef<
+const Root = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
 >(({ className, children, ...props }, ref) => (
@@ -21,7 +21,7 @@ const NavigationMenu = React.forwardRef<
     <NavigationMenuViewport />
   </NavigationMenuPrimitive.Root>
 ))
-NavigationMenu.displayName = NavigationMenuPrimitive.Root.displayName
+Root.displayName = NavigationMenuPrimitive.Root.displayName
 
 const NavigationMenuList = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.List>,
@@ -115,14 +115,14 @@ const NavigationMenuIndicator = React.forwardRef<
 NavigationMenuIndicator.displayName =
   NavigationMenuPrimitive.Indicator.displayName
 
-export {
+export const NavigationMenu = {
   navigationMenuTriggerStyle,
-  NavigationMenu,
-  NavigationMenuList,
-  NavigationMenuItem,
-  NavigationMenuContent,
-  NavigationMenuTrigger,
-  NavigationMenuLink,
-  NavigationMenuIndicator,
-  NavigationMenuViewport,
+  Root,
+  List: NavigationMenuList,
+  Item: NavigationMenuItem,
+  Content: NavigationMenuContent,
+  Trigger: NavigationMenuTrigger,
+  Link: NavigationMenuLink,
+  Indicator: NavigationMenuIndicator,
+  Viewport: NavigationMenuViewport,
 }

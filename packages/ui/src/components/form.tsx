@@ -11,9 +11,9 @@ import {
 } from "react-hook-form"
 
 import { cn } from "../lib/utils"
-import { Label } from "@/components/ui/label"
+import { Label } from "./label"
 
-const Form = FormProvider
+const Provider = FormProvider
 
 type FormFieldContextValue<
   TFieldValues extends FieldValues = FieldValues,
@@ -164,13 +164,13 @@ const FormMessage = React.forwardRef<
 })
 FormMessage.displayName = "FormMessage"
 
-export {
+export const Form = {
   useFormField,
-  Form,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormDescription,
-  FormMessage,
-  FormField,
+  Provider,
+  Item:FormItem,
+  Label:FormLabel,
+  Control:FormControl,
+  Description:FormDescription,
+  Message:FormMessage,
+  Field:FormField,
 }

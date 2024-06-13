@@ -5,7 +5,7 @@ import { Drawer as DrawerPrimitive } from "vaul"
 
 import { cn } from "../lib/utils"
 
-const Drawer = ({
+const Root = ({
   shouldScaleBackground = true,
   ...props
 }: React.ComponentProps<typeof DrawerPrimitive.Root>) => (
@@ -14,7 +14,7 @@ const Drawer = ({
     {...props}
   />
 )
-Drawer.displayName = "Drawer"
+Root.displayName = "Drawer"
 
 const DrawerTrigger = DrawerPrimitive.Trigger
 
@@ -104,15 +104,15 @@ const DrawerDescription = React.forwardRef<
 ))
 DrawerDescription.displayName = DrawerPrimitive.Description.displayName
 
-export {
-  Drawer,
-  DrawerPortal,
-  DrawerOverlay,
-  DrawerTrigger,
-  DrawerClose,
-  DrawerContent,
-  DrawerHeader,
-  DrawerFooter,
-  DrawerTitle,
-  DrawerDescription,
+export const Drawer = {
+  Root,
+  Portal: DrawerPortal,
+  Overlay: DrawerOverlay,
+  Trigger: DrawerTrigger,
+  Close: DrawerClose,
+  Content: DrawerContent,
+  Header: DrawerHeader,
+  Footer: DrawerFooter,
+  Title: DrawerTitle,
+  Description: DrawerDescription,
 }
