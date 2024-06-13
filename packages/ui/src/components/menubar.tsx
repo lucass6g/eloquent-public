@@ -20,7 +20,7 @@ const MenubarSub = MenubarPrimitive.Sub
 
 const MenubarRadioGroup = MenubarPrimitive.RadioGroup
 
-const Menubar = React.forwardRef<
+const Root = React.forwardRef<
   React.ElementRef<typeof MenubarPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof MenubarPrimitive.Root>
 >(({ className, ...props }, ref) => (
@@ -33,7 +33,7 @@ const Menubar = React.forwardRef<
     {...props}
   />
 ))
-Menubar.displayName = MenubarPrimitive.Root.displayName
+Root.displayName = MenubarPrimitive.Root.displayName
 
 const MenubarTrigger = React.forwardRef<
   React.ElementRef<typeof MenubarPrimitive.Trigger>,
@@ -220,21 +220,21 @@ const MenubarShortcut = ({
 }
 MenubarShortcut.displayname = "MenubarShortcut"
 
-export {
-  Menubar,
-  MenubarMenu,
-  MenubarTrigger,
-  MenubarContent,
-  MenubarItem,
-  MenubarSeparator,
-  MenubarLabel,
-  MenubarCheckboxItem,
-  MenubarRadioGroup,
-  MenubarRadioItem,
-  MenubarPortal,
-  MenubarSubContent,
-  MenubarSubTrigger,
-  MenubarGroup,
-  MenubarSub,
-  MenubarShortcut,
+export const Menubar = {
+  Root,
+  Menu: MenubarMenu,
+  Trigger: MenubarTrigger,
+  Content: MenubarContent,
+  Item: MenubarItem,
+  Separator: MenubarSeparator,
+  Label: MenubarLabel,
+  CheckboxItem: MenubarCheckboxItem,
+  RadioGroup: MenubarRadioGroup,
+  RadioItem: MenubarRadioItem,
+  Portal: MenubarPortal,
+  SubContent: MenubarSubContent,
+  SubTrigger: MenubarSubTrigger,
+  Group: MenubarGroup,
+  Sub: MenubarSub,
+  Shortcut: MenubarShortcut,
 }

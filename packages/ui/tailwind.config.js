@@ -40,6 +40,9 @@ module.exports = {
                 600: "600",
                 700: "700",
             },
+            borderRadius: {
+                radius: "0.5rem",
+            },
             keyframes: {
                 "accordion-down": {
                     from: {height: "0"},

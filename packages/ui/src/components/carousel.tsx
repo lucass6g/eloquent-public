@@ -9,7 +9,7 @@ import useEmblaCarousel, {
 import { cn } from "../lib/utils"
 import { Button } from "./button"
 
-type CarouselApi = UseEmblaCarouselType[1]
+export type CarouselApi = UseEmblaCarouselType[1]
 type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
 type CarouselOptions = UseCarouselParameters[0]
 type CarouselPlugin = UseCarouselParameters[1]
@@ -42,7 +42,7 @@ function useCarousel() {
   return context
 }
 
-const Carousel = React.forwardRef<
+const RootCarousel = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement> & CarouselProps
 >(
@@ -148,7 +148,7 @@ const Carousel = React.forwardRef<
     )
   }
 )
-Carousel.displayName = "Carousel"
+RootCarousel.displayName = "Carousel"
 
 const CarouselContent = React.forwardRef<
   HTMLDivElement,
@@ -252,11 +252,10 @@ const CarouselNext = React.forwardRef<
 })
 CarouselNext.displayName = "CarouselNext"
 
-export {
-  type CarouselApi,
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
+export const Carousel = {
+  Root: RootCarousel,
+  Content: CarouselContent,
+  Item: CarouselItem,
+  Previous: CarouselPrevious,
+  Next: CarouselNext,
 }

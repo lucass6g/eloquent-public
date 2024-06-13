@@ -6,7 +6,7 @@ import * as RadioGroupPrimitive from "@radix-ui/react-radio-group"
 
 import { cn } from "../lib/utils"
 
-const RadioGroup = React.forwardRef<
+const Root = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
 >(({ className, ...props }, ref) => {
@@ -18,7 +18,7 @@ const RadioGroup = React.forwardRef<
     />
   )
 })
-RadioGroup.displayName = RadioGroupPrimitive.Root.displayName
+Root.displayName = RadioGroupPrimitive.Root.displayName
 
 const RadioGroupItem = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Item>,
@@ -41,4 +41,7 @@ const RadioGroupItem = React.forwardRef<
 })
 RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName
 
-export { RadioGroup, RadioGroupItem }
+export const RadioGroup = {
+  Root,
+  Item: RadioGroupItem
+}
