@@ -9,27 +9,27 @@ export const EloquentPreset = {
         "node_modules/@eloquent/ui/dist/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-        colors: {
-            feedback: {
-                informative: INFORMATIVE,
-                positive: POSITIVE,
-                alert: ALERT,
-                negative: NEGATIVE
-            },
-            neutral: NEUTRAL,
-            green: {
-                light: GREEN_LIGHT,
-                dark: GREEN_DARK
-            },
-            red: RED,
-            blue: BLUE,
-            yellow: YELLOW
-        },
         spacing: SPACING,
         extend: {
             lineHeight: LINE_HEIGHT,
             borderWidth: BORDER_WIDTH,
             fontSize: FONT_SIZE,
+            colors: {
+                feedback: {
+                    informative: INFORMATIVE,
+                    positive: POSITIVE,
+                    alert: ALERT,
+                    negative: NEGATIVE
+                },
+                neutral: NEUTRAL,
+                green: {
+                    light: GREEN_LIGHT,
+                    dark: GREEN_DARK
+                },
+                red: RED,
+                blue: BLUE,
+                yellow: YELLOW
+            },
         },
     },
 }
