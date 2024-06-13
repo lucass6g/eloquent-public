@@ -58,10 +58,14 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-!/packages/ui/node_modules/
-!/node_modules/
-!/packages/tokens/node_modules/*
-!/packages/react/node_modules/
-!/apps/docs/node_modules/
+/packages/ui/node_modules/
+/node_modules/
+/packages/tokens/node_modules/*
+/packages/react/node_modules/
+/packages/react/dist/
+/packages/tokens/dist/
+/packages/ui/dist/
+/apps/docs/node_modules/
 /pnpm-lock.yaml
 /node_modules/*
+/.turbo/
