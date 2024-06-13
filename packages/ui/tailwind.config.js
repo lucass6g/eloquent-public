@@ -1,13 +1,35 @@
-import {EloquentPreset} from '../tokens/src/tailwind.config-preset'
+import {SPACING, LINE_HEIGHT, FONT_SIZE, BORDER_WIDTH} from '../tokens/src'
+import {ALERT, BLUE, GREEN_DARK, GREEN_LIGHT, INFORMATIVE, NEGATIVE, NEUTRAL, POSITIVE, RED, YELLOW} from '../tokens/src/colors'
+
 module.exports = {
     content: [
         "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
         "./src/**/*.{js,ts,jsx,tsx,mdx}",
-        "node_modules/@eloquent/ui/dist/**/*.{js,ts,jsx,tsx}"
+        "node_modules/@eloquent/ui/dist/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
         extend: {
+            lineHeight: LINE_HEIGHT,
+            borderWidth: BORDER_WIDTH,
+            fontSize: FONT_SIZE,
+            spacing: SPACING,
+            colors: {
+                feedback: {
+                    informative: INFORMATIVE,
+                    positive: POSITIVE,
+                    alert: ALERT,
+                    negative: NEGATIVE
+                },
+                neutral: NEUTRAL,
+                green: {
+                    light: GREEN_LIGHT,
+                    dark: GREEN_DARK
+                },
+                red: RED,
+                blue: BLUE,
+                yellow: YELLOW
+            },
             fontFamily: {
                 barlow: ["Barlow", "sans-serif"],
             },
@@ -35,5 +57,4 @@ module.exports = {
         },
     },
     plugins: [require("tailwindcss-animate")],
-    presets: [EloquentPreset],
 }

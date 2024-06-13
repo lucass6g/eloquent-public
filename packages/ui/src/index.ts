@@ -1,4 +1,4 @@
-export * as Accordion from "./components/accordion";
+export {Accordion} from "./components/accordion";
 export * as Avatar from "./components/avatar";
 export * as Breadcrumb from "./components/breadcrumb";
 export { Button } from "./components/button";

@@ -26,9 +26,10 @@
     "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",
     "paths": {
-      "@ui/*": ["./src/*"],
-      "@ui/components/ui/*": ["./src/components/ui/*"],
+      "@ui/*": ["src/*"],
+      "@ui/components/ui/*": ["src/components/ui/*"]
     },
+    "baseUrl": ".",
     "incremental": false,
     "isolatedModules": true
   }

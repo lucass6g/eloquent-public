@@ -15,8 +15,8 @@ function getAbsolutePath(value:string) {
 const config: StorybookConfig = {
   stories: [{
     directory: "../../../packages/ui/src/components/**",
-    titlePrefix: "UI",
-    files: "*.@(mdx|stories.@(ts|tsx))"
+    titlePrefix: "Eloquent",
+    files: "*.@(mdx|stories.@(ts|tsx))",
   }],
   addons: [
     getAbsolutePath("@storybook/addon-links"),
