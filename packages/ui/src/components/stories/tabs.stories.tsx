@@ -2,18 +2,18 @@ import { Meta, StoryObj } from "@storybook/react";
 import { Button } from "../button";
 import { Input } from "../input";
 import { Label } from "../label";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "../tabs";
+import { Tabs } from "../tabs";
 
 const meta = {
   title: "Tabs",
   component: () => (
     <div className="flex w-[400px]">
-      <Tabs defaultValue="login" className="w-full">
-        <TabsList className="flex w-full justify-start gap-4 bg-gray pb-6">
-          <TabsTrigger value="login">Entrar</TabsTrigger>
-          <TabsTrigger value="signup">Cadastrar</TabsTrigger>
-        </TabsList>
-        <TabsContent value="login">
+      <Tabs.Root defaultValue="login" className="w-full">
+        <Tabs.List className="flex w-full justify-start gap-4 bg-gray pb-6">
+          <Tabs.Trigger value="login">Entrar</Tabs.Trigger>
+          <Tabs.Trigger value="signup">Cadastrar</Tabs.Trigger>
+        </Tabs.List>
+        <Tabs.Content value="login">
           <div className="grid gap-3 border px-4 py-6 rounded-lg">
             <p className="text-balance text-muted-foreground text-[#64748B]">
               Insira suas credenciais para acessar o nosso super site mais
@@ -59,8 +59,8 @@ const meta = {
               </Button>
             </div>
           </div>
-        </TabsContent>
-        <TabsContent value="signup">
+        </Tabs.Content>
+        <Tabs.Content value="signup">
           <div className="grid gap-3 border px-4 py-6 rounded-lg">
             <p className="text-balance text-muted-foreground text-[#64748B]">
               Aproveite o melhor do cartão do brasileiro agora!
@@ -141,8 +141,8 @@ const meta = {
               </Button>
             </div>
           </div>
-        </TabsContent>
-      </Tabs>
+        </Tabs.Content>
+      </Tabs.Root>
     </div>
   ),
   parameters: {
