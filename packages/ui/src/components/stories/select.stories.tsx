@@ -10,7 +10,7 @@ import {
 } from "../select";
 
 const meta = {
-  title: "components/Select",
+  title: "Select",
   component: () => (
     <Select>
       <SelectTrigger className="w-[180px]">

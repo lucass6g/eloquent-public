@@ -7,7 +7,7 @@ type ButtonVariant = Required<ButtonProps["variant"]>;
 type ButtonSize = Required<ButtonProps["size"]>;
 
 const meta: Meta<ButtonProps> = {
-  title: "components/Button",
+  title: "Button",
   component: Button,
   args: {
     children: "Clique aqui",

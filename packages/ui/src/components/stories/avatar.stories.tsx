@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { Avatar, AvatarFallback, AvatarImage } from "../avatar";
 
 const meta = {
-  title: "components/Avatar",
+  title: "Avatar",
   render: () => (
     <Avatar>
       <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
