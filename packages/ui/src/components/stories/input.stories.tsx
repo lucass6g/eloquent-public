@@ -79,7 +79,7 @@ export const InputDisabled: Story = {
 
 export const InputWithLabel: Story = {
   args: {},
-  render: function (args) {
+  render: function () {
     return (
       <div className="grid w-full max-w-sm items-center gap-1.5">
         <Label htmlFor="email">Email</Label>
@@ -91,7 +91,7 @@ export const InputWithLabel: Story = {
 
 export const InputWithButton: Story = {
   args: {},
-  render: function (args) {
+  render: function () {
     return (
       <div className="flex w-full max-w-sm items-center space-x-2">
         <Input type="email" placeholder="Email" />

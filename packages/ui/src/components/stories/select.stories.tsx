@@ -1,32 +1,26 @@
 import { Meta, StoryObj } from "@storybook/react";
 import {
   Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
 } from "../select";
 
 const meta = {
   title: "Select",
   component: () => (
-    <Select>
-      <SelectTrigger className="w-[180px]">
-        <SelectValue placeholder="Escolha uma opção de fruta" />
-      </SelectTrigger>
-      <SelectContent>
-        <SelectGroup>
-          <SelectLabel>Frutas</SelectLabel>
-          <SelectItem value="apple">Maçã</SelectItem>
-          <SelectItem value="banana">Banana</SelectItem>
-          <SelectItem value="blueberry">Mirtilo</SelectItem>
-          <SelectItem value="grapes">Uvas</SelectItem>
-          <SelectItem value="pineapple">Abacaxi</SelectItem>
-        </SelectGroup>
-      </SelectContent>
-    </Select>
+    <Select.Root>
+      <Select.Trigger className="w-[180px]">
+        <Select.Value placeholder="Escolha uma opção de fruta" />
+      </Select.Trigger>
+      <Select.Content>
+        <Select.Group>
+          <Select.Label>Frutas</Select.Label>
+          <Select.Item value="apple">Maçã</Select.Item>
+          <Select.Item value="banana">Banana</Select.Item>
+          <Select.Item value="blueberry">Mirtilo</Select.Item>
+          <Select.Item value="grapes">Uvas</Select.Item>
+          <Select.Item value="pineapple">Abacaxi</Select.Item>
+        </Select.Group>
+      </Select.Content>
+    </Select.Root>
   ),
   parameters: {
     layout: "centered",
