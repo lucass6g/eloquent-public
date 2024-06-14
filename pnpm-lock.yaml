@@ -32,6 +32,9 @@ importers:
       '@eloquent/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      '@storybook/addon-a11y':
+        specifier: ^8.1.9
+        version: 8.1.9
       '@storybook/test':
         specifier: ^8.1.9
         version: 8.1.9
@@ -4151,6 +4154,13 @@ packages:
     engines: {node: '>=18'}
     dev: true
 
+  /@storybook/addon-a11y@8.1.9:
+    resolution: {integrity: sha512-UNA0uGUU7bS43Ue9uSwvqHxalNB6rGo7y15CqU4vBFY3ilZlnwLiIJ/sjdyuUt03i1lNu6avAM9nTic8uI5jWg==}
+    dependencies:
+      '@storybook/addon-highlight': 8.1.9
+      axe-core: 4.7.0
+    dev: false
+
   /@storybook/addon-actions@8.1.9:
     resolution: {integrity: sha512-7ZefE9AER42htn4McqMXcL2RDnflesIf4SxY7pCHpL7rUoldxfZ1DGGRgyKen00H6vx1LGzLRBN9fhBUf9XqCA==}
     dependencies:
@@ -4247,7 +4257,6 @@ packages:
     resolution: {integrity: sha512-7jcjepeP/Z6XhKXKIfMqrM72tsTwo3wAaytuVWG9mHeNTTphepqO0YXZphaEh5EhupaT0DOYWT6jVxOkiw+xpA==}
     dependencies:
       '@storybook/global': 5.0.0
-    dev: true
 
   /@storybook/addon-interactions@8.1.9:
     resolution: {integrity: sha512-R916xLxWrhNPujo63JHIn8pcwR9KpaME/WH1PGLFsvVS7R7gcTNsa/ZL2LanuG8tHtEcLAoGufXaeoZGmTCTIQ==}
@@ -6168,7 +6177,6 @@ packages:
   /axe-core@4.7.0:
     resolution: {integrity: sha512-M0JtH+hlOL5pLQwHOLNYZaXuhqmvS8oExsqB1SBYgA4Dk7u/xx+YdGHXaK5pyUfed5mYXdlYiphWq3G8cRi5JQ==}
     engines: {node: '>=4'}
-    dev: true
 
   /axobject-query@3.2.1:
     resolution: {integrity: sha512-jsyHu61e6N4Vbz/v18DHwWYKK0bSWLqn47eeDSKPB7m8tqMHF9YJ+mhIk2lVteyZrY8tnSj/jHOv4YiTCuCJgg==}
