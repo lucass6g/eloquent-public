@@ -63,6 +63,9 @@ stages:
             inputs:
               output_location: './storybook-static'
               azure_static_web_apps_api_token: $(deployment-token)
+              skip_api_build: true
+              skip_app_build: true
+              is_static_export: true
 
 #          - bash: |
 #              pnpm changeset version
