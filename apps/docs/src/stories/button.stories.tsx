@@ -75,6 +75,7 @@ const meta: Meta<ButtonProps> = {
       },
     },
   },
+  tags: ["experimental"]
 };
 
 export default meta;
