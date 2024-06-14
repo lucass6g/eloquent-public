@@ -1,4 +1,4 @@
-import { Button, type ButtonProps } from "@eloquent/ui";
+import { Button, type ButtonProps } from "../../../../packages/ui/src";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Plus } from "lucide-react";
 
