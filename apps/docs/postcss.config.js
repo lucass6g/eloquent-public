@@ -1,1 +1,6 @@
-module.exports = require("@eloquent/ui/postcss")
+module.exports = {
+    plugins: {
+        tailwindcss: {},
+        autoprefixer: {},
+    },
+}

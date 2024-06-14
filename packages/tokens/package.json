@@ -1,13 +1,12 @@
 {
   "name": "@eloquent/tokens",
-  "version": "1.0.9",
+  "version": "1.0.11",
   "description": "",
   "license": "MIT",
   "private": false,
   "main": "./dist/index.js",
   "files": [
-    "dist",
-    "tailwind.config-preset.ts"
+    "dist"
   ],
   "types": "./dist/index.d.ts",
   "exports": {
@@ -29,16 +28,6 @@
       "require": {
         "default": "./dist/colors/index.js",
         "types": "./dist/colors/index.d.ts"
-      }
-    },
-    "./tailwind.config-preset": {
-      "import": {
-        "default": "./dist/tailwind.config-preset.mjs",
-        "types": "./dist/tailwind.config-preset.d.mts"
-      },
-      "require": {
-        "default": "./dist/tailwind.config-preset.js",
-        "types": "./dist/tailwind.config-preset.d.ts"
       }
     }
   },

@@ -14,6 +14,7 @@
   "dependencies": {
     "@eloquent/tokens": "workspace:*",
     "@eloquent/ui": "workspace:*",
+    "@eloquent/styles": "workspace:*",
     "@storybook/addon-a11y": "^8.1.9",
     "@storybook/addon-themes": "^8.1.9",
     "@storybook/test": "^8.1.9",
@@ -33,6 +34,7 @@
     "@storybook/cli": "^8.1.9",
     "@storybook/react": "^8.1.9",
     "@storybook/react-vite": "^8.1.9",
+    "@storybook/theming": "^8.1.9",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^7.13.0",

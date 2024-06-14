@@ -1,4 +1,4 @@
-import "../../../packages/ui/styles/global.css"
+import "../src/styles/global.css"
 import {Preview} from '@storybook/react'
 import { themes } from '@storybook/theming';
 import {darkUIStorybook, lightUIStorybook, commonTheme} from "./themes-Storybook-UI"

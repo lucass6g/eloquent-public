@@ -65,6 +65,8 @@ next-env.d.ts
 /packages/react/dist/
 /packages/tokens/dist/
 /packages/ui/dist/
+/packages/styles/dist/
+/packages/styles/.turbo/
 /apps/docs/node_modules/
 /node_modules/*
 /.turbo/

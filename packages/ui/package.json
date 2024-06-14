@@ -1,6 +1,6 @@
 {
   "name": "@eloquent/ui",
-  "version": "1.0.37",
+  "version": "1.0.38",
   "license": "MIT",
   "main": "./dist/cjs/index.js",
   "private": false,
@@ -35,7 +35,7 @@
     "build:css": "npx tailwindcss -o tw.css",
     "build:cjs": "tsup --format cjs --external react",
     "build:esm": "tsup --format esm --external react",
-    "build": "npm run clean && concurrently \"npm run build:cjs\"  \"npm run build:esm\" \"npm run build:css\"",
+    "build": "npm run clean && concurrently \"npm run build:cjs\"  \"npm run build:esm\"",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "test:ui": "vitest  --ui",
@@ -66,6 +66,7 @@
   "dependencies": {
     "@eloquent/react": "workspace:*",
     "@eloquent/tokens": "workspace:*",
+    "@eloquent/styles": "workspace:*",
     "@hookform/resolvers": "^3.6.0",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",

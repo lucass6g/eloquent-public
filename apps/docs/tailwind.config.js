@@ -1,9 +1,8 @@
-import sharedTailwindConfig from '../../packages/ui/tailwind.config'
+import {defineTailwindConfig} from "@eloquent/styles";
 
-export default {
-    ...sharedTailwindConfig,
+export default defineTailwindConfig ({
     content: [
-        "node_modules/@eloquent/ui/dist/**/*.{js,ts,jsx,tsx}",
         "./src/stories/**/*.{ts,tsx}",
+        "./src/DEMO/**/*.{ts,tsx}"
     ]
-}
+})
