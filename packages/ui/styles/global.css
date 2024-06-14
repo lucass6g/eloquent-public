@@ -1,7 +1,5 @@
 @import url("https://p.typekit.net/p.css?s=1&k=wvf5kwu&ht=tk&f=1981.1984.2005.2007.2009.22618.22619&a=32411851&app=typekit&e=css");
-@import url("https://p.typekit.net/p.css?s=1&k=wvf5kwu&ht=tk&f=1981.1984.2005.2007.2009.22618.22619&a=32411851&app=typekit&e=css");
 @import url("https://use.typekit.net/mfg4ogz.css");
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -22,8 +20,8 @@
         --card-foreground: 240 10% 3.9%;
         --popover: 0 0% 100%;
         --popover-foreground: 240 10% 3.9%;
-        --primary: #033933;
-        --primary-foreground: #ffffff;
+        --primary: 173, 90%, 12%;
+        --primary-foreground: 0, 0%, 100%;
         --secondary: 240 4.8% 95.9%;
         --secondary-foreground: 240 5.9% 10%;
         --muted: 240 4.8% 95.9%;
@@ -34,7 +32,7 @@
         --destructive-foreground: 0 0% 98%;
         --border: 240 5.9% 90%;
         --input: 240 5.9% 90%;
-        --ring: 240 5.9% 10%;
+        --ring: 173, 90%, 12%;
         --radius: 1rem;
     }
 
@@ -62,11 +60,6 @@
     * {
         @apply font-barlow;
         color: hsl(var(--primary));
-    }
-
-    button, a {
-        color: hsl(var(--primary-foreground));
-        border-radius: var(--radius);
     }
 
     .font-clamp {

@@ -68,3 +68,4 @@ next-env.d.ts
 /apps/docs/node_modules/
 /node_modules/*
 /.turbo/
+/apps/docs/storybook-static/
