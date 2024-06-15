@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { DropdownMenuDemo } from "../demo/dropdown-menu-demo";
+import { DropdownMenuDemo } from "../demo/dropdown-menu-demo.tsx";
 
 const meta = {
   title: "DropdownMenu",

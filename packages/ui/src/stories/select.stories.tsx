@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Select } from "@eloquent/ui";
+import { Select } from "../";
 
 const meta = {
   title: "Select",

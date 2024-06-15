@@ -1,4 +1,4 @@
-import { Button, type ButtonProps } from "../../../../packages/ui/src";
+import { Button, type ButtonProps } from "../";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Plus } from "lucide-react";
 
@@ -122,7 +122,7 @@ export const Icon: Story = {
   render(props) {
     return (
       <Button {...props}>
-        <Plus />
+        <Plus/>
       </Button>
     );
   },

@@ -1,18 +1,19 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { SwitchDemo as Switch } from "../demo/switch-demo";
+import { Calendar as CalendarComponent } from "../";
 
+//meta
 const meta = {
-  title: "Switch",
-  component: Switch,
+  title: "Date",
+  component: CalendarComponent,
   parameters: {
     layout: "centered",
   },
-} satisfies Meta<{}>;
+} satisfies Meta<typeof CalendarComponent>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const SwitchDemo: Story = {
+export const Calendar: Story = {
   args: {},
 };

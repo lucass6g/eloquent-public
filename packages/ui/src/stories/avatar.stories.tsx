@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Avatar } from "@eloquent/ui";
+import { Avatar } from "../";
 
 const meta = {
   title: "Avatar",

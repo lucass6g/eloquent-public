@@ -1,12 +1,12 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Button,Input, Label, Tabs} from "@eloquent/ui";
+import { Button,Input, Label, Tabs} from "../";
 
 const meta = {
   title: "Tabs",
   component: () => (
     <div className="flex w-[400px]">
       <Tabs.Root defaultValue="login" className="w-full">
-        <Tabs.List className="flex w-full justify-start gap-4 bg-gray pb-6">
+        <Tabs.List className="flex  justify-start gap-4 items-start bg-gray-200 pb-6">
           <Tabs.Trigger value="login">Entrar</Tabs.Trigger>
           <Tabs.Trigger value="signup">Cadastrar</Tabs.Trigger>
         </Tabs.List>
@@ -19,7 +19,7 @@ const meta = {
             <div className="grid gap-4">
               <Label
                 htmlFor="email"
-                className="font-bold text-[#003933] dark:text-white"
+                className="font-bold text-primary-foreground"
               >
                 CPF
               </Label>
@@ -35,7 +35,7 @@ const meta = {
               <div>
                 <Label
                   htmlFor="password"
-                  className="font-bold text-[#003933] dark:text-white"
+                  className="font-bold"
                 >
                   Senha
                 </Label>
@@ -65,7 +65,7 @@ const meta = {
             <div className="grid gap-4">
               <Label
                 htmlFor="name"
-                className="font-bold text-[#003933] dark:text-white"
+                className="font-bold"
               >
                 Nome
               </Label>
@@ -79,7 +79,7 @@ const meta = {
             <div className="grid gap-4">
               <Label
                 htmlFor="birthdate"
-                className="font-bold text-[#003933] dark:text-white"
+                className="font-bold"
               >
                 Data de nascimento
               </Label>
@@ -93,7 +93,7 @@ const meta = {
             <div className="grid gap-4">
               <Label
                 htmlFor="email"
-                className="font-bold text-[#003933] dark:text-white"
+                className="font-bold"
               >
                 CPF
               </Label>
@@ -107,7 +107,7 @@ const meta = {
             <div className="grid gap-4">
               <Label
                 htmlFor="password"
-                className="font-bold text-[#003933] dark:text-white"
+                className="font-bold"
               >
                 Senha
               </Label>
@@ -121,7 +121,7 @@ const meta = {
             <div className="mb-12 grid gap-4">
               <Label
                 htmlFor="password"
-                className="font-bold text-[#003933] dark:text-white"
+                className="font-bold"
               >
                 Confirmar Senha
               </Label>

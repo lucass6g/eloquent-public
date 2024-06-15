@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Accordion } from "@eloquent/ui";
+import { Accordion } from "../";
 
 const meta = {
   title: "Accordion",

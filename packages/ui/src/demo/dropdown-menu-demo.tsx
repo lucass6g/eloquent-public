@@ -15,7 +15,7 @@ import {
     Users,
 } from "lucide-react";
 
-import {Button, DropdownMenu,} from "@eloquent/ui";
+import {Button, DropdownMenu,} from "../";
 
 export function DropdownMenuDemo() {
     return (
