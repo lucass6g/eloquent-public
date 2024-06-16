@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react'
 
 import { VariantProps } from 'class-variance-authority'
 import { Terminal } from 'lucide-react'
-import { Alert, alertVariants } from '../'
+import {Alert, alertVariants} from '../'
 
 type TypeCustomAlertProps = {} & VariantProps<typeof alertVariants>
 
@@ -38,7 +38,7 @@ type Story = StoryObj<typeof meta>
 
 //Colors
 export const AlertDefaultDemo: Story = {
-    name: 'Demonstração - Alerta',
+    name: 'Alerta padrão',
     args: {
         variant: 'default',
     },
