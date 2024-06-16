@@ -127,29 +127,29 @@ export const columns: ColumnDef<Payment>[] = [
             const payment = row.original
 
             return (
-                <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
+                <DropdownMenu.Root>
+                    <DropdownMenu.Trigger asChild>
                         <Button variant="ghost" className="h-8 w-8 p-0">
                             <span className="sr-only">Open menu</span>
                             <MoreHorizontal className="h-4 w-4" />
                         </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end">
-                        <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                        <DropdownMenuItem
+                    </DropdownMenu.Trigger>
+                    <DropdownMenu.Content align="end">
+                        <DropdownMenu.Label>Actions</DropdownMenu.Label>
+                        <DropdownMenu.Item
                             onClick={() =>
                                 navigator.clipboard.writeText(payment.id)
                             }
                         >
                             Copy payment ID
-                        </DropdownMenuItem>
-                        <DropdownMenuSeparator />
-                        <DropdownMenuItem>View customer</DropdownMenuItem>
-                        <DropdownMenuItem>
+                        </DropdownMenu.Item>
+                        <DropdownMenu.Separator />
+                        <DropdownMenu.Item>View customer</DropdownMenu.Item>
+                        <DropdownMenu.Item>
                             View payment details
-                        </DropdownMenuItem>
-                    </DropdownMenuContent>
-                </DropdownMenu>
+                        </DropdownMenu.Item>
+                    </DropdownMenu.Content>
+                </DropdownMenu.Root>
             )
         },
     },
