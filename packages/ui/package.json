@@ -65,8 +65,8 @@
   },
   "dependencies": {
     "@eloquent/react": "workspace:*",
-    "@eloquent/tokens": "workspace:*",
     "@eloquent/styles": "workspace:*",
+    "@eloquent/tokens": "workspace:*",
     "@hookform/resolvers": "^3.6.0",
     "@radix-ui/react-accordion": "^1.1.2",
     "@radix-ui/react-alert-dialog": "^1.0.5",
@@ -99,6 +99,7 @@
     "@storybook/addon-docs": "^8.1.9",
     "@storybook/blocks": "^8.1.9",
     "@storybook/react": "^8.1.9",
+    "@tanstack/react-table": "^8.17.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "cmdk": "^1.0.0",
