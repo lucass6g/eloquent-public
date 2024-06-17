@@ -1,0 +1,31 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Aspect Ratio > should match the snapshot > 16 / 9 1`] = `
+<body>
+  <div>
+    <div
+      data-radix-aspect-ratio-wrapper=""
+      style="position: relative; width: 100%; padding-bottom: 56.25%;"
+    >
+      <div
+        style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px;"
+      />
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Aspect Ratio > should match the snapshot > default 1`] = `
+<body>
+  <div>
+    <div
+      data-radix-aspect-ratio-wrapper=""
+      style="position: relative; width: 100%; padding-bottom: 100%;"
+    >
+      <div
+        style="position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px;"
+      />
+    </div>
+  </div>
+</body>
+`;
