@@ -5,4 +5,88 @@
 @tailwind variants;
 
 
+/*.dark .sbdocs-wrapper,*/
+/*.dark .css-11ju8y0,*/
+/*.dark .css-1f9domv,*/
+/*.dark .css-p1dfi6,*/
+/*.dark .sbdocs-preview {*/
+/*    background-color: #39f6e2;*/
+/*    color: #ffffff;*/
+/*}*/
 
+/*.dark .sbdocs .sbdocs-content .css-qa4clq {*/
+/*    color: var(--foreground);*/
+/*}*/
+
+/*.dark .sbdocs-preview {*/
+/*    border: 1px solid var(--border)*/
+/*}*/
+
+/*.dark .docblock-code-toggle {*/
+/*    background: transparent;*/
+/*    color: var(--foreground);*/
+/*}*/
+
+/*.dark .css-qa4clq *:not(button, ol, h1) {*/
+/*    background: var(--background);*/
+/*    color: var(--foreground)*/
+/*}*/
+
+/*.dark div:has(.docblock-code-toggle) {*/
+/*    background: transparent;*/
+/*}*/
+
+/*.dark .os-theme-dark {*/
+/*    background: var(--background);*/
+/*    color: var(--foreground);*/
+/*}*/
+
+/*.dark .sbdocs-title {*/
+/*    color: var(--foreground);*/
+/*    background: transparent;*/
+/*}*/
+
+/*.sbdocs-title .sb-unstyled {*/
+/*    background: transparent;*/
+/*}*/
+
+/*.dark .docblock-argstable-head {*/
+/*    background: var(--background);*/
+/*}*/
+
+/*.dark .docblock-argstable-head th {*/
+/*    color: var(--foreground);*/
+/*    border-bottom: 1px solid var(--border) !important;*/
+/*}*/
+
+/*.dark .docblock-argstable-head th span {*/
+/*    color: var(--foreground);*/
+/*}*/
+
+/*.dark #docs-root tbody td {*/
+/*    background: var(--background) !important;*/
+/*    color: var(--foreground) !important;*/
+/*}*/
+
+/*.dark #docs-root tbody tr:first-child td:first-child {*/
+/*    border-top-left-radius: 0 !important;*/
+/*}*/
+
+/*.dark #docs-root tbody tr:first-child td:last-child {*/
+/*    border-top-right-radius: 0 !important;*/
+/*}*/
+
+/*.dark #docs-root tbody tr:not(:first-child) {*/
+/*    border-top: 1px solid var(--border) !important;*/
+/*}*/
+
+/*.dark .css-v2ifgj.css-v2ifgj tbody >tr>* {*/
+/*    color: var(--foreground);*/
+/*    background-color: var(--background);*/
+/*    border-color: var(--border);*/
+/*}*/
+
+/*.dark #control-variant {*/
+/*    background-color: var(--input);*/
+/*    color: var(--foreground);*/
+/*}*/

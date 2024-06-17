@@ -28,7 +28,7 @@ export function CardDemoNotification({ className, ...props }: CardProps) {
             </Card.Header>
             <Card.Content className="grid gap-4">
                 <div className=" flex items-center space-x-4 rounded-md border p-4">
-                    <BellRing />
+                    <BellRing className="stroke-primary" />
                     <div className="flex-1 space-y-1">
                         <p className="text-sm font-medium leading-none">
                             Push Notifications
