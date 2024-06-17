@@ -2,7 +2,6 @@ import { join, dirname } from "path";
 import {StorybookConfig} from "@storybook/react-vite";
 
 type FrameworkNames = "@storybook/react-vite"
-
 /**
  * This function is used to resolve the absolute path of a package.
  * It is needed in projects that use Yarn PnP or are set up within a monorepo.
@@ -13,7 +12,10 @@ function getAbsolutePath(value:string) {
 
 /** @type { import('@storybook/react-vite').StorybookConfig } */
 const config: StorybookConfig = {
-  stories: ["../src/stories/**/*.stories.{tsx,mdx}"],
+  stories: [{
+    directory: "../../../packages/ui/src/**",
+    files: "*.@(mdx|stories.@(ts|tsx))"
+  }],
   addons: [
     getAbsolutePath("@storybook/addon-links"),
     getAbsolutePath("@storybook/addon-essentials"),
@@ -29,10 +31,6 @@ const config: StorybookConfig = {
   framework: {
     name: getAbsolutePath("@storybook/react-vite") as FrameworkNames,
     options: {},
-  },
-
-  docs: {
-    autodocs: true
   },
 
   typescript: {

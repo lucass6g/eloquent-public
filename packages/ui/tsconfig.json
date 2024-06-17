@@ -27,7 +27,7 @@
     "jsx": "react-jsx",
     "paths": {
       "@ui/*": ["src/*"],
-      "@ui/components/ui/*": ["src/components/ui/*"]
+      "@components/*": ["src/components/*"]
     },
     "baseUrl": ".",
     "incremental": false,
