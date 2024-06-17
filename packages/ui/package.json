@@ -36,9 +36,11 @@
     "build:cjs": "tsup --format cjs --external react",
     "build:esm": "tsup --format esm --external react",
     "build": "npm run clean && concurrently \"npm run build:cjs\"  \"npm run build:esm\"",
-    "test": "vitest",
-    "coverage": "vitest run --coverage",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "test:ui": "vitest  --ui",
+    "test:update": "vitest -u",
+    "coverage": "vitest run --coverage",
     "clean": "rm -rf dist"
   },
   "devDependencies": {
