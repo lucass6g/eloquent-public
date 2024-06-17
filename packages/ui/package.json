@@ -39,7 +39,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:ui": "vitest  --ui",
-    "test:update": "vitest -u",
+    "test:update": "vitest run -u",
     "coverage": "vitest run --coverage",
     "clean": "rm -rf dist"
   },
