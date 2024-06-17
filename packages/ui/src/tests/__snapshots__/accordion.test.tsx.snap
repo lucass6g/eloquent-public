@@ -26,7 +26,7 @@ exports[`Accordion > should match the snapshot 1`] = `
             id="radix-:r0:"
             type="button"
           >
-            teste
+            trigger
             <svg
               class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200"
               fill="none"
