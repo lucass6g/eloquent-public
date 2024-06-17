@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 
 import { Button, Form, Input } from '../'
-import {formSchema} from "@ui/demo/checkbox-demo-with-form.tsx";
+import {formSchema} from "./checkbox-demo-with-form.tsx";
 
 
 export function ProfileForm() {

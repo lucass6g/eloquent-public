@@ -8,7 +8,7 @@ import * as z from 'zod'
 
 import { cn } from '../lib/utils'
 import { Button, Calendar, Form, Popover, toast } from '../'
-import {FormSchemaDatePicker} from "@ui/demo/checkbox-demo-with-form.tsx";
+import {FormSchemaDatePicker} from "./checkbox-demo-with-form.tsx";
 
 export function DatePickerForm() {
     const form = useForm<z.infer<typeof FormSchemaDatePicker>>({

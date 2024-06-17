@@ -4,10 +4,10 @@ export const darkUIStorybook = {
     colorSecondary: "hsl(217.2 32.6% 17.5%)",
 
     // UI
-    appBg: "hsl(222.2 84% 4.9%)",
-    appContentBg: "hsl(222.2 84% 4.9%)",
-    appBorderColor: "hsl(217.2 32.6% 17.5%)",
-    appBorderRadius: ".4rem",
+    appBg: "hsla(168, 100%, 6%, 1)",
+    appContentBg: "hsla(168, 100%, 6%, 1)",
+    appBorderColor: "hsla(168, 100%, 6%, 1)",
+    appBorderRadius: "0.5rem",
 
     // Typography
     // fontBase: "",
@@ -20,11 +20,11 @@ export const darkUIStorybook = {
     // Toolbar default and active colors
     barTextColor: "hsl(210 40% 98%)",
     barSelectedColor: "hsl(210 40% 98%)",
-    barBg: "hsl(222.2 84% 4.9%)",
+    barBg: "hsla(171, 100%, 8%, 1)",
 
     // Form colo,
-    inputBg: "hsl(217.2 32.6% 17.5%)",
-    inputBorder: "hsl(217.2 32.6% 17.5%)",
+    inputBg: "hsla(168, 100%, 6%, 1)",
+    inputBorder: "hsla(168, 100%, 6%, 1)",
     inputTextColor: "hsl(210 40% 98%)",
     inputBorderRadius: "0.4rem",
 
