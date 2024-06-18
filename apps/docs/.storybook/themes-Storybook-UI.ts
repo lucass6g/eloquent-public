@@ -6,7 +6,7 @@ export const darkUIStorybook = {
     // UI
     appBg: "hsla(160, 100%, 5%, 1)",
     appContentBg: "hsla(160, 100%, 5%, 1)",
-    appPreviewBg: "hsla(160, 100%, 5%, 1)",
+    appPreviewBg: "hsla(0.67, 4.76%, 4.12%, 1.00)",
     appBorderColor: "hsl(0,0%,100%)",
     appBorderRadius: "0.5rem",
 

@@ -7,6 +7,9 @@ const meta: Meta<CheckboxProps> = {
   args: {
     disabled: false,
   },
+  parameters: {
+    layout: 'centered',
+  },
 };
 
 export default meta;

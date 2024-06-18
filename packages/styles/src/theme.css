@@ -63,18 +63,13 @@
   --destructive-foreground: 	#fafafa;
 
   --border: #ffffff;
-  --input: #033a34;
+  --input: #ffffff;
   --ring: #ffffff;
 }
 
 * {
   @apply font-barlow;
   color: var(--foreground);
-}
-
-svg {
-  color: var(--primary);
-  stroke: var(--primary)
 }
 
 .font-clamp {
