@@ -13,7 +13,7 @@ const meta = {
                     <Button variant="outline">Hover</Button>
                 </Tooltip.Trigger>
                 <Tooltip.Content>
-                    <p>Add to library</p>
+                    Add to library
                 </Tooltip.Content>
             </Tooltip.Root>
         </Tooltip.Provider>
