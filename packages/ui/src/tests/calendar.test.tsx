@@ -28,7 +28,7 @@ describe("Calendar", () => {
         const button = screen.getByRole('button', { name: /go to previous month/i })
         act(() => button.click())
 
-        const month = await waitFor(() => screen.findByText(/december 2023/i))
+        const month = await waitFor(() => screen.findByText(/dezembro 2023/i))
         expect(month).toBeInTheDocument();
     })
 
@@ -42,7 +42,7 @@ describe("Calendar", () => {
         const button = screen.getByRole('button', { name: /go to next month/i })
         act(() => button.click())
 
-        const month = await waitFor(() => screen.findByText(/february 2024/i))
+        const month = await waitFor(() => screen.findByText(/fevereiro 2024/i))
         expect(month).toBeInTheDocument();
     })
 

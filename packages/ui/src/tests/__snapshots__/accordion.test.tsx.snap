@@ -19,7 +19,7 @@ exports[`Accordion > should match the snapshot 1`] = `
           <button
             aria-controls="radix-:r1:"
             aria-expanded="false"
-            class="flex flex-1 items-center justify-between py-4 text-green-dark-600 text-sm font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180"
+            class="flex flex-1 items-center justify-between py-4 text-primary text-sm font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180"
             data-orientation="vertical"
             data-radix-collection-item=""
             data-state="closed"
@@ -28,7 +28,7 @@ exports[`Accordion > should match the snapshot 1`] = `
           >
             trigger
             <svg
-              class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200"
+              class="h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200 fill-current"
               fill="none"
               height="15"
               viewBox="0 0 15 15"
