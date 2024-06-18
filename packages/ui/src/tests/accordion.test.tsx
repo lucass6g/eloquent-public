@@ -1,4 +1,5 @@
 import { render, screen, waitFor } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { Accordion } from "..";
 
 describe("Accordion", () => {
@@ -22,12 +23,12 @@ describe("Accordion", () => {
         </Accordion.Root>);
 
         const trigger = screen.getByRole('button', { name: /trigger/i })
-        await waitFor(() => trigger.click())
+        await waitFor(() => userEvent.click(trigger))
 
         const content = screen.queryByText(/content/i)
         expect(content).toBeInTheDocument()
 
-        await waitFor(() => trigger.click())
+        await waitFor(() => userEvent.click(trigger))
         expect(content).not.toBeInTheDocument()
     })
 }); 

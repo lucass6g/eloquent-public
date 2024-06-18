@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { Button } from "..";
 
 describe("Button", () => {
@@ -57,7 +58,7 @@ describe("Button", () => {
         render(<Button onClick={clickFn}>button</Button>);
 
         const button = screen.getByRole('button', { name: /button/i })
-        button.click()
+        userEvent.click(button)
 
         expect(clickFn).toHaveBeenCalled()
     })
@@ -67,7 +68,7 @@ describe("Button", () => {
         render(<Button disabled onClick={clickFn}>button</Button>);
 
         const button = screen.getByRole('button', { name: /button/i })
-        button.click()
+        userEvent.click(button)
 
         expect(button).toBeDisabled();
         expect(clickFn).not.toHaveBeenCalled()

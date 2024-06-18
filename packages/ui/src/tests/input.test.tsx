@@ -1,4 +1,5 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { Input } from "..";
 
 describe("Input", () => {
@@ -21,24 +22,31 @@ describe("Input", () => {
         />);
 
         const input = screen.getByPlaceholderText('email')
-        fireEvent.change(input, { target: { value: 'placeholder@elo.com' } })
+        await waitFor(() => userEvent.type(input, 'placeholder@elo.com'))
 
-        const filledInput = screen.getByDisplayValue('placeholder@elo.com')
+        const filledInput = screen.queryByDisplayValue('placeholder@elo.com')
         expect(filledInput).toBeInTheDocument()
 
         expect(stateFn).toHaveBeenCalled()
     })
 
     it("should be disabled", async () => {
+        const stateFn = vi.fn()
+
         render(<Input
             type="email"
             placeholder="email"
-            onChange={vi.fn()}
+            onChange={stateFn}
             disabled
         />);
 
         const input = screen.getByPlaceholderText('email')
+        await waitFor(() => userEvent.type(input, 'placeholder@elo.com'))
 
+        const filledInput = screen.queryByDisplayValue('placeholder@elo.com')
+        expect(filledInput).not.toBeInTheDocument()
+
+        expect(stateFn).not.toHaveBeenCalled()
         expect(input).toBeDisabled();
     })
 }); 

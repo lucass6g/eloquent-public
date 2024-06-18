@@ -1,4 +1,5 @@
 import { render, screen, waitFor } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { Checkbox } from "..";
 
 describe("Checkbox", () => {
@@ -22,7 +23,7 @@ describe("Checkbox", () => {
         />);
 
         const button = screen.getByRole('checkbox')
-        await waitFor(() => button.click())
+        await waitFor(() => userEvent.click(button))
 
         expect(checkFn).toHaveBeenCalled()
     })
@@ -37,7 +38,7 @@ describe("Checkbox", () => {
         />);
 
         const button = screen.getByRole('checkbox')
-        await waitFor(() => button.click())
+        await waitFor(() => userEvent.click(button))
 
         expect(button).toBeDisabled();
         expect(checkFn).not.toHaveBeenCalled()

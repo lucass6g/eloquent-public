@@ -18,7 +18,7 @@ describe("Input OTP", () => {
         expect(component.baseElement).toMatchSnapshot()
     })
 
-    it("should be filled out correctly", async () => {
+    it("should be filled out correctly", () => {
         const stateFn = vi.fn()
 
         render(<InputOTP.Root
@@ -45,7 +45,7 @@ describe("Input OTP", () => {
         expect(stateFn).toHaveBeenCalled()
     })
 
-    it("should be disabled", async () => {
+    it("should be disabled", () => {
         render(<InputOTP.Root disabled maxLength={4}>
             <InputOTP.Group>
                 <InputOTP.Slot index={0} />
