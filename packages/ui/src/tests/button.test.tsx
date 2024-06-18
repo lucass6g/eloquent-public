@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { Button } from "..";
 
@@ -53,22 +53,22 @@ describe("Button", () => {
         })
     })
 
-    it("should click correctly", () => {
+    it("should click correctly", async () => {
         const clickFn = vi.fn()
         render(<Button onClick={clickFn}>button</Button>);
 
         const button = screen.getByRole('button', { name: /button/i })
-        userEvent.click(button)
+        await waitFor(() => userEvent.click(button))
 
         expect(clickFn).toHaveBeenCalled()
     })
 
-    it("should be disabled", () => {
+    it("should be disabled", async () => {
         const clickFn = vi.fn()
         render(<Button disabled onClick={clickFn}>button</Button>);
 
         const button = screen.getByRole('button', { name: /button/i })
-        userEvent.click(button)
+        await waitFor(() => userEvent.click(button))
 
         expect(button).toBeDisabled();
         expect(clickFn).not.toHaveBeenCalled()
