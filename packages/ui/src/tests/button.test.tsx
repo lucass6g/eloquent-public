@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { Button } from "..";
 
 describe("Button", () => {
@@ -54,9 +54,9 @@ describe("Button", () => {
 
     it("should click correctly", () => {
         const clickFn = vi.fn()
-        const component = render(<Button onClick={clickFn}>button</Button>);
+        render(<Button onClick={clickFn}>button</Button>);
 
-        const button = component.getByRole('button', { name: /button/i })
+        const button = screen.getByRole('button', { name: /button/i })
         button.click()
 
         expect(clickFn).toHaveBeenCalled()
@@ -64,11 +64,12 @@ describe("Button", () => {
 
     it("should be disabled", () => {
         const clickFn = vi.fn()
-        const component = render(<Button disabled onClick={clickFn}>button</Button>);
+        render(<Button disabled onClick={clickFn}>button</Button>);
 
-        const button = component.getByRole('button', { name: /button/i })
+        const button = screen.getByRole('button', { name: /button/i })
         button.click()
 
+        expect(button).toBeDisabled();
         expect(clickFn).not.toHaveBeenCalled()
     })
 }); 

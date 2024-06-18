@@ -1,4 +1,4 @@
-import { render, waitFor } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import { Accordion } from "..";
 
 describe("Accordion", () => {
@@ -14,17 +14,17 @@ describe("Accordion", () => {
     })
 
     it("should open and close correctly", async () => {
-        const component = render(<Accordion.Root type="single" collapsible>
+        render(<Accordion.Root type="single" collapsible>
             <Accordion.Item value="item-1">
                 <Accordion.Trigger>trigger</Accordion.Trigger>
                 <Accordion.Content>content</Accordion.Content>
             </Accordion.Item>
         </Accordion.Root>);
 
-        const trigger = component.getByRole('button', { name: /trigger/i })
+        const trigger = screen.getByRole('button', { name: /trigger/i })
         await waitFor(() => trigger.click())
 
-        const content = component.queryByText(/content/i)
+        const content = screen.queryByText(/content/i)
         expect(content).toBeInTheDocument()
 
         await waitFor(() => trigger.click())

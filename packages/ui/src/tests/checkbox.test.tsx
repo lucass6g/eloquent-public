@@ -1,4 +1,4 @@
-import { render, waitFor } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import { Checkbox } from "..";
 
 describe("Checkbox", () => {
@@ -16,12 +16,12 @@ describe("Checkbox", () => {
     it("should check correctly", async () => {
         const checkFn = vi.fn()
 
-        const component = render(<Checkbox
+        render(<Checkbox
             defaultChecked={false}
             onCheckedChange={checkFn}
         />);
 
-        const button = component.getByRole('checkbox', { name: "" })
+        const button = screen.getByRole('checkbox', { name: "" })
         await waitFor(() => button.click())
 
         expect(checkFn).toHaveBeenCalled()
@@ -30,15 +30,16 @@ describe("Checkbox", () => {
     it("should be disabled", async () => {
         const checkFn = vi.fn()
 
-        const component = render(<Checkbox
+        render(<Checkbox
             disabled
             defaultChecked={false}
             onCheckedChange={checkFn}
         />);
 
-        const button = component.getByRole('checkbox', { name: "" })
+        const button = screen.getByRole('checkbox', { name: "" })
         await waitFor(() => button.click())
 
+        expect(button).toBeDisabled();
         expect(checkFn).not.toHaveBeenCalled()
     })
 }); 
