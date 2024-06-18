@@ -1,63 +1,58 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { Checkbox } from "..";
+import { Switch } from "..";
 
-describe("Checkbox", () => {
+describe("Switch", () => {
     it("should match the snapshot", () => {
-        const component = render(<Checkbox
-            checked
-            defaultChecked
-            required
-            onCheckedChange={vi.fn()}
-        />);
+        const component = render(<Switch id="switch" />);
 
         expect(component.baseElement).toMatchSnapshot()
     })
 
     it("should check correctly", async () => {
-        const checkFn = vi.fn()
+        const switchFn = vi.fn()
 
-        render(<Checkbox
+        render(<Switch
             defaultChecked={false}
-            onCheckedChange={checkFn}
+            onCheckedChange={switchFn}
         />);
 
-        const button = screen.getByRole('checkbox')
+        const button = screen.getByRole('switch')
         expect(button).not.toBeChecked()
 
         await waitFor(() => userEvent.click(button))
         expect(button).toBeChecked()
 
-        expect(checkFn).toHaveBeenCalled()
+        expect(switchFn).toHaveBeenCalled()
     })
 
     it("should uncheck correctly", async () => {
-        const checkFn = vi.fn()
+        const switchFn = vi.fn()
 
-        render(<Checkbox
+        render(<Switch
             defaultChecked={true}
-            onCheckedChange={checkFn}
+            onCheckedChange={switchFn}
         />);
 
-        const button = screen.getByRole('checkbox')
+        const button = screen.getByRole('switch')
         expect(button).toBeChecked()
 
         await waitFor(() => userEvent.click(button))
         expect(button).not.toBeChecked()
 
-        expect(checkFn).toHaveBeenCalled()
+        expect(switchFn).toHaveBeenCalled()
     })
 
     it("should be disabled", async () => {
         const checkFn = vi.fn()
 
-        render(<Checkbox
+        render(<Switch
             disabled
             defaultChecked={false}
             onCheckedChange={checkFn}
         />);
 
-        const button = screen.getByRole('checkbox')
+        const button = screen.getByRole('switch')
         await waitFor(() => userEvent.click(button))
 
         expect(button).toBeDisabled();
