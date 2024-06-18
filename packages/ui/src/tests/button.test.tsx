@@ -61,4 +61,14 @@ describe("Button", () => {
 
         expect(clickFn).toHaveBeenCalled()
     })
+
+    it("should be disabled", () => {
+        const clickFn = vi.fn()
+        const component = render(<Button disabled onClick={clickFn}>button</Button>);
+
+        const button = component.getByRole('button', { name: /button/i })
+        button.click()
+
+        expect(clickFn).not.toHaveBeenCalled()
+    })
 }); 
