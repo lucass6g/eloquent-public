@@ -21,7 +21,7 @@ describe("Checkbox", () => {
             onCheckedChange={checkFn}
         />);
 
-        const button = screen.getByRole('checkbox', { name: "" })
+        const button = screen.getByRole('checkbox')
         await waitFor(() => button.click())
 
         expect(checkFn).toHaveBeenCalled()
@@ -36,7 +36,7 @@ describe("Checkbox", () => {
             onCheckedChange={checkFn}
         />);
 
-        const button = screen.getByRole('checkbox', { name: "" })
+        const button = screen.getByRole('checkbox')
         await waitFor(() => button.click())
 
         expect(button).toBeDisabled();

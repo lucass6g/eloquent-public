@@ -30,12 +30,10 @@ describe("Input", () => {
     })
 
     it("should be disabled", async () => {
-        const stateFn = vi.fn()
-
         render(<Input
             type="email"
             placeholder="email"
-            onChange={stateFn}
+            onChange={vi.fn()}
             disabled
         />);
 
