@@ -62,7 +62,7 @@
   --destructive: 	#7f1d1d;
   --destructive-foreground: 	#fafafa;
 
-  --border: #033a34;
+  --border: #ffffff;
   --input: #033a34;
   --ring: #ffffff;
 }
@@ -73,8 +73,8 @@
 }
 
 svg {
-  color: var(--background);
-  stroke: var(--background)
+  color: var(--primary);
+  stroke: var(--primary)
 }
 
 .font-clamp {

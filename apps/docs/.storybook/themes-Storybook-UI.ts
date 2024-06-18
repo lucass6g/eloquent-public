@@ -1,12 +1,13 @@
 
 export const darkUIStorybook = {
-    colorPrimary: "hsl(210 40% 98%)",
-    colorSecondary: "hsl(217.2 32.6% 17.5%)",
+    colorPrimary: "hsl(0,0%,100%)",
+    colorSecondary: "hsla(170, 42%, 75%, 1)",
 
     // UI
-    appBg: "hsla(168, 100%, 6%, 1)",
-    appContentBg: "hsla(168, 100%, 6%, 1)",
-    appBorderColor: "hsla(168, 100%, 6%, 1)",
+    appBg: "hsla(160, 100%, 5%, 1)",
+    appContentBg: "hsla(160, 100%, 5%, 1)",
+    appPreviewBg: "hsla(160, 100%, 5%, 1)",
+    appBorderColor: "hsl(0,0%,100%)",
     appBorderRadius: "0.5rem",
 
     // Typography
@@ -15,17 +16,17 @@ export const darkUIStorybook = {
 
     // Text colors
     textColor: "hsl(210 40% 98%)",
-    textInverseColor: "hsl(217.2 32.6% 17.5%)",
+    textInverseColor: "hsl(0,100%,50%)",
 
     // Toolbar default and active colors
-    barTextColor: "hsl(210 40% 98%)",
-    barSelectedColor: "hsl(210 40% 98%)",
+    barTextColor: "hsl(0,0%,100%)",
+    barSelectedColor: "hsl(0,0%,100%)",
     barBg: "hsla(171, 100%, 8%, 1)",
 
-    // Form colo,
-    inputBg: "hsla(168, 100%, 6%, 1)",
-    inputBorder: "hsla(168, 100%, 6%, 1)",
-    inputTextColor: "hsl(210 40% 98%)",
+    // Form colors,
+    inputBg: "hsl(0,0%,100%)",
+    // inputBorder: "hsla(174, 100%, 11%, 1)",
+    inputTextColor: "hsl(0,0%,0%)",
     inputBorderRadius: "0.4rem",
 
     // Brand
@@ -33,6 +34,7 @@ export const darkUIStorybook = {
 }
 
 export const lightUIStorybook = {
+    appPreviewBg: "hsla(0, 0%, 100%, 1)",
     brandImage: "https://media-linkedoffers.elo.com.br/cms-campaigns/assets/logo_preta_rebranding_09e841e7c5.png",
 }
 

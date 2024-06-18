@@ -5,46 +5,56 @@
 @tailwind variants;
 
 
-/*.dark .sbdocs-wrapper,*/
+
 /*.dark .css-11ju8y0,*/
 /*.dark .css-1f9domv,*/
-/*.dark .css-p1dfi6,*/
-/*.dark .sbdocs-preview {*/
-/*    background-color: #39f6e2;*/
-/*    color: #ffffff;*/
-/*}*/
+.dark .css-p1dfi6,
+.dark .sbdocs-preview {
+    background-color: hsla(174, 100%, 11%, 1);
+    color:var(--foreground);
+}
 
-/*.dark .sbdocs .sbdocs-content .css-qa4clq {*/
-/*    color: var(--foreground);*/
-/*}*/
+/*BACKGROUND DO CONTEÚDO*/
+.dark .sbdocs-wrapper {
+    background-color: #001810;
+    color: #ffffff;
+}
 
-/*.dark .sbdocs-preview {*/
-/*    border: 1px solid var(--border)*/
-/*}*/
+/*CODE BLOCK*/
+.dark .sbdocs-preview {
+    border: 1px solid var(--border)
+}
+/*Button "Show code" */
+.docblock-code-toggle {
+    background: var(--primary);
+    color: var(--primary-foreground);
+}
 
-/*.dark .docblock-code-toggle {*/
-/*    background: transparent;*/
-/*    color: var(--foreground);*/
-/*}*/
+.dark div:has(.css-p1dfi60) {
+    background: #76fd00;
+}
 
+/*======*/
 /*.dark .css-qa4clq *:not(button, ol, h1) {*/
 /*    background: var(--background);*/
 /*    color: var(--foreground)*/
 /*}*/
 
-/*.dark div:has(.docblock-code-toggle) {*/
-/*    background: transparent;*/
-/*}*/
+.dark .sbdocs .sbdocs-content .css-qa4clq {
+    /*color: var(--foreground);*/
+    color: #ff0000;
+}
 
-/*.dark .os-theme-dark {*/
-/*    background: var(--background);*/
-/*    color: var(--foreground);*/
-/*}*/
+.dark .os-theme-dark {
+    background: var(--background);
+    color: var(--foreground);
+}
 
-/*.dark .sbdocs-title {*/
-/*    color: var(--foreground);*/
-/*    background: transparent;*/
-/*}*/
+/*Título da documentação*/
+.dark .sbdocs-title {
+    color: var(--foreground);
+    background: transparent;
+}
 
 /*.sbdocs-title .sb-unstyled {*/
 /*    background: transparent;*/

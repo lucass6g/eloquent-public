@@ -20,38 +20,38 @@ const preview: Preview = {
             light: {...themes.normal, ...lightUIStorybook, ...commonTheme},
             current: "dark",
         },
-        // controls: {
-        //     matchers: {
-        //         color: /(background|color)$/i,
-        //         date: /Date$/,
-        //     },
-        // },
+        controls: {
+            matchers: {
+                color: /(background|color)$/i,
+                date: /Date$/,
+            },
+        },
     },
     tags: ["autodocs"],
 };
 
-export const decorators = [
-    (Story) => {
-        return (
-            <ThemeProvider
-                attribute="class"
-                defaultTheme="dark"
-                disableTransitionOnChange
-            >
-                <div>
-                    <Story/>
-                    <Toaster/>
-                </div>
-            </ThemeProvider>
-        )
-    },
-    withThemeByClassName({
-        themes: {
-            light: 'light',
-            dark: 'dark',
-        },
-        defaultTheme: 'dark',
-    }),
-]
+// export const decorators = [
+//     (Story) => {
+//         return (
+//             <ThemeProvider
+//                 attribute="class"
+//                 defaultTheme="dark"
+//                 disableTransitionOnChange
+//             >
+//                 <div>
+//                     <Story/>
+//                     <Toaster/>
+//                 </div>
+//             </ThemeProvider>
+//         )
+//     },
+//     withThemeByClassName({
+//         themes: {
+//             light: 'light',
+//             dark: 'dark',
+//         },
+//         defaultTheme: 'dark',
+//     }),
+// ]
 
 export default preview;
