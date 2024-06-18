@@ -1,0 +1,44 @@
+import { render, waitFor } from "@testing-library/react";
+import { Checkbox } from "..";
+
+describe("Checkbox", () => {
+    it("should match the snapshot", () => {
+        const component = render(<Checkbox
+            checked
+            defaultChecked
+            required
+            onCheckedChange={vi.fn()}
+        />);
+
+        expect(component.baseElement).toMatchSnapshot()
+    })
+
+    it("should check correctly", async () => {
+        const checkFn = vi.fn()
+
+        const component = render(<Checkbox
+            defaultChecked={false}
+            onCheckedChange={checkFn}
+        />);
+
+        const button = component.getByRole('checkbox', { name: "" })
+        await waitFor(() => button.click())
+
+        expect(checkFn).toHaveBeenCalled()
+    })
+
+    it("should be disabled", async () => {
+        const checkFn = vi.fn()
+
+        const component = render(<Checkbox
+            disabled
+            defaultChecked={false}
+            onCheckedChange={checkFn}
+        />);
+
+        const button = component.getByRole('checkbox', { name: "" })
+        await waitFor(() => button.click())
+
+        expect(checkFn).not.toHaveBeenCalled()
+    })
+}); 
