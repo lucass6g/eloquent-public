@@ -53,50 +53,61 @@
 /*Título da documentação*/
 .dark .sbdocs-title {
     color: var(--foreground);
-    background: transparent;
 }
 
 /*.sbdocs-title .sb-unstyled {*/
 /*    background: transparent;*/
 /*}*/
 
-/*.dark .docblock-argstable-head {*/
-/*    background: var(--background);*/
-/*}*/
+.dark .css-wzniqs {
+    color: var(--foreground);
+}
 
-/*.dark .docblock-argstable-head th {*/
-/*    color: var(--foreground);*/
-/*    border-bottom: 1px solid var(--border) !important;*/
-/*}*/
+.dark .docblock-argstable-head {
+    background: var(--background);
+}
 
-/*.dark .docblock-argstable-head th span {*/
-/*    color: var(--foreground);*/
-/*}*/
+.dark .docblock-argstable-head th {
+    color: var(--foreground);
+    border-bottom: 1px solid var(--border) !important;
+}
 
-/*.dark #docs-root tbody td {*/
-/*    background: var(--background) !important;*/
-/*    color: var(--foreground) !important;*/
-/*}*/
+.dark .docblock-argstable-head th span {
+    color: var(--foreground);
+    border: 1px solid #ffffff;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+}
 
-/*.dark #docs-root tbody tr:first-child td:first-child {*/
-/*    border-top-left-radius: 0 !important;*/
-/*}*/
+.dark #docs-root tbody td {
+    background: var(--background) !important;
+    color: var(--foreground) !important;
+    background: red !important;
+}
 
-/*.dark #docs-root tbody tr:first-child td:last-child {*/
-/*    border-top-right-radius: 0 !important;*/
-/*}*/
+.dark #docs-root tbody tr:first-child td:first-child {
+    border-top-left-radius: 0 !important;
+    background: red !important;
+}
 
-/*.dark #docs-root tbody tr:not(:first-child) {*/
-/*    border-top: 1px solid var(--border) !important;*/
-/*}*/
+.dark #docs-root tbody tr:first-child td:last-child {
+    border-top-right-radius: 0 !important;
+    background: red !important;
+}
 
-/*.dark .css-v2ifgj.css-v2ifgj tbody >tr>* {*/
-/*    color: var(--foreground);*/
-/*    background-color: var(--background);*/
-/*    border-color: var(--border);*/
-/*}*/
+.dark #docs-root tbody tr:not(:first-child) {
+    border-top: 1px solid var(--border) !important;
+    background: red !important;
+}
 
-/*.dark #control-variant {*/
-/*    background-color: var(--input);*/
-/*    color: var(--foreground);*/
-/*}*/
+.dark .css-v2ifgj.css-v2ifgj tbody >tr>* {
+    color: var(--foreground);
+    background-color: var(--background);
+    border: 1px solid var(--border);
+}
+
+.dark #control-variant {
+    background-color: #ffffff;
+    color: #000000;
+}
