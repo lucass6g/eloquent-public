@@ -1,12 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react'
 import { ProgressDemo } from '../demo/progress-demo'
-
 const meta = {
     title: 'Shadcn/progress',
-    component: ProgressDemo,
-    parameters: {
-        layout: 'centered',
-    },
+    component: ProgressDemo
 } satisfies Meta<typeof ProgressDemo>
 
 export default meta
