@@ -3,32 +3,36 @@ import userEvent from "@testing-library/user-event";
 import { Accordion } from "..";
 
 describe("Accordion", () => {
-    it("should match the snapshot", () => {
-        const component = render(<Accordion.Root type="single" collapsible>
-            <Accordion.Item value="item-1">
-                <Accordion.Trigger>trigger</Accordion.Trigger>
-                <Accordion.Content>content</Accordion.Content>
-            </Accordion.Item>
-        </Accordion.Root>);
+  it("should match the snapshot", () => {
+    const component = render(
+      <Accordion.Root type="single" collapsible>
+        <Accordion.Item value="item-1">
+          <Accordion.Trigger>trigger</Accordion.Trigger>
+          <Accordion.Content>content</Accordion.Content>
+        </Accordion.Item>
+      </Accordion.Root>
+    );
 
-        expect(component.baseElement).toMatchSnapshot()
-    })
+    expect(component.baseElement).toMatchSnapshot();
+  });
 
-    it("should open and close correctly", async () => {
-        render(<Accordion.Root type="single" collapsible>
-            <Accordion.Item value="item-1">
-                <Accordion.Trigger>trigger</Accordion.Trigger>
-                <Accordion.Content>content</Accordion.Content>
-            </Accordion.Item>
-        </Accordion.Root>);
+  it("should open and close correctly", async () => {
+    render(
+      <Accordion.Root type="single" collapsible>
+        <Accordion.Item value="item-1">
+          <Accordion.Trigger>trigger</Accordion.Trigger>
+          <Accordion.Content>content</Accordion.Content>
+        </Accordion.Item>
+      </Accordion.Root>
+    );
 
-        const trigger = screen.getByRole('button', { name: /trigger/i })
-        await waitFor(() => userEvent.click(trigger))
+    const trigger = screen.getByRole("button", { name: /trigger/i });
+    await waitFor(() => userEvent.click(trigger));
 
-        const content = screen.queryByText(/content/i)
-        expect(content).toBeInTheDocument()
+    const content = screen.queryByText(/content/i);
+    expect(content).toBeInTheDocument();
 
-        await waitFor(() => userEvent.click(trigger))
-        expect(content).not.toBeInTheDocument()
-    })
-}); 
+    await waitFor(() => userEvent.click(trigger));
+    expect(content).not.toBeInTheDocument();
+  });
+});

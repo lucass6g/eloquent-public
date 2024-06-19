@@ -3,50 +3,40 @@ import userEvent from "@testing-library/user-event";
 import { Input } from "..";
 
 describe("Input", () => {
-    it("should match the snapshot", () => {
-        const component = render(<Input
-            type="email"
-            placeholder="email"
-        />);
+  it("should match the snapshot", () => {
+    const component = render(<Input type="email" placeholder="email" />);
 
-        expect(component.baseElement).toMatchSnapshot()
-    })
+    expect(component.baseElement).toMatchSnapshot();
+  });
 
-    it("should be filled out correctly", async () => {
-        const stateFn = vi.fn()
+  it("should be filled out correctly", async () => {
+    const stateFn = vi.fn();
 
-        render(<Input
-            type="email"
-            placeholder="email"
-            onChange={stateFn}
-        />);
+    render(<Input type="email" placeholder="email" onChange={stateFn} />);
 
-        const input = screen.getByPlaceholderText('email')
-        await waitFor(() => userEvent.type(input, 'placeholder@elo.com'))
+    const input = screen.getByPlaceholderText("email");
+    await waitFor(() => userEvent.type(input, "placeholder@elo.com"));
 
-        const filledInput = screen.queryByDisplayValue('placeholder@elo.com')
-        expect(filledInput).toBeInTheDocument()
+    const filledInput = screen.queryByDisplayValue("placeholder@elo.com");
+    expect(filledInput).toBeInTheDocument();
 
-        expect(stateFn).toHaveBeenCalled()
-    })
+    expect(stateFn).toHaveBeenCalled();
+  });
 
-    it("should be disabled", async () => {
-        const stateFn = vi.fn()
+  it("should be disabled", async () => {
+    const stateFn = vi.fn();
 
-        render(<Input
-            type="email"
-            placeholder="email"
-            onChange={stateFn}
-            disabled
-        />);
+    render(
+      <Input type="email" placeholder="email" onChange={stateFn} disabled />
+    );
 
-        const input = screen.getByPlaceholderText('email')
-        await waitFor(() => userEvent.type(input, 'placeholder@elo.com'))
+    const input = screen.getByPlaceholderText("email");
+    await waitFor(() => userEvent.type(input, "placeholder@elo.com"));
 
-        const filledInput = screen.queryByDisplayValue('placeholder@elo.com')
-        expect(filledInput).not.toBeInTheDocument()
+    const filledInput = screen.queryByDisplayValue("placeholder@elo.com");
+    expect(filledInput).not.toBeInTheDocument();
 
-        expect(stateFn).not.toHaveBeenCalled()
-        expect(input).toBeDisabled();
-    })
-}); 
+    expect(stateFn).not.toHaveBeenCalled();
+    expect(input).toBeDisabled();
+  });
+});
