@@ -1,0 +1,98 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Button > should match the snapshot > default 1`] = `
+<body>
+  <div>
+    <button
+      class="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-green-dark-400 h-9 px-4 py-2 border-lg"
+    >
+      button
+    </button>
+  </div>
+</body>
+`;
+
+exports[`Button > should match the snapshot > destructive 1`] = `
+<body>
+  <div>
+    <button
+      class="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-50 bg-destructive text-destructive-foreground shadow-sm hover:opacity-90 h-9 px-4 py-2 border-lg"
+    >
+      button
+    </button>
+  </div>
+</body>
+`;
+
+exports[`Button > should match the snapshot > disabled 1`] = `
+<body>
+  <div>
+    <button
+      class="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-green-dark-400 h-9 px-4 py-2 border-lg"
+      disabled=""
+    >
+      button
+    </button>
+  </div>
+</body>
+`;
+
+exports[`Button > should match the snapshot > ghost 1`] = `
+<body>
+  <div>
+    <button
+      class="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent text-accent-foreground h-9 px-4 py-2 border-lg"
+    >
+      button
+    </button>
+  </div>
+</body>
+`;
+
+exports[`Button > should match the snapshot > icon 1`] = `
+<body>
+  <div>
+    <button
+      class="inline-flex border-lg items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-green-dark-400 h-9 w-9 first-child:stroke-primary-foreground"
+    >
+      +
+    </button>
+  </div>
+</body>
+`;
+
+exports[`Button > should match the snapshot > link 1`] = `
+<body>
+  <div>
+    <button
+      class="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-50 text-primary underline-offset-4 hover:underline h-9 px-4 py-2 border-lg"
+    >
+      button
+    </button>
+  </div>
+</body>
+`;
+
+exports[`Button > should match the snapshot > outline 1`] = `
+<body>
+  <div>
+    <button
+      class="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-50 shadow-sm border text-accent-foreground hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2 border-lg"
+    >
+      button
+    </button>
+  </div>
+</body>
+`;
+
+exports[`Button > should match the snapshot > secondary 1`] = `
+<body>
+  <div>
+    <button
+      class="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 disabled:pointer-events-none disabled:opacity-50 bg-secondary text-secondary-foreground shadow-sm hover:opacity-90 h-9 px-4 py-2 border-lg"
+    >
+      button
+    </button>
+  </div>
+</body>
+`;

@@ -29,7 +29,7 @@ sketch
 .pnp.js
 
 # testing
-/coverage
+**/**/coverage
 
 # next.js
 /.next/
