@@ -29,6 +29,8 @@ const CardHeader = React.forwardRef<
 ))
 CardHeader.displayName = "CardHeader"
 
+
+// TODO: Adicionar a possibilidade do Title não ser fixo no H3.
 const CardTitle = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLHeadingElement>
