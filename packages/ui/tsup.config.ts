@@ -1,23 +1,34 @@
-import { defineConfig } from 'tsup';
+import {defineConfig} from 'tsup';
 
-export default defineConfig( ( options) => {
-	console.log(options.format);
-	const formatString = Array.isArray(options.format)
-		? options.format.join("-")
-		: options.format ?? "esm";
+const useClientRegex = /['"]use client['"]\s?;/i;
 
-	return {
-		entry:      [ "src/index.ts"],
-		injectStyle: true,
-		name:       "@eloquent/ui",
-		tsconfig: `tsconfig-${formatString ?? "esm"}.json`,
-		clean:      true,
-		dts:        true,
-		format: options.format ?? ["esm"],
-		minify:     false,
-		target:     "es2022",
-		silent:     true,
-		sourcemap:  true,
-		outDir: `dist/${formatString ?? "esm"}`,
-	}
-} )
+export default defineConfig({
+    name: "@eloquent/ui",
+    entry: ["src/components/**/*.tsx"],
+    format: ["cjs", "esm"],
+    minify: true,
+    tsconfig: "tsconfig.json",
+    bundle: true,
+    clean: true,
+    dts: true,
+    target: "es2022",
+    silent: false,
+    esbuildPlugins: [
+        {
+            name: "use-client",
+            setup(build) {
+                build.onEnd((result) => {
+                    result.outputFiles?.forEach((file) => {
+                        if (file.text.match(useClientRegex)) {
+                            Object.defineProperty(file, "text", {
+                                value:
+                                    '"use client";\n' + file.text.replace(useClientRegex, ""),
+                            });
+                        }
+                    });
+                });
+            },
+        },
+    ],
+    outDir: "dist",
+})
