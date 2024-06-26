@@ -3,11 +3,10 @@
   "version": "1.0.1",
   "exports": {
     "./*": "./*",
-    "./vite": "./vite",
-    "./tailwind": "./tailwind"
+    "./vite": "./vite"
   },
   "files": [
-    "tailwind/*"
+
   ],
   "scripts": {
     "lint": "eslint . --cache"
