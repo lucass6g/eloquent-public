@@ -5,7 +5,7 @@ import {
   DotsHorizontalIcon,
 } from "@radix-ui/react-icons"
 
-import { cn } from "../lib/utils"
+import { cn } from "@eloquent/styles"
 import { ButtonProps, buttonVariants } from "./button"
 
 const Root = ({ className, ...props }: React.ComponentProps<"nav">) => (

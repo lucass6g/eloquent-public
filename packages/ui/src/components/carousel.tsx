@@ -6,7 +6,7 @@ import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react"
 
-import { cn } from "../lib/utils"
+import { cn } from "@eloquent/styles"
 import { Button } from "./button"
 
 export type CarouselApi = UseEmblaCarouselType[1]
