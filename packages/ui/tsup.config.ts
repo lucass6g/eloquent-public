@@ -8,7 +8,7 @@ export default defineConfig({
     format: ["cjs", "esm"],
     minify: true,
     tsconfig: "tsconfig.json",
-    bundle: true,
+    bundle: false,
     clean: true,
     dts: true,
     target: "es2022",
@@ -30,5 +30,4 @@ export default defineConfig({
             },
         },
     ],
-    outDir: "dist",
 })

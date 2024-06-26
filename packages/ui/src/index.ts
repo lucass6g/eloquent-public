@@ -1,4 +1,4 @@
-export * from "./components/accordion";
+export * from "./components/accordion/index.tsx";
 export * from './components/alert';
 export * from './components/alert-dialog';
 export * from './components/aspect-ratio';
