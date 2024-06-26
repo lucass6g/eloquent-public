@@ -1,7 +1,7 @@
 import { deepmerge } from "@fastify/deepmerge";
 import type { Config } from "tailwindcss";
 import {ALERT, BLUE, GREEN_DARK, GREEN_LIGHT, INFORMATIVE, NEGATIVE, NEUTRAL, POSITIVE, RED, YELLOW} from '../../tokens/src/colors'
-import * as animate from "tailwindcss-animate"
+const animate = require("tailwindcss-animate");
 
 export const defaultTailwindConfig = {
   content: ["node_modules/@eloquent/ui/dist/**/*.{js,ts,jsx,tsx}"],

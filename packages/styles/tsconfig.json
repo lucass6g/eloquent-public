@@ -1,8 +1,6 @@
 {
   "extends": "../../packages/config/base.tsconfig.json",
   "compilerOptions": {
-    "moduleResolution": "Bundler",
-
-    "lib": ["ES2022"]
+    "esModuleInterop": true
   }
 }
