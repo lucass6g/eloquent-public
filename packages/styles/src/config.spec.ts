@@ -19,8 +19,8 @@ describe("defineTailwindConfig", () => {
     const result = defineTailwindConfig(providedConfig);
 
     expect(result.content).toStrictEqual([
-      ...providedConfig.content,
       ...defaultTailwindConfig.content,
+      ...providedConfig.content,
     ]);
 
     expect(result.theme).toMatchObject(defaultTailwindConfig.theme);
