@@ -1,6 +1,17 @@
 import { deepmerge } from "@fastify/deepmerge";
 import type { Config } from "tailwindcss";
-import {ALERT, BLUE, GREEN_DARK, GREEN_LIGHT, INFORMATIVE, NEGATIVE, NEUTRAL, POSITIVE, RED, YELLOW} from '../../tokens/src/colors'
+import {
+  ALERT,
+  BLUE,
+  GREEN_DARK,
+  GREEN_LIGHT,
+  INFORMATIVE,
+  NEGATIVE,
+  NEUTRAL,
+  POSITIVE,
+  RED,
+  YELLOW,
+} from "../../tokens/src/colors";
 export const defaultTailwindConfig = {
   content: ["node_modules/@eloquent/ui/dist/**/*.{js,ts,jsx,tsx}"],
   darkMode: ["class"],
@@ -18,57 +29,57 @@ export const defaultTailwindConfig = {
           DEFAULT: "var(--primary)",
           foreground: "var(--primary-foreground)",
         },
-        border: 'var(--border)',
-        input: 'var(--input)',
-        ring: 'var(--ring)',
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
+        border: "var(--border)",
+        input: "var(--input)",
+        ring: "var(--ring)",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
         secondary: {
-          DEFAULT: 'var(--secondary)',
-          foreground: 'var(--secondary-foreground)'
+          DEFAULT: "var(--secondary)",
+          foreground: "var(--secondary-foreground)",
         },
         destructive: {
-          DEFAULT: 'var(--destructive)',
-          foreground: 'var(--destructive-foreground)'
+          DEFAULT: "var(--destructive)",
+          foreground: "var(--destructive-foreground)",
         },
         muted: {
-          DEFAULT: 'var(--muted)',
-          foreground: 'var(--muted-foreground)'
+          DEFAULT: "var(--muted)",
+          foreground: "var(--muted-foreground)",
         },
         accent: {
-          DEFAULT: 'var(--accent)',
-          foreground: 'var(--accent-foreground)',
+          DEFAULT: "var(--accent)",
+          foreground: "var(--accent-foreground)",
         },
         popover: {
-          DEFAULT: 'var(--popover)',
-          foreground: 'var(--popover-foreground)'
+          DEFAULT: "var(--popover)",
+          foreground: "var(--popover-foreground)",
         },
         card: {
-          DEFAULT: 'var(--card)',
-          foreground: 'var(--card-foreground)'
+          DEFAULT: "var(--card)",
+          foreground: "var(--card-foreground)",
         },
         feedback: {
           informative: INFORMATIVE,
           positive: POSITIVE,
           alert: ALERT,
-          negative: NEGATIVE
+          negative: NEGATIVE,
         },
         neutral: NEUTRAL,
         green: {
           light: GREEN_LIGHT,
-          dark: GREEN_DARK
+          dark: GREEN_DARK,
         },
         red: RED,
         blue: BLUE,
-        yellow: YELLOW
+        yellow: YELLOW,
       },
       fontFamily: {
         barlow: ["Barlow", "sans-serif"],
       },
       borderRadius: {
-        lg: 'var(--radius)',
-        md: 'calc(var(--radius) - 2px)',
-        sm: 'calc(var(--radius) - 4px)'
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
       fontWeight: {
         300: "300",
@@ -79,12 +90,12 @@ export const defaultTailwindConfig = {
       },
       keyframes: {
         "accordion-down": {
-          from: {height: "0"},
-          to: {height: "var(--radix-accordion-content-height)"},
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {height: "var(--radix-accordion-content-height)"},
-          to: {height: "0"},
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
         },
       },
       animation: {
@@ -103,5 +114,5 @@ export const defaultTailwindConfig = {
 export function defineTailwindConfig(config: Config) {
   return deepmerge({
     all: true,
-  })(config, defaultTailwindConfig) as Config;
+  })(defaultTailwindConfig, config) as Config;
 }
