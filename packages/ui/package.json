@@ -1,6 +1,6 @@
 {
   "name": "@eloquent/ui",
-  "version": "1.0.0-alpha.13",
+  "version": "1.0.0-alpha.14",
   "license": "MIT",
   "private": false,
   "files": [
@@ -15,19 +15,19 @@
         "types": "./dist/Accordion/index.d.ts"
     },
     "./alert": {
-      "import": "./dist/alert.cjs",
-      "require": "./dist/alert.js",
-      "types": "./dist/alert.d.ts"
+      "import": "./dist/Alert/index.cjs",
+      "require": "./dist/Alert/index.js",
+      "types": "./dist/Alert/index.d.ts"
     },
     "./alert-dialog": {
-      "import": "./dist/alert-dialog.mjs",
-      "require": "./dist/alert-dialog.js",
-      "types": "./dist/alert-dialog.d.ts"
+      "import": "./dist/AlertDialog/index.mjs",
+      "require": "./dist/AlertDialog/index.js",
+      "types": "./dist/AlertDialog/index.d.ts"
     },
     "./aspect-ratio": {
-      "import": "./dist/aspect-ratio.mjs",
-      "require": "./dist/aspect-ratio.js",
-      "types": "./dist/aspect-ratio.d.ts"
+      "import": "./dist/AspectRatio/index.mjs",
+      "require": "./dist/AspectRatio/index.js",
+      "types": "./dist/AspectRatio/index.d.ts"
     },
     "./avatar": {
       "import": "./dist/avatar.mjs",
@@ -45,9 +45,9 @@
       "types": "./dist/breadcrumb.d.ts"
     },
     "./button": {
-      "import": "./dist/button.mjs",
-      "require": "./dist/button.js",
-      "types": "./dist/button.d.ts"
+      "import": "./dist/Button/index.mjs",
+      "require": "./dist/Button/index.js",
+      "types": "./dist/Button/index.d.ts"
     },
     "./calendar": {
       "import": "./dist/calendar.mjs",
