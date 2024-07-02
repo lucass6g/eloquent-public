@@ -4,7 +4,7 @@ const useClientRegex = /['"]use client['"]\s?;/i;
 
 export default defineConfig({
     name: "@eloquent/ui",
-    entry: ["src/components/**/*.ts"],
+    entry: ["src/components/**/*.tsx"],
     format: ["cjs", "esm"],
     minify: false,
     tsconfig: "tsconfig.json",
