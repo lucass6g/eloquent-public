@@ -1,11 +1,11 @@
 {
   "name": "@eloquent/ui",
-  "version": "1.0.0-alpha.7",
+  "version": "1.0.0-alpha.8",
   "license": "MIT",
   "private": false,
   "files": [
-    "dist/**",
-    "dist/**/*"
+    "dist"
+
   ],
   "exports": {
     "./accordion": {
