@@ -4,11 +4,11 @@ const useClientRegex = /['"]use client['"]\s?;/i;
 
 export default defineConfig({
     name: "@eloquent/ui",
-    entry: ["src/components/**/*.ts","src/components/**/*.tsx"],
+    entry: ["src/components/**/*.ts","src/components/**/*.tsx", "!src/components/Accordion/accordion.tsx"],
     format: ["cjs", "esm"],
     minify: false,
     tsconfig: "tsconfig.json",
-    bundle: true,
+    bundle: false,
     clean: true,
     dts: true,
     target: "es2022",
