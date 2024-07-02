@@ -1,13 +1,20 @@
 {
   "name": "@eloquent/ui",
-  "version": "1.0.0-alpha.16",
+  "version": "1.0.0-alpha.17",
   "license": "MIT",
   "private": false,
   "files": [
     "dist",
     "dist/**/*"
   ],
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
   "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
     "./accordion": {
         "import": {
           "types": "./dist/Accordion/index.d.mts",
