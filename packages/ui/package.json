@@ -1,21 +1,21 @@
 {
   "name": "@eloquent/ui",
-  "version": "1.0.0-alpha.9",
+  "version": "1.0.0-alpha.10",
   "license": "MIT",
   "private": false,
   "files": [
-    "dist"
-
+    "dist",
+    "dist/Accordion"
   ],
   "exports": {
     "./accordion": {
       "import": {
-        "types": "./dist/accordion.d.mts",
-        "default": "./dist/accordion.mjs"
+        "types": "./dist/Accordion/index.d.mts",
+        "default": "./dist/Accordion/index.mjs"
       },
       "require": {
-        "types": "./dist/accordion.d.ts",
-        "default": "./dist/accordion.js"
+        "types": "./dist/Accordion/index.d.ts",
+        "default": "./dist/Accordion/index.js"
       }
     },
     "./alert": {
