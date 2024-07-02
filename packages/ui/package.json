@@ -1,18 +1,22 @@
 {
   "name": "@eloquent/ui",
-  "version": "1.0.0-alpha.14",
+  "version": "1.0.0-alpha.15",
   "license": "MIT",
   "private": false,
   "files": [
     "dist",
     "dist/**/*"
   ],
-  "main": "dist/button.js",
   "exports": {
     "./accordion": {
-        "import": "./dist/Accordion/index.mjs",
-        "require": "./dist/Accordion/index.js",
-        "types": "./dist/Accordion/index.d.ts"
+        "import": {
+          "types": "./dist/Accordion/index.d.mts",
+          "default": "./dist/Accordion/index.mjs"
+        },
+        "require": {
+            "types": "./dist/Accordion/index.d.ts",
+            "default": "./dist/Accordion/index.js"
+        }
     },
     "./alert": {
       "import": "./dist/Alert/index.cjs",
