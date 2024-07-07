@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 
 import { siteConfig } from "@/config/siteConfig";
-import { displayFont, monoFont, sansFont } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 import { Footer } from "@/components/footer";
 import { Providers } from "@/components/Providers";
@@ -22,10 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html suppressHydrationWarning className="scroll-smooth" lang="pt-BR">
       <body
         className={cn(
-          "min-h-screen-dvh font-sans antialiased",
-          displayFont.variable,
-          monoFont.variable,
-          sansFont.variable
+          "min-h-screen-dvh font-sans antialiased"
         )}
       >
         <div className="min-h-screen-dvh flex flex-col">
