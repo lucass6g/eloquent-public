@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ChevronLeftIcon, ChevronRightIcon } from "@iconicicons/react";
-import { Button } from "@lemonsqueezy/wedges";
+import { Button } from "@eloquent/ui/button";
 
 import { sidebarConfig, type DocsConfig } from "@/config/sidebarConfig";
 
@@ -10,16 +10,22 @@ export function Pagination({ pageHref }: { pageHref: string }) {
   return (
     <div className="mt-16 flex items-center justify-between gap-4">
       {pagination.prev ? (
-        <Button asChild before={<ChevronLeftIcon />} className="pr-3" size="sm" variant="outline">
-          <Link href={pagination.prev.href ?? "/"}>{pagination.prev.label}</Link>
+        <Button asChild className="pr-3" size="sm" variant="outline">
+          <Link href={pagination.prev.href ?? "/"}>
+            <ChevronLeftIcon />
+            {pagination.prev.label}
+          </Link>
         </Button>
       ) : (
         <span />
       )}
 
       {pagination.next ? (
-        <Button asChild after={<ChevronRightIcon />} className="pl-3" size="sm" variant="outline">
-          <Link href={pagination.next.href ?? "/"}>{pagination.next.label}</Link>
+        <Button asChild className="pl-3" size="sm" variant="outline">
+          <Link href={pagination.next.href ?? "/"}>
+            {pagination.next.label}
+            <ChevronRightIcon />
+          </Link>
         </Button>
       ) : (
         <span />

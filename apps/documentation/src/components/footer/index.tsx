@@ -1,8 +1,8 @@
 
 export function Footer() {
   return (
-    <footer className="h-20">
-        Elo
+    <footer className="flex items-center justify-center p-10">
+        ©2024 Elo Serviços S.A.
     </footer>
   );
 }

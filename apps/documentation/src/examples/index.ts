@@ -1072,15 +1072,17 @@ export function Example() {
   },
   "button/preview": {
     component: lazy(() => import("@/examples/button/preview.tsx")),
-    code: `import { PlusIcon } from "@iconicicons/react";
-import { Button } from "@lemonsqueezy/wedges";
+    code: `import {PlusIcon} from "@iconicicons/react";
+import {Button} from "@eloquent/ui/button";
 
 export function Example() {
-  return (
-    <Button after={<PlusIcon />} before={<PlusIcon />}>
-      Button
-    </Button>
-  );
+    return (
+        <Button>
+            <PlusIcon color={"white"}/>
+                Button
+            <PlusIcon/>
+        </Button>
+    );
 }
 `,
   },

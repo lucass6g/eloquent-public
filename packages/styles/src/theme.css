@@ -69,7 +69,6 @@
 
 * {
   @apply font-barlow;
-  color: var(--foreground);
 }
 
 .font-clamp {

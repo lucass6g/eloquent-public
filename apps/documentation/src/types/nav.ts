@@ -1,4 +1,3 @@
-/* -------------------------- Primary nav (header) -------------------------- */
 export type NavBadge = "new" | "updates";
 
 export type NavItem = {
@@ -23,7 +22,6 @@ export type SidebarNav = {
 
 export type MainNav = NavItem[];
 
-/* ----------------------- Secondary nav (sub header) ----------------------- */
 export type SecondaryNavItem = {
   label: string;
   slug: string;
@@ -33,7 +31,6 @@ export type SecondaryNavItem = {
 
 export type SecondaryNav = SecondaryNavItem[];
 
-/* ------------------------------- Footer nav ------------------------------- */
 export type FooterNavItem = {
   label?: string;
   href?: string;
