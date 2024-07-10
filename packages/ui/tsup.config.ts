@@ -6,8 +6,9 @@ export default defineConfig((options) => {
         : options.format ?? "esm";
     return {
         name: "@eloquent/ui",
-        entry: ["src/index.ts"],
+        entry: ["src/components/**/index.tsx", "src/components/index.ts"],
         format: options.format ?? ["esm"],
+        external: ["react", "react-dom", "react-hook-form"],
         minify: false,
         tsconfig: `tsconfig-${formatString ?? "esm"}.json`,
         clean: true,
