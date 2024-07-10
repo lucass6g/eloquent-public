@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+// @ts-ignore
 import { describe, expect, it } from "vitest";
 
 import { defaultTailwindConfig, defineTailwindConfig } from "./config";

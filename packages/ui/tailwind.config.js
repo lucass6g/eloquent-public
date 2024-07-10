@@ -1,5 +1,5 @@
 import {SPACING, LINE_HEIGHT, FONT_SIZE, BORDER_WIDTH} from '../tokens/src'
-import {defineTailwindConfig} from '../../packages/styles/src/config'
+import {defineTailwindConfig} from '../styles/src/index.js'
 
 module.exports = defineTailwindConfig({
     darkMode: ['class'],

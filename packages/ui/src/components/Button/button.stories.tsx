@@ -1,10 +1,10 @@
-import { Button, type ButtonProps } from "../";
+import { Button, type ButtonProps, ButtonVariantsProps } from ".";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Plus } from "lucide-react";
+import {ValueOf} from "@ui/types/select-key.ts";
 
-type ButtonVariant = Required<ButtonProps["variant"]>;
-
-type ButtonSize = Required<ButtonProps["size"]>;
+type ButtonVariant = Required<ValueOf<ButtonVariantsProps, "variant">>;
+type ButtonSize = Required<ValueOf<ButtonVariantsProps, "size">>
 
 const meta: Meta<ButtonProps> = {
   title: "Button",
@@ -47,9 +47,7 @@ const meta: Meta<ButtonProps> = {
       options: [
         "default",
         "destructive",
-        "ghost",
         "link",
-        "outline",
         "secondary",
       ] satisfies ButtonVariant[],
       description: "Variante do botão",
@@ -60,7 +58,7 @@ const meta: Meta<ButtonProps> = {
     },
     size: {
       control: { type: "select" },
-      options: ["default", "icon", "lg", "sm"] satisfies ButtonSize[],
+      options: ["default", "icon", "sm"] satisfies ButtonSize[],
       description: "Tamanho do botão",
       table: {
         type: { summary: "string" },
@@ -94,21 +92,9 @@ export const Secondary: Story = {
   },
 };
 
-export const Outline: Story = {
-  args: {
-    variant: "outline",
-  },
-};
-
 export const Link: Story = {
   args: {
     variant: "link",
-  },
-};
-
-export const Ghost: Story = {
-  args: {
-    variant: "ghost",
   },
 };
 

@@ -22,7 +22,6 @@ import { cn } from "@/lib/utils";
 import { Colors } from "./Colors";
 import { CopyButton } from "./CopyButton";
 import { TabsContent, TabsList, TabsRoot, TabsTrigger } from "./CustomTabs";
-import { LemonSqueezyLogomark } from "./icons/lemonsqueezy";
 import { PreviewComponent } from "./PreviewComponent";
 import { PropsTable } from "./PropsTable";
 
@@ -75,7 +74,7 @@ function CustomPre(props: HTMLAttributes<HTMLPreElement> & { raw?: string }) {
   return (
     <pre
       className={cn(
-        "not-prose my-6 max-h-[650px] overflow-x-auto rounded-lg bg-wg-gray-800 py-4 leading-6",
+        "not-prose my-6 max-h-[650px] overflow-x-auto rounded-lg bg-gray-800 py-4 leading-6",
         className
       )}
       {...otherProps}
@@ -127,7 +126,7 @@ export function CustomMDX(
     TabsList,
     TabsTrigger,
     Tooltip,
-    Logomark: LemonSqueezyLogomark,
+    // Logomark: LemonSqueezyLogomark,
     Image: (props: ComponentProps<typeof Image>) => <Image {...props} />,
     Colors,
     LinkCard,

@@ -4,7 +4,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 
-import { Button, Form, Input } from '../'
+import { Button, Form, Input } from '../../src'
 import {formSchema} from "./checkbox-demo-with-form.tsx";
 
 

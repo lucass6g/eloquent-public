@@ -28,7 +28,7 @@ function Calendar({
         caption_label: "font-medium ",
         nav: "space-x-1 flex items-center",
         nav_button: cn(
-          buttonVariants({ variant: "outline" }),
+          buttonVariants({ variant: "secondary" }),
           "h-7 w-7  p-0 hover:opacity-80 hover:bg-muted-foreground/80"
         ),
         nav_button_previous: "absolute left-1 stroke-background text-background",
@@ -45,7 +45,7 @@ function Calendar({
             : "[&:has([aria-selected])]:rounded-md"
         ),
         day: cn(
-          buttonVariants({ variant: "ghost" }),
+          buttonVariants({ variant: "icon" }),
           "h-8 w-8 p-0 font-normal aria-selected:bg-green-dark-300"
         ),
         day_range_start: "day-range-start",
