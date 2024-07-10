@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react'
 
 import {
     AlertDialog,
-} from '../'
+} from '.'
 
 const meta = {
     title: 'Alert Dialog',

@@ -15,7 +15,7 @@ export function DropdownMenuCheckboxesDemo() {
     return (
         <DropdownMenu.Root>
             <DropdownMenu.Trigger asChild>
-                <Button variant="outline">Open</Button>
+                <Button variant="secondary">Open</Button>
             </DropdownMenu.Trigger>
             <DropdownMenu.Content className="w-56">
                 <DropdownMenu.Label>Appearance</DropdownMenu.Label>

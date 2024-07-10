@@ -21,7 +21,7 @@ export function DropdownMenuDemo() {
     return (
         <DropdownMenu.Root>
             <DropdownMenu.Trigger asChild>
-                <Button variant="outline">Clique aqui</Button>
+                <Button variant="secondary">Clique aqui</Button>
             </DropdownMenu.Trigger>
             <DropdownMenu.Content className="w-56">
                 <DropdownMenu.Label>Minha conta</DropdownMenu.Label>

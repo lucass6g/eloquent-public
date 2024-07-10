@@ -5,7 +5,7 @@ import { ptBR } from 'date-fns/locale'
 import { Calendar as CalendarIcon } from 'lucide-react'
 import * as React from 'react'
 import { cn } from '../lib/utils'
-import { Button, Index, Popover, Select} from '../'
+import { Button, Calendar, Popover, Select} from '../'
 
 export function DatePickerWithPresets() {
     const [date, setDate] = React.useState<Date>()
@@ -14,7 +14,7 @@ export function DatePickerWithPresets() {
         <Popover.Root>
             <Popover.Trigger asChild>
                 <Button
-                    variant={'outline'}
+                    variant={'secondary'}
                     className={cn(
                         'w-[280px] justify-start text-left font-normal',
                         !date && 'text-muted-foreground',
@@ -45,7 +45,7 @@ export function DatePickerWithPresets() {
                     </Select.Content>
                 </Select.Root>
                 <div className="rounded-md border">
-                    <Index
+                    <Calendar
                         mode="single"
                         selected={date}
                         onSelect={setDate}

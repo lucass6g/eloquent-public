@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { CollapsibleDemo } from '../demo/collapsible-demo'
+import { CollapsibleDemo } from '../../demo/collapsible-demo'
 
 //meta
 const meta = {

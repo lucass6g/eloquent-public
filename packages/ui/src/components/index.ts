@@ -45,3 +45,4 @@ export * from "./Toaster";
 export * from "./Toggle";
 export * from "./ToggleGroup";
 export * from "./tooltip";
+export * from "./use-toast"

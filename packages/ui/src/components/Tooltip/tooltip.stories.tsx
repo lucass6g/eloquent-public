@@ -10,7 +10,7 @@ const meta = {
         <Tooltip.Provider>
             <Tooltip.Root>
                 <Tooltip.Trigger asChild>
-                    <Button variant="outline">Hover</Button>
+                    <Button variant="secondary">Hover</Button>
                 </Tooltip.Trigger>
                 <Tooltip.Content>
                     Add to library

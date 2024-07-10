@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { CheckboxReactHookFormSingle } from '../demo/checkbox-demo-with-form'
+import { CheckboxReactHookFormSingle } from '../../demo/checkbox-demo-with-form'
 
 const meta = {
     title: 'Shadcn/form',

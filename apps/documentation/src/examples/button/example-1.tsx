@@ -8,7 +8,7 @@ export default function Example() {
         <Button before={<PlusIcon />} variant="primary" />
         <Button before={<PlusIcon />} variant="secondary" />
         <Button before={<PlusIcon />} variant="tertiary" />
-        <Button before={<PlusIcon />} variant="outline" />
+        <Button before={<PlusIcon />} variant="secondary" />
         <Button before={<PlusIcon />} variant="transparent" />
         <Button before={<PlusIcon />} variant="link" />
       </div>
@@ -26,7 +26,7 @@ export default function Example() {
           Button
         </Button>
 
-        <Button after={<PlusIcon />} before={<PlusIcon />} variant="outline">
+        <Button after={<PlusIcon />} before={<PlusIcon />} variant="secondary">
           Button
         </Button>
 
@@ -43,7 +43,7 @@ export default function Example() {
         <Button before={<PlusIcon />} variant="primary" shape="pill" />
         <Button before={<PlusIcon />} variant="secondary" shape="pill" />
         <Button before={<PlusIcon />} variant="tertiary" shape="pill" />
-        <Button before={<PlusIcon />} variant="outline" shape="pill" />
+        <Button before={<PlusIcon />} variant="secondary" shape="pill" />
         <Button before={<PlusIcon />} variant="transparent" shape="pill" />
         <Button before={<PlusIcon />} variant="link" shape="pill" />
       </div>
@@ -61,7 +61,7 @@ export default function Example() {
           Button
         </Button>
 
-        <Button after={<PlusIcon />} before={<PlusIcon />} variant="outline" shape="pill">
+        <Button after={<PlusIcon />} before={<PlusIcon />} variant="secondary" shape="pill">
           Button
         </Button>
 

@@ -37,7 +37,7 @@ export function ComboboxDemo() {
         <Popover.Root open={open} onOpenChange={setOpen}>
             <Popover.Trigger asChild>
                 <Button
-                    variant="outline"
+                    variant="secondary"
                     role="combobox"
                     aria-expanded={open}
                     className="w-[200px] justify-between"

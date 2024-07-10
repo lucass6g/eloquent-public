@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { DatePickerWithRange } from '../demo/date-picker-with-ranger-demo'
+import { DatePickerWithRange } from '../../demo/date-picker-with-ranger-demo'
 
 //meta
 const meta = {

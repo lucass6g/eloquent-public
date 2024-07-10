@@ -44,7 +44,7 @@ export default function Example() {
         variant="expanded"
         after={
           <Button
-            variant="outline"
+            variant="secondary"
             className="light:bg-white"
             size="sm"
             after={<ArrowUpRightIcon />}

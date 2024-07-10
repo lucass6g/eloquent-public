@@ -16,7 +16,7 @@ export function ToastDemo({
 
     return (
         <Button
-            variant="outline"
+            variant="secondary"
             onClick={() => {
                 toast({
                     title,

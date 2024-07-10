@@ -7,8 +7,8 @@ import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 
 import { cn } from '../lib/utils'
-import { Button, Index, Form, Popover, toast } from '../'
-import {FormSchemaDatePicker} from "./checkbox-demo-with-form.tsx";
+import { Button, Calendar, Form, Popover, toast } from '../'
+import {FormSchemaDatePicker} from "./checkbox-demo-with-form";
 
 export function DatePickerForm() {
     const form = useForm<z.infer<typeof FormSchemaDatePicker>>({
@@ -41,7 +41,7 @@ export function DatePickerForm() {
                                 <Popover.Trigger asChild>
                                     <Form.Control>
                                         <Button
-                                            variant={'outline'}
+                                            variant={'secondary'}
                                             className={cn(
                                                 'w-[240px] pl-3 text-left font-normal',
                                                 !field.value &&
@@ -61,7 +61,7 @@ export function DatePickerForm() {
                                     className="w-auto p-0"
                                     align="start"
                                 >
-                                    <Index
+                                    <Calendar
                                         mode="single"
                                         selected={field.value}
                                         onSelect={field.onChange}

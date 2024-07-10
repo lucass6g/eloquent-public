@@ -57,7 +57,7 @@ export function ComboboxForm() {
                                 <Popover.Trigger asChild>
                                     <Form.Control>
                                         <Button
-                                            variant="outline"
+                                            variant="secondary"
                                             role="combobox"
                                             className={cn(
                                                 'w-[200px] justify-between',

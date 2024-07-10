@@ -1,7 +1,7 @@
-import React from 'react'
+import {useState} from "react";
 
 function useDate() {
-    const [date, setDate] = React.useState<Date | undefined>(new Date())
+    const [date, setDate] = useState<Date | undefined>(new Date())
     return {
         date,
         setDate,

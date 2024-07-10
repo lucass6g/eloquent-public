@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { DropdownMenuCheckboxesDemo } from '../demo/dropdown-menu-checkbox-demo'
+import { DropdownMenuCheckboxesDemo } from '../../demo/dropdown-menu-checkbox-demo'
 
 //meta
 const meta = {

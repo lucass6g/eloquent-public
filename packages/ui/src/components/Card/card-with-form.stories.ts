@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { CardWithForm } from '../demo/card-with-form'
+import { CardWithForm } from '../../demo/card-with-form'
 
 const meta = {
     title: 'form',

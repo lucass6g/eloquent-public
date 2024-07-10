@@ -10,7 +10,7 @@ export default function Example() {
       variant="expanded"
       after={
         <div className="flex items-center gap-3">
-          <Button variant="outline" size="sm" className="light:bg-white">
+          <Button variant="secondary" size="sm" className="light:bg-white">
             View the data
           </Button>
 

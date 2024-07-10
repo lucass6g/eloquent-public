@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { DatePickerWithPresets } from '../demo/date-picker-with-presets-demo'
+import { DatePickerWithPresets } from '../../demo/date-picker-with-presets-demo'
 
 const meta = {
     title: 'Shadcn/date',

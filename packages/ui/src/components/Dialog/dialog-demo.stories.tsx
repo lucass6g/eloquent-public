@@ -4,7 +4,7 @@ import {
     Dialog,
     Input,
     Label
-} from '../'
+} from '../../'
 import { Copy } from 'lucide-react'
 
 const meta = {
@@ -12,7 +12,7 @@ const meta = {
     component: () => (
         <Dialog.Root>
             <Dialog.Trigger asChild>
-                <Button variant="outline">Edit Profile</Button>
+                <Button variant="secondary">Edit Profile</Button>
             </Dialog.Trigger>
             <Dialog.Content className="sm:max-w-[425px]">
                 <Dialog.Header>
@@ -68,7 +68,7 @@ export const DialogCustomShareLink: Story = {
     render: () => (
         <Dialog.Root>
             <Dialog.Trigger asChild>
-                <Button variant="outline">Share</Button>
+                <Button variant="secondary">Share</Button>
             </Dialog.Trigger>
             <Dialog.Content className="sm:max-w-md">
                 <Dialog.Header>

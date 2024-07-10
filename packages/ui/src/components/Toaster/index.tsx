@@ -3,7 +3,7 @@
 import {
   Toast,
 } from "../Toast/"
-import { useToast } from "../Toast/use-toast"
+import { useToast } from "../use-toast"
 
 export function Toaster() {
   const { toasts } = useToast()

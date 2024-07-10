@@ -6,7 +6,7 @@ const meta = {
     component: () => (
         <Popover.Root>
             <Popover.Trigger asChild>
-                <Button variant="outline">Open popover</Button>
+                <Button variant="secondary">Open popover</Button>
             </Popover.Trigger>
             <Popover.Content className="w-80">
                 <div className="grid gap-4">

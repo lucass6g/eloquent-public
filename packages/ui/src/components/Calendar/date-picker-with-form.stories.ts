@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { DatePickerForm } from '../demo/date-picker-with-form'
+import { DatePickerForm } from '../../demo/date-picker-with-form'
 
 const meta = {
     title: 'Shadcn/form',

@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { CardDemoNotification } from '../demo/card-notification-demo'
+import { CardDemoNotification } from '../../demo/card-notification-demo'
 
 const meta = {
     title: 'Card',

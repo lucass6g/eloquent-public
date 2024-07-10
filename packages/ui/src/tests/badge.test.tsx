@@ -16,7 +16,7 @@ describe("Badge", () => {
     });
 
     it("outline", () => {
-      const component = render(<Badge variant="outline">badge</Badge>);
+      const component = render(<Badge variant="secondary">badge</Badge>);
 
       expect(component.baseElement).toMatchSnapshot();
     });

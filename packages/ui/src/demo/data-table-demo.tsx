@@ -91,7 +91,7 @@ export const columns: ColumnDef<Payment>[] = [
         header: ({ column }) => {
             return (
                 <Button
-                    variant="ghost"
+                    variant="secondary"
                     onClick={() =>
                         column.toggleSorting(column.getIsSorted() === 'asc')
                     }
@@ -129,7 +129,7 @@ export const columns: ColumnDef<Payment>[] = [
             return (
                 <DropdownMenu.Root>
                     <DropdownMenu.Trigger asChild>
-                        <Button variant="ghost" className="h-8 w-8 p-0">
+                        <Button variant="secondary" className="h-8 w-8 p-0">
                             <span className="sr-only">Open menu</span>
                             <MoreHorizontal className="h-4 w-4" />
                         </Button>
@@ -201,7 +201,7 @@ export function DataTableDemo() {
                 />
                 <DropdownMenu.Root>
                     <DropdownMenu.Trigger asChild>
-                        <Button variant="outline" className="ml-auto">
+                        <Button variant="secondary" className="ml-auto">
                             Columns <ChevronDown className="ml-2 h-4 w-4" />
                         </Button>
                     </DropdownMenu.Trigger>
@@ -286,7 +286,7 @@ export function DataTableDemo() {
                 </div>
                 <div className="space-x-2">
                     <Button
-                        variant="outline"
+                        variant="secondary"
                         size="sm"
                         onClick={() => table.previousPage()}
                         disabled={!table.getCanPreviousPage()}
@@ -294,7 +294,7 @@ export function DataTableDemo() {
                         Previous
                     </Button>
                     <Button
-                        variant="outline"
+                        variant="secondary"
                         size="sm"
                         onClick={() => table.nextPage()}
                         disabled={!table.getCanNextPage()}

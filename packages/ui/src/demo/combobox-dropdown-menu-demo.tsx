@@ -31,7 +31,7 @@ export function ComboboxDropdownMenu() {
             </p>
             <DropdownMenu.Root open={open} onOpenChange={setOpen}>
                 <DropdownMenu.Trigger asChild>
-                    <Button variant="ghost" size="sm">
+                    <Button variant="secondary" size="sm">
                         <MoreHorizontal />
                     </Button>
                 </DropdownMenu.Trigger>

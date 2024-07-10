@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { CheckboxReactHookFormMultiple } from '../demo/checkbox-ReactHook-Form-Multiple'
+import { CheckboxReactHookFormMultiple } from '../../demo/checkbox-ReactHook-Form-Multiple'
 
 const meta = {
     title: 'Shadcn/form',

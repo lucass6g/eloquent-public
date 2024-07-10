@@ -44,7 +44,7 @@ export function CardWithForm() {
                 </form>
             </Card.Content>
             <Card.Footer className="flex justify-between">
-                <Button variant="outline">Cancel</Button>
+                <Button variant="secondary">Cancel</Button>
                 <Button>Deploy</Button>
             </Card.Footer>
         </Card.Root>

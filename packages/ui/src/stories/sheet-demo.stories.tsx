@@ -11,7 +11,7 @@ const meta = {
     component: () => (
         <Sheet.Root>
             <Sheet.Trigger asChild>
-                <Button variant="outline">Open</Button>
+                <Button variant="secondary">Open</Button>
             </Sheet.Trigger>
             <Sheet.Content>
                 <Sheet.Header>
@@ -73,7 +73,7 @@ export const SheetSideExample: Story = {
             {SHEET_SIDES.map((side) => (
                 <Sheet.Root key={side}>
                     <Sheet.Trigger asChild>
-                        <Button variant="outline">{side}</Button>
+                        <Button variant="secondary">{side}</Button>
                     </Sheet.Trigger>
                     <Sheet.Content side={side}>
                         <Sheet.Header>

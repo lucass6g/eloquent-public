@@ -25,7 +25,7 @@ export function Example() {
       variant="expanded"
       after={
         <div className="flex items-center gap-3">
-          <Button variant="outline" size="sm" className="light:bg-white">
+          <Button variant="secondary" size="sm" className="light:bg-white">
             View the data
           </Button>
 
@@ -87,7 +87,7 @@ export function Example() {
         variant="expanded"
         after={
           <Button
-            variant="outline"
+            variant="secondary"
             className="light:bg-white"
             size="sm"
             after={<ArrowUpRightIcon />}
@@ -794,7 +794,7 @@ export function Example() {
         <Button before={<PlusIcon />} variant="primary" />
         <Button before={<PlusIcon />} variant="secondary" />
         <Button before={<PlusIcon />} variant="tertiary" />
-        <Button before={<PlusIcon />} variant="outline" />
+        <Button before={<PlusIcon />} variant="secondary" />
         <Button before={<PlusIcon />} variant="transparent" />
         <Button before={<PlusIcon />} variant="link" />
       </div>
@@ -812,7 +812,7 @@ export function Example() {
           Button
         </Button>
 
-        <Button after={<PlusIcon />} before={<PlusIcon />} variant="outline">
+        <Button after={<PlusIcon />} before={<PlusIcon />} variant="secondary">
           Button
         </Button>
 
@@ -829,7 +829,7 @@ export function Example() {
         <Button before={<PlusIcon />} variant="primary" shape="pill" />
         <Button before={<PlusIcon />} variant="secondary" shape="pill" />
         <Button before={<PlusIcon />} variant="tertiary" shape="pill" />
-        <Button before={<PlusIcon />} variant="outline" shape="pill" />
+        <Button before={<PlusIcon />} variant="secondary" shape="pill" />
         <Button before={<PlusIcon />} variant="transparent" shape="pill" />
         <Button before={<PlusIcon />} variant="link" shape="pill" />
       </div>
@@ -847,7 +847,7 @@ export function Example() {
           Button
         </Button>
 
-        <Button after={<PlusIcon />} before={<PlusIcon />} variant="outline" shape="pill">
+        <Button after={<PlusIcon />} before={<PlusIcon />} variant="secondary" shape="pill">
           Button
         </Button>
 
@@ -876,7 +876,7 @@ export function Example() {
         <Button before={<PlusIcon />} variant="primary" size="sm" />
         <Button before={<PlusIcon />} variant="secondary" size="sm" />
         <Button before={<PlusIcon />} variant="tertiary" size="sm" />
-        <Button before={<PlusIcon />} variant="outline" size="sm" />
+        <Button before={<PlusIcon />} variant="secondary" size="sm" />
         <Button before={<PlusIcon />} variant="transparent" size="sm" />
         <Button before={<PlusIcon />} variant="link" size="sm" />
       </div>
@@ -894,7 +894,7 @@ export function Example() {
           Button
         </Button>
 
-        <Button after={<PlusIcon />} before={<PlusIcon />} variant="outline" size="sm">
+        <Button after={<PlusIcon />} before={<PlusIcon />} variant="secondary" size="sm">
           Button
         </Button>
 
@@ -911,7 +911,7 @@ export function Example() {
         <Button before={<PlusIcon />} variant="primary" shape="pill" size="sm" />
         <Button before={<PlusIcon />} variant="secondary" shape="pill" size="sm" />
         <Button before={<PlusIcon />} variant="tertiary" shape="pill" size="sm" />
-        <Button before={<PlusIcon />} variant="outline" shape="pill" size="sm" />
+        <Button before={<PlusIcon />} variant="secondary" shape="pill" size="sm" />
         <Button before={<PlusIcon />} variant="transparent" shape="pill" size="sm" />
         <Button before={<PlusIcon />} variant="link" shape="pill" size="sm" />
       </div>
@@ -941,7 +941,7 @@ export function Example() {
           Button
         </Button>
 
-        <Button after={<PlusIcon />} before={<PlusIcon />} variant="outline" shape="pill" size="sm">
+        <Button after={<PlusIcon />} before={<PlusIcon />} variant="secondary" shape="pill" size="sm">
           Button
         </Button>
 
@@ -976,7 +976,7 @@ export function Example() {
         <Button before={<PlusIcon />} variant="primary" destructive />
         <Button before={<PlusIcon />} variant="secondary" destructive />
         <Button before={<PlusIcon />} variant="tertiary" destructive />
-        <Button before={<PlusIcon />} variant="outline" destructive />
+        <Button before={<PlusIcon />} variant="secondary" destructive />
         <Button before={<PlusIcon />} variant="transparent" destructive />
         <Button before={<PlusIcon />} variant="link" destructive />
       </div>
@@ -994,7 +994,7 @@ export function Example() {
           Button
         </Button>
 
-        <Button after={<PlusIcon />} before={<PlusIcon />} variant="outline" destructive>
+        <Button after={<PlusIcon />} before={<PlusIcon />} variant="secondary" destructive>
           Button
         </Button>
 
@@ -1011,7 +1011,7 @@ export function Example() {
         <Button before={<PlusIcon />} variant="primary" shape="pill" destructive />
         <Button before={<PlusIcon />} variant="secondary" shape="pill" destructive />
         <Button before={<PlusIcon />} variant="tertiary" shape="pill" destructive />
-        <Button before={<PlusIcon />} variant="outline" shape="pill" destructive />
+        <Button before={<PlusIcon />} variant="secondary" shape="pill" destructive />
         <Button before={<PlusIcon />} variant="transparent" shape="pill" destructive />
         <Button before={<PlusIcon />} variant="link" shape="pill" destructive />
       </div>
@@ -1044,7 +1044,7 @@ export function Example() {
         <Button
           after={<PlusIcon />}
           before={<PlusIcon />}
-          variant="outline"
+          variant="secondary"
           shape="pill"
           destructive
         >

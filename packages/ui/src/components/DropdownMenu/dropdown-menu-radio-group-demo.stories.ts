@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react'
 
-import { DropdownMenuRadioGroupDemo } from '../demo/dropdown-menu-radio-group-demo'
+import { DropdownMenuRadioGroupDemo } from '../../demo/dropdown-menu-radio-group-demo'
 
 //meta
 const meta = {

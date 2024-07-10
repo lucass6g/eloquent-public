@@ -17,7 +17,7 @@ describe("Button", () => {
     });
 
     it("outline", () => {
-      const component = render(<Button variant="outline">button</Button>);
+      const component = render(<Button variant="secondary">button</Button>);
 
       expect(component.baseElement).toMatchSnapshot();
     });
@@ -35,7 +35,7 @@ describe("Button", () => {
     });
 
     it("ghost", () => {
-      const component = render(<Button variant="ghost">button</Button>);
+      const component = render(<Button variant="secondary">button</Button>);
 
       expect(component.baseElement).toMatchSnapshot();
     });

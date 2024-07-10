@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { CheckboxWithText } from '../demo/checkbox-demo-with-text'
+import { CheckboxWithText } from '../../demo/checkbox-demo-with-text'
 
 const meta = {
     title: 'Shadcn/checkbox',

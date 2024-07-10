@@ -43,7 +43,7 @@ const meta = {
               <Button type="submit" className="w-full font-semibold">
                 Entrar
               </Button>
-              <Button variant="outline" className="w-full font-semibold">
+              <Button variant="secondary" className="w-full font-semibold">
                 Esqueci minha senha
               </Button>
             </div>
