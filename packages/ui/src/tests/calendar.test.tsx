@@ -1,6 +1,6 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import { act } from "react";
-import { Calendar } from "..";
+import { Index } from "..";
 
 describe("Calendar", () => {
   beforeEach(() => {
@@ -10,14 +10,14 @@ describe("Calendar", () => {
 
   it("should match the snapshot", () => {
     const component = render(
-      <Calendar mode="single" selected={new Date()} onSelect={vi.fn()} />
+      <Index mode="single" selected={new Date()} onSelect={vi.fn()} />
     );
 
     expect(component.baseElement).toMatchSnapshot();
   });
 
   it("should go back to the previous month correctly", async () => {
-    render(<Calendar mode="single" selected={new Date()} onSelect={vi.fn()} />);
+    render(<Index mode="single" selected={new Date()} onSelect={vi.fn()} />);
 
     const button = screen.getByRole("button", {
       name: /go to previous month/i,
@@ -29,7 +29,7 @@ describe("Calendar", () => {
   });
 
   it("should go to next month correctly", async () => {
-    render(<Calendar mode="single" selected={new Date()} onSelect={vi.fn()} />);
+    render(<Index mode="single" selected={new Date()} onSelect={vi.fn()} />);
 
     const button = screen.getByRole("button", { name: /go to next month/i });
     act(() => button.click());
@@ -41,7 +41,7 @@ describe("Calendar", () => {
   it("should select a day correctly", () => {
     const onSelect = vi.fn();
     render(
-      <Calendar mode="single" selected={new Date()} onSelect={onSelect} />
+      <Index mode="single" selected={new Date()} onSelect={onSelect} />
     );
 
     const button = screen.getAllByRole("gridcell", { name: "2" })[0];
@@ -56,7 +56,7 @@ describe("Calendar", () => {
   it("should be disabled", () => {
     const onSelect = vi.fn();
     render(
-      <Calendar
+      <Index
         mode="single"
         selected={new Date()}
         onSelect={onSelect}

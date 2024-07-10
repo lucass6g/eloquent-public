@@ -1,14 +1,14 @@
 'use client'
 
 import { ptBR } from 'date-fns/locale'
-import { Calendar } from '../'
+import { Index } from '../'
 import useDate from './useDate'
 
 export function CalendarDemo() {
   const { date, setDate } = useDate()
 
   return (
-    <Calendar
+    <Index
       mode="single"
       locale={ptBR}
       selected={date}

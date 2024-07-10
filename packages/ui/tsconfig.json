@@ -1,23 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "../../packages/config/base.tsconfig.json",
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.mts",
-    "**/*.cts",
-    "**/*.js",
-    "**/*.cjs",
-    "**/*.mjs"
-  ],
-  "exclude": [
-    "dist",
-    "build",
-    "node_modules",
-    "stories",
-    "demo",
-    "coverage"
-  ],
   "display": "Default",
   "compilerOptions": {
     "skipLibCheck": true,

@@ -7,7 +7,7 @@ import { useForm } from 'react-hook-form'
 import * as z from 'zod'
 
 import { cn } from '../lib/utils'
-import { Button, Calendar, Form, Popover, toast } from '../'
+import { Button, Index, Form, Popover, toast } from '../'
 import {FormSchemaDatePicker} from "./checkbox-demo-with-form.tsx";
 
 export function DatePickerForm() {
@@ -61,7 +61,7 @@ export function DatePickerForm() {
                                     className="w-auto p-0"
                                     align="start"
                                 >
-                                    <Calendar
+                                    <Index
                                         mode="single"
                                         selected={field.value}
                                         onSelect={field.onChange}

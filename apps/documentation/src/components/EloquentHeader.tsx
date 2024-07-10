@@ -1,8 +1,7 @@
-"use client";
-
+"use client"
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Button } from "@eloquent/ui/button";
+import { Button } from "@eloquent/ui";
 
 import { siteConfig } from "@/config/siteConfig";
 import { focusClasses } from "@/lib/a11y";

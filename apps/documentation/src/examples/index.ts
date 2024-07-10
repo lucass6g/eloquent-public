@@ -1073,7 +1073,7 @@ export function Example() {
   "button/preview": {
     component: lazy(() => import("@/examples/button/preview.tsx")),
     code: `import {PlusIcon} from "@iconicicons/react";
-import {Button} from "@eloquent/ui/button";
+import {Button} from "@eloquent/ui";
 
 export function Example() {
     return (

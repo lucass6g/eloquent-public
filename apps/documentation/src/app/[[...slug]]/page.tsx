@@ -88,12 +88,12 @@ function Links({ links }: { links?: FrontmatterProps["links"] }) {
       {links.radix ? (
         <Button
           asChild
-          before={<RadixIcon aria-hidden />}
           className="gap-1 px-3"
           size="sm"
-          variant="tertiary"
+          variant="secondary"
         >
           <Link href={links.radix} rel="noopener noreferrer" target="_blank">
+          <RadixIcon aria-hidden />
             Radix UI
           </Link>
         </Button>
@@ -102,13 +102,13 @@ function Links({ links }: { links?: FrontmatterProps["links"] }) {
       {links.source ? (
         <Button
           asChild
-          before={<GithubIcon aria-hidden />}
           className="gap-1 px-3"
           size="sm"
-          variant="tertiary"
+          variant="secondary"
         >
           <Link href={links.source} rel="noopener noreferrer" target="_blank">
             Source
+          <GithubIcon aria-hidden />
           </Link>
         </Button>
       ) : null}

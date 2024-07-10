@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Calendar as CalendarComponent } from "../";
+import { Index as CalendarComponent } from "../";
 
 //meta
 const meta = {

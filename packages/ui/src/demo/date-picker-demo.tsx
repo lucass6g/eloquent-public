@@ -4,7 +4,7 @@ import { format } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
 import { Calendar as CalendarIcon } from 'lucide-react'
 import { cn } from '../lib/utils'
-import { Button, Calendar, Popover } from '../'
+import { Button, Index, Popover } from '../'
 import useDate from './useDate'
 
 export function DatePickerDemo() {
@@ -29,7 +29,7 @@ export function DatePickerDemo() {
                 </Button>
             </Popover.Trigger>
             <Popover.Content className="w-auto p-0">
-                <Calendar
+                <Index
                     mode="single"
                     selected={date}
                     onSelect={setDate}

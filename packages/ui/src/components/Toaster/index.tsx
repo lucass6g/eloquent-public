@@ -2,8 +2,8 @@
 
 import {
   Toast,
-} from "./toast"
-import { useToast } from "./use-toast"
+} from "../Toast/"
+import { useToast } from "../Toast/use-toast"
 
 export function Toaster() {
   const { toasts } = useToast()

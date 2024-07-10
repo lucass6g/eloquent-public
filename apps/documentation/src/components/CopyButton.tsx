@@ -1,8 +1,7 @@
 "use client";
 
 import {useState} from "react";
-import {Button} from "@eloquent/ui/button";
-import {Tooltip} from "@eloquent/ui/tooltip";
+import {Button, Tooltip} from "@eloquent/ui";
 
 import {cn} from "@/lib/utils";
 import {CheckIcon, CopyIcon} from "@iconicicons/react";

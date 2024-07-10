@@ -1,9 +1,12 @@
-import { Alert, Button } from "@lemonsqueezy/wedges";
+import { Alert } from "@eloquent/ui/Alert";
 
 export default function Example() {
   return (
-    <Alert title="Alert title" after={<Button variant="link">Button</Button>}>
-      Alert content
-    </Alert>
+    <Alert.Root>
+        <Alert.Title>Alert Title</Alert.Title>
+        <Alert.Description>
+            Alert Description
+        </Alert.Description>
+    </Alert.Root>
   );
 }
