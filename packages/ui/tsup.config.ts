@@ -16,5 +16,6 @@ export default defineConfig((options) => {
         target: "es2022",
         silent: false,
         outDir: `dist/${formatString ?? "esm"}`,
+        banner: {js: '"use client";'},
     }
 })
