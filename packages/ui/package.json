@@ -13,8 +13,8 @@
   "scripts": {
     "lint": "eslint src --cache",
     "typecheck": "tsc -b",
-    "build:cjs": "NODE_OPTIONS='--max-old-space-size=16384' tsup --format cjs",
-    "build:esm": "NODE_OPTIONS='--max-old-space-size=16384' tsup --format esm",
+    "build:cjs": "tsup --format cjs",
+    "build:esm": "tsup --format esm",
     "build": "concurrently \"npm run build:cjs\" \"npm run build:esm\"",
     "test": "vitest run",
     "test:ui": "vitest  --ui",
