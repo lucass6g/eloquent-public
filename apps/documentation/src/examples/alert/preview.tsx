@@ -1,4 +1,4 @@
-import { Alert } from "@eloquent/ui/Alert";
+import { Alert } from "@eloquent/ui";
 
 export default function Example() {
   return (

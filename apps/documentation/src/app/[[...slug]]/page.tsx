@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Button } from "@eloquent/ui/button";
+import { Button } from "@eloquent/ui";
 
 import { type FrontmatterProps } from "@/types/mdx";
 import { type PageProps } from "@/types/page";
