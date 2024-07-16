@@ -1,4 +1,4 @@
-import {defineConfig, build} from 'tsup';
+import {defineConfig} from 'tsup';
 
 export default defineConfig((options) => {
     const formatString = Array.isArray(options.format)
