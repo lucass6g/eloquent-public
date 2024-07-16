@@ -1,4 +1,5 @@
-import { Heading, type HeadingProps } from ".";
+import { Heading } from "./";
+import type { HeadingProps } from "./Heading.props";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<HeadingProps> = {
