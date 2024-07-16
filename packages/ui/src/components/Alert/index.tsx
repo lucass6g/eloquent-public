@@ -4,13 +4,13 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@eloquent/styles";
 
 export const alertVariants = cva(
-    "relative w-full rounded-lg border px-4 py-3 text-sm [&>svg]:stroke-primary-foreground [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:stroke-foreground [&>svg~*]:pl-7",
+    "relative w-full p-4 text-sm rounded-[8px] [&>svg]:stroke-primary-foreground [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:stroke-foreground [&>svg~*]:pl-7",
     {
         variants: {
             variant: {
-                default: "bg-background text-foreground",
+                default: "bg-white border border-[#E0E0E0] text-foreground",
                 destructive:
-                    " bg-background border-destructive/50 text-destructive border-destructive [&>svg]:stroke-destructive *:text-destructive",
+                    "bg-background border text-destructive border-destructive [&>svg]:stroke-destructive *:text-destructive",
             },
         },
         defaultVariants: {
@@ -23,12 +23,12 @@ const RootAlert = React.forwardRef<
     HTMLDivElement,
     React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
 >(({ className, variant, ...props }, ref) => (
-    <div
-        ref={ref}
-role="alert"
-className={cn(alertVariants({ variant }), className)}
-{...props}
-/>
+        <div
+            ref={ref}
+            role="alert"
+            className={cn(alertVariants({ variant }), className)}
+            {...props}
+        />
 ));
 RootAlert.displayName = "Alert";
 
@@ -38,9 +38,9 @@ const AlertTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
     <h5
         ref={ref}
-className={cn("mb-1 font-medium leading-none tracking-tight", className)}
-{...props}
-/>
+        className={cn("text-base not-italic font-medium", className)}
+        {...props}
+    />
 ));
 AlertTitle.displayName = "AlertTitle";
 
@@ -50,9 +50,9 @@ const AlertDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
     <div
         ref={ref}
-className={cn("text-sm [&_p]:leading-relaxed", className)}
-{...props}
-/>
+        className={cn("text-base font-normal not-italic text-[#616161]", className)}
+        {...props}
+    />
 ));
 AlertDescription.displayName = "AlertDescription";
 
