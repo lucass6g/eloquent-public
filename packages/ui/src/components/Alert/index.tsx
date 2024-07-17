@@ -1,23 +1,8 @@
 import * as React from "react";
-import { cva, type VariantProps } from "class-variance-authority";
+import { type VariantProps } from "class-variance-authority";
 
 import { cn } from "@eloquent/styles";
-
-export const alertVariants = cva(
-    "relative w-full p-4 text-sm rounded-[8px] [&>svg]:stroke-primary-foreground [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:stroke-foreground [&>svg~*]:pl-7",
-    {
-        variants: {
-            variant: {
-                default: "bg-white border border-[#E0E0E0] text-foreground",
-                destructive:
-                    "bg-background border text-destructive border-destructive [&>svg]:stroke-destructive *:text-destructive",
-            },
-        },
-        defaultVariants: {
-            variant: "default",
-        },
-    }
-);
+import { alertVariants } from "./variants";
 
 const RootAlert = React.forwardRef<
     HTMLDivElement,
