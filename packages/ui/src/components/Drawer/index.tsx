@@ -4,6 +4,24 @@ import * as React from "react"
 import { Drawer as DrawerPrimitive } from "vaul"
 
 import { cn } from "@eloquent/styles"
+import { cva, type VariantProps } from "class-variance-authority";
+
+export const drawerVariants = cva(
+  "",
+  {
+    variants: {
+      variant: {
+        default: "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col  border bg-background",
+        responsive:
+          "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col bg-background rounded-t-[10px]",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+    },
+  }
+);
+
 
 const Root = ({
   shouldScaleBackground = true,
@@ -29,6 +47,7 @@ const DrawerOverlay = React.forwardRef<
   <DrawerPrimitive.Overlay
     ref={ref}
     className={cn("fixed inset-0 z-50 bg-black/80", className)}
+    style={{ opacity: '0.5' }}
     {...props}
   />
 ))
@@ -36,19 +55,16 @@ DrawerOverlay.displayName = DrawerPrimitive.Overlay.displayName
 
 const DrawerContent = React.forwardRef<
   React.ElementRef<typeof DrawerPrimitive.Content>,
-  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Content>
->(({ className, children, ...props }, ref) => (
+  React.ComponentPropsWithoutRef<typeof DrawerPrimitive.Content> & VariantProps<typeof drawerVariants>
+>(({ className, children, variant, ...props }, ref) => (
   <DrawerPortal>
     <DrawerOverlay />
     <DrawerPrimitive.Content
       ref={ref}
-      className={cn(
-        "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col rounded-t-[10px] border bg-background",
-        className
-      )}
+      className={cn(drawerVariants({ variant }), className)}
       {...props}
     >
-      <div className="mx-auto mt-4 h-2 w-[100px] rounded-full bg-muted" />
+      <div className="mx-auto mt-4 h-2 rounded-full bg-muted w-[88px]" />
       {children}
     </DrawerPrimitive.Content>
   </DrawerPortal>
@@ -84,7 +100,7 @@ const DrawerTitle = React.forwardRef<
   <DrawerPrimitive.Title
     ref={ref}
     className={cn(
-      "text-lg font-semibold leading-none tracking-tight",
+      "mx-auto text-lg font-semibold leading-none tracking-tight",
       className
     )}
     {...props}
@@ -98,7 +114,7 @@ const DrawerDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Description
     ref={ref}
-    className={cn("text-sm text-muted-foreground", className)}
+    className={cn("mx-auto text-sm text-muted-foreground", className)}
     {...props}
   />
 ))
