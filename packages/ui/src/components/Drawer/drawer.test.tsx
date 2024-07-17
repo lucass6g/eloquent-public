@@ -12,8 +12,29 @@ describe('Drawer', () => {
             removeListener: function() {}
         };
     };
+    it('should render the component correctly', () => {
+        const component = render(<Drawer.Root>
+            <Drawer.Trigger>Abrir</Drawer.Trigger>
+            <Drawer.Portal>
+                <Drawer.Content>
+                    <Drawer.Header>
+                        <Drawer.Title>Content title</Drawer.Title>
+                    </Drawer.Header>
+                    <Drawer.Description>Content description</Drawer.Description>
+                    <Drawer.Footer>
+                        <Drawer.Close asChild>
+                            <Button variant="default">Cancel</Button>
+                        </Drawer.Close>
+                    </Drawer.Footer>
+                </Drawer.Content>
+                <Drawer.Overlay />
+            </Drawer.Portal>
+        </Drawer.Root>);
+
+    expect(component.baseElement).toMatchSnapshot();
+    })
     it('should render the drawer and handle open/close actions correctly', () => {
-        render(<Drawer.Root>
+        const component = render(<Drawer.Root>
             <Drawer.Trigger>Abrir</Drawer.Trigger>
             <Drawer.Portal>
                 <Drawer.Content>
@@ -38,9 +59,10 @@ describe('Drawer', () => {
         const cancelButton = screen.getByText('Cancel');
         expect(cancelButton).toBeInTheDocument();
         fireEvent.click(cancelButton);
+        expect(component.baseElement).toMatchSnapshot();
     });
     it('should render the responsive variant correctly', () => {
-        render(<Drawer.Root>
+        const component = render(<Drawer.Root>
             <Drawer.Trigger>Abrir</Drawer.Trigger>
             <Drawer.Portal>
                 <Drawer.Content data-testid="content"variant="responsive">
@@ -61,5 +83,6 @@ describe('Drawer', () => {
         expect(trigger).toBeInTheDocument();
         fireEvent.click(trigger);
         expect(screen.getByTestId('content')).toHaveClass('rounded-t-[10px]')
+        expect(component.baseElement).toMatchSnapshot();
     });
 });
