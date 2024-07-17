@@ -1,7 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react/*';
 import { VariantProps } from 'class-variance-authority'
-import { Drawer, drawerVariants } from '.';
+import { Drawer } from '.';
 import { Button } from '../Button';
+import { drawerVariants } from './variants';
 
 type TypeCustomDrawerProps = {} & VariantProps<typeof drawerVariants>
 
@@ -40,7 +41,7 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 export const DrawerDefault: Story = {
-    name: "Drawer com conteúdo",
+    name: "Drawer padrão",
     render: () => (
         <Drawer.Root>
             <Drawer.Trigger>Abrir</Drawer.Trigger>

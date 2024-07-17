@@ -4,24 +4,8 @@ import * as React from "react"
 import { Drawer as DrawerPrimitive } from "vaul"
 
 import { cn } from "@eloquent/styles"
-import { cva, type VariantProps } from "class-variance-authority";
-
-export const drawerVariants = cva(
-  "",
-  {
-    variants: {
-      variant: {
-        default: "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col  border bg-background",
-        responsive:
-          "fixed inset-x-0 bottom-0 z-50 mt-24 flex h-auto flex-col bg-background rounded-t-[10px]",
-      },
-    },
-    defaultVariants: {
-      variant: "default",
-    },
-  }
-);
-
+import { type VariantProps } from "class-variance-authority";
+import { drawerVariants } from "./variants";
 
 const Root = ({
   shouldScaleBackground = true,
