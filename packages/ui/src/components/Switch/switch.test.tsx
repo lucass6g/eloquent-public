@@ -1,4 +1,5 @@
 import { render, screen, waitFor } from "@testing-library/react";
+import {it, describe, expect, vi} from "vitest"
 import userEvent from "@testing-library/user-event";
 import { Switch } from "..";
 
