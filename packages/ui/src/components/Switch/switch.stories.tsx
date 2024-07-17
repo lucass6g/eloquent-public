@@ -16,15 +16,15 @@ type Story = StoryObj<typeof meta>;
 export const SwitchDefault: Story = {
   name: "Switch padrão",
   args: {},
-  render: () => (<Switch.Default title="Título"/>),
+  render: () => (<Switch.Default />),
 };
 export const SwitchWithTitle: Story = {
   name: "Switch com título",
   args: {},
-  render: () => (<Switch.LabelText labelText="Título"/> ),
+  render: () => (<Switch.LabelText labelText="O Brasil é caramelo"/> ),
 };
 export const SwitchWithHelperText: Story = {
   name: "Switch com texto auxiliar",
   args: {},
-  render: () => (<Switch.LabelText labelText="Título 2" helperText="Texto auxiliar ao Switch"/> ),
+  render: () => (<Switch.LabelText labelText="Título" helperText="Texto auxiliar ao Switch"/> ),
 };

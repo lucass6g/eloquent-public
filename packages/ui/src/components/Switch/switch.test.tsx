@@ -5,7 +5,7 @@ import { Switch } from "..";
 
 describe("Switch", () => {
   it("should match the snapshot", () => {
-    const component = render(<Switch id="switch" />);
+    const component = render(<Switch.Default id="switch" />);
 
     expect(component.baseElement).toMatchSnapshot();
   });
@@ -13,7 +13,7 @@ describe("Switch", () => {
   it("should check correctly", async () => {
     const switchFn = vi.fn();
 
-    render(<Switch defaultChecked={false} onCheckedChange={switchFn} />);
+    render(<Switch.Default defaultChecked={false} onCheckedChange={switchFn} />);
 
     const button = screen.getByRole("switch");
     expect(button).not.toBeChecked();
@@ -27,7 +27,7 @@ describe("Switch", () => {
   it("should uncheck correctly", async () => {
     const switchFn = vi.fn();
 
-    render(<Switch defaultChecked={true} onCheckedChange={switchFn} />);
+    render(<Switch.Default defaultChecked={true} onCheckedChange={switchFn} />);
 
     const button = screen.getByRole("switch");
     expect(button).toBeChecked();
@@ -42,7 +42,7 @@ describe("Switch", () => {
     const checkFn = vi.fn();
 
     render(
-      <Switch disabled defaultChecked={false} onCheckedChange={checkFn} />
+      <Switch.Default disabled defaultChecked={false} onCheckedChange={checkFn} />
     );
 
     const button = screen.getByRole("switch");
@@ -51,4 +51,25 @@ describe("Switch", () => {
     expect(button).toBeDisabled();
     expect(checkFn).not.toHaveBeenCalled();
   });
+
+  it('renders the switch with title', () => {
+    const component = render(<Switch.LabelText labelText="O Brasil é caramelo"/>);
+    const labelElement = screen.getByText('O Brasil é caramelo');
+    expect(labelElement).toBeInTheDocument();
+    const switchElement = screen.getByRole('switch');
+    expect(switchElement).toBeInTheDocument();
+    expect(component.baseElement).toMatchSnapshot();
+  });
+
+  it('renders the switch with helper text', () => {
+    const component = render(<Switch.LabelText labelText="Título" helperText="Texto auxiliar ao Switch"/> );
+    const labelElement = screen.getByText('Título');
+    expect(labelElement).toBeInTheDocument();
+    const helperTextElement = screen.getByText('Texto auxiliar ao Switch');
+    expect(helperTextElement).toBeInTheDocument();
+    const switchElement = screen.getByRole('switch');
+    expect(switchElement).toBeInTheDocument();
+    expect(component.baseElement).toMatchSnapshot();
+  });
 });
+

@@ -1,0 +1,102 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Switch > renders the switch with helper text 1`] = `
+<body>
+  <div>
+    <div
+      style="display: flex; align-items: center;"
+    >
+      <button
+        aria-checked="false"
+        class="peer inline-flex h-5 w-9 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent shadow-sm transition-colors data-[state=checked]:bg-[#003933] data-[state=unchecked]:bg-[#BDBDBD] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50"
+        data-state="unchecked"
+        id="Título"
+        role="switch"
+        type="button"
+        value="on"
+      >
+        <span
+          class="pointer-events-none block h-4 w-4 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-4 data-[state=unchecked]:translate-x-0"
+          data-state="unchecked"
+        />
+      </button>
+      <div
+        class="ml-2 flex flex-col"
+      >
+        <label
+          class="block text-sm font-medium ml-8px text-[#003933]"
+          for="Título"
+        >
+          Título
+        </label>
+        <label
+          class="block text-sm ml-8px text-[#616161]"
+          for="Título"
+        >
+          Texto auxiliar ao Switch
+        </label>
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Switch > renders the switch with title 1`] = `
+<body>
+  <div>
+    <div
+      style="display: flex; align-items: center;"
+    >
+      <button
+        aria-checked="false"
+        class="peer inline-flex h-5 w-9 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent shadow-sm transition-colors data-[state=checked]:bg-[#003933] data-[state=unchecked]:bg-[#BDBDBD] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50"
+        data-state="unchecked"
+        id="O Brasil é caramelo"
+        role="switch"
+        type="button"
+        value="on"
+      >
+        <span
+          class="pointer-events-none block h-4 w-4 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-4 data-[state=unchecked]:translate-x-0"
+          data-state="unchecked"
+        />
+      </button>
+      <div
+        class="ml-2 flex flex-col"
+      >
+        <label
+          class="block text-sm font-medium ml-8px text-[#003933]"
+          for="O Brasil é caramelo"
+        >
+          O Brasil é caramelo
+        </label>
+        <label
+          class="block text-sm ml-8px text-[#616161]"
+          for="O Brasil é caramelo"
+        />
+      </div>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Switch > should match the snapshot 1`] = `
+<body>
+  <div>
+    <button
+      aria-checked="false"
+      class="peer inline-flex h-5 w-9 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent shadow-sm transition-colors data-[state=checked]:bg-[#003933] data-[state=unchecked]:bg-[#BDBDBD] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50"
+      data-state="unchecked"
+      id="switch"
+      role="switch"
+      type="button"
+      value="on"
+    >
+      <span
+        class="pointer-events-none block h-4 w-4 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-4 data-[state=unchecked]:translate-x-0"
+        data-state="unchecked"
+      />
+    </button>
+  </div>
+</body>
+`;
