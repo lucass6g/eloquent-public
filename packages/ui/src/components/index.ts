@@ -17,6 +17,7 @@ export * from "./Command";
 export * from "./ContextMenu";
 export * from "./Dialog";
 export * from "./DropdownMenu";
+export * from "./Drawer";
 export * from "./Form";
 export * from "./HoverCard";
 export * from "./Input";
