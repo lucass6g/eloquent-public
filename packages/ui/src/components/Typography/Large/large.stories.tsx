@@ -1,5 +1,5 @@
-import { Large } from "./";
-import type { LargeProps } from "./Large.props";
+import { Large } from "./index.tsx";
+import type { LargeProps } from "./Large.props.ts";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<LargeProps> = {

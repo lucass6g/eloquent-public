@@ -2,7 +2,7 @@ import {tv} from "tailwind-variants";
 
 export const headingVariants = tv({
     base: [
-        "text-green-dark-600 font-barlow font-semibold"
+        "text-foreground font-barlow font-semibold"
     ],
     variants: {
         level: {

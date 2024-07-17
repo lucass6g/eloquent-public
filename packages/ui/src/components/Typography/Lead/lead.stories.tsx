@@ -1,5 +1,5 @@
-import { Lead } from "./";
-import type { LeadProps } from "./Lead.props";
+import { Lead } from "./index.tsx";
+import type { LeadProps } from "./Lead.props.ts";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<LeadProps> = {

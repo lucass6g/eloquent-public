@@ -1,5 +1,5 @@
 import {forwardRef} from "react";
-import {LargeElement, LargeProps} from "./Large.props";
+import {LargeElement, LargeProps} from "./Large.props.ts";
 import {cn} from "@eloquent/styles";
 import {largeVariants} from "./variants.ts";
 
