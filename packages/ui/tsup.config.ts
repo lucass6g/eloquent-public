@@ -6,7 +6,7 @@ export default defineConfig((options) => {
         : options.format ?? "esm";
     return {
         name: "@eloquent/ui",
-        entry: ["src/index.ts"],
+        entry: ["src/index.ts", "src/components/**/index.tsx", "src/components/Typography/index.ts"],
         format: options.format ?? ["esm"],
         external: ["react", "react-dom", "react-hook-form"],
         minify: false,
@@ -16,6 +16,5 @@ export default defineConfig((options) => {
         target: "es2022",
         silent: false,
         outDir: `dist/${formatString ?? "esm"}`,
-        banner: {js: '"use client";'},
     }
 })
