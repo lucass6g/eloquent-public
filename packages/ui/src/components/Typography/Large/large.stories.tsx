@@ -1,10 +1,10 @@
-import { Heading } from "./";
-import type { HeadingProps } from "./Heading.props";
+import { Large } from "./index.tsx";
+import type { LargeProps } from "./Large.props.ts";
 import type { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<HeadingProps> = {
-  title: "Typography/Heading",
-  component: Heading,
+const meta: Meta<LargeProps> = {
+  title: "Typography/Large",
+  component: Large,
   args: {
     children: "O Brasil é caramelo",
     as: "h1",
@@ -24,7 +24,7 @@ const meta: Meta<HeadingProps> = {
 
 export default meta;
 
-export const Default: StoryObj<HeadingProps> = {
+export const Default: StoryObj<LargeProps> = {
   args: {
     as: "h1",
   },

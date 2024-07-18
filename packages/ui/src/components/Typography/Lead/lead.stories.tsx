@@ -1,10 +1,10 @@
-import { Heading } from "./";
-import type { HeadingProps } from "./Heading.props";
+import { Lead } from "./index.tsx";
+import type { LeadProps } from "./Lead.props.ts";
 import type { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<HeadingProps> = {
-  title: "Typography/Heading",
-  component: Heading,
+const meta: Meta<LeadProps> = {
+  title: "Typography/Lead",
+  component: Lead,
   args: {
     children: "O Brasil é caramelo",
     as: "h1",
@@ -24,7 +24,7 @@ const meta: Meta<HeadingProps> = {
 
 export default meta;
 
-export const Default: StoryObj<HeadingProps> = {
+export const Default: StoryObj<LeadProps> = {
   args: {
     as: "h1",
   },

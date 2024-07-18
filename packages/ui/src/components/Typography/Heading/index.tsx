@@ -1,5 +1,5 @@
 import {forwardRef} from "react";
-import {HeadingElement, HeadingProps} from "./Heading-type";
+import {HeadingElement, HeadingProps} from "./Heading.props";
 import {cn} from "@eloquent/styles";
 import {headingVariants} from "./variants"
 
