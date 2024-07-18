@@ -35,4 +35,25 @@ describe("Accordion", () => {
     await waitFor(() => userEvent.click(trigger));
     expect(content).not.toBeInTheDocument();
   });
+
+  it("should render multiple contents", async () => {
+    render(
+      <Accordion.Root type="multiple">
+        <Accordion.Item value="item-1">
+          <Accordion.Trigger>trigger</Accordion.Trigger>
+          <Accordion.Content>Item-1</Accordion.Content>
+          <Accordion.Content>Item-2</Accordion.Content>
+        </Accordion.Item>
+      </Accordion.Root>
+    );
+
+    const trigger = screen.getByRole("button", { name: /trigger/i });
+    await waitFor(() => userEvent.click(trigger));
+
+    const content = screen.queryByText(/content one/i);
+    expect(content).toBeInTheDocument();
+ 
+    const contentTwo = screen.queryByText(/content two/i);
+    expect(contentTwo).toBeInTheDocument();
+  });
 });
