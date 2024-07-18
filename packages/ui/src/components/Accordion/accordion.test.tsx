@@ -1,6 +1,8 @@
-import { render, screen, waitFor } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import { it, describe, expect } from "vitest";
+import { render, screen, waitFor } from "@testing-library/react"
 import { Accordion } from "..";
+import { userEvent } from "@storybook/testing-library";
+
 
 describe("Accordion", () => {
   it("should match the snapshot", () => {
