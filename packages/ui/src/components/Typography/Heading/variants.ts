@@ -11,7 +11,7 @@ export const headingVariants = tv({
             h3: "text-2xl",
             h4: "text-xl",
             h5: "text-md",
-            h6: "text-sm font"
+            h6: "text-sm"
         }
     },
     defaultVariants: {

@@ -9,7 +9,7 @@ export default defineConfig({
 		setupFiles: ["setupTests.ts"],
 		coverage: {
 			provider: "istanbul",
-			exclude: ["style/**", "src/lib/**", "**/styles.ts", "**.config.**"],
+			exclude: ["style/**", "src/lib/**", "**/styles.ts", "**.config.**", "**.stories.**"],
 			reportsDirectory: "./coverage",
 			reporter: ["text-summary", "html", "json", "lcov"],
 		},

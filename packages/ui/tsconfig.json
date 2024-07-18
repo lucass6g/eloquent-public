@@ -36,5 +36,9 @@
     "baseUrl": ".",
     "incremental": false,
     "isolatedModules": true,
+    "types": [
+      "vitest/globals",
+      "vitest/jsdom"
+    ]
   }
 }
