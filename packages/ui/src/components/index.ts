@@ -17,6 +17,7 @@ export * from "./Command";
 export * from "./ContextMenu";
 export * from "./Dialog";
 export * from "./DropdownMenu";
+export * from "./Drawer";
 export * from "./Form";
 export * from "./HoverCard";
 export * from "./Input";
@@ -45,4 +46,5 @@ export * from "./Toaster";
 export * from "./Toggle";
 export * from "./ToggleGroup";
 export * from "./Tooltip";
+export* from "./Typography"
 export * from "./use-toast"
