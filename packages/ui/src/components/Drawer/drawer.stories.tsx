@@ -62,6 +62,76 @@ export const DrawerDefault: Story = {
         </Drawer.Root>
     ),
 }
+export const DrawerDirectionTop: Story = {
+    name: "Drawer com posição no Topo",
+    render: () => (
+        <Drawer.Root direction='top'>
+            <Drawer.Trigger>Abrir</Drawer.Trigger>
+            <Drawer.Portal>
+                <Drawer.Content>
+                    <Drawer.Header>
+                        <Drawer.Title>Content title</Drawer.Title>
+                    </Drawer.Header>
+                    <Drawer.Description>Content description</Drawer.Description>
+                    <Drawer.Footer>
+                        <Drawer.Close asChild>
+                            <Button variant="default">Cancel</Button>
+                        </Drawer.Close>
+                    </Drawer.Footer>
+                </Drawer.Content>
+                <Drawer.Overlay />
+            </Drawer.Portal>
+        </Drawer.Root>
+    ),
+}
+
+export const DrawerDirectionLeft: Story = {
+    name: "Drawer animação para Esquerda",
+    render: () => (
+        <Drawer.Root direction='left'>
+            <Drawer.Trigger>Abrir</Drawer.Trigger>
+            <Drawer.Portal>
+                <Drawer.Content>
+                    <Drawer.Header>
+                        <Drawer.Title>Content title</Drawer.Title>
+                    </Drawer.Header>
+                    <Drawer.Description>Content description</Drawer.Description>
+                    <Drawer.Footer>
+                        <Drawer.Close asChild>
+                            <Button variant="default">Cancel</Button>
+                        </Drawer.Close>
+                    </Drawer.Footer>
+                </Drawer.Content>
+                <Drawer.Overlay />
+            </Drawer.Portal>
+        </Drawer.Root>
+    ),
+}
+
+
+export const DrawerDirectionRight: Story = {
+    name: "Drawer animação para Direita",
+    render: () => (
+        <Drawer.Root direction='right'>
+            <Drawer.Trigger>Abrir</Drawer.Trigger>
+            <Drawer.Portal>
+                <Drawer.Content>
+                    <Drawer.Header>
+                        <Drawer.Title>Content title</Drawer.Title>
+                    </Drawer.Header>
+                    <Drawer.Description>Content description</Drawer.Description>
+                    <Drawer.Footer>
+                        <Drawer.Close asChild>
+                            <Button variant="default">Cancel</Button>
+                        </Drawer.Close>
+                    </Drawer.Footer>
+                </Drawer.Content>
+                <Drawer.Overlay />
+            </Drawer.Portal>
+        </Drawer.Root>
+    ),
+}
+
 
 export const DrawerResponsive: Story = {
     name: "Drawer responsivo",

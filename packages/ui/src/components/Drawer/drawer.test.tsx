@@ -85,4 +85,77 @@ describe('Drawer', () => {
         expect(screen.getByTestId('content')).toHaveClass('rounded-t-[10px]')
         expect(component.baseElement).toMatchSnapshot();
     });
+
+    it('should open the drawer from right direction', () => {
+        const component = render(<Drawer.Root direction='right'>
+            <Drawer.Trigger>Abrir</Drawer.Trigger>
+            <Drawer.Portal>
+                <Drawer.Content data-testid="content"variant="responsive">
+                    <Drawer.Header>
+                        <Drawer.Title>Content title</Drawer.Title>
+                    </Drawer.Header>
+                    <Drawer.Description>Content description</Drawer.Description>
+                    <Drawer.Footer>
+                        <Drawer.Close asChild>
+                            <Button variant="default">Cancel</Button>
+                        </Drawer.Close>
+                    </Drawer.Footer>
+                </Drawer.Content>
+                <Drawer.Overlay />
+            </Drawer.Portal>
+        </Drawer.Root>);
+        const trigger = screen.getByText('Abrir');
+        expect(trigger).toBeInTheDocument();
+        fireEvent.click(trigger);
+        expect(screen.getByTestId('content')).toHaveAttribute('vaul-drawer-direction', "right")
+        expect(component.baseElement).toMatchSnapshot();
+    });
+    it('should open the drawer from left direction', () => {
+        const component = render(<Drawer.Root direction='left'>
+            <Drawer.Trigger>Abrir</Drawer.Trigger>
+            <Drawer.Portal>
+                <Drawer.Content data-testid="content"variant="responsive">
+                    <Drawer.Header>
+                        <Drawer.Title>Content title</Drawer.Title>
+                    </Drawer.Header>
+                    <Drawer.Description>Content description</Drawer.Description>
+                    <Drawer.Footer>
+                        <Drawer.Close asChild>
+                            <Button variant="default">Cancel</Button>
+                        </Drawer.Close>
+                    </Drawer.Footer>
+                </Drawer.Content>
+                <Drawer.Overlay />
+            </Drawer.Portal>
+        </Drawer.Root>);
+        const trigger = screen.getByText('Abrir');
+        expect(trigger).toBeInTheDocument();
+        fireEvent.click(trigger);
+        expect(screen.getByTestId('content')).toHaveAttribute('vaul-drawer-direction', "left")
+        expect(component.baseElement).toMatchSnapshot();
+    });
+    it('should open the drawer from top direction', () => {
+        const component = render(<Drawer.Root direction='top'>
+            <Drawer.Trigger>Abrir</Drawer.Trigger>
+            <Drawer.Portal>
+                <Drawer.Content data-testid="content"variant="responsive">
+                    <Drawer.Header>
+                        <Drawer.Title>Content title</Drawer.Title>
+                    </Drawer.Header>
+                    <Drawer.Description>Content description</Drawer.Description>
+                    <Drawer.Footer>
+                        <Drawer.Close asChild>
+                            <Button variant="default">Cancel</Button>
+                        </Drawer.Close>
+                    </Drawer.Footer>
+                </Drawer.Content>
+                <Drawer.Overlay />
+            </Drawer.Portal>
+        </Drawer.Root>);
+        const trigger = screen.getByText('Abrir');
+        expect(trigger).toBeInTheDocument();
+        fireEvent.click(trigger);
+        expect(screen.getByTestId('content')).toHaveAttribute('vaul-drawer-direction', "top")
+        expect(component.baseElement).toMatchSnapshot();
+    });
 });
