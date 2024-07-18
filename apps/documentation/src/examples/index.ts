@@ -103,13 +103,16 @@ export function Example() {
   },
   "alert/preview": {
     component: lazy(() => import("@/examples/alert/preview.tsx")),
-    code: `import { Alert, Button } from "@lemonsqueezy/wedges";
+    code: `import { Alert } from "@eloquent/ui";
 
 export function Example() {
   return (
-    <Alert title="Alert title" after={<Button variant="link">Button</Button>}>
-      Alert content
-    </Alert>
+    <Alert.Root>
+        <Alert.Title>Alert Title</Alert.Title>
+        <Alert.Description>
+            Alert Description
+        </Alert.Description>
+    </Alert.Root>
   );
 }
 `,
