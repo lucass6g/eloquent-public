@@ -1,5 +1,6 @@
 import { render } from "@testing-library/react";
 import { Separator } from ".";
+import { describe, it } from "vitest";
 
 describe("Separator", () => {
     describe("should match the snapshot", () => {
