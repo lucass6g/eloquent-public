@@ -5,15 +5,54 @@ import * as SwitchPrimitives from "@radix-ui/react-switch";
 
 import { cn } from "@eloquent/styles";
 
-const Switch = React.forwardRef<
+type SwitchProps = {
+    labelText: string;
+    helperText?: string;
+}
+
+const LabelText = React.forwardRef<
+    React.ElementRef<typeof SwitchPrimitives.Root>,
+    React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root> & SwitchProps
+>(({ className, labelText, helperText, ...props }, ref) => (<div style={{ display: 'flex', alignItems: 'center' }}>
+    <SwitchPrimitives.Root
+        className={cn(
+            [
+                "peer inline-flex h-5 w-9 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent shadow-sm transition-colors",
+                "data-[state=checked]:bg-[#003933] data-[state=unchecked]:bg-[#BDBDBD]",
+                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+                "disabled:cursor-not-allowed disabled:opacity-50"
+            ],
+            className
+        )}
+        id={labelText}
+        {...props}
+        ref={ref}
+    >
+        <SwitchPrimitives.Thumb
+            className={cn(
+                "pointer-events-none block h-4 w-4 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-4 data-[state=unchecked]:translate-x-0"
+            )}
+        />
+    </SwitchPrimitives.Root>
+    <div className="ml-2 flex flex-col">
+        <label htmlFor={labelText} className="block text-sm font-medium ml-8px text-[#003933]" >
+            {labelText}
+        </label>
+        <label htmlFor={labelText} className="block text-sm ml-8px text-[#616161]">
+            {helperText}
+        </label>
+    </div>
+</div>));
+
+const Default = React.forwardRef<
     React.ElementRef<typeof SwitchPrimitives.Root>,
     React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
->(({className, ...props}, ref) => (
+>(({ className, ...props }, ref) => (
     <SwitchPrimitives.Root
         className={cn(
             [
                 "peer inline-flex h-5 w-9 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent shadow-sm transition-colors  ",
-                "data-[state=checked]:bg-primary data-[state=unchecked]:bg-slate-600",
+                "data-[state=checked]:bg-[#003933] data-[state=unchecked]:bg-[#BDBDBD]",
                 "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
                 "disabled:cursor-not-allowed disabled:opacity-50"
             ],
@@ -29,6 +68,10 @@ const Switch = React.forwardRef<
         />
     </SwitchPrimitives.Root>
 ));
-Switch.displayName = SwitchPrimitives.Root.displayName;
+Default.displayName = SwitchPrimitives.Root.displayName;
+LabelText.displayName = SwitchPrimitives.Root.displayName;
 
-export {Switch};
+export const Switch = {
+    LabelText: LabelText,
+    Default: Default
+}
