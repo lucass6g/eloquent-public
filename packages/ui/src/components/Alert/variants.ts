@@ -6,7 +6,7 @@ export const alertVariants = tv({
     ],
     variants: {
         variant: {
-            default: "bg-white border border-[#E0E0E0] text-foreground",
+            default: "bg-white border border-neutral-300 text-foreground",
             destructive:
                 "bg-background border text-destructive border-destructive [&>svg]:stroke-destructive *:text-destructive",
         },
