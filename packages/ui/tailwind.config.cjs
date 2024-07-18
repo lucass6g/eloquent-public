@@ -1,4 +1,4 @@
-import {defineTailwindConfig} from '../styles/src/index.js'
+import { defineTailwindConfig } from '../styles/src/index.js'
 
 module.exports = defineTailwindConfig({
     darkMode: ['class'],
