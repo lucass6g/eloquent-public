@@ -32,8 +32,18 @@ export const AvatarWithFallback: Story = {
   args: {},
   render: () => (
     <Avatar.Root>
-      <Avatar.Image src="" alt="@shadcn" />
+      <Avatar.Image src="" alt="@shadcn"/>
       <Avatar.Fallback>Elo</Avatar.Fallback>
+    </Avatar.Root>
+  ),
+};
+export const AvatarWithSizesProperties: Story = {
+  args: {},
+  name: 'Avatar com tamanhos específicos',
+  render: () => (
+    <Avatar.Root size="xl">
+      <Avatar.Image src="" alt="@shadcn"/>
+      <Avatar.Fallback fontSize="lg">Elo</Avatar.Fallback>
     </Avatar.Root>
   ),
 };

@@ -75,6 +75,7 @@ export const defaultTailwindConfig = {
       },
       fontFamily: {
         barlow: ["Barlow", "sans-serif"],
+        redonda: ["Redonda", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

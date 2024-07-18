@@ -67,8 +67,8 @@
   --ring: #ffffff;
 }
 
-* {
-  @apply font-barlow;
+.font-redonda {
+  font-family: 'Redonda', sans-serif;
 }
 
 .font-clamp {

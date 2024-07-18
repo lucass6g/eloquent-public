@@ -45,4 +45,5 @@ export * from "./Toaster";
 export * from "./Toggle";
 export * from "./ToggleGroup";
 export * from "./Tooltip";
+export* from "./Typography"
 export * from "./use-toast"
