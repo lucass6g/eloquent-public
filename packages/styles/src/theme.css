@@ -1,11 +1,25 @@
 @import url("https://p.typekit.net/p.css?s=1&k=wvf5kwu&ht=tk&f=1981.1984.2005.2007.2009.22618.22619&a=32411851&app=typekit&e=css");
 @import url("https://use.typekit.net/mfg4ogz.css");
 
+
 @font-face {
   font-family: 'Barlow';
   src: url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap') format('woff2');
-  font-weight: 400;
+  font-weight: 500
 }
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap') format('woff2');
+  font-weight: 600
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap') format('woff2');
+  font-weight: 800;
+}
+
 
 :root {
   --background: #ffffff;
@@ -65,10 +79,6 @@
   --border: #ffffff;
   --input: #ffffff;
   --ring: #ffffff;
-}
-
-.font-redonda {
-  font-family: 'Redonda', sans-serif;
 }
 
 .font-clamp {

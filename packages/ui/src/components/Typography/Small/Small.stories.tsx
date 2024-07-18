@@ -1,5 +1,5 @@
 import { Small } from "./";
-import type { SmallProps } from "./Small.props.ts";
+import type {SmallProps} from "./Small.props.ts";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<SmallProps> = {
@@ -7,11 +7,11 @@ const meta: Meta<SmallProps> = {
   component: Small,
   args: {
     children: "O Brasil é caramelo",
-    size: "default",
+    variant: "default",
   },
   argTypes: {
-    size: {
-      options: ["default", "sm"],
+    variant: {
+      options: ["default", "regular"],
       control: { type: "radio" },
     },
   }
