@@ -31,9 +31,7 @@ export const SkeletonAvatar: Story = {
 export const SkeletonText: Story = {
     args: {},
     render: () => (
-        <>
-            <Skeleton className="h-4 w-[392px]" />
-        </>
+        <Skeleton className="h-4 w-[392px]" />
     ),
     parameters: {
         doc: {
@@ -47,9 +45,7 @@ export const SkeletonText: Story = {
 export const SkeletonCard: Story = {
     args: {},
     render: () => (
-        <>
-            <Skeleton className="h-32 w-[392px] rounded-xl" />
-        </>
+        <Skeleton className="h-32 w-[392px] rounded-xl" />
     ),
     parameters: {
         doc: {
