@@ -5,7 +5,7 @@ import { Switch } from "..";
 
 describe("Switch", () => {
   it("should match the snapshot", () => {
-    const component = render(<Switch.Default id="switch" />);
+    const component = render(<Switch.Root id="switch" />);
 
     expect(component.baseElement).toMatchSnapshot();
   });
@@ -13,7 +13,7 @@ describe("Switch", () => {
   it("should check correctly", async () => {
     const switchFn = vi.fn();
 
-    render(<Switch.Default defaultChecked={false} onCheckedChange={switchFn} />);
+    render(<Switch.Root defaultChecked={false} onCheckedChange={switchFn} />);
 
     const button = screen.getByRole("switch");
     expect(button).not.toBeChecked();
@@ -27,7 +27,7 @@ describe("Switch", () => {
   it("should uncheck correctly", async () => {
     const switchFn = vi.fn();
 
-    render(<Switch.Default defaultChecked={true} onCheckedChange={switchFn} />);
+    render(<Switch.Root defaultChecked={true} onCheckedChange={switchFn} />);
 
     const button = screen.getByRole("switch");
     expect(button).toBeChecked();
@@ -42,7 +42,7 @@ describe("Switch", () => {
     const checkFn = vi.fn();
 
     render(
-      <Switch.Default disabled defaultChecked={false} onCheckedChange={checkFn} />
+      <Switch.Root disabled defaultChecked={false} onCheckedChange={checkFn} />
     );
 
     const button = screen.getByRole("switch");

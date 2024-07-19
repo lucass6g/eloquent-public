@@ -36,7 +36,7 @@ const LabelText = React.forwardRef<
     </div>
 </div>));
 
-const Default = React.forwardRef<
+const Root = React.forwardRef<
     React.ElementRef<typeof SwitchPrimitives.Root>,
     React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
 >(({ className, ...props }, ref) => (
@@ -50,10 +50,10 @@ const Default = React.forwardRef<
         />
     </SwitchPrimitives.Root>
 ));
-Default.displayName = SwitchPrimitives.Root.displayName;
+Root.displayName = SwitchPrimitives.Root.displayName;
 LabelText.displayName = SwitchPrimitives.Root.displayName;
 
 export const Switch = {
     LabelText: LabelText,
-    Default: Default
+    Root
 }

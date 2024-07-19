@@ -58,7 +58,7 @@ export function SwitchFormDemo() {
                                         </Form.Description>
                                     </div>
                                     <Form.Control>
-                                        <Switch
+                                        <Switch.Root
                                             checked={field.value}
                                             onCheckedChange={field.onChange}
                                         />
@@ -81,7 +81,7 @@ export function SwitchFormDemo() {
                                         </Form.Description>
                                     </div>
                                     <Form.Control>
-                                        <Switch
+                                        <Switch.Root
                                             checked={field.value}
                                             onCheckedChange={field.onChange}
                                             disabled

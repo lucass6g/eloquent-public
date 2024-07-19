@@ -3,7 +3,7 @@ import { Switch } from ".";
 
 const meta = {
   title: "Switch",
-  component: Switch.Default,
+  component: Switch.Root,
   parameters: {
     layout: "centered",
   },
@@ -16,7 +16,7 @@ type Story = StoryObj<typeof meta>;
 export const SwitchDefault: Story = {
   name: "Switch padrão",
   args: {},
-  render: () => (<Switch.Default />),
+  render: () => (<Switch.Root />),
 };
 export const SwitchWithTitle: Story = {
   name: "Switch com título",

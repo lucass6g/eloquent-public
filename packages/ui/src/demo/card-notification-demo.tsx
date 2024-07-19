@@ -37,7 +37,7 @@ export function CardDemoNotification({ className, ...props }: CardProps) {
                             Send notifications to device.
                         </p>
                     </div>
-                    <Switch />
+                    <Switch.Root />
                 </div>
                 <div>
                     {notifications.map((notification, index) => (
