@@ -1,6 +1,6 @@
 {
   "name": "@eloquent/ui",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "license": "MIT",
   "private": false,
   "files": [
@@ -576,6 +576,16 @@
       "import": {
         "types": "./dist/esm/Typography/index.d.ts",
         "default": "./dist/esm/Typography/index.js"
+      }
+    },
+    "./use-toast": {
+      "require": {
+        "types": "./dist/cjs/useToast.d.cts",
+        "default": "./dist/cjs/useToast.cjs"
+      },
+      "import": {
+        "types": "./dist/esm/useToast.d.ts",
+        "default": "./dist/esm/useToast.js"
       }
     }
   }
