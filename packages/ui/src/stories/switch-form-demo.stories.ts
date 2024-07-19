@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { SwitchFormDemo } from '../demo/switch-form-demo'
+import { SwitchFormDemo } from '../../demo/switch-form-demo'
 
 const meta = {
     title: 'Shadcn/form',

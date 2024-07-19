@@ -1,0 +1,144 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Avatar Component > applies correct size variants classes 1`] = `
+<body>
+  <div>
+    <span
+      class="relative flex shrink-0 overflow-hidden rounded-full h-24 w-24"
+      data-testid="root-element"
+    >
+      <span
+        class="flex h-full w-full items-center justify-center rounded-full bg-muted text-lg"
+      >
+        Elo
+      </span>
+    </span>
+  </div>
+</body>
+`;
+
+exports[`Avatar Component > applies correct size variants classes 2`] = `
+<body>
+  <div>
+    <span
+      class="relative flex shrink-0 overflow-hidden rounded-full h-10 w-10"
+    >
+      <span
+        class="flex h-full w-full items-center justify-center rounded-full bg-muted text-sm"
+      >
+        Elo
+      </span>
+    </span>
+  </div>
+</body>
+`;
+
+exports[`Avatar Component > applies correct size variants classes 3`] = `
+<body>
+  <div>
+    <span
+      class="relative flex shrink-0 overflow-hidden rounded-full h-24 w-24"
+      data-testid="root-element"
+    >
+      <span
+        class="flex h-full w-full items-center justify-center rounded-full bg-muted text-lg"
+      >
+        Elo
+      </span>
+    </span>
+  </div>
+</body>
+`;
+
+exports[`Avatar Component > applies correct size variants classes 4`] = `
+<body>
+  <div>
+    <span
+      class="relative flex shrink-0 overflow-hidden rounded-full h-10 w-10"
+    >
+      <span
+        class="flex h-full w-full items-center justify-center rounded-full bg-muted text-sm"
+      >
+        Elo
+      </span>
+    </span>
+  </div>
+</body>
+`;
+
+exports[`Avatar Component > renders Avatar with fallback 1`] = `
+<body>
+  <div>
+    <span
+      class="relative flex shrink-0 overflow-hidden rounded-full h-16 w-16"
+    >
+      <span
+        class="flex h-full w-full items-center justify-center rounded-full bg-muted text-base"
+      >
+        Elo
+      </span>
+    </span>
+  </div>
+</body>
+`;
+
+exports[`Avatar Component > renders Avatar with image 1`] = `
+<body>
+  <div>
+    <span
+      class="relative flex shrink-0 overflow-hidden rounded-full h-16 w-16"
+    />
+  </div>
+</body>
+`;
+
+exports[`Avatar with valid image > should have alt text on the image 1`] = `
+<body>
+  <div>
+    <span
+      class="relative flex shrink-0 overflow-hidden rounded-full h-16 w-16"
+      data-testid="avatar-root"
+    >
+      <img
+        alt="@shadcn"
+        class="aspect-square h-full w-full"
+        src="/test"
+      />
+    </span>
+  </div>
+</body>
+`;
+
+exports[`Avatar with valid image > should render the fallback initially 1`] = `
+<body>
+  <div>
+    <span
+      class="relative flex shrink-0 overflow-hidden rounded-full h-16 w-16"
+      data-testid="avatar-root"
+    >
+      <span
+        class="flex h-full w-full items-center justify-center rounded-full bg-muted text-base"
+      >
+        Avatar Shad
+      </span>
+    </span>
+  </div>
+</body>
+`;
+
+exports[`Avatar with valid image > should render the image after it has loaded 1`] = `
+<body>
+  <div>
+    <span
+      class="relative flex shrink-0 overflow-hidden rounded-full h-16 w-16"
+      data-testid="avatar-root"
+    >
+      <img
+        alt="@shadcn"
+        class="aspect-square h-full w-full"
+        src="/test"
+      />
+    </span>
+  </div>
+</body>
+`;

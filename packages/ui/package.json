@@ -118,7 +118,7 @@
         "default": "./dist/esm/index.js"
       }
     },
-    "./Accordion": {
+    "./accordion": {
       "require": {
         "types": "./dist/cjs/Accordion/index.d.cts",
         "default": "./dist/cjs/Accordion/index.cjs"
@@ -128,7 +128,7 @@
         "default": "./dist/esm/Accordion/index.js"
       }
     },
-    "./Alert": {
+    "./alert": {
         "require": {
             "types": "./dist/cjs/Alert/index.d.cts",
             "default": "./dist/cjs/Alert/index.cjs"
@@ -138,7 +138,7 @@
             "default": "./dist/esm/Alert/index.js"
         }
     },
-    "./AlertDialog": {
+    "./alert-dialog": {
         "require": {
             "types": "./dist/cjs/AlertDialog/index.d.cts",
             "default": "./dist/cjs/AlertDialog/index.cjs"
@@ -148,7 +148,7 @@
             "default": "./dist/esm/AlertDialog/index.js"
         }
     },
-    "./AspectRatio": {
+    "./aspect-ratio": {
         "require": {
             "types": "./dist/cjs/AspectRatio/index.d.cts",
             "default": "./dist/cjs/AspectRatio/index.cjs"
@@ -158,7 +158,7 @@
             "default": "./dist/esm/AspectRatio/index.js"
         }
     },
-    "./Avatar": {
+    "./avatar": {
         "require": {
             "types": "./dist/cjs/Avatar/index.d.cts",
             "default": "./dist/cjs/Avatar/index.cjs"
