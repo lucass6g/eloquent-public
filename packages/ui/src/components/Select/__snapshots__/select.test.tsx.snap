@@ -20,7 +20,7 @@ exports[`Select > should match the snapshot > closed 1`] = `
       aria-autocomplete="none"
       aria-controls="radix-:r1:"
       aria-expanded="true"
-      class="flex items-center justify-between whitespace-nowrap text-sm ring-offset-background placeholder:text-muted-foreground h-9 w-full px-3 py-2 gap-2 bg-transparent disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 focus:outline-none focus:ring-1 focus:ring-ring border border-input rounded-[6px]"
+      class="flex items-center justify-between whitespace-nowrap text-sm ring-offset-background placeholder:text-muted-foreground h-10 w-full px-3 py-2 gap-2 bg-transparent disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border border-input rounded-[6px]"
       data-placeholder=""
       data-state="open"
       dir="ltr"
@@ -89,7 +89,7 @@ exports[`Select > should match the snapshot > closed 1`] = `
           <div
             aria-labelledby="radix-:r6:"
             aria-selected="false"
-            class="relative flex w-full cursor-default select-none items-center rounded-[6px] py-1.5 pl-2 pr-8 text-sm outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 focus:bg-accent focus:text-accent-foreground"
+            class="relative flex w-full cursor-default select-none items-center rounded-[6px] py-1.5 pl-8 pr-2 text-sm outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 focus:bg-neutral-200 focus:text-accent-foreground"
             data-highlighted=""
             data-radix-collection-item=""
             data-state="unchecked"
@@ -97,7 +97,7 @@ exports[`Select > should match the snapshot > closed 1`] = `
             tabindex="-1"
           >
             <span
-              class="absolute right-2 flex h-3.5 w-3.5 items-center justify-center"
+              class="absolute left-2 flex h-3.5 w-3.5 items-center justify-center"
             />
             <span
               id="radix-:r6:"
@@ -108,14 +108,14 @@ exports[`Select > should match the snapshot > closed 1`] = `
           <div
             aria-labelledby="radix-:r7:"
             aria-selected="false"
-            class="relative flex w-full cursor-default select-none items-center rounded-[6px] py-1.5 pl-2 pr-8 text-sm outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 focus:bg-accent focus:text-accent-foreground"
+            class="relative flex w-full cursor-default select-none items-center rounded-[6px] py-1.5 pl-8 pr-2 text-sm outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 focus:bg-neutral-200 focus:text-accent-foreground"
             data-radix-collection-item=""
             data-state="unchecked"
             role="option"
             tabindex="-1"
           >
             <span
-              class="absolute right-2 flex h-3.5 w-3.5 items-center justify-center"
+              class="absolute left-2 flex h-3.5 w-3.5 items-center justify-center"
             />
             <span
               id="radix-:r7:"
@@ -144,7 +144,7 @@ exports[`Select > should match the snapshot > opened 1`] = `
       aria-autocomplete="none"
       aria-controls="radix-:r0:"
       aria-expanded="false"
-      class="flex items-center justify-between whitespace-nowrap text-sm ring-offset-background placeholder:text-muted-foreground h-9 w-full px-3 py-2 gap-2 bg-transparent disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 focus:outline-none focus:ring-1 focus:ring-ring border border-input rounded-[6px]"
+      class="flex items-center justify-between whitespace-nowrap text-sm ring-offset-background placeholder:text-muted-foreground h-10 w-full px-3 py-2 gap-2 bg-transparent disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 border border-input rounded-[6px]"
       data-placeholder=""
       data-state="closed"
       dir="ltr"
