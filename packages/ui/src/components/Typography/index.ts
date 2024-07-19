@@ -3,6 +3,8 @@ import {Heading} from "./Heading"
 import { Large } from "./Large"
 import {Lead} from "./Lead"
 import { Paragraph } from "./Paragraph"
+import { Small } from "./Small"
+import {Table} from "./Table"
 
 
 export const Typography = {
@@ -10,5 +12,7 @@ export const Typography = {
     Heading,
     Large,
     Lead,
-    Paragraph
+    Paragraph,
+    Small,
+    Table
 }
