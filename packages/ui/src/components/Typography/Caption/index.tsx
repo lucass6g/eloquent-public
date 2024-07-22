@@ -4,7 +4,7 @@ import {cn} from "@eloquent/styles";
 import {captionVariants} from "./variants.ts";
 
 export const Caption = forwardRef<CaptionElement, CaptionProps>(
-    function Caption({className,size="default",...rest}, ref) {
+    function Caption({className, size="default", ...rest}, ref) {
         return (
             <h6
                 ref={ref}
