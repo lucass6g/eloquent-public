@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react"
 import {describe, it, expect} from "vitest"
 import { Caption } from "."
 
-describe("Caption", () => {
+describe("Caption Component", () => {
     it("should rendering the component correctly", () => {
         render(<Caption size="default">O Brasil é caramelo</Caption>);
         expect(screen.getByText("O Brasil é caramelo")).toBeInTheDocument() 
