@@ -6,19 +6,6 @@ import { Button } from '../Button';
 import { vi } from 'vitest';
 
 describe('SonnerToaster', () => {
-    beforeAll(() => {
-        Object.defineProperty(window, 'matchMedia', {
-            writable: true,
-            value: vi.fn().mockImplementation((query) => ({
-                matches: false,
-                media: query,
-                onchange: null,
-                addEventListener: vi.fn(),
-                removeEventListener: vi.fn(),
-                dispatchEvent: vi.fn(),
-            })),
-        });
-    });
     it('displays the toast message when the button is clicked', async () => {
         const toastMessageMock = vi.spyOn(toast, 'message');
         const component = render(
