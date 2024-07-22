@@ -6,7 +6,9 @@ import {createRef} from "react";
 describe('Large Component', () => {
     it('should render the component correctly', () => {
         render(<Large>O Brasil é caramelo</Large>);
-        expect(screen.getByText('O Brasil é caramelo')).toBeInTheDocument();
+        const largeComponent = screen.getByText('O Brasil é caramelo');
+        expect(largeComponent).toBeInTheDocument();
+        expect(largeComponent).toHaveClass('font-barlow text-lg text-foreground font-semibold');
     })
 
     it('forwards ref to the DOM element', () => {
