@@ -5,4 +5,4 @@ export type CaptionVariantsProps = {
 }
 export type CaptionElement = ElementRef<"h6">
 
-export type CaptionProps = ComponentProps<"h6"> & CaptionVariantsProps
+export type CaptionProps = ComponentProps<"h6"> & Partial<CaptionVariantsProps>
