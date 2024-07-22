@@ -17,44 +17,55 @@ describe("Accordion", () => {
     expect(component.baseElement).toMatchSnapshot();
   });
 
-  it("should open and close correctly", async () => {
+  it("should render the single accordion correctly", async () => {
     render(
       <Accordion.Root type="single" collapsible>
         <Accordion.Item value="item-1">
-          <Accordion.Trigger>trigger</Accordion.Trigger>
-          <Accordion.Content>content</Accordion.Content>
+          <Accordion.Trigger>trigger 1</Accordion.Trigger>
+          <Accordion.Content>content 1</Accordion.Content>
+        </Accordion.Item>
+        <Accordion.Item value="item-2">
+          <Accordion.Trigger>trigger 2</Accordion.Trigger>
+          <Accordion.Content>content 2</Accordion.Content>
         </Accordion.Item>
       </Accordion.Root>
     );
 
-    const trigger = screen.getByRole("button", { name: /trigger/i });
-    await waitFor(() => userEvent.click(trigger));
+    const triggerOne = screen.getByRole("button", { name: /trigger 1/i });
+    await waitFor(() => userEvent.click(triggerOne));
+    const contentOne = screen.queryByText(/content 1/i);
+    expect(contentOne).toBeInTheDocument();
 
-    const content = screen.queryByText(/content/i);
-    expect(content).toBeInTheDocument();
-
-    await waitFor(() => userEvent.click(trigger));
-    expect(content).not.toBeInTheDocument();
+    const triggerTwo = screen.getByRole("button", { name: /trigger 2/i });
+    await waitFor(() => userEvent.click(triggerTwo));
+    const contentTwo = screen.queryByText(/content 2/i);
+    expect(contentOne).not.toBeInTheDocument();
+    expect(contentTwo).toBeInTheDocument();
   });
 
-  it("should render multiple contents", async () => {
+  it("should render the multiple accordion correctly", async () => {
     render(
       <Accordion.Root type="multiple">
         <Accordion.Item value="item-1">
-          <Accordion.Trigger>trigger</Accordion.Trigger>
-          <Accordion.Content>Item-1</Accordion.Content>
-          <Accordion.Content>Item-2</Accordion.Content>
+          <Accordion.Trigger>trigger 1</Accordion.Trigger>
+          <Accordion.Content>content 1</Accordion.Content>
+        </Accordion.Item>
+        <Accordion.Item value="item-2">
+          <Accordion.Trigger>trigger 2</Accordion.Trigger>
+          <Accordion.Content>content 2</Accordion.Content>
         </Accordion.Item>
       </Accordion.Root>
     );
 
-    const trigger = screen.getByRole("button", { name: /trigger/i });
-    await waitFor(() => userEvent.click(trigger));
+    const triggerOne = screen.getByRole("button", { name: /trigger 1/i });
+    await waitFor(() => userEvent.click(triggerOne));
+    const contentOne = screen.queryByText(/content 1/i);
+    expect(contentOne).toBeInTheDocument();
 
-    const content = screen.queryByText(/content one/i);
-    expect(content).toBeInTheDocument();
- 
-    const contentTwo = screen.queryByText(/content two/i);
+    const triggerTwo = screen.getByRole("button", { name: /trigger 2/i });
+    await waitFor(() => userEvent.click(triggerTwo));
+    const contentTwo = screen.queryByText(/content 2/i);
+    expect(contentOne).toBeInTheDocument();
     expect(contentTwo).toBeInTheDocument();
   });
 });
