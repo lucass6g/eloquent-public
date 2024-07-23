@@ -1,8 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react'
 
 import { VariantProps } from 'class-variance-authority'
-import { Terminal } from 'lucide-react'
-import {Alert, alertVariants} from '.'
+import { Component } from 'lucide-react'
+import { Alert } from '.'
+import { alertVariants } from './variants'
 
 type TypeCustomAlertProps = {} & VariantProps<typeof alertVariants>
 
@@ -13,10 +14,10 @@ const meta = {
     },
     render: ({ variant }) => (
         <Alert.Root variant={variant}>
-            <Terminal className="h-4 w-4" />
-            <Alert.Title>Heads up!</Alert.Title>
+            <Component className="h-4 w-4" />
+            <Alert.Title>Atenção!</Alert.Title>
             <Alert.Description>
-                You can add components to your app using the cli.
+                Houve um problema com o seu cartão de crédito. Por favor, tente novamente mais tarde.
             </Alert.Description>
         </Alert.Root>
     ),
@@ -29,6 +30,11 @@ const meta = {
     },
     parameters: {
         layout: 'centered',
+        docs: {
+            description: {
+                component: "Alerts são mensagens que fornecem algum feedback ao usuário e de aparição temporária. "
+            }
+        }
     },
 } satisfies Meta<TypeCustomAlertProps>
 
@@ -42,12 +48,19 @@ export const AlertDefaultDemo: Story = {
     args: {
         variant: 'default',
     },
+    parameters: {
+        docs: {
+            description: {
+                story: "É o estado padrão de aplicação, onde exibe-se um feedback e somem após 8 segundos."
+            }
+        }
+    },
     render: ({ variant }) => (
         <Alert.Root variant={variant}>
-            <Terminal className="h-4 w-4" />
-            <Alert.Title>Heads up!</Alert.Title>
+            <Component className="h-4 w-4" />
+            <Alert.Title>Atenção!</Alert.Title>
             <Alert.Description>
-                You can add components to your app using the cli.
+                Houve um problema com o seu cartão de crédito. Por favor, tente novamente mais tarde.
             </Alert.Description>
         </Alert.Root>
     ),
@@ -57,12 +70,19 @@ export const AlertDestructiveDemo: Story = {
     args: {
         variant: 'destructive',
     },
+    parameters: {
+        docs: {
+            description: {
+                story: "Aplicado onde deseja-se apresentar um feedback negativo de alguma ação do usuário."
+            }
+        }
+    },
     render: ({ variant }) => (
         <Alert.Root variant={variant}>
-            <Terminal className="h-4 w-4" />
-            <Alert.Title>Heads up!</Alert.Title>
+            <Component className="h-4 w-4" />
+            <Alert.Title>Atenção!</Alert.Title>
             <Alert.Description>
-                You can add components to your app using the cli.
+                Houve um problema com o seu cartão de crédito. Por favor, tente novamente mais tarde.
             </Alert.Description>
         </Alert.Root>
     ),
@@ -73,9 +93,9 @@ export const AlertNotTitle: Story = {
     name: 'Alerta sem título',
     render: ({ variant }) => (
         <Alert.Root variant={variant}>
-            <Terminal className="h-4 w-4" />
+            <Component className="h-4 w-4" />
             <Alert.Description>
-                You can add components to your app using the cli.
+                Houve um problema com o seu cartão de crédito. Por favor, tente novamente mais tarde.
             </Alert.Description>
         </Alert.Root>
     ),
@@ -84,8 +104,8 @@ export const AlertNotDescription: Story = {
     name: 'Alerta sem descrição',
     render: ({ variant }) => (
         <Alert.Root variant={variant}>
-            <Terminal className="h-4 w-4" />
-            <Alert.Title>Heads up!</Alert.Title>
+            <Component className="h-4 w-4" />
+            <Alert.Title>Atenção!</Alert.Title>
         </Alert.Root>
     ),
 }
@@ -94,9 +114,9 @@ export const AlertNotIcon: Story = {
     name: "Alerta sem ícone",
     render: ({ variant }) => (
         <Alert.Root variant={variant}>
-            <Alert.Title>Heads up!</Alert.Title>
+            <Alert.Title>Atenção!</Alert.Title>
             <Alert.Description>
-                You can add components to your app using the cli.
+                Houve um problema com o seu cartão de crédito. Por favor, tente novamente mais tarde.
             </Alert.Description>
         </Alert.Root>
     ),
