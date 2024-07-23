@@ -1,4 +1,4 @@
-import {tv} from "tailwind-variants";
+import { tv } from "tailwind-variants";
 
 export const alertVariants = tv({
     base: [
@@ -14,4 +14,11 @@ export const alertVariants = tv({
     defaultVariants: {
         variant: "default",
     },
+})
+
+export const alertSlots = tv({
+    slots: {
+        alertTitleStyle: "text-base not-italic font-medium",
+        alertDescriptionStyle: "text-base font-normal not-italic text-neutral-500",
+    }
 })

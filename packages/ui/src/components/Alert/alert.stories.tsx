@@ -2,7 +2,8 @@ import { Meta, StoryObj } from '@storybook/react'
 
 import { VariantProps } from 'class-variance-authority'
 import { Component } from 'lucide-react'
-import {Alert, alertVariants} from '.'
+import { Alert } from '.'
+import { alertVariants } from './variants'
 
 type TypeCustomAlertProps = {} & VariantProps<typeof alertVariants>
 
@@ -29,6 +30,11 @@ const meta = {
     },
     parameters: {
         layout: 'centered',
+        docs: {
+            description: {
+                component: "Alerts são mensagens que fornecem algum feedback ao usuário e de aparição temporária. "
+            }
+        }
     },
 } satisfies Meta<TypeCustomAlertProps>
 
@@ -41,6 +47,13 @@ export const AlertDefaultDemo: Story = {
     name: 'Alerta padrão',
     args: {
         variant: 'default',
+    },
+    parameters: {
+        docs: {
+            description: {
+                story: "É o estado padrão de aplicação, onde exibe-se um feedback e somem após 8 segundos."
+            }
+        }
     },
     render: ({ variant }) => (
         <Alert.Root variant={variant}>
@@ -56,6 +69,13 @@ export const AlertDestructiveDemo: Story = {
     name: 'Alerta destrutivo',
     args: {
         variant: 'destructive',
+    },
+    parameters: {
+        docs: {
+            description: {
+                story: "Aplicado onde deseja-se apresentar um feedback negativo de alguma ação do usuário."
+            }
+        }
     },
     render: ({ variant }) => (
         <Alert.Root variant={variant}>

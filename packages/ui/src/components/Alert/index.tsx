@@ -2,7 +2,9 @@ import * as React from "react";
 import { type VariantProps } from "class-variance-authority";
 
 import { cn } from "@eloquent/styles";
-import { alertVariants } from "./variants";
+import { alertSlots, alertVariants } from "./variants";
+
+const { alertDescriptionStyle, alertTitleStyle } = alertSlots();
 
 const RootAlert = React.forwardRef<
     HTMLDivElement,
@@ -23,7 +25,7 @@ const AlertTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
     <h5
         ref={ref}
-        className={cn("text-base not-italic font-medium", className)}
+        className={cn(alertTitleStyle(), className)}
         {...props}
     />
 ));
@@ -35,7 +37,7 @@ const AlertDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
     <div
         ref={ref}
-        className={cn("text-base font-normal not-italic text-neutral-500", className)}
+        className={cn(alertDescriptionStyle(), className)}
         {...props}
     />
 ));
@@ -46,3 +48,4 @@ export const Alert = {
     Title: AlertTitle,
     Description: AlertDescription,
 };
+
