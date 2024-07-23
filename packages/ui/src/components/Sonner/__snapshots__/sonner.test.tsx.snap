@@ -1,0 +1,74 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SonnerToaster > displays the toast message when the button is clicked 1`] = `
+<body>
+  <div>
+    <div>
+      <section
+        aria-label="Notifications alt+T"
+        tabindex="-1"
+      >
+        <ol
+          class="toaster group"
+          data-sonner-toaster="true"
+          data-theme="light"
+          data-x-position="right"
+          data-y-position="bottom"
+          dir=""
+          style="--front-toast-height: 0px; --offset: 32px; --width: 356px; --gap: 14px;"
+          tabindex="-1"
+        >
+          <li
+            aria-atomic="true"
+            aria-live="polite"
+            class="group toast flex justify-between group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg [&>div>div[data-title]]:font-semibold [&>button]:min-w-[87px]"
+            data-dismissible="true"
+            data-expanded="false"
+            data-front="true"
+            data-index="0"
+            data-mounted="true"
+            data-promise="false"
+            data-removed="false"
+            data-sonner-toast=""
+            data-styled="true"
+            data-swipe-out="false"
+            data-swiping="false"
+            data-visible="true"
+            data-x-position="right"
+            data-y-position="bottom"
+            role="status"
+            style="--index: 0; --toasts-before: 0; --z-index: 1; --offset: 0px; --initial-height: 0px;"
+            tabindex="0"
+          >
+            <div
+              class=""
+              data-content=""
+            >
+              <div
+                class=""
+                data-title=""
+              >
+                Elo o cartão do brasileiro
+              </div>
+              <div
+                class="group-[.toast]:text-muted-foreground"
+                data-description=""
+              >
+                Elo o cartão do brasileiro
+              </div>
+            </div>
+            <button
+              class="inline-flex items-center justify-center whitespace-nowrap rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 disabled:pointer-events-none text-base font-medium antialiased leading-4 bg-primary text-primary-foreground shadow hover:bg-green-dark-400 disabled:bg-neutral-300 disabled:text-neutral-500 py-2 px-4 min-w-[152px] min-h-[24px] border-lg"
+            >
+              Desfazer
+            </button>
+          </li>
+        </ol>
+      </section>
+      <button>
+        Abrir
+      </button>
+    </div>
+  </div>
+</body>
+`;
