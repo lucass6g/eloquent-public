@@ -1,10 +1,8 @@
-import { Button, type ButtonProps, ButtonVariantsProps } from ".";
+import { Button } from ".";
 import type { Meta, StoryObj } from "@storybook/react";
 import { Plus } from "lucide-react";
-import {ValueOf} from "@ui/types/select-key.ts";
 
-type ButtonVariant = Required<ValueOf<ButtonVariantsProps, "variant">>;
-type ButtonSize = Required<ValueOf<ButtonVariantsProps, "size">>
+import { ButtonProps, ButtonSize, ButtonVariant } from "./Button.props";
 
 const meta: Meta<ButtonProps> = {
   title: "Button",
