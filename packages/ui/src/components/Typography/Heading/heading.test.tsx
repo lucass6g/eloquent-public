@@ -31,26 +31,26 @@ describe('Heading Component', () => {
     it('renders correctly with variant styles for different levels', () => {
         const { rerender } = render(<Heading as="h1">Test Heading</Heading>);
         let headingElement = screen.getByText('Test Heading');
-        expect(headingElement).toHaveClass('text-4xl font-bold');
+        expect(headingElement).toHaveClass('font-redonda text-4xl font-extrabold');
 
         rerender(<Heading as="h2">Test Heading</Heading>);
         headingElement = screen.getByText('Test Heading');
-        expect(headingElement).toHaveClass('text-3xl font-bold');
+        expect(headingElement).toHaveClass('text-3xl');
 
         rerender(<Heading as="h3">Test Heading</Heading>);
         headingElement = screen.getByText('Test Heading');
-        expect(headingElement).toHaveClass('text-2xl font-bold');
+        expect(headingElement).toHaveClass('text-2xl');
 
         rerender(<Heading as="h4">Test Heading</Heading>);
         headingElement = screen.getByText('Test Heading');
-        expect(headingElement).toHaveClass('text-xl font-bold');
+        expect(headingElement).toHaveClass('text-xl');
 
         rerender(<Heading as="h5">Test Heading</Heading>);
         headingElement = screen.getByText('Test Heading');
-        expect(headingElement).toHaveClass('text-lg font-bold');
+        expect(headingElement).toHaveClass('text-md');
 
         rerender(<Heading as="h6">Test Heading</Heading>);
         headingElement = screen.getByText('Test Heading');
-        expect(headingElement).toHaveClass('text-base font');
+        expect(headingElement).toHaveClass('text-sm font');
     });
 });

@@ -1,4 +1,4 @@
-import { Caption } from "./";
+import { Caption } from "./index.tsx";
 import type { CaptionProps } from "./Caption.props.ts";
 import type { Meta, StoryObj } from "@storybook/react";
 
