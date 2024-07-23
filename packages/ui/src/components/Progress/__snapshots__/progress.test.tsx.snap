@@ -9,7 +9,7 @@ exports[`Progress Component > renders with default value when no value is provid
       class="relative h-2 w-full overflow-hidden rounded-full bg-primary/20 border border-primary/40"
       data-max="100"
       data-state="indeterminate"
-      data-testid="testeprogress"
+      data-testid="progress-test"
       role="progressbar"
     >
       <div
@@ -32,7 +32,7 @@ exports[`Progress Component > renders with value when value is provided 1`] = `
       class="relative h-2 w-full overflow-hidden rounded-full bg-primary/20 border border-primary/40"
       data-max="100"
       data-state="indeterminate"
-      data-testid="testeprogress"
+      data-testid="progress-test"
       role="progressbar"
     >
       <div

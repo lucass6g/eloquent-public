@@ -3,6 +3,9 @@
 import * as ProgressPrimitive from "@radix-ui/react-progress";
 import { cn } from "@eloquent/styles";
 import React from "react";
+import { progressSlots } from "./variants";
+
+const { indicatorStyle, rootStyle } = progressSlots();
 
 export const Progress = React.forwardRef<
   React.ElementRef<typeof ProgressPrimitive.Root>,
@@ -12,13 +15,13 @@ export const Progress = React.forwardRef<
     <ProgressPrimitive.Root
       ref={ref}
       className={cn(
-        "relative h-2 w-full overflow-hidden rounded-full bg-primary/20 border border-primary/40",
+        rootStyle(),
         className
       )}
       {...props}
     >
       <ProgressPrimitive.Indicator
-        className="h-full w-full flex-1 bg-primary transition-all"
+        className={cn(indicatorStyle())}
         style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
       />
     </ProgressPrimitive.Root>
