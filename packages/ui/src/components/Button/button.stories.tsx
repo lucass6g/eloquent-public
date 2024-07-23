@@ -1,6 +1,6 @@
 import { Button } from ".";
 import type { Meta, StoryObj } from "@storybook/react";
-import { Plus } from "lucide-react";
+import { LayoutGrid, Loader2, X } from "lucide-react";
 
 import { ButtonProps, ButtonSize, ButtonVariant } from "./Button.props";
 
@@ -47,6 +47,7 @@ const meta: Meta<ButtonProps> = {
         "destructive",
         "link",
         "secondary",
+        "badge"
       ] satisfies ButtonVariant[],
       description: "Variante do botão",
       table: {
@@ -102,22 +103,48 @@ export const Destructive: Story = {
   },
 };
 
-export const Icon: Story = {
+export const WithIcon: Story = {
   render(props) {
     return (
       <Button {...props}>
-        <Plus/>
+        <LayoutGrid className="mr-2 h-4 w-4" />
+        Clique aqui
+      </Button>
+    );
+  },
+};
+
+export const Loading: Story = {
+  render: (props) => {
+    return (
+      <Button {...props} disabled>
+        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+        Clique aqui
+      </Button>
+    );
+  }
+}
+
+export const Badge: Story = {
+  render: (props) => {
+    return (
+      <Button {...props} variant="badge">
+          Clique aqui
+          <X className="ml-2 w-4 h-4"/>
       </Button>
     );
   },
   args: {
-    variant: "default",
-    size: "icon",
-    "aria-label": "Adicionar",
-  },
-  argTypes: {
-    children: {
-      control: { type: "text" },
-    },
+    variant: "badge",
+  }
+}
+
+export const Icon: Story = {
+  render: (props) => {
+    return(
+      <Button {...props} size="icon" variant="icon">
+        <LayoutGrid className="h-4 w-4" />
+      </Button>
+    )
   },
 };

@@ -16,24 +16,38 @@ export const buttonVariants = tv({
     variants: {
         variant: {
             default:[
-                "bg-primary text-primary-foreground shadow",
+                "bg-green-dark-600 font-medium text-primary-foreground shadow",
                 "hover:bg-green-dark-400",
                 "disabled:bg-neutral-300 disabled:text-neutral-500 disabled:font-medium",
             ],
             secondary: [
-                "shadow-sm",
-                "border-foreground",
-                "text-accent-foreground hover:bg-accent hover:text-accent-foreground",
+                "border border-neutral-300 text-accent-foreground text-sm font-medium",
+                "hover:bg-neutral-200",
+                "disabled:text-neutral-500",
             ],
-            destructive:
-                "bg-destructive text-destructive-foreground shadow-sm hover:opacity-90",
-            link: "text-primary underline-offset-4 hover:underline",
-            icon: "p-0",
+            destructive: [
+                "bg-red-600 text-neutral-100 font-medium", 
+                "hover:bg-red-400",
+                "disabled:bg-neutral-300 disabled:text-neutral-500",
+            ],
+            link: [
+                "text-green-dark-600 underline",
+                "disabled:text-neutral-500",
+            ],
             loading: "",
+            badge: [
+                "bg-green-dark-600 text-sm text-neutral-100 min-w-fit max-w-fit max-h-6 cursor-pointer",
+                "hover:bg-green-dark-400",
+                "disabled:bg-neutral-300 disabled:text-neutral-500",
+            ],
+            icon: [
+                "p-0 border border-neutral-300 text-neutral-800",
+                "disabled:text-neutral-500",
+            ],
         },
         size: {
-            default: "py-2 px-4 min-w-[152px] min-h-[24px] border-lg",
-            sm: "h-8 px-3 text-xs",
+            default: "py-2 px-4 w-[184px] h-[40px] border-lg",
+            sm: "h-8 px-3 text-xs w-[152px] h-[32px]",
             icon: "h-9 w-9 first-child:stroke-primary-foreground",
         },
     },
