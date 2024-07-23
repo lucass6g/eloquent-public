@@ -1,0 +1,17 @@
+{
+	"Variants Template": {
+		"prefix": "!cvariant",
+        "body": [
+            "import { tv } from 'tailwind-variants';",
+            "",
+            "export const ${1:componentName}Variants = tv({",
+            "    base: [],",
+            "    variants: {",
+            "        variant: {},",
+            "    },",
+            "    defaultVariants: {},",
+            "});"
+        ],
+        "description": "Create a variants template for Eloquent"
+    }
+ }
