@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Button, Label, Input, InputProps } from "../";
+import { Button, Label, Input } from "../";
+import { InputProps } from "./Input.props";
 
 const meta = {
   title: "Input",
