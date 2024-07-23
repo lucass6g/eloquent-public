@@ -34,7 +34,7 @@ describe('Button component', () => {
     it("should render a button with the 'variant' class", () => {
         const {rerender} = render(<Button variant="default">Default</Button>);
         const buttonDefault = screen.getByRole("button", {name: "Default"});
-        expect(buttonDefault).toHaveClass("bg-primary")
+        expect(buttonDefault).toHaveClass("bg-green-dark-600")
 
         rerender(<Button variant="secondary">Secondary</Button>);
         const buttonSecondary = screen.getByRole("button", {name: "Secondary"});
@@ -42,14 +42,18 @@ describe('Button component', () => {
 
         rerender(<Button variant="destructive">Destructive</Button>);
         const buttonDestructive = screen.getByRole("button", {name: "Destructive"});
-        expect(buttonDestructive).toHaveClass("bg-destructive")
+        expect(buttonDestructive).toHaveClass("bg-red-600")
 
         rerender(<Button variant="link">Link</Button>);
         const buttonLink = screen.getByRole("button", {name: "Link"});
-        expect(buttonLink).toHaveClass("underline-offset-4")
+        expect(buttonLink).toHaveClass("underline")
 
         rerender(<Button variant="icon">Icon</Button>);
         const buttonIcon = screen.getByRole("button", {name: "Icon"});
         expect(buttonIcon).toHaveClass("p-0")
+
+        rerender(<Button variant="badge">Badge</Button>);
+        const buttonBadge = screen.getByRole("button", {name: "Badge"});
+        expect(buttonBadge).toHaveClass("bg-green-dark-600 text-sm text-neutral-100 min-w-fit max-w-fit max-h-6 cursor-pointer")
     })
   });
