@@ -49,18 +49,6 @@
 			"    }",
 			"};",
 			"",
-			"export const CustomStory: Story = {",
-			"    name: 'Custom',",
-			"    args: { ${3:propName}: 'option1' },",
-			"    render: (args) => (<${1:ComponentName} {...args} />),",
-			"    parameters: {",
-			"        docs: {",
-			"            description: {",
-			"                story: 'Custom variant of the ${1:ComponentName} with ${3:propName} set to option1.'",
-			"            }",
-			"        }",
-			"    }",
-			"};"
 		],
 		"description": "Create stories for eloquent storybook"
 	}
