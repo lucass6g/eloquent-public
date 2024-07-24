@@ -5,7 +5,11 @@ import { ValueOf } from "src/types/select-key";
 export interface ButtonHTMLAttributes extends React.ButtonHTMLAttributes<HTMLButtonElement>{}
 export interface ButtonVariantsProps extends VariantProps<typeof buttonVariants>{}
 export interface ButtonEloquentProps  {
-    asChild?: boolean
+    asChild?: boolean,
+    loading?: boolean,
+    icon?: React.ReactNode,
+    startIcon?: React.ReactNode,
+    endIcon?: React.ReactNode,
 }
 
 export interface  ButtonProps extends ButtonEloquentProps, ButtonHTMLAttributes, ButtonVariantsProps {}

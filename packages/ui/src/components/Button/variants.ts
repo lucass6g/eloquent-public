@@ -16,39 +16,40 @@ export const buttonVariants = tv({
     variants: {
         variant: {
             default:[
-                "bg-green-dark-600 font-medium text-primary-foreground shadow",
-                "hover:bg-green-dark-400",
+                "bg-primary font-medium text-primary-foreground shadow",
+                "hover:bg-primary-hover",
                 "disabled:bg-neutral-300 disabled:text-neutral-500 disabled:font-medium",
             ],
             secondary: [
-                "border border-neutral-300 text-accent-foreground text-sm font-medium",
-                "hover:bg-neutral-200",
+                "border border-border text-secondary-foreground text-sm font-medium",
+                "hover:bg-secondary-hover",
                 "disabled:text-neutral-500",
             ],
             destructive: [
-                "bg-red-600 text-neutral-100 font-medium", 
-                "hover:bg-red-400",
+                "bg-destructive text-destructive-foreground font-medium", 
+                "hover:bg-destructive-hover",
                 "disabled:bg-neutral-300 disabled:text-neutral-500",
             ],
             link: [
-                "text-green-dark-600 underline",
+                "text-primary underline",
                 "disabled:text-neutral-500",
             ],
-            loading: "",
             badge: [
-                "bg-green-dark-600 text-sm text-neutral-100 min-w-fit max-w-fit max-h-6 cursor-pointer",
-                "hover:bg-green-dark-400",
+                "bg-primary text-sm text-primary-foreground min-w-fit max-w-fit max-h-6 cursor-pointer",
+                "hover:bg-primary-hover",
                 "disabled:bg-neutral-300 disabled:text-neutral-500",
             ],
             icon: [
-                "p-0 border border-neutral-300 text-neutral-800",
+                "p-0 border border-border text-accent-foreground",
                 "disabled:text-neutral-500",
             ],
+            none: "border-none bg-transparent text-inherit cursor-default",
         },
         size: {
             default: "py-2 px-4 w-[184px] h-[40px] border-lg",
             sm: "h-8 px-3 text-xs w-[152px] h-[32px]",
             icon: "h-9 w-9 first-child:stroke-primary-foreground",
+            none: "p-0 m-0",
         },
     },
     defaultVariants: {

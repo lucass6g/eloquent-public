@@ -1,6 +1,6 @@
 import { Button } from ".";
 import type { Meta, StoryObj } from "@storybook/react";
-import { LayoutGrid, Loader2, X } from "lucide-react";
+import { LayoutGrid, X } from "lucide-react";
 
 import { ButtonProps, ButtonSize, ButtonVariant } from "./Button.props";
 
@@ -11,6 +11,7 @@ const meta: Meta<ButtonProps> = {
     children: "Clique aqui",
     disabled: false,
     size: "default",
+    loading: false
   },
   argTypes: {
     onClick: {
@@ -47,7 +48,8 @@ const meta: Meta<ButtonProps> = {
         "destructive",
         "link",
         "secondary",
-        "badge"
+        "badge",
+        "none"
       ] satisfies ButtonVariant[],
       description: "Variante do botão",
       table: {
@@ -57,7 +59,7 @@ const meta: Meta<ButtonProps> = {
     },
     size: {
       control: { type: "select" },
-      options: ["default", "icon", "sm"] satisfies ButtonSize[],
+      options: ["default", "icon", "sm", "none"] satisfies ButtonSize[],
       description: "Tamanho do botão",
       table: {
         type: { summary: "string" },
@@ -68,7 +70,26 @@ const meta: Meta<ButtonProps> = {
       description: "Se o botão está desabilitado",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: "s" },
+        defaultValue: { summary: "false" },
+      },
+    },
+    loading: {
+      description: "Se o botão está em estado de `carregando...`",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+      },
+    },
+    startIcon: {
+      description: "Ícone no início do botão",
+      table: {
+        type: { summary: "React.ReactNode" },
+      },
+    },
+    endIcon: {
+      description: "Ícone no final do botão",
+      table: {
+        type: { summary: "React.ReactNode" },
       },
     },
   },
@@ -81,7 +102,7 @@ type Story = StoryObj<ButtonProps>;
 
 export const Primary: Story = {
   args: {
-    variant: "default",
+    variant: "default"
   },
 };
 
@@ -103,13 +124,25 @@ export const Destructive: Story = {
   },
 };
 
+export const NoStyle: Story = {
+  args: {
+    variant: "none",
+    size: "none"
+  },
+};
+
+
 export const WithIcon: Story = {
   render(props) {
     return (
-      <Button {...props}>
-        <LayoutGrid className="mr-2 h-4 w-4" />
-        Clique aqui
-      </Button>
+      <div className="flex items-center gap-4">
+        <Button {...props} startIcon={<LayoutGrid className="w-4 h-4 mr-2"/>}>
+          Start icon
+        </Button>
+        <Button {...props} endIcon={<LayoutGrid className="w-4 h-4 ml-2"/>}>
+          End Icon
+        </Button>
+      </div>
     );
   },
 };
@@ -117,21 +150,27 @@ export const WithIcon: Story = {
 export const Loading: Story = {
   render: (props) => {
     return (
-      <Button {...props} disabled>
-        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+      <Button {...props}>
         Clique aqui
       </Button>
     );
+  },
+  args: {
+    loading: true,
   }
 }
 
 export const Badge: Story = {
   render: (props) => {
     return (
-      <Button {...props} variant="badge">
-          Clique aqui
-          <X className="ml-2 w-4 h-4"/>
-      </Button>
+       <div className="flex items-center gap-4">
+          <Button {...props} variant="badge" startIcon={<X className="mr-2 w-4 h-4" />}>
+            Start icon
+          </Button>
+          <Button {...props} variant="badge" endIcon={<X className="ml-2 w-4 h-4" />}>
+            End icon
+          </Button>
+       </div>
     );
   },
   args: {
@@ -140,11 +179,9 @@ export const Badge: Story = {
 }
 
 export const Icon: Story = {
-  render: (props) => {
+  render: ({children, ...props}) => {
     return(
-      <Button {...props} size="icon" variant="icon">
-        <LayoutGrid className="h-4 w-4" />
-      </Button>
+      <Button {...props} size="icon" variant="icon" startIcon={<LayoutGrid className="h-4 w-4" />} />
     )
   },
 };
