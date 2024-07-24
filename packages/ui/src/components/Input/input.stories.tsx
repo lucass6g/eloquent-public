@@ -7,10 +7,15 @@ const meta = {
   component: (args) => <Input {...args} />,
   args: {
     type: "text",
+    disabled: false,
   },
   argTypes: {
     type: {
-      control: { type: "select" },
+      description: "Uma string especificando o tipo de controle a ser renderizado.",
+      table: {
+        defaultValue: { summary: "text" },
+        control: { type: "select" },
+      },
       options: [
         "file",
         "email",
@@ -36,6 +41,13 @@ const meta = {
         "week",
       ],
     },
+    disabled: {
+      description: "Se o input está desabilitado",
+      table: {
+        control: { type: "boolean" },
+        defaultValue: { summary: "false" },
+      },
+    },
   },
   parameters: {
     layout: "centered",
@@ -47,10 +59,14 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const InputDefault: Story = {
-  args: {
-    type: "text",
-    placeholder: "Name",
-  },
+  args: {},
+  render: function(args) {
+    return (
+      <div className="w-[392px]">
+        <Input placeholder="Name" type="text" {...args}/>
+      </div>
+    )
+  }
 };
 
 export const InputFile: Story = {
@@ -82,8 +98,8 @@ export const InputWithLabel: Story = {
   args: {},
   render: function () {
     return (
-      <div className="grid w-full max-w-sm items-center gap-1.5">
-        <Label className="p-2" htmlFor="email">
+      <div className="grid w-[392px] max-w-sm items-center gap-1.5">
+        <Label className="p-2 text-neutral-800" htmlFor="email">
           Email
         </Label>
         <Input type="email" id="email" placeholder="Email" />
@@ -96,7 +112,7 @@ export const InputWithButton: Story = {
   args: {},
   render: function () {
     return (
-      <div className="flex w-full max-w-sm items-center space-x-2 gap-2">
+      <div className="flex w-[392px] max-w-sm items-center space-x-2 gap-2">
         <Input type="email" placeholder="Email" />
         <Button type="submit">Subscribe</Button>
       </div>
