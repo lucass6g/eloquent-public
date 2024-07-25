@@ -27,6 +27,7 @@ export const defaultTailwindConfig = {
       colors: {
         primary: {
           DEFAULT: "var(--primary)",
+          hover: "var(--primary-hover)",
           foreground: "var(--primary-foreground)",
         },
         border: "var(--border)",
@@ -36,10 +37,12 @@ export const defaultTailwindConfig = {
         foreground: "var(--foreground)",
         secondary: {
           DEFAULT: "var(--secondary)",
+          hover: "var(--secondary-hover)",
           foreground: "var(--secondary-foreground)",
         },
         destructive: {
           DEFAULT: "var(--destructive)",
+          hover: "var(--destructive-hover)",
           foreground: "var(--destructive-foreground)",
         },
         muted: {
