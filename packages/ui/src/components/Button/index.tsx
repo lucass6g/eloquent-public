@@ -13,14 +13,25 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         loading = false, 
         size, 
         asChild = false, 
-        startIcon,
         children,
-        endIcon,
+        labelLoading = "Carregando...",
         ...props
     }, 
         ref)  {
         const Comp = asChild ? Slot : "button";
-        const renderIcon = (icon: React.ReactNode) => !loading && icon;
+
+        const loadingContent = (
+            <>
+                <Loader2 className={cn("animate-spin h-4 w-4 mr-2", size === "icon" && "m-auto")}/>
+                {size !== "icon" && labelLoading}
+            </>
+        )
+
+        const defaultContent = (
+            <>
+                {children}
+            </>
+        )
         
         return (
             <Comp
@@ -29,12 +40,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                 ref={ref}
                 {...props}
         >
-            <span className="flex items-center">
-                {loading && <Loader2 className={cn("animate-spin h-4 w-4 mr-2", size === "icon" && "m-auto")}/>}
-                {renderIcon(startIcon)}
-                {children}
-                {renderIcon(endIcon)}
-            </span>
+            {loading ? loadingContent : defaultContent}
         </Comp>
     );
     }

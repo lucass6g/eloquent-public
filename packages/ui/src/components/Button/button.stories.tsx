@@ -80,16 +80,11 @@ const meta: Meta<ButtonProps> = {
         defaultValue: { summary: "false" },
       },
     },
-    startIcon: {
-      description: "Ícone no início do botão",
+    labelLoading: {
+      description: "Texto que aparece quando o botão está em estado de carregando",
       table: {
-        type: { summary: "React.ReactNode" },
-      },
-    },
-    endIcon: {
-      description: "Ícone no final do botão",
-      table: {
-        type: { summary: "React.ReactNode" },
+        type: { summary: "string" },
+        defaultValue: { summary: "Carregando..." },
       },
     }
   },
@@ -131,18 +126,13 @@ export const NoStyle: Story = {
   },
 };
 
-
 export const WithIcon: Story = {
   render(props) {
     return (
-      <div className="flex items-center gap-4">
-        <Button {...props} startIcon={<LayoutGrid className="w-4 h-4 mr-2"/>}>
-          Start icon
+        <Button {...props}>
+          <LayoutGrid className="w-4 h-4 mr-2"/>
+          Clique aqui
         </Button>
-        <Button {...props} endIcon={<LayoutGrid className="w-4 h-4 ml-2"/>}>
-          End Icon
-        </Button>
-      </div>
     );
   }
 };
@@ -163,14 +153,10 @@ export const Loading: Story = {
 export const Badge: Story = {
   render: (props) => {
     return (
-       <div className="flex items-center gap-4">
-          <Button {...props} variant="badge" startIcon={<X className="mr-2 w-4 h-4" />}>
-            Start icon
+          <Button {...props} variant="badge">
+            Clique aqui
+            <X className="ml-2 w-4 h-4" />
           </Button>
-          <Button {...props} variant="badge" endIcon={<X className="ml-2 w-4 h-4" />}>
-            End icon
-          </Button>
-       </div>
     );
   },
   args: {
@@ -181,7 +167,9 @@ export const Badge: Story = {
 export const Icon: Story = {
   render: ({children, ...props}) => {
     return(
-      <Button {...props} size="icon" variant="icon" startIcon={<LayoutGrid className="h-4 w-4" />} />
+      <Button {...props} size="icon" variant="icon">
+        <LayoutGrid className="h-4 w-4" />
+      </Button>
     )
   }
 };

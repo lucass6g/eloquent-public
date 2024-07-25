@@ -7,8 +7,7 @@ export interface ButtonVariantsProps extends VariantProps<typeof buttonVariants>
 export interface ButtonEloquentProps  {
     asChild?: boolean,
     loading?: boolean,
-    startIcon?: React.ReactNode,
-    endIcon?: React.ReactNode,
+    labelLoading?: string,
 }
 
 export interface  ButtonProps extends ButtonEloquentProps, ButtonHTMLAttributes, ButtonVariantsProps {}
