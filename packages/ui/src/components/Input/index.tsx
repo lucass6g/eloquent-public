@@ -5,14 +5,14 @@ import {inputVariants} from "./variants"
 import { InputProps } from "./Input.props"
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  function Input({className, type = "text", ...props}, ref) {
+  function Input({className, type = "text", helperText, ...props}, ref) {
     return (
-    <input
-      type={type}
-      className={cn(inputVariants(), className)}
-      ref={ref}
-      {...props}
-    />
+        <input
+          type={type}
+          className={cn(inputVariants(), className)}
+          ref={ref}
+          {...props}
+        />
     )
   }
 )

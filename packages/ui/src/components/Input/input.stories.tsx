@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Button, Label, Input } from "../";
+import { Label, Input } from "../";
 import { InputProps } from "./Input.props";
 
 const meta = {
@@ -8,13 +8,14 @@ const meta = {
   args: {
     type: "text",
     disabled: false,
+    placeholder: "Label"
   },
   argTypes: {
     type: {
       description: "Uma string especificando o tipo de controle a ser renderizado.",
+      control: { type: "select" },
       table: {
         defaultValue: { summary: "text" },
-        control: { type: "select" },
       },
       options: [
         "file",
@@ -41,10 +42,17 @@ const meta = {
         "week",
       ],
     },
+    placeholder: {
+      description: "Uma string que define o texto de ajuda que é exibido quando o input está vazio.",
+      control: { type: "text" },
+      table: {
+        defaultValue: { summary: "Name" }
+      },
+    },
     disabled: {
       description: "Se o input está desabilitado",
+      control: { type: "boolean" },
       table: {
-        control: { type: "boolean" },
         defaultValue: { summary: "false" },
       },
     },
@@ -61,60 +69,34 @@ type Story = StoryObj<typeof meta>;
 export const InputDefault: Story = {
   args: {},
   render: function(args) {
-    return (
-      <div className="w-[392px]">
-        <Input placeholder="Name" type="text" {...args}/>
-      </div>
-    )
+    return <Input {...args}/>
   }
-};
-
-export const InputFile: Story = {
-  args: {},
-  render: function (args) {
-    return (
-      <>
-        <div className="grid w-full max-w-sm items-center gap-1.5">
-          <Label className="p-2" htmlFor="picture">
-            Picture
-          </Label>
-          <Input id="picture" type="file" {...args} />
-        </div>
-      </>
-    );
-  },
-};
-
-export const InputDisabled: Story = {
-  args: {
-    disabled: true,
-  },
-  render: function (args) {
-    return <Input type="email" placeholder="Email" {...args} />;
-  },
 };
 
 export const InputWithLabel: Story = {
   args: {},
-  render: function () {
+  render: function (args) {
     return (
-      <div className="grid w-[392px] max-w-sm items-center gap-1.5">
-        <Label className="p-2 text-neutral-800" htmlFor="email">
-          Email
+      <div className="grid w-full max-w-sm items-center gap-1.5">
+        <Label className="text-neutral-800" htmlFor="with-label">
+          Título
         </Label>
-        <Input type="email" id="email" placeholder="Email" />
+        <Input id="with-label" {...args} />
       </div>
     );
   },
 };
 
-export const InputWithButton: Story = {
+
+export const InputWithHelper: Story = {
   args: {},
-  render: function () {
+  render: function (args) {
     return (
-      <div className="flex w-[392px] max-w-sm items-center space-x-2 gap-2">
-        <Input type="email" placeholder="Email" />
-        <Button type="submit">Subscribe</Button>
+      <div className="grid w-full max-w-sm items-center gap-2">
+        <Label className="text-neutral-800" htmlFor="with-label">
+          Título
+        </Label>
+        <Input helperText="Seu texto de apoio aparecerá aqui." id="with-label" {...args} />
       </div>
     );
   },
