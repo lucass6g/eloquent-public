@@ -27,12 +27,6 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             </>
         )
 
-        const defaultContent = (
-            <>
-                {children}
-            </>
-        )
-        
         return (
             <Comp
                 disabled={disabled || loading}
@@ -41,7 +35,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                 {...props}
         >
             <span className="flex items-center">
-                {loading ? loadingContent : defaultContent}
+                {loading ? loadingContent : children}
             </span>
         </Comp>
     );
