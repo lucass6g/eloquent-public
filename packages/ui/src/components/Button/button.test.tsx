@@ -1,4 +1,4 @@
-import { render, screen, waitFor } from "@testing-library/react";
+import {render, screen, waitFor} from "@testing-library/react";
 import {it, describe, expect, vi} from "vitest"
 import {Button} from "."
 import userEvent from "@testing-library/user-event";
@@ -38,7 +38,7 @@ describe('Button component', () => {
 
         rerender(<Button variant="secondary">Secondary</Button>);
         const buttonSecondary = screen.getByRole("button", {name: "Secondary"});
-        expect(buttonSecondary).toHaveClass("text-accent-foreground")
+        expect(buttonSecondary).toHaveClass("text-secondary-foreground")
 
         rerender(<Button variant="destructive">Destructive</Button>);
         const buttonDestructive = screen.getByRole("button", {name: "Destructive"});
@@ -46,10 +46,33 @@ describe('Button component', () => {
 
         rerender(<Button variant="link">Link</Button>);
         const buttonLink = screen.getByRole("button", {name: "Link"});
-        expect(buttonLink).toHaveClass("underline-offset-4")
+        expect(buttonLink).toHaveClass("underline")
 
         rerender(<Button variant="icon">Icon</Button>);
         const buttonIcon = screen.getByRole("button", {name: "Icon"});
         expect(buttonIcon).toHaveClass("p-0")
+
+        rerender(<Button variant="badge">Badge</Button>);
+        const buttonBadge = screen.getByRole("button", {name: "Badge"});
+        expect(buttonBadge).toHaveClass("bg-primary text-sm text-primary-foreground min-w-fit max-w-fit max-h-6 cursor-pointer")
     })
-  });
+
+    it("should render icon when 'loading' prop is passed", () => {
+      render(<Button loading>With Loading</Button>);
+      const button = screen.getByRole("button", {name: "Carregando..."});
+      const svgIcon = button.querySelector("svg");
+      expect(svgIcon).toHaveClass("animate-spin");
+    })
+
+    it("should render text when 'labelLoading' prop is passed", () => {
+      render(<Button loading labelLoading="Enviando...">With Loading</Button>);
+      const button = screen.getByRole("button", {name: "Enviando..."});
+      expect(button).toBeInTheDocument();
+    })
+
+    it("should remove 'labelLoading' when 'size=icon' prop is passed", () => {
+      render(<Button loading labelLoading="Enviando..." size="icon">With Loading</Button>);
+      const loadingText = screen.queryByText("Enviando...");
+      expect(loadingText).not.toBeInTheDocument();
+    })
+});

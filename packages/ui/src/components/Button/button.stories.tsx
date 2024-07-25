@@ -1,16 +1,20 @@
 import { Button } from ".";
 import type { Meta, StoryObj } from "@storybook/react";
-import { Plus } from "lucide-react";
+import { LayoutGrid, X } from "lucide-react";
 
 import { ButtonProps, ButtonSize, ButtonVariant } from "./Button.props";
 
 const meta: Meta<ButtonProps> = {
   title: "Button",
   component: Button,
+  parameters: {
+    layout: "centered",
+  },
   args: {
     children: "Clique aqui",
     disabled: false,
     size: "default",
+    loading: false
   },
   argTypes: {
     onClick: {
@@ -47,6 +51,8 @@ const meta: Meta<ButtonProps> = {
         "destructive",
         "link",
         "secondary",
+        "badge",
+        "none"
       ] satisfies ButtonVariant[],
       description: "Variante do botão",
       table: {
@@ -67,9 +73,24 @@ const meta: Meta<ButtonProps> = {
       description: "Se o botão está desabilitado",
       table: {
         type: { summary: "boolean" },
-        defaultValue: { summary: "s" },
+        defaultValue: { summary: "false" },
       },
     },
+    loading: {
+      description: "Se o botão está em estado de `carregando...`",
+      table: {
+        type: { summary: "boolean" },
+        defaultValue: { summary: "false" },
+      },
+    },
+    labelLoading: {
+      description: "Texto que aparece quando o botão está em estado de carregando",
+      control: { type: "text" },
+      table: {
+        type: { summary: "string" },
+        defaultValue: { summary: "Carregando..." },
+      },
+    }
   },
   tags: ["experimental"]
 };
@@ -102,22 +123,56 @@ export const Destructive: Story = {
   },
 };
 
-export const Icon: Story = {
+export const NoStyle: Story = {
+  args: {
+    variant: "none"
+  }
+};
+
+export const WithIcon: Story = {
   render(props) {
     return (
+        <Button {...props}>
+          <LayoutGrid className="w-4 h-4 mr-2"/>
+          Clique aqui
+        </Button>
+    );
+  }
+};
+
+export const Loading: Story = {
+  render: (props) => {
+    return (
       <Button {...props}>
-        <Plus/>
+        Clique aqui
       </Button>
     );
   },
   args: {
-    variant: "default",
-    size: "icon",
-    "aria-label": "Adicionar",
+    loading: true
+  }
+}
+
+export const Badge: Story = {
+  render: (props) => {
+    return (
+        <Button {...props} variant="badge">
+          Clique aqui
+          <X className="ml-2 w-4 h-4" />
+        </Button>
+    );
   },
-  argTypes: {
-    children: {
-      control: { type: "text" },
-    },
-  },
+  args: {
+    variant: "badge"
+  }
+}
+
+export const Icon: Story = {
+  render: ({children, ...props}) => {
+    return(
+      <Button {...props} size="icon" variant="icon">
+          <LayoutGrid className="h-4 w-4" />
+      </Button>
+    )
+  }
 };
