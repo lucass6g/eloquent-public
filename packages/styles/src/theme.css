@@ -4,7 +4,7 @@
 @font-face {
   font-family: 'Barlow';
   src: url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap') format('woff2');
-  font-weight: 400;
+  font-weight: 500;
 }
 
 :root {
