@@ -7,6 +7,9 @@ import { ButtonProps, ButtonSize, ButtonVariant } from "./Button.props";
 const meta: Meta<ButtonProps> = {
   title: "Button",
   component: Button,
+  parameters: {
+    layout: "centered",
+  },
   args: {
     children: "Clique aqui",
     disabled: false,
@@ -48,8 +51,7 @@ const meta: Meta<ButtonProps> = {
         "destructive",
         "link",
         "secondary",
-        "badge",
-        "none"
+        "badge"
       ] satisfies ButtonVariant[],
       description: "Variante do botão",
       table: {
@@ -59,7 +61,7 @@ const meta: Meta<ButtonProps> = {
     },
     size: {
       control: { type: "select" },
-      options: ["default", "icon", "sm"] satisfies ButtonSize[],
+      options: ["default", "icon", "sm", "none"] satisfies ButtonSize[],
       description: "Tamanho do botão",
       table: {
         type: { summary: "string" },
@@ -82,6 +84,7 @@ const meta: Meta<ButtonProps> = {
     },
     labelLoading: {
       description: "Texto que aparece quando o botão está em estado de carregando",
+      control: { type: "text" },
       table: {
         type: { summary: "string" },
         defaultValue: { summary: "Carregando..." },
@@ -121,7 +124,7 @@ export const Destructive: Story = {
 
 export const NoStyle: Story = {
   args: {
-    variant: "none"
+    size: "none"
   },
 };
 
