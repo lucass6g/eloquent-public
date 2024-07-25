@@ -1,6 +1,9 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Label, Input } from "../";
+import { Label } from "../Label";
+import { Input } from "../Input";
+import { Button } from "../Button";
 import { InputProps } from "./Input.props";
+import { HelperText } from "../HelperText";
 
 const meta = {
   title: "Input",
@@ -87,17 +90,29 @@ export const InputWithLabel: Story = {
   },
 };
 
-
 export const InputWithHelper: Story = {
-  args: {},
+  args: {
+    id: "label",
+  },
   render: function (args) {
     return (
-      <div className="grid w-full max-w-sm items-center gap-2">
-        <Label className="text-neutral-800" htmlFor="with-label">
-          Título
-        </Label>
-        <Input helperText="Seu texto de apoio aparecerá aqui." id="with-label" {...args} />
-      </div>
+     <HelperText.Root>
+        <Label htmlFor="label" className="text-neutral-800">Titulo</Label>
+        <Input {...args} />
+        <HelperText.Label>Seu texto de apoio aparecerá aqui.</HelperText.Label>
+     </HelperText.Root>
     );
   },
 };
+
+export const InputWithButton: Story = {
+  args: {},
+  render: function (args) {
+    return (
+      <div className="flex w-full max-w-sm items-center space-x-2">
+        <Input {...args} />
+        <Button className="max-w-28">Subscribe</Button>
+      </div>
+    )
+  }
+}
