@@ -40,7 +40,9 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                 ref={ref}
                 {...props}
         >
-            {loading ? loadingContent : defaultContent}
+            <span className="flex items-center">
+                {loading ? loadingContent : defaultContent}
+            </span>
         </Comp>
     );
     }
