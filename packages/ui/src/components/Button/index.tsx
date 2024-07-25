@@ -21,10 +21,10 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         const Comp = asChild ? Slot : "button";
 
         const loadingContent = (
-            <>
+            <span className="flex items-center">
                 <Loader2 className={cn("animate-spin h-4 w-4 mr-2", size === "icon" && "m-auto")}/>
                 {size !== "icon" && labelLoading}
-            </>
+            </span>
         )
 
         return (
@@ -34,9 +34,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                 ref={ref}
                 {...props}
         >
-            <span className="flex items-center">
-                {loading ? loadingContent : children}
-            </span>
+            {loading ? loadingContent : children}
         </Comp>
     );
     }

@@ -168,7 +168,7 @@ export const Icon: Story = {
   render: ({children, ...props}) => {
     return(
       <Button {...props} size="icon" variant="icon">
-        <LayoutGrid className="h-4 w-4" />
+          <LayoutGrid className="h-4 w-4" />
       </Button>
     )
   }
