@@ -9,20 +9,19 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     function EloquentButton({
         className, 
         variant, 
-        children, 
         disabled, 
         loading = false, 
         size, 
         asChild = false, 
-        icon,
         startIcon,
+        children,
         endIcon,
         ...props
     }, 
         ref)  {
         const Comp = asChild ? Slot : "button";
         const renderIcon = (icon: React.ReactNode) => !loading && icon;
-
+        
         return (
             <Comp
                 disabled={disabled || loading}
@@ -30,10 +29,12 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                 ref={ref}
                 {...props}
         >
-            {loading && <Loader2 className="animate-spin w-4 h-4 mr-2" />}
-            {renderIcon(startIcon)}
-            {children}
-            {renderIcon(endIcon)}
+            <span className="flex items-center">
+                {loading && <Loader2 className={cn("animate-spin h-4 w-4 mr-2", size === "icon" && "m-auto")}/>}
+                {renderIcon(startIcon)}
+                {children}
+                {renderIcon(endIcon)}
+            </span>
         </Comp>
     );
     }

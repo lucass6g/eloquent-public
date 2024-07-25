@@ -7,7 +7,6 @@ export interface ButtonVariantsProps extends VariantProps<typeof buttonVariants>
 export interface ButtonEloquentProps  {
     asChild?: boolean,
     loading?: boolean,
-    icon?: React.ReactNode,
     startIcon?: React.ReactNode,
     endIcon?: React.ReactNode,
 }

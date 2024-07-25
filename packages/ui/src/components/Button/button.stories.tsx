@@ -91,7 +91,7 @@ const meta: Meta<ButtonProps> = {
       table: {
         type: { summary: "React.ReactNode" },
       },
-    },
+    }
   },
   tags: ["experimental"]
 };
@@ -102,7 +102,7 @@ type Story = StoryObj<ButtonProps>;
 
 export const Primary: Story = {
   args: {
-    variant: "default"
+    variant: "default",
   },
 };
 
@@ -127,7 +127,7 @@ export const Destructive: Story = {
 export const NoStyle: Story = {
   args: {
     variant: "none",
-    size: "none"
+    size: "none",
   },
 };
 
@@ -144,7 +144,7 @@ export const WithIcon: Story = {
         </Button>
       </div>
     );
-  },
+  }
 };
 
 export const Loading: Story = {
@@ -156,7 +156,7 @@ export const Loading: Story = {
     );
   },
   args: {
-    loading: true,
+    loading: true
   }
 }
 
@@ -174,7 +174,7 @@ export const Badge: Story = {
     );
   },
   args: {
-    variant: "badge",
+    variant: "badge"
   }
 }
 
@@ -183,5 +183,5 @@ export const Icon: Story = {
     return(
       <Button {...props} size="icon" variant="icon" startIcon={<LayoutGrid className="h-4 w-4" />} />
     )
-  },
+  }
 };
