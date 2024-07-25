@@ -153,10 +153,10 @@ export const Loading: Story = {
 export const Badge: Story = {
   render: (props) => {
     return (
-          <Button {...props} variant="badge">
-            Clique aqui
-            <X className="ml-2 w-4 h-4" />
-          </Button>
+        <Button {...props} variant="badge">
+          Clique aqui
+          <X className="ml-2 w-4 h-4" />
+        </Button>
     );
   },
   args: {
