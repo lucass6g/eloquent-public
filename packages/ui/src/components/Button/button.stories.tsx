@@ -59,7 +59,7 @@ const meta: Meta<ButtonProps> = {
     },
     size: {
       control: { type: "select" },
-      options: ["default", "icon", "sm", "none"] satisfies ButtonSize[],
+      options: ["default", "icon", "sm"] satisfies ButtonSize[],
       description: "Tamanho do botão",
       table: {
         type: { summary: "string" },
@@ -121,8 +121,7 @@ export const Destructive: Story = {
 
 export const NoStyle: Story = {
   args: {
-    variant: "none",
-    size: "none",
+    variant: "none"
   },
 };
 

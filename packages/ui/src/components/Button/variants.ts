@@ -43,13 +43,12 @@ export const buttonVariants = tv({
                 "p-0 border border-border text-accent-foreground",
                 "disabled:text-neutral-500",
             ],
-            none: "border-none bg-transparent text-inherit cursor-default",
+            none: "p-0 m-0 border-none bg-transparent text-inherit cursor-default",
         },
         size: {
             default: "py-2 px-4 w-[184px] h-[40px] border-lg",
             sm: "h-8 px-3 text-xs w-[152px] h-[32px]",
-            icon: "h-9 w-9 first-child:stroke-primary-foreground",
-            none: "p-0 m-0",
+            icon: "h-9 w-9 first-child:stroke-primary-foreground"
         },
     },
     defaultVariants: {
