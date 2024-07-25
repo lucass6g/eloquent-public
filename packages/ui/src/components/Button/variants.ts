@@ -42,21 +42,20 @@ export const buttonVariants = tv({
             icon: [
                 "p-0 border border-border text-accent-foreground",
                 "disabled:text-neutral-500",
+            ],
+            none: [
+                "p-0 m-0 border-none bg-transparent shadow-none text-secondary-foreground",
+                "hover:shadow-none hover:bg-transparent",
+                "disabled:bg-transparent disabled:shadow-none"
             ]
         },
         size: {
             default: "py-2 px-4 w-[184px] h-[40px] border-lg",
             sm: "h-8 px-3 text-xs w-[152px] h-[32px]",
-            icon: "h-9 w-9 first-child:stroke-primary-foreground",
-            none: [
-                "p-0 m-0 border-none bg-transparent shadow-none text-secondary-foreground",
-                "hover:shadow-none hover:bg-transparent",
-                "disabled:bg-transparent disabled:shadow-none",
-            ],
+            icon: "h-9 w-9 first-child:stroke-primary-foreground"
         },
     },
     defaultVariants: {
-        variant: "default",
-        size: "default",
-    },
+        variant: "default"
+    }
 });

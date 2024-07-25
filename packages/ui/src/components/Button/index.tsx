@@ -8,10 +8,10 @@ import { Loader2 } from "lucide-react";
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     function EloquentButton({
         className, 
-        variant, 
-        disabled, 
+        variant = "default", 
+        disabled = false, 
         loading = false, 
-        size, 
+        size = "default", 
         asChild = false, 
         children,
         labelLoading = "Carregando...",
@@ -20,21 +20,22 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref)  {
         const Comp = asChild ? Slot : "button";
 
-        const loadingContent = (
-            <span className="flex items-center">
+        const LoadingContent = (
+            <div className="flex items-center">
                 <Loader2 className={cn("animate-spin h-4 w-4 mr-2", size === "icon" && "m-auto")}/>
                 {size !== "icon" && labelLoading}
-            </span>
+            </div>
         )
-
+          
         return (
             <Comp
                 disabled={disabled || loading}
-                className={cn(buttonVariants({variant, size, className}))}
+                className={cn(variant === "none" ? buttonVariants({variant, className}): 
+                buttonVariants({variant, size, className}))}
                 ref={ref}
                 {...props}
         >
-            {loading ? loadingContent : children}
+            {loading ? LoadingContent : children}
         </Comp>
     );
     }
