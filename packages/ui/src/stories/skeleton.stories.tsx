@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react'
-import { Skeleton,buttonVariants } from '../'
+import { buttonVariants } from '../components/Button/variants'
+import {Skeleton} from "../components/Skeleton"
 
 const meta = {
     title: 'Shadcn/skeleton',
