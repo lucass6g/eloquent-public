@@ -8,4 +8,4 @@ export const inputVariants = tv({
         "file:border-0 file:bg-transparent file:text-sm file:font-medium",
         "placeholder:text-neutral-500",
     ]
-}) 
+})
