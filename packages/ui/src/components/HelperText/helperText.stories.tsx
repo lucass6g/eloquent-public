@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { HelperText } from '.';
 
 const meta = {
-render: () => {
+component: () => {
     return (
         <HelperText.Root>
             <HelperText.Label>Seu texto de apoio.</HelperText.Label>
