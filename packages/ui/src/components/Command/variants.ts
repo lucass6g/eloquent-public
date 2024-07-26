@@ -11,7 +11,7 @@ const commandSlots = tv({
         separatorStyle: "mx-1 h-px bg-border",
         itemStyle: "relative flex gap-2 cursor-default select-none items-center rounded-[4px] px-2 py-1.5 text-sm outline-none data-[disabled=true]:pointer-events-none data-[selected=true]:bg-neutral-200 data-[selected=true]:text-neutral-800 data-[disabled=true]:opacity-50",
         shortCutStyle: "ml-auto text-xs tracking-widest text-muted-foreground",
-        glassIconStyle: "mr-2 h-4 w-4 shrink-0 opacity-50 text-neutral-500",
+        glassIconStyle: "mr-2 h-[18px] w-[18px] shrink-0 opacity-50 text-neutral-500",
         containerInputStyle: "flex items-center border-b px-3",
         dialogContentStyle: "overflow-hidden p-0"
     }
