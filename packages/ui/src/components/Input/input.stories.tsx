@@ -7,7 +7,7 @@ import { HelperText } from "../HelperText";
 
 const meta = {
   title: "Input",
-  component: (args) => <Input {...args} />,
+  component: Input,
   args: {
     type: "text",
     disabled: false,
@@ -49,7 +49,7 @@ const meta = {
       description: "Uma string que define o texto de ajuda que é exibido quando o input está vazio.",
       control: { type: "text" },
       table: {
-        defaultValue: { summary: "Name" }
+        defaultValue: { summary: "Label" }
       },
     },
     disabled: {
@@ -72,16 +72,33 @@ type Story = StoryObj<typeof meta>;
 export const InputDefault: Story = {
   args: {},
   render: function(args) {
-    return <Input {...args}/>
+    return (
+      <div className="w-[392px]">
+        <Input {...args}/>
+      </div>
+    )
   }
 };
+
+export const InputDisabled: Story = {
+  args: {
+    disabled: true
+  },
+  render: function(args){
+    return (
+      <div className="w-[392px]">
+        <Input {...args} />
+      </div>
+    )
+  }
+}
 
 export const InputWithLabel: Story = {
   args: {},
   render: function (args) {
     return (
-      <div className="grid w-full max-w-sm items-center gap-1.5">
-        <Label className="text-neutral-800" htmlFor="with-label">
+      <div className="grid w-[392px] max-w-sm items-center gap-1.5">
+        <Label className="text-neutral-800 font-medium" htmlFor="with-label">
           Título
         </Label>
         <Input id="with-label" {...args} />
@@ -96,8 +113,8 @@ export const InputWithHelper: Story = {
   },
   render: function (args) {
     return (
-     <HelperText.Root>
-        <Label htmlFor="label" className="text-neutral-800">Titulo</Label>
+     <HelperText.Root className="w-[392px]">
+        <Label htmlFor="label" className="text-neutral-800 font-medium">Titulo</Label>
         <Input {...args} />
         <HelperText.Label>Seu texto de apoio aparecerá aqui.</HelperText.Label>
      </HelperText.Root>
@@ -109,9 +126,9 @@ export const InputWithButton: Story = {
   args: {},
   render: function (args) {
     return (
-      <div className="flex w-full max-w-sm items-center space-x-2">
+      <div className="flex gap-2 w-[392px] items-center">
         <Input {...args} />
-        <Button className="max-w-28">Subscribe</Button>
+        <Button className="w-28">Button Label</Button>
       </div>
     )
   }
