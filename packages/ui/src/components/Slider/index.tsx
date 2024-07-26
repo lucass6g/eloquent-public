@@ -1,28 +1,28 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import * as SliderPrimitive from "@radix-ui/react-slider"
+import * as React from "react";
+import * as SliderPrimitive from "@radix-ui/react-slider";
+import { sliderSlots } from "./variants";
 
-import { cn } from "@eloquent/styles"
+import { cn } from "@eloquent/styles";
 
-const Slider = React.forwardRef<
+export const Slider = React.forwardRef<
   React.ElementRef<typeof SliderPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof SliderPrimitive.Root>
->(({ className, ...props }, ref) => (
-  <SliderPrimitive.Root
-    ref={ref}
-    className={cn(
-      "relative flex w-full touch-none select-none items-center",
-      className
-    )}
-    {...props}
-  >
-    <SliderPrimitive.Track className="relative h-1.5 w-full grow overflow-hidden rounded-full bg-primary/20">
-      <SliderPrimitive.Range className="absolute h-full bg-primary" />
-    </SliderPrimitive.Track>
-    <SliderPrimitive.Thumb className="block h-4 w-4 rounded-full border border-primary/50 bg-background shadow transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50" />
-  </SliderPrimitive.Root>
-))
-Slider.displayName = SliderPrimitive.Root.displayName
+>(({ className, ...props }, ref) => {
+  const { rootStyle, trackStyle, rangeStyle, thumbStyle } = sliderSlots();
+  return (
+    <SliderPrimitive.Root
+      ref={ref}
+      className={cn(rootStyle(), className)}
+      {...props}
+    >
+      <SliderPrimitive.Track className={trackStyle()}>
+        <SliderPrimitive.Range className={rangeStyle()} />
+      </SliderPrimitive.Track>
+      <SliderPrimitive.Thumb className={thumbStyle()} />
+    </SliderPrimitive.Root>
+  );
+});
 
-export { Slider }
+Slider.displayName = SliderPrimitive.Root.displayName;
