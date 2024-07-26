@@ -40,4 +40,22 @@ describe("Input", () => {
     expect(stateFn).not.toHaveBeenCalled();
     expect(input).toBeDisabled();
   });
+
+  it("should render a different type", () => {
+   const {rerender} = render(<Input type="text" placeholder="text" />);
+    const textInput = screen.getByPlaceholderText("text");
+    expect(textInput).toHaveAttribute("type", "text");
+
+    rerender(<Input type="number" placeholder="number" />);
+    const numberInput = screen.getByPlaceholderText("number");
+    expect(numberInput).toHaveAttribute("type", "number");
+
+    rerender(<Input type="password" placeholder="password" />);
+    const passwordInput = screen.getByPlaceholderText("password");
+    expect(passwordInput).toHaveAttribute("type", "password");
+
+    rerender(<Input type="email" placeholder="email" />);
+    const emailInput = screen.getByPlaceholderText("email");
+    expect(emailInput).toHaveAttribute("type", "email");
+  })
 });

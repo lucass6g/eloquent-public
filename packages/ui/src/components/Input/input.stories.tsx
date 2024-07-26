@@ -19,30 +19,16 @@ const meta = {
       control: { type: "select" },
       table: {
         defaultValue: { summary: "text" },
+        type: {
+          summary: "string",
+          detail: "'text' | 'password' | 'number' | 'email'"
+        }
       },
       options: [
-        "file",
-        "email",
         "password",
         "text",
-        "checkbox",
-        "radio",
-        " date",
-        "datetime-local",
-        "email",
-        "hidden",
-        "image",
-        "month",
         "number",
-        "password",
-        "range",
-        "reset",
-        "search",
-        "submit",
-        "tel",
-        "time",
-        "url",
-        "week",
+        "email"
       ],
     },
     placeholder: {
