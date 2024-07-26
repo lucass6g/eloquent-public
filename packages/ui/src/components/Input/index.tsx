@@ -5,7 +5,7 @@ import {inputVariants} from "./variants"
 import { InputProps } from "./Input.props"
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  function Input({className, type = "text", helperText, ...props}, ref) {
+  function Input({className, type = "text", ...props}, ref) {
     return (
         <input
           type={type}
