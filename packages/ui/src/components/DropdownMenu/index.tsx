@@ -5,6 +5,7 @@ import * as React from "react";
 import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
 import {
   CheckIcon,
+  ChevronDownIcon,
   ChevronRightIcon,
   DotFilledIcon,
 } from "@radix-ui/react-icons";
@@ -19,22 +20,43 @@ import {
 } from "./variants";
 
 const {
-  dropdownMenuShortcut,
-  dropdownMenuSeparator,
-  dropdownMenuRadioItem,
-  dropdownMenuRadioItemIconWrapper,
-  dropdownMenuRadioItemIcon,
   dropdownMenuCheckboxItem,
-  dropdownMenuCheckboxItemIconWrapper,
   dropdownMenuCheckboxItemIcon,
+  dropdownMenuCheckboxItemIconWrapper,
   dropdownMenuContent,
+  dropdownMenuRadioItem,
+  dropdownMenuRadioItemIcon,
+  dropdownMenuRadioItemIconWrapper,
+  dropdownMenuSeparator,
+  dropdownMenuShortcut,
   dropdownMenuSubContent,
   dropdownMenuSubTriggerIcon,
+  dropdownMenuTrigger,
+  dropdownMenuTriggerIcon,
 } = dropdownMenuVariants();
 
 const DropdownMenuRoot = DropdownMenuPrimitive.Root;
 
-const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger;
+const DropdownMenuTrigger = React.forwardRef<
+  React.ElementRef<typeof DropdownMenuPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Trigger>
+>(({ className, children, ...props }, ref) => (
+  <DropdownMenuPrimitive.Trigger ref={ref} {...props}>
+    {typeof children === "string" ? (
+      <button className={cn(dropdownMenuTrigger(), className)}>
+        {children}
+        <ChevronDownIcon
+          color="currentColor"
+          className={dropdownMenuTriggerIcon()}
+        />
+      </button>
+    ) : (
+      children
+    )}
+  </DropdownMenuPrimitive.Trigger>
+));
+
+DropdownMenuTrigger.displayName = DropdownMenuPrimitive.Trigger.displayName;
 
 const DropdownMenuGroup = DropdownMenuPrimitive.Group;
 
