@@ -21,7 +21,8 @@ export const baseVariants = tv({
     subContent:
       "z-50 min-w-[8rem] overflow-hidden rounded-[6px] border border-neutral-300 bg-popover p-1 text-popover-foreground shadow-lg data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
     subTriggerIcon: "ml-auto h-4 w-4",
-    trigger: "flex items-center pb-2 text-neutral-500 text-sm",
+    trigger:
+      "flex items-center pb-2 font-normal text-neutral-800 text-sm focus:outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
     triggerIcon: "ml-1 h-4 w-4 text-neutral-800",
   },
 });

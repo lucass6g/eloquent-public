@@ -110,10 +110,11 @@ const SubContent = React.forwardRef<SubContentElement, SubContentProps>(
 SubContent.displayName = DropdownMenuPrimitive.SubContent.displayName;
 
 const Content = React.forwardRef<ContentElement, ContentProps>(
-  ({ className, sideOffset = 4, ...props }, ref) => (
+  ({ className, align = "start", sideOffset = 4, ...props }, ref) => (
     <DropdownMenuPrimitive.Portal>
       <DropdownMenuPrimitive.Content
         ref={ref}
+        align={align}
         sideOffset={sideOffset}
         className={cn(content(), className)}
         {...props}
