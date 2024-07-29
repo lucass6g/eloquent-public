@@ -1,0 +1,97 @@
+import { Meta, Canvas } from "@storybook/blocks";
+import InputMaskStories, { InputWithLabel, InputWithHelper, InputWithButton } from "./InputMask.stories";
+
+<Meta of={InputMaskStories}/>
+
+# Input Mask
+
+## Props
+
+`mask: string`
+
+String de máscara. Os caracteres de formato padrão são:<br/>
+
+`9`: aceita números de 0 a 9<br/>
+`a`: aceita letras de A a Z (maiúsculas e minúsculas)<br/>
+`*`: aceita letras de A a Z (maiúsculas e minúsculas) e números de 0 a 9<br/>
+
+Qualquer caractere pode ser escapado com uma barra invertida `\`. 
+Ele aparecerá como uma barra dupla `\\` em strings JavaScript. Por exemplo, um telefone Brasileiro com prefixo +55 ficaria assim: `mask="+55\ (99)\ 9999-9999"`.
+
+<Canvas />
+
+<hr/>
+
+`maskChar: string`
+
+Caractere utilizado para cobrir as partes não preenchidas da máscara. O caractere padrão é "_". Se definido como null ou uma string vazia, as partes não preenchidas ficarão vazias, como em um campo de entrada comum.
+
+`formatChars: object`
+
+Define caracteres de formatação com caracteres como chaves e strings de expressões regulares (RegExp) correspondentes como valores. Os padrões são:
+
+```
+{
+  '9': '[0-9]',
+  'a': '[A-Za-z]',
+  '*': '[A-Za-z0-9]'
+}
+```
+
+`alwaysShowMask: boolean`
+
+Exibe a máscara quando o campo de entrada está vazio e não possui foco.
+
+`inputRef: function`
+
+Use inputRef em vez de ref se você precisar que o nó de entrada gerencie foco, seleção, etc.
+
+## Experimental 🔥
+
+Os adereços a seguir são considerados experimentais porque são mais propensos a problemas e provavelmente serão alterados no futuro. Use com cuidado.
+
+`beforeMaskedValueChange : function`
+
+Caso precise implementar um comportamento de mascaramento mais complexo, você pode fornecer a função `beforeMaskedValueChange` para alterar o valor mascarado e a posição do cursor antes de ser aplicado à entrada. `beforeMaskedValueChange` recebe os seguintes argumentos:
+
+* `newState (object)`: Novo estado do campo de entrada. Contém os campos value e selection. selection é null quando o campo de entrada perde o foco ou quando a função é chamada antes da montagem do campo de entrada. Exemplo:
+
+* `oldState (object)`: Estado do campo de entrada antes da mudança. Contém os campos value e selection. selection é null quando o campo de entrada ganha foco ou quando a função é chamada antes da montagem do campo de entrada.
+
+* `userInput (string)`: String bruta inserida ou colada. null se o usuário não inseriu nada (por exemplo, acionado por exclusão ou renderização devido a mudança de propriedades).
+
+* `maskOptions (object)`: Opções de máscara. Exemplo:
+
+```
+{
+  mask: '99/99/9999',
+  maskChar: '_',
+  alwaysShowMask: false,
+  formatChars: {
+    '9': '[0-9]',
+    'a': '[A-Za-z]',
+    '*': '[A-Za-z0-9]'
+  },
+  permanents: [2, 5] // permanentes é uma matriz de índices dos caracteres não editáveis ​​na máscara
+}
+```
+
+`beforeMaskedValueChange` deve retornar um objeto com os seguintes campos:
+
+* value (string): Novo valor.
+* selection (object): Nova seleção. Se selection no argumento newState for null, deve ser null também.
+Observe que beforeMaskedValueChange é executado com mais frequência do que onChange e deve ser pura.
+
+## Exemplos
+
+### InputDefault
+<Canvas/>
+
+### InputWithLabel
+<Canvas of={InputWithLabel}/>
+
+### InputWithHelper
+<Canvas of={InputWithHelper}/>
+
+### InputWithButton
+<Canvas of={InputWithButton}/>
