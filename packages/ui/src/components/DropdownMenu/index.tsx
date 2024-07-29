@@ -15,6 +15,7 @@ import {
   dropdownMenuItemVariants,
   dropdownMenuLabelVariants,
   dropdownMenuSubTriggerVariants,
+  dropdownMenuIconVariants,
 } from "./variants";
 
 const {
@@ -103,6 +104,22 @@ const DropdownMenuItem = React.forwardRef<
 ));
 DropdownMenuItem.displayName = DropdownMenuPrimitive.Item.displayName;
 
+const DropdownMenuIcon = ({
+  className,
+  position,
+  ...props
+}: {
+  position?: "left" | "right";
+} & React.HTMLAttributes<HTMLDivElement>) => {
+  return (
+    <div
+      className={cn(dropdownMenuIconVariants({ position }), className)}
+      {...props}
+    />
+  );
+};
+DropdownMenuIcon.displayName = "DropdownMenuIcon";
+
 const DropdownMenuCheckboxItem = React.forwardRef<
   React.ElementRef<typeof DropdownMenuPrimitive.CheckboxItem>,
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.CheckboxItem>
@@ -182,6 +199,7 @@ export const DropdownMenu = {
   Trigger: DropdownMenuTrigger,
   Content: DropdownMenuContent,
   Item: DropdownMenuItem,
+  Icon: DropdownMenuIcon,
   CheckboxItem: DropdownMenuCheckboxItem,
   RadioItem: DropdownMenuRadioItem,
   Label: DropdownMenuLabel,
