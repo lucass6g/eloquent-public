@@ -27,7 +27,10 @@ export const dropdownMenuVariants = tv({
 });
 
 export const dropdownMenuIconVariants = tv({
-  base: "h-[18px] w-[18px] text-neutral-800",
+  base: [
+    "h-[18px] w-[18px] text-neutral-800",
+    "flex items-center justify-center",
+  ],
   variants: {
     position: {
       left: "mr-2",
