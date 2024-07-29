@@ -34,7 +34,7 @@ export type ItemProps = ComponentPropsWithoutRef<
 > &
   ItemVariantsProps;
 
-export type IconVariantsProps = { position?: "left" | "right" };
+export type IconVariantsProps = { position: "left" | "right" };
 export type IconProps = ComponentProps<"div"> & IconVariantsProps;
 
 export type CheckboxItemElement = ElementRef<
