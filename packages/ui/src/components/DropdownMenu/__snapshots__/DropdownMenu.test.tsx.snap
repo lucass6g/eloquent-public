@@ -1,0 +1,1101 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Dropdown Menu > should match the snapshot > align > center 1`] = `
+<body
+  data-scroll-locked="1"
+  style="pointer-events: none;"
+>
+  <span
+    aria-hidden="true"
+    data-aria-hidden="true"
+    data-radix-focus-guard=""
+    style="outline: none; opacity: 0; position: fixed; pointer-events: none;"
+    tabindex="0"
+  />
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
+    <button
+      aria-controls="radix-:rp:"
+      aria-expanded="true"
+      aria-haspopup="menu"
+      data-state="open"
+      id="radix-:ro:"
+      type="button"
+    >
+      <button
+        class="flex items-center pb-2 font-normal text-neutral-800 text-sm focus:outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+      >
+        Items
+        <svg
+          class="ml-1 h-4 w-4 text-neutral-800"
+          fill="none"
+          height="15"
+          viewBox="0 0 15 15"
+          width="15"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </button>
+  </div>
+  <div
+    data-radix-popper-content-wrapper=""
+    dir="ltr"
+    style="position: fixed; left: 0px; top: 0px; transform: translate(0px, 4px); min-width: max-content; --radix-popper-available-width: 0px; --radix-popper-available-height: -4px; --radix-popper-anchor-width: 0px; --radix-popper-anchor-height: 0px; --radix-popper-transform-origin: 50% 0px;"
+  >
+    <div
+      aria-labelledby="radix-:ro:"
+      aria-orientation="vertical"
+      class="z-50 min-w-[8rem] overflow-hidden rounded-[6px] border border-neutral-300 bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2"
+      data-align="center"
+      data-orientation="vertical"
+      data-radix-menu-content=""
+      data-side="bottom"
+      data-state="open"
+      dir="ltr"
+      id="radix-:rp:"
+      role="menu"
+      style="outline: none; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); pointer-events: auto;"
+      tabindex="-1"
+    >
+      <div
+        class="p-2 text-sm font-medium text-neutral-800"
+      >
+        Título
+      </div>
+      <div
+        aria-orientation="horizontal"
+        class="my-1 h-px bg-neutral-300"
+        role="separator"
+      />
+      <div
+        role="group"
+      >
+        <div
+          class="relative flex items-center px-2 py-1.5 text-sm text-neutral-800 cursor-default select-none outline-none transition-colors focus:text-neutral-800 focus:bg-neutral-200 hover:text-neutral-800 hover:bg-neutral-200 data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+          data-orientation="vertical"
+          data-radix-collection-item=""
+          role="menuitem"
+          tabindex="-1"
+        >
+          Item 1
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    aria-hidden="true"
+    data-aria-hidden="true"
+    data-radix-focus-guard=""
+    style="outline: none; opacity: 0; position: fixed; pointer-events: none;"
+    tabindex="0"
+  />
+</body>
+`;
+
+exports[`Dropdown Menu > should match the snapshot > align > end 1`] = `
+<body
+  data-scroll-locked="1"
+  style="pointer-events: none;"
+>
+  <span
+    aria-hidden="true"
+    data-aria-hidden="true"
+    data-radix-focus-guard=""
+    style="outline: none; opacity: 0; position: fixed; pointer-events: none;"
+    tabindex="0"
+  />
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
+    <button
+      aria-controls="radix-:rs:"
+      aria-expanded="true"
+      aria-haspopup="menu"
+      data-state="open"
+      id="radix-:rr:"
+      type="button"
+    >
+      <button
+        class="flex items-center pb-2 font-normal text-neutral-800 text-sm focus:outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+      >
+        Items
+        <svg
+          class="ml-1 h-4 w-4 text-neutral-800"
+          fill="none"
+          height="15"
+          viewBox="0 0 15 15"
+          width="15"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </button>
+  </div>
+  <div
+    data-radix-popper-content-wrapper=""
+    dir="ltr"
+    style="position: fixed; left: 0px; top: 0px; transform: translate(0px, 4px); min-width: max-content; --radix-popper-available-width: 0px; --radix-popper-available-height: -4px; --radix-popper-anchor-width: 0px; --radix-popper-anchor-height: 0px; --radix-popper-transform-origin: 100% 0px;"
+  >
+    <div
+      aria-labelledby="radix-:rr:"
+      aria-orientation="vertical"
+      class="z-50 min-w-[8rem] overflow-hidden rounded-[6px] border border-neutral-300 bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2"
+      data-align="end"
+      data-orientation="vertical"
+      data-radix-menu-content=""
+      data-side="bottom"
+      data-state="open"
+      dir="ltr"
+      id="radix-:rs:"
+      role="menu"
+      style="outline: none; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); pointer-events: auto;"
+      tabindex="-1"
+    >
+      <div
+        class="p-2 text-sm font-medium text-neutral-800"
+      >
+        Título
+      </div>
+      <div
+        aria-orientation="horizontal"
+        class="my-1 h-px bg-neutral-300"
+        role="separator"
+      />
+      <div
+        role="group"
+      >
+        <div
+          class="relative flex items-center px-2 py-1.5 text-sm text-neutral-800 cursor-default select-none outline-none transition-colors focus:text-neutral-800 focus:bg-neutral-200 hover:text-neutral-800 hover:bg-neutral-200 data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+          data-orientation="vertical"
+          data-radix-collection-item=""
+          role="menuitem"
+          tabindex="-1"
+        >
+          Item 1
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    aria-hidden="true"
+    data-aria-hidden="true"
+    data-radix-focus-guard=""
+    style="outline: none; opacity: 0; position: fixed; pointer-events: none;"
+    tabindex="0"
+  />
+</body>
+`;
+
+exports[`Dropdown Menu > should match the snapshot > align > start 1`] = `
+<body
+  data-scroll-locked="1"
+  style="pointer-events: none;"
+>
+  <span
+    aria-hidden="true"
+    data-aria-hidden="true"
+    data-radix-focus-guard=""
+    style="outline: none; opacity: 0; position: fixed; pointer-events: none;"
+    tabindex="0"
+  />
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
+    <button
+      aria-controls="radix-:rm:"
+      aria-expanded="true"
+      aria-haspopup="menu"
+      data-state="open"
+      id="radix-:rl:"
+      type="button"
+    >
+      <button
+        class="flex items-center pb-2 font-normal text-neutral-800 text-sm focus:outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+      >
+        Items
+        <svg
+          class="ml-1 h-4 w-4 text-neutral-800"
+          fill="none"
+          height="15"
+          viewBox="0 0 15 15"
+          width="15"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </button>
+  </div>
+  <div
+    data-radix-popper-content-wrapper=""
+    dir="ltr"
+    style="position: fixed; left: 0px; top: 0px; transform: translate(0px, 4px); min-width: max-content; --radix-popper-available-width: 0px; --radix-popper-available-height: -4px; --radix-popper-anchor-width: 0px; --radix-popper-anchor-height: 0px; --radix-popper-transform-origin: 0% 0px;"
+  >
+    <div
+      aria-labelledby="radix-:rl:"
+      aria-orientation="vertical"
+      class="z-50 min-w-[8rem] overflow-hidden rounded-[6px] border border-neutral-300 bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2"
+      data-align="start"
+      data-orientation="vertical"
+      data-radix-menu-content=""
+      data-side="bottom"
+      data-state="open"
+      dir="ltr"
+      id="radix-:rm:"
+      role="menu"
+      style="outline: none; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); pointer-events: auto;"
+      tabindex="-1"
+    >
+      <div
+        class="p-2 text-sm font-medium text-neutral-800"
+      >
+        Título
+      </div>
+      <div
+        aria-orientation="horizontal"
+        class="my-1 h-px bg-neutral-300"
+        role="separator"
+      />
+      <div
+        role="group"
+      >
+        <div
+          class="relative flex items-center px-2 py-1.5 text-sm text-neutral-800 cursor-default select-none outline-none transition-colors focus:text-neutral-800 focus:bg-neutral-200 hover:text-neutral-800 hover:bg-neutral-200 data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+          data-orientation="vertical"
+          data-radix-collection-item=""
+          role="menuitem"
+          tabindex="-1"
+        >
+          Item 1
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    aria-hidden="true"
+    data-aria-hidden="true"
+    data-radix-focus-guard=""
+    style="outline: none; opacity: 0; position: fixed; pointer-events: none;"
+    tabindex="0"
+  />
+</body>
+`;
+
+exports[`Dropdown Menu > should match the snapshot > icon > left 1`] = `
+<body
+  data-scroll-locked="1"
+  style="pointer-events: none;"
+>
+  <span
+    aria-hidden="true"
+    data-aria-hidden="true"
+    data-radix-focus-guard=""
+    style="outline: none; opacity: 0; position: fixed; pointer-events: none;"
+    tabindex="0"
+  />
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
+    <button
+      aria-controls="radix-:r1:"
+      aria-expanded="true"
+      aria-haspopup="menu"
+      data-state="open"
+      id="radix-:r0:"
+      type="button"
+    >
+      <button
+        class="flex items-center pb-2 font-normal text-neutral-800 text-sm focus:outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+      >
+        Items
+        <svg
+          class="ml-1 h-4 w-4 text-neutral-800"
+          fill="none"
+          height="15"
+          viewBox="0 0 15 15"
+          width="15"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </button>
+  </div>
+  <div
+    data-radix-popper-content-wrapper=""
+    dir="ltr"
+    style="position: fixed; left: 0px; top: 0px; transform: translate(0px, 4px); min-width: max-content; --radix-popper-available-width: 0px; --radix-popper-available-height: -4px; --radix-popper-anchor-width: 0px; --radix-popper-anchor-height: 0px; --radix-popper-transform-origin: 0% 0px;"
+  >
+    <div
+      aria-labelledby="radix-:r0:"
+      aria-orientation="vertical"
+      class="z-50 min-w-[8rem] overflow-hidden rounded-[6px] border border-neutral-300 bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2"
+      data-align="start"
+      data-orientation="vertical"
+      data-radix-menu-content=""
+      data-side="bottom"
+      data-state="open"
+      dir="ltr"
+      id="radix-:r1:"
+      role="menu"
+      style="outline: none; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); pointer-events: auto;"
+      tabindex="-1"
+    >
+      <div
+        class="p-2 text-sm font-medium text-neutral-800"
+      >
+        Título
+      </div>
+      <div
+        aria-orientation="horizontal"
+        class="my-1 h-px bg-neutral-300"
+        role="separator"
+      />
+      <div
+        role="group"
+      >
+        <div
+          class="relative flex items-center px-2 py-1.5 text-sm text-neutral-800 cursor-default select-none outline-none transition-colors focus:text-neutral-800 focus:bg-neutral-200 hover:text-neutral-800 hover:bg-neutral-200 data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+          data-orientation="vertical"
+          data-radix-collection-item=""
+          role="menuitem"
+          tabindex="-1"
+        >
+          <div
+            class="h-[18px] w-[18px] text-neutral-800 flex items-center justify-center mr-2"
+          >
+            <svg
+              class="lucide lucide-layout-grid"
+              fill="none"
+              height="18"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                height="7"
+                rx="1"
+                width="7"
+                x="3"
+                y="3"
+              />
+              <rect
+                height="7"
+                rx="1"
+                width="7"
+                x="14"
+                y="3"
+              />
+              <rect
+                height="7"
+                rx="1"
+                width="7"
+                x="14"
+                y="14"
+              />
+              <rect
+                height="7"
+                rx="1"
+                width="7"
+                x="3"
+                y="14"
+              />
+            </svg>
+          </div>
+          Item 1
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    aria-hidden="true"
+    data-aria-hidden="true"
+    data-radix-focus-guard=""
+    style="outline: none; opacity: 0; position: fixed; pointer-events: none;"
+    tabindex="0"
+  />
+</body>
+`;
+
+exports[`Dropdown Menu > should match the snapshot > icon > right 1`] = `
+<body
+  data-scroll-locked="1"
+  style="pointer-events: none;"
+>
+  <span
+    aria-hidden="true"
+    data-aria-hidden="true"
+    data-radix-focus-guard=""
+    style="outline: none; opacity: 0; position: fixed; pointer-events: none;"
+    tabindex="0"
+  />
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
+    <button
+      aria-controls="radix-:r4:"
+      aria-expanded="true"
+      aria-haspopup="menu"
+      data-state="open"
+      id="radix-:r3:"
+      type="button"
+    >
+      <button
+        class="flex items-center pb-2 font-normal text-neutral-800 text-sm focus:outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+      >
+        Items
+        <svg
+          class="ml-1 h-4 w-4 text-neutral-800"
+          fill="none"
+          height="15"
+          viewBox="0 0 15 15"
+          width="15"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </button>
+  </div>
+  <div
+    data-radix-popper-content-wrapper=""
+    dir="ltr"
+    style="position: fixed; left: 0px; top: 0px; transform: translate(0px, 4px); min-width: max-content; --radix-popper-available-width: 0px; --radix-popper-available-height: -4px; --radix-popper-anchor-width: 0px; --radix-popper-anchor-height: 0px; --radix-popper-transform-origin: 0% 0px;"
+  >
+    <div
+      aria-labelledby="radix-:r3:"
+      aria-orientation="vertical"
+      class="z-50 min-w-[8rem] overflow-hidden rounded-[6px] border border-neutral-300 bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2"
+      data-align="start"
+      data-orientation="vertical"
+      data-radix-menu-content=""
+      data-side="bottom"
+      data-state="open"
+      dir="ltr"
+      id="radix-:r4:"
+      role="menu"
+      style="outline: none; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); pointer-events: auto;"
+      tabindex="-1"
+    >
+      <div
+        class="p-2 text-sm font-medium text-neutral-800"
+      >
+        Título
+      </div>
+      <div
+        aria-orientation="horizontal"
+        class="my-1 h-px bg-neutral-300"
+        role="separator"
+      />
+      <div
+        role="group"
+      >
+        <div
+          class="relative flex items-center px-2 py-1.5 text-sm text-neutral-800 cursor-default select-none outline-none transition-colors focus:text-neutral-800 focus:bg-neutral-200 hover:text-neutral-800 hover:bg-neutral-200 data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+          data-orientation="vertical"
+          data-radix-collection-item=""
+          role="menuitem"
+          tabindex="-1"
+        >
+          Item 1
+          <div
+            class="h-[18px] w-[18px] text-neutral-800 flex items-center justify-center ml-auto"
+          >
+            <svg
+              class="lucide lucide-layout-grid"
+              fill="none"
+              height="18"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="1.5"
+              viewBox="0 0 24 24"
+              width="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                height="7"
+                rx="1"
+                width="7"
+                x="3"
+                y="3"
+              />
+              <rect
+                height="7"
+                rx="1"
+                width="7"
+                x="14"
+                y="3"
+              />
+              <rect
+                height="7"
+                rx="1"
+                width="7"
+                x="14"
+                y="14"
+              />
+              <rect
+                height="7"
+                rx="1"
+                width="7"
+                x="3"
+                y="14"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    aria-hidden="true"
+    data-aria-hidden="true"
+    data-radix-focus-guard=""
+    style="outline: none; opacity: 0; position: fixed; pointer-events: none;"
+    tabindex="0"
+  />
+</body>
+`;
+
+exports[`Dropdown Menu > should match the snapshot > icon > without 1`] = `
+<body
+  data-scroll-locked="1"
+  style="pointer-events: none;"
+>
+  <span
+    aria-hidden="true"
+    data-aria-hidden="true"
+    data-radix-focus-guard=""
+    style="outline: none; opacity: 0; position: fixed; pointer-events: none;"
+    tabindex="0"
+  />
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
+    <button
+      aria-controls="radix-:r7:"
+      aria-expanded="true"
+      aria-haspopup="menu"
+      data-state="open"
+      id="radix-:r6:"
+      type="button"
+    >
+      <button
+        class="flex items-center pb-2 font-normal text-neutral-800 text-sm focus:outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+      >
+        Items
+        <svg
+          class="ml-1 h-4 w-4 text-neutral-800"
+          fill="none"
+          height="15"
+          viewBox="0 0 15 15"
+          width="15"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </button>
+  </div>
+  <div
+    data-radix-popper-content-wrapper=""
+    dir="ltr"
+    style="position: fixed; left: 0px; top: 0px; transform: translate(0px, 4px); min-width: max-content; --radix-popper-available-width: 0px; --radix-popper-available-height: -4px; --radix-popper-anchor-width: 0px; --radix-popper-anchor-height: 0px; --radix-popper-transform-origin: 0% 0px;"
+  >
+    <div
+      aria-labelledby="radix-:r6:"
+      aria-orientation="vertical"
+      class="z-50 min-w-[8rem] overflow-hidden rounded-[6px] border border-neutral-300 bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2"
+      data-align="start"
+      data-orientation="vertical"
+      data-radix-menu-content=""
+      data-side="bottom"
+      data-state="open"
+      dir="ltr"
+      id="radix-:r7:"
+      role="menu"
+      style="outline: none; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); pointer-events: auto;"
+      tabindex="-1"
+    >
+      <div
+        class="p-2 text-sm font-medium text-neutral-800"
+      >
+        Título
+      </div>
+      <div
+        aria-orientation="horizontal"
+        class="my-1 h-px bg-neutral-300"
+        role="separator"
+      />
+      <div
+        role="group"
+      >
+        <div
+          class="relative flex items-center px-2 py-1.5 text-sm text-neutral-800 cursor-default select-none outline-none transition-colors focus:text-neutral-800 focus:bg-neutral-200 hover:text-neutral-800 hover:bg-neutral-200 data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+          data-orientation="vertical"
+          data-radix-collection-item=""
+          role="menuitem"
+          tabindex="-1"
+        >
+          Item 1
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    aria-hidden="true"
+    data-aria-hidden="true"
+    data-radix-focus-guard=""
+    style="outline: none; opacity: 0; position: fixed; pointer-events: none;"
+    tabindex="0"
+  />
+</body>
+`;
+
+exports[`Dropdown Menu > should match the snapshot > side > bottom 1`] = `
+<body
+  data-scroll-locked="1"
+  style="pointer-events: none;"
+>
+  <span
+    aria-hidden="true"
+    data-aria-hidden="true"
+    data-radix-focus-guard=""
+    style="outline: none; opacity: 0; position: fixed; pointer-events: none;"
+    tabindex="0"
+  />
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
+    <button
+      aria-controls="radix-:rj:"
+      aria-expanded="true"
+      aria-haspopup="menu"
+      data-state="open"
+      id="radix-:ri:"
+      type="button"
+    >
+      <button
+        class="flex items-center pb-2 font-normal text-neutral-800 text-sm focus:outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+      >
+        Items
+        <svg
+          class="ml-1 h-4 w-4 text-neutral-800"
+          fill="none"
+          height="15"
+          viewBox="0 0 15 15"
+          width="15"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </button>
+  </div>
+  <div
+    data-radix-popper-content-wrapper=""
+    dir="ltr"
+    style="position: fixed; left: 0px; top: 0px; transform: translate(0px, 4px); min-width: max-content; --radix-popper-available-width: 0px; --radix-popper-available-height: -4px; --radix-popper-anchor-width: 0px; --radix-popper-anchor-height: 0px; --radix-popper-transform-origin: 0% 0px;"
+  >
+    <div
+      aria-labelledby="radix-:ri:"
+      aria-orientation="vertical"
+      class="z-50 min-w-[8rem] overflow-hidden rounded-[6px] border border-neutral-300 bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2"
+      data-align="start"
+      data-orientation="vertical"
+      data-radix-menu-content=""
+      data-side="bottom"
+      data-state="open"
+      dir="ltr"
+      id="radix-:rj:"
+      role="menu"
+      style="outline: none; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); pointer-events: auto;"
+      tabindex="-1"
+    >
+      <div
+        class="p-2 text-sm font-medium text-neutral-800"
+      >
+        Título
+      </div>
+      <div
+        aria-orientation="horizontal"
+        class="my-1 h-px bg-neutral-300"
+        role="separator"
+      />
+      <div
+        role="group"
+      >
+        <div
+          class="relative flex items-center px-2 py-1.5 text-sm text-neutral-800 cursor-default select-none outline-none transition-colors focus:text-neutral-800 focus:bg-neutral-200 hover:text-neutral-800 hover:bg-neutral-200 data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+          data-orientation="vertical"
+          data-radix-collection-item=""
+          role="menuitem"
+          tabindex="-1"
+        >
+          Item 1
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    aria-hidden="true"
+    data-aria-hidden="true"
+    data-radix-focus-guard=""
+    style="outline: none; opacity: 0; position: fixed; pointer-events: none;"
+    tabindex="0"
+  />
+</body>
+`;
+
+exports[`Dropdown Menu > should match the snapshot > side > left 1`] = `
+<body
+  data-scroll-locked="1"
+  style="pointer-events: none;"
+>
+  <span
+    aria-hidden="true"
+    data-aria-hidden="true"
+    data-radix-focus-guard=""
+    style="outline: none; opacity: 0; position: fixed; pointer-events: none;"
+    tabindex="0"
+  />
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
+    <button
+      aria-controls="radix-:ra:"
+      aria-expanded="true"
+      aria-haspopup="menu"
+      data-state="open"
+      id="radix-:r9:"
+      type="button"
+    >
+      <button
+        class="flex items-center pb-2 font-normal text-neutral-800 text-sm focus:outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+      >
+        Items
+        <svg
+          class="ml-1 h-4 w-4 text-neutral-800"
+          fill="none"
+          height="15"
+          viewBox="0 0 15 15"
+          width="15"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </button>
+  </div>
+  <div
+    data-radix-popper-content-wrapper=""
+    dir="ltr"
+    style="position: fixed; left: 0px; top: 0px; transform: translate(-4px, 0px); min-width: max-content; --radix-popper-available-width: -4px; --radix-popper-available-height: 0px; --radix-popper-anchor-width: 0px; --radix-popper-anchor-height: 0px; --radix-popper-transform-origin: 0px 0%;"
+  >
+    <div
+      aria-labelledby="radix-:r9:"
+      aria-orientation="vertical"
+      class="z-50 min-w-[8rem] overflow-hidden rounded-[6px] border border-neutral-300 bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2"
+      data-align="start"
+      data-orientation="vertical"
+      data-radix-menu-content=""
+      data-side="left"
+      data-state="open"
+      dir="ltr"
+      id="radix-:ra:"
+      role="menu"
+      style="outline: none; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); pointer-events: auto;"
+      tabindex="-1"
+    >
+      <div
+        class="p-2 text-sm font-medium text-neutral-800"
+      >
+        Título
+      </div>
+      <div
+        aria-orientation="horizontal"
+        class="my-1 h-px bg-neutral-300"
+        role="separator"
+      />
+      <div
+        role="group"
+      >
+        <div
+          class="relative flex items-center px-2 py-1.5 text-sm text-neutral-800 cursor-default select-none outline-none transition-colors focus:text-neutral-800 focus:bg-neutral-200 hover:text-neutral-800 hover:bg-neutral-200 data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+          data-orientation="vertical"
+          data-radix-collection-item=""
+          role="menuitem"
+          tabindex="-1"
+        >
+          Item 1
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    aria-hidden="true"
+    data-aria-hidden="true"
+    data-radix-focus-guard=""
+    style="outline: none; opacity: 0; position: fixed; pointer-events: none;"
+    tabindex="0"
+  />
+</body>
+`;
+
+exports[`Dropdown Menu > should match the snapshot > side > right 1`] = `
+<body
+  data-scroll-locked="1"
+  style="pointer-events: none;"
+>
+  <span
+    aria-hidden="true"
+    data-aria-hidden="true"
+    data-radix-focus-guard=""
+    style="outline: none; opacity: 0; position: fixed; pointer-events: none;"
+    tabindex="0"
+  />
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
+    <button
+      aria-controls="radix-:rd:"
+      aria-expanded="true"
+      aria-haspopup="menu"
+      data-state="open"
+      id="radix-:rc:"
+      type="button"
+    >
+      <button
+        class="flex items-center pb-2 font-normal text-neutral-800 text-sm focus:outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+      >
+        Items
+        <svg
+          class="ml-1 h-4 w-4 text-neutral-800"
+          fill="none"
+          height="15"
+          viewBox="0 0 15 15"
+          width="15"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </button>
+  </div>
+  <div
+    data-radix-popper-content-wrapper=""
+    dir="ltr"
+    style="position: fixed; left: 0px; top: 0px; transform: translate(4px, 0px); min-width: max-content; --radix-popper-available-width: -4px; --radix-popper-available-height: 0px; --radix-popper-anchor-width: 0px; --radix-popper-anchor-height: 0px; --radix-popper-transform-origin: 0px 0%;"
+  >
+    <div
+      aria-labelledby="radix-:rc:"
+      aria-orientation="vertical"
+      class="z-50 min-w-[8rem] overflow-hidden rounded-[6px] border border-neutral-300 bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2"
+      data-align="start"
+      data-orientation="vertical"
+      data-radix-menu-content=""
+      data-side="right"
+      data-state="open"
+      dir="ltr"
+      id="radix-:rd:"
+      role="menu"
+      style="outline: none; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); pointer-events: auto;"
+      tabindex="-1"
+    >
+      <div
+        class="p-2 text-sm font-medium text-neutral-800"
+      >
+        Título
+      </div>
+      <div
+        aria-orientation="horizontal"
+        class="my-1 h-px bg-neutral-300"
+        role="separator"
+      />
+      <div
+        role="group"
+      >
+        <div
+          class="relative flex items-center px-2 py-1.5 text-sm text-neutral-800 cursor-default select-none outline-none transition-colors focus:text-neutral-800 focus:bg-neutral-200 hover:text-neutral-800 hover:bg-neutral-200 data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+          data-orientation="vertical"
+          data-radix-collection-item=""
+          role="menuitem"
+          tabindex="-1"
+        >
+          Item 1
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    aria-hidden="true"
+    data-aria-hidden="true"
+    data-radix-focus-guard=""
+    style="outline: none; opacity: 0; position: fixed; pointer-events: none;"
+    tabindex="0"
+  />
+</body>
+`;
+
+exports[`Dropdown Menu > should match the snapshot > side > top 1`] = `
+<body
+  data-scroll-locked="1"
+  style="pointer-events: none;"
+>
+  <span
+    aria-hidden="true"
+    data-aria-hidden="true"
+    data-radix-focus-guard=""
+    style="outline: none; opacity: 0; position: fixed; pointer-events: none;"
+    tabindex="0"
+  />
+  <div
+    aria-hidden="true"
+    data-aria-hidden="true"
+  >
+    <button
+      aria-controls="radix-:rg:"
+      aria-expanded="true"
+      aria-haspopup="menu"
+      data-state="open"
+      id="radix-:rf:"
+      type="button"
+    >
+      <button
+        class="flex items-center pb-2 font-normal text-neutral-800 text-sm focus:outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+      >
+        Items
+        <svg
+          class="ml-1 h-4 w-4 text-neutral-800"
+          fill="none"
+          height="15"
+          viewBox="0 0 15 15"
+          width="15"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            clip-rule="evenodd"
+            d="M3.13523 6.15803C3.3241 5.95657 3.64052 5.94637 3.84197 6.13523L7.5 9.56464L11.158 6.13523C11.3595 5.94637 11.6759 5.95657 11.8648 6.15803C12.0536 6.35949 12.0434 6.67591 11.842 6.86477L7.84197 10.6148C7.64964 10.7951 7.35036 10.7951 7.15803 10.6148L3.15803 6.86477C2.95657 6.67591 2.94637 6.35949 3.13523 6.15803Z"
+            fill="currentColor"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
+    </button>
+  </div>
+  <div
+    data-radix-popper-content-wrapper=""
+    dir="ltr"
+    style="position: fixed; left: 0px; top: 0px; transform: translate(0px, -4px); min-width: max-content; --radix-popper-available-width: 0px; --radix-popper-available-height: -4px; --radix-popper-anchor-width: 0px; --radix-popper-anchor-height: 0px; --radix-popper-transform-origin: 0% 0px;"
+  >
+    <div
+      aria-labelledby="radix-:rf:"
+      aria-orientation="vertical"
+      class="z-50 min-w-[8rem] overflow-hidden rounded-[6px] border border-neutral-300 bg-popover p-1 text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2"
+      data-align="start"
+      data-orientation="vertical"
+      data-radix-menu-content=""
+      data-side="top"
+      data-state="open"
+      dir="ltr"
+      id="radix-:rg:"
+      role="menu"
+      style="outline: none; --radix-dropdown-menu-content-transform-origin: var(--radix-popper-transform-origin); --radix-dropdown-menu-content-available-width: var(--radix-popper-available-width); --radix-dropdown-menu-content-available-height: var(--radix-popper-available-height); --radix-dropdown-menu-trigger-width: var(--radix-popper-anchor-width); --radix-dropdown-menu-trigger-height: var(--radix-popper-anchor-height); pointer-events: auto;"
+      tabindex="-1"
+    >
+      <div
+        class="p-2 text-sm font-medium text-neutral-800"
+      >
+        Título
+      </div>
+      <div
+        aria-orientation="horizontal"
+        class="my-1 h-px bg-neutral-300"
+        role="separator"
+      />
+      <div
+        role="group"
+      >
+        <div
+          class="relative flex items-center px-2 py-1.5 text-sm text-neutral-800 cursor-default select-none outline-none transition-colors focus:text-neutral-800 focus:bg-neutral-200 hover:text-neutral-800 hover:bg-neutral-200 data-[disabled]:pointer-events-none data-[disabled]:opacity-50"
+          data-orientation="vertical"
+          data-radix-collection-item=""
+          role="menuitem"
+          tabindex="-1"
+        >
+          Item 1
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    aria-hidden="true"
+    data-aria-hidden="true"
+    data-radix-focus-guard=""
+    style="outline: none; opacity: 0; position: fixed; pointer-events: none;"
+    tabindex="0"
+  />
+</body>
+`;
