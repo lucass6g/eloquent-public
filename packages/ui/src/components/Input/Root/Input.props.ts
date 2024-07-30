@@ -1,6 +1,6 @@
 type InputType = "text" | "password" | "email";
 
-export interface InputProps
+export interface InputRootProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   type?: InputType;
 }

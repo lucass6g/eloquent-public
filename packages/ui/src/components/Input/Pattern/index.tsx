@@ -3,8 +3,8 @@ import {
     PatternFormat
 } from "react-number-format"
 
-import { Root } from "../Root"
+import { Input } from ".."
 
 export const Pattern = (props: PatternFormatProps) => {
-    return <PatternFormat {...props} customInput={Root} />
+    return <PatternFormat {...props} customInput={Input.Root} />
 }

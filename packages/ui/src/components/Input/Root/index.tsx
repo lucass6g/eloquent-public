@@ -2,9 +2,9 @@ import * as React from "react"
 
 import { cn } from "@eloquent/styles"
 import { inputVariants } from "./variants"
-import { InputProps } from "./Input.props"
+import { InputRootProps } from "./Input.props"
 
-export const Root = React.forwardRef<HTMLInputElement, InputProps>(
+export const Root = React.forwardRef<HTMLInputElement, InputRootProps>(
   function Input({ className, type = "text", ...props }, ref) {
     return (
       <input

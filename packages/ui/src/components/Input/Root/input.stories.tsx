@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Label } from "../../Label";
-import { Input } from "../";
+import { Input } from "..";
 import { Button } from "../../Button";
-import { InputProps } from "./Input.props";
+import { InputRootProps } from "./Input.props";
 import { HelperText } from "../../HelperText";
 
 const meta = {
@@ -48,7 +48,7 @@ const meta = {
   parameters: {
     layout: "centered",
   },
-} satisfies Meta<InputProps>;
+} satisfies Meta<InputRootProps>;
 
 export default meta;
 
