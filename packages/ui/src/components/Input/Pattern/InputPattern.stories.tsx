@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import { Pattern } from ".";
 
 const meta = {
-  title: "InputPattern",
+  title: "Input/Pattern",
   component: Pattern,
   argTypes: {
     placeholder: {
@@ -30,10 +30,10 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const InputPattern: Story = {
+export const WithPattern: Story = {
   args: {
-    format: "##.###.###/####-##",
-    placeholder: "Digite seu CNPJ"
+    format: "(##) #####-####",
+    placeholder: "Digite seu telefone"
   },
   render: function (args) {
     return (

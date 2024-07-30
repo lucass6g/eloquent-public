@@ -6,7 +6,7 @@ import { InputProps } from "./Input.props";
 import { HelperText } from "../../HelperText";
 
 const meta = {
-  title: "Root",
+  title: "Input/Root",
   component: Root,
   args: {
     type: "text",
@@ -55,7 +55,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const InputDefault: Story = {
+export const Default: Story = {
   args: {},
   render: function (args) {
     return (
@@ -66,7 +66,7 @@ export const InputDefault: Story = {
   }
 };
 
-export const InputDisabled: Story = {
+export const Disabled: Story = {
   args: {
     disabled: true
   },
@@ -79,7 +79,7 @@ export const InputDisabled: Story = {
   }
 }
 
-export const InputWithLabel: Story = {
+export const WithLabel: Story = {
   args: {},
   render: function (args) {
     return (
@@ -93,7 +93,7 @@ export const InputWithLabel: Story = {
   },
 };
 
-export const InputWithHelper: Story = {
+export const WithHelper: Story = {
   args: {
     id: "label",
   },
@@ -108,7 +108,7 @@ export const InputWithHelper: Story = {
   },
 };
 
-export const InputWithButton: Story = {
+export const WithButton: Story = {
   args: {},
   render: function (args) {
     return (

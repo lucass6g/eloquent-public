@@ -1,5 +1,134 @@
-import { Canvas, Meta } from '@storybook/blocks';
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as Numeric from "./InputNumeric.stories"
 
-<Meta title="InputNumeric" />
+<Meta of={Numeric} />
 
-# Input Mask
+# Input.Numeric
+
+Input Numeric é um componente formatador de entrada com um mecanismo de intercalação sofisticado e leve. Ele garante que um usuário só possa inserir texto que atenda a padrões numéricos ou de string específicos e formate o valor de entrada para exibição.
+
+## Props
+
+### `allowLeadingZeros boolean`
+
+`default: false`
+
+Isto permite ativar ou desativar zeros à esquerda no campo de entrada. Por padrão, ao desfocar uma entrada, os zeros à esquerda são removidos. Para permitir 0s iniciais no campo de entrada, defina permitirLeadingZeros como verdadeiro. No entanto, isso não controla os zeros à direita.
+
+```tsx
+import { Input } from '@eloquent';
+
+<Input.Numeric value="20020220" allowLeadingZeros thousandSeparator="," />;
+
+// 102,220
+```
+
+### `allowNegative boolean`
+
+`default: true`
+
+Se definido como falso, números negativos não serão permitidos.
+
+```tsx
+import { Input } from '@eloquent';
+
+<Input.Numeric value="-12" allowNegative />;
+```
+
+### `allowedDecimalSeparators Array<string>`
+
+`default: undefined`
+
+Caracteres que quando pressionados resultam em um separador decimal. Quando ausente, separador decimal e '.' são usados.
+
+```tsx
+import { Input } from '@eloquent';
+
+<Input.Numeric value="12" allowedDecimalSeparators={['%']} />;
+```
+
+### `decimalScale number`
+
+`default: undefined`
+
+Se definido, limita o número de dígitos após a vírgula decimal.
+
+```tsx
+import { Input } from '@eloquent';
+
+<Input.Numeric value={12323.3334} decimalScale={3} />;
+
+// 12323.333
+```
+
+### `decimalSeparator string`
+
+`default: .`
+
+```tsx
+import { Input } from '@eloquent';
+
+<Input.Numeric value={12323.3333} decimalSeparator="," />;
+
+// 12323,3333
+```
+
+### `fixedDecimalScale boolean`
+
+`default: false`
+
+Se definido como verdadeiro, ele adiciona 0s à direita após decimalSeparator para corresponder ao decimalScale fornecido.
+
+```tsx
+import { Input } from '@eloquent';
+
+<Input.Numeric value={12323.1} decimalScale={3} fixedDecimalScale />;
+
+// 12323.100
+```
+
+### `prefix string`
+
+`default: undefined`
+
+Adiciona o caractere de prefixo antes do valor de entrada.
+
+```tsx
+import { Input } from '@eloquent';
+
+<Input.Numeric value={1234} prefix={'R$'} />;
+
+// R$1234
+```
+
+### `suffix string`
+
+`default: undefined`
+
+Adiciona o caractere de sufixo após o valor de entrada.
+
+```tsx 
+import { Input } from '@eloquent';
+
+<Input.Numeric value={1234} suffix={'BRL'} />;
+
+// 1234BRL
+```
+
+### `thousandsGroupStyle string`
+
+`default: ,`
+
+Estilo de agrupamento de milhares.
+
+```tsx
+import { Input } from '@eloquent';
+
+<Input.Numeric type="text" value={1231231} thousandsGroupStyle="lakh" thousandSeparator="," />;
+
+// 12,31,231
+```
+
+<Canvas of={Numeric.WithNumeric}/>
+
+<Controls />

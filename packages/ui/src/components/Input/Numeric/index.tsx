@@ -3,8 +3,8 @@ import {
     NumericFormat
 } from "react-number-format"
 
-import { Input } from "../Root"
+import { Root } from "../Root"
 
 export const Numeric = (props: NumericFormatProps) => {
-    return <NumericFormat {...props} customInput={Input} />
+    return <NumericFormat {...props} customInput={Root} />
 }
