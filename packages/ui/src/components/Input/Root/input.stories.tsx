@@ -1,13 +1,13 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Label } from "../Label";
-import { Input } from "../Input";
-import { Button } from "../Button";
+import { Label } from "../../Label";
+import { Root } from "../Root";
+import { Button } from "../../Button";
 import { InputProps } from "./Input.props";
-import { HelperText } from "../HelperText";
+import { HelperText } from "../../HelperText";
 
 const meta = {
-  title: "Input",
-  component: Input,
+  title: "Root",
+  component: Root,
   args: {
     type: "text",
     disabled: false,
@@ -57,10 +57,10 @@ type Story = StoryObj<typeof meta>;
 
 export const InputDefault: Story = {
   args: {},
-  render: function(args) {
+  render: function (args) {
     return (
       <div className="w-[392px]">
-        <Input {...args}/>
+        <Root {...args} />
       </div>
     )
   }
@@ -70,10 +70,10 @@ export const InputDisabled: Story = {
   args: {
     disabled: true
   },
-  render: function(args){
+  render: function (args) {
     return (
       <div className="w-[392px]">
-        <Input {...args} />
+        <Root {...args} />
       </div>
     )
   }
@@ -87,7 +87,7 @@ export const InputWithLabel: Story = {
         <Label className="text-neutral-800 font-medium" htmlFor="with-label">
           Título
         </Label>
-        <Input id="with-label" {...args} />
+        <Root id="with-label" {...args} />
       </div>
     );
   },
@@ -99,11 +99,11 @@ export const InputWithHelper: Story = {
   },
   render: function (args) {
     return (
-     <HelperText.Root className="w-[392px]">
+      <HelperText.Root className="w-[392px]">
         <Label htmlFor="label" className="text-neutral-800 font-medium">Titulo</Label>
-        <Input {...args} />
+        <Root {...args} />
         <HelperText.Label>Seu texto de apoio aparecerá aqui.</HelperText.Label>
-     </HelperText.Root>
+      </HelperText.Root>
     );
   },
 };
@@ -113,7 +113,7 @@ export const InputWithButton: Story = {
   render: function (args) {
     return (
       <div className="flex gap-2 w-[392px] items-center">
-        <Input {...args} />
+        <Root {...args} />
         <Button className="w-28">Button Label</Button>
       </div>
     )
