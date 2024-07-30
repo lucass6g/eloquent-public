@@ -27,7 +27,6 @@ const meta = {
       options: [
         "password",
         "text",
-        "number",
         "email"
       ],
     },
