@@ -1,23 +1,23 @@
 "use client"
 
-import * as React from "react"
+import {
+  NumericFormatProps, 
+  NumericFormat,
+  PatternFormatProps,
+  PatternFormat
+} from "react-number-format"
 
-import { cn } from "@eloquent/styles"
-import {inputMaskVariants} from "./variants"
-import ReactInputMask from "react-input-mask"
-import { InputMaskProps } from "./InputMask.props"
+import { Input } from "../Input"
 
-const InputMask = React.forwardRef<HTMLInputElement, InputMaskProps>(
-  function InputMask({className, type = "text", ...props}, ref) {
-    return (
-        <ReactInputMask 
-          type={type}
-          className={cn(inputMaskVariants(), className)} 
-          inputRef={ref}
-          {...props} 
-        />
-  )
-  }
-)
+const Numeric = (props: NumericFormatProps) => {
+  return <NumericFormat {...props}  customInput={Input}/>
+}
 
-export { InputMask }
+const Pattern = (props: PatternFormatProps) => {
+  return <PatternFormat {...props} customInput={Input}/>
+}
+
+export const InputMask = {
+  Numeric,
+  Pattern
+}
