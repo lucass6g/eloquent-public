@@ -1,13 +1,13 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Label } from "../../Label";
-import { Root } from "../Root";
+import { Input } from "../";
 import { Button } from "../../Button";
 import { InputProps } from "./Input.props";
 import { HelperText } from "../../HelperText";
 
 const meta = {
   title: "Input/Root",
-  component: Root,
+  component: Input.Root,
   args: {
     type: "text",
     disabled: false,
@@ -60,7 +60,7 @@ export const Default: Story = {
   render: function (args) {
     return (
       <div className="w-[392px]">
-        <Root {...args} />
+        <Input.Root {...args} />
       </div>
     )
   }
@@ -73,7 +73,7 @@ export const Disabled: Story = {
   render: function (args) {
     return (
       <div className="w-[392px]">
-        <Root {...args} />
+        <Input.Root {...args} />
       </div>
     )
   }
@@ -87,7 +87,7 @@ export const WithLabel: Story = {
         <Label className="text-neutral-800 font-medium" htmlFor="with-label">
           Título
         </Label>
-        <Root id="with-label" {...args} />
+        <Input.Root id="with-label" {...args} />
       </div>
     );
   },
@@ -101,7 +101,7 @@ export const WithHelper: Story = {
     return (
       <HelperText.Root className="w-[392px]">
         <Label htmlFor="label" className="text-neutral-800 font-medium">Titulo</Label>
-        <Root {...args} />
+        <Input.Root {...args} />
         <HelperText.Label>Seu texto de apoio aparecerá aqui.</HelperText.Label>
       </HelperText.Root>
     );
@@ -113,7 +113,7 @@ export const WithButton: Story = {
   render: function (args) {
     return (
       <div className="flex gap-2 w-[392px] items-center">
-        <Root {...args} />
+        <Input.Root {...args} />
         <Button className="w-28">Button Label</Button>
       </div>
     )

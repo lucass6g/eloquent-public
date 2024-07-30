@@ -1,9 +1,14 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Pattern } from ".";
+import { Input } from "../";
 
 const meta = {
   title: "Input/Pattern",
-  component: Pattern,
+  component: Input.Pattern,
+  args: {
+    format: "(##) #####-####",
+    placeholder: "Digite seu telefone",
+    mask: "_",
+  },
   argTypes: {
     placeholder: {
       description: "Uma string que define o texto de ajuda que é exibido quando o input está vazio.",
@@ -18,27 +23,51 @@ const meta = {
       table: {
         defaultValue: { summary: "false" },
       },
+    },
+    allowEmptyFormatting: {
+      description: "Se o input deve permitir formatação vazia",
+      control: { type: "boolean" },
+      table: {
+        defaultValue: { summary: "false" },
+      },
+    },
+    format: {
+      description: "Uma string que define o formato do input",
+      control: { type: "text" },
+      table: {
+        defaultValue: { summary: "undefined" }
+      },
+    },
+    mask: {
+      description: "Uma string que define a máscara do input",
+      control: { type: "text" },
+      table: {
+        defaultValue: { summary: "undefined" }
+      },
+    },
+    patternChar: {
+      description: "Um caractere que define o padrão do input",
+      control: { type: "text" },
+      table: {
+        defaultValue: { summary: "#" }
+      },
     }
   },
   parameters: {
     layout: "centered",
   },
   tags: ["!autodocs"],
-} satisfies Meta<typeof Pattern>;
+} satisfies Meta<typeof Input.Pattern>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
 export const WithPattern: Story = {
-  args: {
-    format: "(##) #####-####",
-    placeholder: "Digite seu telefone"
-  },
   render: function (args) {
     return (
       <div className="w-[392px]">
-        <Pattern {...args} />
+        <Input.Pattern {...args} />
       </div>
     )
   }

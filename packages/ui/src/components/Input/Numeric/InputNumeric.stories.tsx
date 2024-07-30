@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Numeric } from ".";
+import { Input } from "../";
 
 const meta = {
   title: "Input/Numeric",
-  component: Numeric,
+  component: Input.Numeric,
   args: {
-    placeholder: "Digite o valor",
+    placeholder: "Digite o valor do cashback",
     prefix: "R$ ",
     thousandSeparator: ",",
     suffix: " BRL",
@@ -100,7 +100,7 @@ const meta = {
     layout: "centered",
   },
   tags: ["!autodocs"],
-} satisfies Meta<typeof Numeric>;
+} satisfies Meta<typeof Input.Numeric>;
 
 export default meta;
 
@@ -110,7 +110,7 @@ export const WithNumeric: Story = {
   render: function (args) {
     return (
       <div className="w-[392px]">
-        <Numeric {...args} />
+        <Input.Numeric {...args} />
       </div>
     )
   }
