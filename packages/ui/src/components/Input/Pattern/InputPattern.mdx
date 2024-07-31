@@ -1,0 +1,69 @@
+import { Canvas, Meta, Controls } from '@storybook/blocks';
+import * as Pattern from "./InputPattern.stories"
+
+<Meta of={Pattern} />
+
+# Input.Pattern
+
+<Canvas of={Pattern.WithPattern}/>
+
+<Controls/>
+
+Input Pattern é um componente formatador de entrada com um mecanismo de intercalação sofisticado e leve. Ele garante que um usuário só possa inserir texto que atenda a padrões numéricos ou de string específicos e formate o valor de entrada para exibição.
+
+## Props
+
+### `allowEmptyFormatting boolean`
+
+`default: false`
+
+Por padrão, o componente PatternFormat não aplica formatação quando o valor está vazio (nulo, indefinido ou ""). Se você deseja aplicar formatação em valores vazios, defina `permitEmptyFormatting` como true.
+
+```tsx
+import { Input } from '@eloquent';
+
+<Input.Pattern format="+55 (##) ####-####" allowEmptyFormatting mask="_" />;
+
+// +55 (__) ____-____
+```
+
+### `format string`
+
+`default: undefined`
+
+Ele define o padrão de formato usando o caractere # (ou patternChar ). # é o caractere de espaço reservado para números.
+
+```tsx
+import { Input } from '@eloquent;
+
+<Input.Pattern value={123123} format="### ###" />;
+// 123 123
+```
+
+### `mask string | Array<string>`
+
+`default: undefined`
+
+Usado como caractere de máscara para casas numéricas, até que qualquer caractere numérico seja fornecido para essa posição. Você pode fornecer caracteres de máscara diferentes para cada posição numérica, passando uma matriz de caracteres de máscara.
+**Nota**: O comprimento dos caracteres da máscara deve corresponder aos números de # `patternChar`.
+
+```tsx
+import { Input } from '@eloquent';
+
+<Input.Pattern value="411111" valueIsNumericString format="#### #### #### ####" mask="_" />;
+// 4111 11__ ____
+```
+
+### `patternChar string`
+
+`default: #`
+
+Isso ajuda a definir o caractere padrão de formato.
+
+```tsx
+import { Input } from '@eloquent';
+
+<Input.Pattern format="%% (%%%)" patternChar="%" value={23456} />;
+
+// 23 (456)
+```
