@@ -5,7 +5,7 @@ import { Input } from "..";
 
 describe("Input", () => {
   it("should match the snapshot", () => {
-    const component = render(<Input type="email" placeholder="email" />);
+    const component = render(<Input.Root type="email" placeholder="email" />);
 
     expect(component.baseElement).toMatchSnapshot();
   });
@@ -13,7 +13,7 @@ describe("Input", () => {
   it("should be filled out correctly", async () => {
     const stateFn = vi.fn();
 
-    render(<Input type="email" placeholder="email" onChange={stateFn} />);
+    render(<Input.Root type="email" placeholder="email" onChange={stateFn} />);
 
     const input = screen.getByPlaceholderText("email");
     await waitFor(() => userEvent.type(input, "placeholder@elo.com"));
@@ -28,7 +28,7 @@ describe("Input", () => {
     const stateFn = vi.fn();
 
     render(
-      <Input type="email" placeholder="email" onChange={stateFn} disabled />
+      <Input.Root type="email" placeholder="email" onChange={stateFn} disabled />
     );
 
     const input = screen.getByPlaceholderText("email");
@@ -42,19 +42,15 @@ describe("Input", () => {
   });
 
   it("should render a different type", () => {
-   const {rerender} = render(<Input type="text" placeholder="text" />);
+    const { rerender } = render(<Input.Root type="text" placeholder="text" />);
     const textInput = screen.getByPlaceholderText("text");
     expect(textInput).toHaveAttribute("type", "text");
 
-    rerender(<Input type="number" placeholder="number" />);
-    const numberInput = screen.getByPlaceholderText("number");
-    expect(numberInput).toHaveAttribute("type", "number");
-
-    rerender(<Input type="password" placeholder="password" />);
+    rerender(<Input.Root type="password" placeholder="password" />);
     const passwordInput = screen.getByPlaceholderText("password");
     expect(passwordInput).toHaveAttribute("type", "password");
 
-    rerender(<Input type="email" placeholder="email" />);
+    rerender(<Input.Root type="email" placeholder="email" />);
     const emailInput = screen.getByPlaceholderText("email");
     expect(emailInput).toHaveAttribute("type", "email");
   })

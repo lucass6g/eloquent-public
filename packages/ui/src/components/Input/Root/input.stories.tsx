@@ -1,13 +1,13 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Label } from "../Label";
-import { Input } from "../Input";
-import { Button } from "../Button";
-import { InputProps } from "./Input.props";
-import { HelperText } from "../HelperText";
+import { Label } from "../../Label";
+import { Input } from "..";
+import { Button } from "../../Button";
+import { InputRootProps } from "./Input.props";
+import { HelperText } from "../../HelperText";
 
 const meta = {
-  title: "Input",
-  component: Input,
+  title: "Input/Root",
+  component: Input.Root,
   args: {
     type: "text",
     disabled: false,
@@ -27,7 +27,6 @@ const meta = {
       options: [
         "password",
         "text",
-        "number",
         "email"
       ],
     },
@@ -49,37 +48,37 @@ const meta = {
   parameters: {
     layout: "centered",
   },
-} satisfies Meta<InputProps>;
+} satisfies Meta<InputRootProps>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const InputDefault: Story = {
+export const Default: Story = {
   args: {},
-  render: function(args) {
+  render: function (args) {
     return (
       <div className="w-[392px]">
-        <Input {...args}/>
+        <Input.Root {...args} />
       </div>
     )
   }
 };
 
-export const InputDisabled: Story = {
+export const Disabled: Story = {
   args: {
     disabled: true
   },
-  render: function(args){
+  render: function (args) {
     return (
       <div className="w-[392px]">
-        <Input {...args} />
+        <Input.Root {...args} />
       </div>
     )
   }
 }
 
-export const InputWithLabel: Story = {
+export const WithLabel: Story = {
   args: {},
   render: function (args) {
     return (
@@ -87,33 +86,33 @@ export const InputWithLabel: Story = {
         <Label className="text-neutral-800 font-medium" htmlFor="with-label">
           Título
         </Label>
-        <Input id="with-label" {...args} />
+        <Input.Root id="with-label" {...args} />
       </div>
     );
   },
 };
 
-export const InputWithHelper: Story = {
+export const WithHelper: Story = {
   args: {
     id: "label",
   },
   render: function (args) {
     return (
-     <HelperText.Root className="w-[392px]">
+      <HelperText.Root className="w-[392px]">
         <Label htmlFor="label" className="text-neutral-800 font-medium">Titulo</Label>
-        <Input {...args} />
+        <Input.Root {...args} />
         <HelperText.Label>Seu texto de apoio aparecerá aqui.</HelperText.Label>
-     </HelperText.Root>
+      </HelperText.Root>
     );
   },
 };
 
-export const InputWithButton: Story = {
+export const WithButton: Story = {
   args: {},
   render: function (args) {
     return (
       <div className="flex gap-2 w-[392px] items-center">
-        <Input {...args} />
+        <Input.Root {...args} />
         <Button className="w-28">Button Label</Button>
       </div>
     )
