@@ -9,6 +9,12 @@ const meta = {
     prefix: "R$ ",
     thousandSeparator: ",",
     suffix: " BRL",
+    disabled: false,
+    allowLeadingZeros: false,
+    allowNegative: false,
+    fixedDecimalScale: false,
+    decimalSeparator: ".",
+    thousandsGroupStyle: "none"
   },
   argTypes: {
     placeholder: {
@@ -41,7 +47,7 @@ const meta = {
     },
     allowedDecimalSeparators: {
       description: "Uma string que define os separadores decimais permitidos.",
-      control: { type: "object" },
+      control: { type: "text" },
       table: {
         defaultValue: { summary: "undefined" }
       }
@@ -90,9 +96,10 @@ const meta = {
     },
     thousandsGroupStyle: {
       description: "Define o estilo de agrupamento de mil.",
-      control: { type: "text" },
+      control: { type: "select" },
+      options: ["thousand", "lakh", "wan", "none", undefined],
       table: {
-        defaultValue: { summary: "," }
+        defaultValue: { summary: "none" }
       }
     }
   },

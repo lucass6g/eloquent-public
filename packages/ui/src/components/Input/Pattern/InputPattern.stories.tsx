@@ -8,6 +8,9 @@ const meta = {
     format: "(##) #####-####",
     placeholder: "Digite seu telefone",
     mask: "_",
+    disabled: false,
+    allowEmptyFormatting: false,
+    patternChar: "#"
   },
   argTypes: {
     placeholder: {
