@@ -1,7 +1,7 @@
+import { describe, expect, it, vi } from "vitest";
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { Tabs } from "..";
-import { vi } from "vitest";
 
 describe("Tabs", () => {
   it("should match the snapshot", () => {
