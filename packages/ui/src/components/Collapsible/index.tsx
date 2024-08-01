@@ -10,7 +10,7 @@ import { contentStyle, rootStyle, triggerContainerStyle, triggerTitleStyle } fro
 const Root = React.forwardRef<
     React.ElementRef<typeof CollapsiblePrimitive>,
     React.ComponentPropsWithoutRef<typeof CollapsiblePrimitive>
->(function RootEloquent({ className, ...props }, ref) {
+>(function CollapsibleRootEloquent({ className, ...props }, ref) {
     return (
         <CollapsiblePrimitive
             ref={ref}
