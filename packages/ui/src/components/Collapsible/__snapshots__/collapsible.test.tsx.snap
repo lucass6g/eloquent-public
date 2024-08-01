@@ -4,7 +4,7 @@ exports[`Collapsible component > should render the Collapsible component and tog
 <body>
   <div>
     <div
-      class="mb-1 space-y-2 [&>[data-content]]:rounded-[6px] [&>[data-content]]:border [&>[data-content]]:px-4 [&>[data-content]]:py-3 [&>[data-content]]:text-sm [&>[data-content]]:text-neutral-500 [&>[data-content]]:w-[400px]"
+      class="mb-1 space-y-2"
       data-state="open"
     >
       <button

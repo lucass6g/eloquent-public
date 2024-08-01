@@ -25,7 +25,8 @@ const CollapsibleTrigger = React.forwardRef<
     React.ElementRef<typeof CollapsibleTriggerPrimitive>,
     React.ComponentPropsWithoutRef<typeof CollapsibleTriggerPrimitive> & CollapsibleTriggerProps & CollapsibleProps
 >(function CollapsibleTriggerEloquent({ children, title, className, open: isOpen, ...props }, ref) {
-    return (<CollapsibleTriggerPrimitive
+    return (
+    <CollapsibleTriggerPrimitive
         ref={ref}
         className={cn(
             className)} {...props}
