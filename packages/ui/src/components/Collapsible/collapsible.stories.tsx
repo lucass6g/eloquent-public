@@ -1,5 +1,4 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { useState } from 'react';
 import { Collapsible } from '.';
 
 const meta = {
@@ -15,18 +14,19 @@ const meta = {
     argTypes: {
         asChild: {
             description: "Altera o elemento renderizado padrão para aquele passado como filho, mesclando seus adereços e comportamento.",
-            type: 'boolean',
             table: {
                 defaultValue: { summary: "false" }
             },
         },
         defaultOpen: {
             description: "O estado aberto do componente quando ele é inicialmente renderizado. Use quando não precisar controlar seu estado.",
-            type: 'boolean',
+            control: { type: 'boolean' },
+            options: [true, false],
         },
         open: {
             description: "O estado aberto controlado do collapsible. Deve ser usado em conjunto com onOpenChange.",
-            type: 'boolean',
+            control: { type: 'boolean' },
+            options: [true, false],
         },
         onOpenChange: {
             description: "Manipulador de eventos chamado quando o estado aberto do collapsible é alterado.",
@@ -34,7 +34,8 @@ const meta = {
         },
         disabled: {
             description: "Quando verdadeiro, impede que o usuário interaja com o collapsible.",
-            type: 'boolean',
+            control: { type: 'boolean' },
+            options: [true, false],
         },
     },
 } satisfies Meta<{}>;
@@ -45,15 +46,13 @@ type Story = StoryObj<typeof meta>;
 export const DefaultStory: Story = {
     name: 'Collapsible padrão',
     args: {},
-    render: () => {
-        const [isOpen, setIsOpen] = useState(false)
-
+    render: (args: any) => {
+        const { open } = args
 
         return (<Collapsible.Root
-            open={isOpen}
-            onOpenChange={setIsOpen}
+            {...args}
         >
-            <Collapsible.Trigger title="@peduarte marcou 3 repositórios com estrela" open={isOpen}/>
+            <Collapsible.Trigger title="@peduarte marcou 3 repositórios com estrela" open={open} asChild />
             <div className='rounded-[6px] border px-4 py-3 text-sm text-neutral-500 w-[400px]'>
                 @eloquent/react
             </div>

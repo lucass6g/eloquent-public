@@ -4,7 +4,7 @@ exports[`Collapsible component > should render the Collapsible component and tog
 <body>
   <div>
     <div
-      class="mb-1 space-y-2"
+      class="mb-1 space-y-2 [&>[data-disabled]]:opacity-50"
       data-state="open"
     >
       <button
