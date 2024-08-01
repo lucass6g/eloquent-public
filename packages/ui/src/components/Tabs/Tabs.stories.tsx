@@ -1,10 +1,15 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Button, Card, Input, Label, Tabs } from "../";
-import { TabsProps, TabsListProps, TabsTriggerProps, TabsContentProps } from "@radix-ui/react-tabs";
+import {
+  TabsProps as TabsPropsRadix,
+  TabsListProps,
+  TabsTriggerProps,
+  TabsContentProps
+} from "@radix-ui/react-tabs";
 
-type TabsComponentsProps = TabsProps & TabsListProps & TabsTriggerProps & TabsContentProps;
+type TabsProps = TabsPropsRadix & TabsListProps & TabsTriggerProps & TabsContentProps;
 
-const meta: Meta<TabsComponentsProps> = {
+const meta: Meta<TabsProps> = {
   title: "Tabs",
   component: () => (
     <div className="flex w-[400px]">
