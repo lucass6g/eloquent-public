@@ -51,13 +51,13 @@ export const HorizontalScroll: Story = {
     args: {},
     render: (args: any) => {
         const { orientation, scrollHideDelay, type } = args;
-        return (<ScrollArea.Root data-testid="scroll-area" scrollHideDelay={scrollHideDelay} type={type} className="w-96 whitespace-nowrap rounded-[6px] border">
+        return (<ScrollArea.Root scrollHideDelay={scrollHideDelay} type={type} className="w-96 whitespace-nowrap rounded-[6px] border">
             <div className="flex w-max space-x-4 p-4">
                 O Design System é uma iniciativa para escalar a forma como projetamos e desenvolvemos interfaces e produtos digitais na Elo.
                 Todos os componentes foram projetados para serem reutilizados de acordo com a necessidade.
                 Nosso objetivo é garantir consistência, acessibilidade e qualidade.
             </div>
-            <ScrollArea.ScrollBar data-testid="scrollbar" orientation={orientation ?? 'horizontal'} />
+            <ScrollArea.ScrollBar orientation={orientation ?? 'horizontal'} />
         </ScrollArea.Root>)
     },
     parameters: {
