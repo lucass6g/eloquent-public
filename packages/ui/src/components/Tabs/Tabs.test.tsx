@@ -19,7 +19,7 @@ describe("Tabs", () => {
     expect(component.baseElement).toMatchSnapshot();
   });
 
-  it("should change tab correctly ", async () => {
+  it("should change tab correctly", async () => {
     const tabsFn = vi.fn();
 
     render(
@@ -43,5 +43,25 @@ describe("Tabs", () => {
     expect(content2).toBeInTheDocument();
 
     expect(tabsFn).toHaveBeenCalled();
+  });
+
+  it("should not trigger when disabled", async () => {
+    const tabsFn = vi.fn();
+
+    render(
+      <Tabs.Root defaultValue="account" onValueChange={tabsFn}>
+        <Tabs.List>
+          <Tabs.Trigger disabled value="account">tab trigger 1</Tabs.Trigger>
+          <Tabs.Trigger disabled value="password">tab trigger 2</Tabs.Trigger>
+        </Tabs.List>
+        <Tabs.Content value="account">tab content 1</Tabs.Content>
+        <Tabs.Content value="password">tab content 2</Tabs.Content>
+      </Tabs.Root>
+    );
+
+    const trigger = screen.getByRole("tab", { name: /tab trigger 2/i });
+    await waitFor(() => userEvent.click(trigger));
+
+    expect(tabsFn).not.toHaveBeenCalled();
   });
 });
