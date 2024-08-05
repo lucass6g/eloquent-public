@@ -16,7 +16,7 @@ type Story = StoryObj<typeof meta>;
 export const SwitchDefault: Story = {
   name: "Switch padrão",
   args: {},
-  render: () => (<Switch.Default />),
+  render: () => (<Switch.Root />),
 };
 export const SwitchWithTitle: Story = {
   name: "Switch com título",
