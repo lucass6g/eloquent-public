@@ -13,7 +13,7 @@ import {
   YELLOW,
 } from "../../tokens/src/colors";
 export const defaultTailwindConfig = {
-  content: ["node_modules/@eloquent/ui/dist/**/*.{js,ts,jsx,tsx}"],
+  content: ["node_modules/@eloquent/ui/dist/**/*.{js,ts,jsx,tsx,mdx}"],
   darkMode: ["class"],
   theme: {
     container: {
