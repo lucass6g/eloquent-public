@@ -1,7 +1,14 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Accordion } from ".";
 
-const meta = {
+type AccordionProps = {
+  type: "single" | "multiple"
+  collapsible?: boolean
+  disabled: boolean
+  defaultValue: string
+}
+
+const meta:Meta<AccordionProps> = {
   title: "Accordion",
   parameters: {
     docs: {
@@ -12,16 +19,30 @@ const meta = {
   },
   argTypes: {
     type: {
-      description: "`single` ou `multiple`",
-      type: { name: "string" },
+        description: "Determina se um ou vários itens podem ser abertos ao mesmo tempo.",
+        options: ["single", "multiple"],
+        control: {type: "radio"},
     },
     collapsible: {
-      description: "Se o Accordion pode ser fechado.",
-      type: { name: "boolean"},
-    }
+        description: "Quando `type` é `single`, permite fechar o conteúdo ao clicar no trigger de um item aberto.",
+        options: [true, false],
+        control: {type: "boolean"},
+        defaultValue: false,
+    },
+    defaultValue: {
+        description: "O valor do item cujo conteúdo é expandido quando o Accordion é inicialmente renderizado. Use `defaultValue` se você não precisar controlar o estado de um Accordion.",
+        control: {type: "text"},
+        defaultValue: "item-1"
+    },
+    disabled: {
+        description: "Desabilita o Accordion.",
+        control: {type: "boolean"},
+        options: [true, false],
+         defaultValue: false,
+    },
   },
-  render: () => (
-    <Accordion.Root type="single" collapsible>
+  render: ({type, disabled,collapsible, defaultValue}) => (
+    <Accordion.Root type={type as "single"} disabled={disabled} collapsible={collapsible} defaultValue={defaultValue}>
       <Accordion.Item value="item-1">
         <Accordion.Trigger>Título para o Accordion Single</Accordion.Trigger>
         <Accordion.Content>
@@ -31,7 +52,7 @@ const meta = {
     </Accordion.Root>
   ),
   tags: ['autodocs'],
-} satisfies Meta<{}>;
+} satisfies Meta<AccordionProps>;
 
 export default meta;
 
@@ -39,9 +60,14 @@ type Story = StoryObj<typeof meta>;
 
 export const AccordionSingle: Story = {
   name: "Accordion Single",
-  args: {},
-  render: () => (
-    <Accordion.Root type="single" collapsible>
+  args: {
+    type: "single",
+    collapsible: true,
+    disabled: false,
+    defaultValue: "item-1"
+  },
+  render: ({type, disabled,collapsible, defaultValue}) => (
+    <Accordion.Root type={type as "single"} disabled={disabled} collapsible={collapsible} defaultValue={defaultValue}>
       <Accordion.Item value="item-1">
         <Accordion.Trigger>Título para o Accordion item</Accordion.Trigger>
         <Accordion.Content>Texto de resposta para o Accordion expandido</Accordion.Content>
@@ -56,15 +82,38 @@ export const AccordionSingle: Story = {
 
 export const AccordionMultiple: Story = {
   name: "Accordion Multiple",
-  args: {},
-  render: () => (
-    <Accordion.Root type="multiple">
+   args: {
+    type: "multiple",
+    disabled: false
+  },
+  render: ({type, disabled}) => (
+    <Accordion.Root type={type} disabled={disabled}>
       <Accordion.Item value="item-1">
       <Accordion.Trigger>Título para o Accordion item</Accordion.Trigger>
       <Accordion.Content>Texto de resposta para o Accordion expandido</Accordion.Content>
       </Accordion.Item>
       <Accordion.Item value="item-2">
         <Accordion.Trigger>Título para o Accordion com múltiplos itens</Accordion.Trigger>
+        <Accordion.Content>Texto de resposta para o Accordion expandido</Accordion.Content>
+      </Accordion.Item>
+    </Accordion.Root>
+  )
+}
+
+export const AccordionDisabled: Story = {
+  name: "Accordion Disabled",
+   args: {
+    type: "multiple",
+    disabled: true
+  },
+  render: ({type, disabled}) => (
+    <Accordion.Root type={type}>
+      <Accordion.Item value="item-1" disabled={disabled}>
+        <Accordion.Trigger>Título para o Accordion item desabilitado</Accordion.Trigger>
+        <Accordion.Content>Texto de resposta para o Accordion expandido</Accordion.Content>
+      </Accordion.Item>
+      <Accordion.Item value="item-2">
+        <Accordion.Trigger>Título para o Accordion item</Accordion.Trigger>
         <Accordion.Content>Texto de resposta para o Accordion expandido</Accordion.Content>
       </Accordion.Item>
     </Accordion.Root>
