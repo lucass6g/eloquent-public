@@ -1,120 +1,108 @@
-import * as React from "react"
+import * as React from "react";
 
-import { cn } from "@eloquent/styles"
+import {
+  CaptionElement,
+  CaptionProps,
+  CellElement,
+  CellProps,
+  HeadElement,
+  HeadProps,
+  RootElement,
+  RootProps,
+  RowElement,
+  RowProps,
+  SectionElement,
+  SectionProps,
+} from "./Table.props";
+import { baseVariants } from "./variants";
 
-const Root = React.forwardRef<
-  HTMLTableElement,
-  React.HTMLAttributes<HTMLTableElement>
->(({ className, ...props }, ref) => (
-  <div className="relative w-full overflow-auto">
-    <table
-      ref={ref}
-      className={cn("w-full caption-bottom text-sm", className)}
-      {...props}
-    />
-  </div>
-))
-Root.displayName = "Table"
+const {
+  rootWrapperVariants,
+  rootTableVariants,
+  headerVariants,
+  bodyVariants,
+  footerVariants,
+  rowVariants,
+  headVariants,
+  cellVariants,
+  captionVariants,
+} = baseVariants();
 
-const TableHeader = React.forwardRef<
-  HTMLTableSectionElement,
-  React.HTMLAttributes<HTMLTableSectionElement>
->(({ className, ...props }, ref) => (
-  <thead ref={ref} className={cn("[&_tr]:border-b", className)} {...props} />
-))
-TableHeader.displayName = "TableHeader"
+const Root = React.forwardRef<RootElement, RootProps>(function EloquentTable(
+  { className, ...props },
+  ref
+) {
+  return (
+    <div className={rootWrapperVariants()}>
+      <table
+        ref={ref}
+        className={rootTableVariants({ className })}
+        {...props}
+      />
+    </div>
+  );
+});
 
-const TableBody = React.forwardRef<
-  HTMLTableSectionElement,
-  React.HTMLAttributes<HTMLTableSectionElement>
->(({ className, ...props }, ref) => (
-  <tbody
-    ref={ref}
-    className={cn("[&_tr:last-child]:border-0", className)}
-    {...props}
-  />
-))
-TableBody.displayName = "TableBody"
+const Header = React.forwardRef<SectionElement, SectionProps>(
+  function EloquentTableHeader({ className, ...props }, ref) {
+    return <thead ref={ref} className={headerVariants(className)} {...props} />;
+  }
+);
 
-const TableFooter = React.forwardRef<
-  HTMLTableSectionElement,
-  React.HTMLAttributes<HTMLTableSectionElement>
->(({ className, ...props }, ref) => (
-  <tfoot
-    ref={ref}
-    className={cn(
-      "border-t bg-muted/50 font-medium [&>tr]:last:border-b-0",
-      className
-    )}
-    {...props}
-  />
-))
-TableFooter.displayName = "TableFooter"
+const Body = React.forwardRef<SectionElement, SectionProps>(
+  function EloquentTableBody({ className, ...props }, ref) {
+    return (
+      <tbody ref={ref} className={bodyVariants({ className })} {...props} />
+    );
+  }
+);
 
-const TableRow = React.forwardRef<
-  HTMLTableRowElement,
-  React.HTMLAttributes<HTMLTableRowElement>
->(({ className, ...props }, ref) => (
-  <tr
-    ref={ref}
-    className={cn(
-      "border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted",
-      className
-    )}
-    {...props}
-  />
-))
-TableRow.displayName = "TableRow"
+const Footer = React.forwardRef<SectionElement, SectionProps>(
+  function EloquentTableFooter({ className, ...props }, ref) {
+    return (
+      <tfoot ref={ref} className={footerVariants({ className })} {...props} />
+    );
+  }
+);
 
-const TableHead = React.forwardRef<
-  HTMLTableCellElement,
-  React.ThHTMLAttributes<HTMLTableCellElement>
->(({ className, ...props }, ref) => (
-  <th
-    ref={ref}
-    className={cn(
-      "h-10 px-2 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
-      className
-    )}
-    {...props}
-  />
-))
-TableHead.displayName = "TableHead"
+const Row = React.forwardRef<RowElement, RowProps>(function EloquentTableRow(
+  { className, ...props },
+  ref
+) {
+  return <tr ref={ref} className={rowVariants({ className })} {...props} />;
+});
 
-const TableCell = React.forwardRef<
-  HTMLTableCellElement,
-  React.TdHTMLAttributes<HTMLTableCellElement>
->(({ className, ...props }, ref) => (
-  <td
-    ref={ref}
-    className={cn(
-      "p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
-      className
-    )}
-    {...props}
-  />
-))
-TableCell.displayName = "TableCell"
+const Head = React.forwardRef<HeadElement, HeadProps>(
+  function EloquentTableHead({ className, ...props }, ref) {
+    return <th ref={ref} className={headVariants({ className })} {...props} />;
+  }
+);
 
-const TableCaption = React.forwardRef<
-  HTMLTableCaptionElement,
-  React.HTMLAttributes<HTMLTableCaptionElement>
->(({ className, ...props }, ref) => (
-  <caption
-    ref={ref}
-    className={cn("mt-4 text-sm text-muted-foreground", className)}
-    {...props}
-  />
-))
-TableCaption.displayName = "TableCaption"
+const Cell = React.forwardRef<CellElement, CellProps>(
+  function EloquentTableCell({ className, ...props }, ref) {
+    return <td ref={ref} className={cellVariants({ className })} {...props} />;
+  }
+);
+
+const Caption = React.forwardRef<CaptionElement, CaptionProps>(
+  function EloquentTableCaption({ className, ...props }, ref) {
+    return (
+      <caption
+        ref={ref}
+        className={captionVariants({ className })}
+        {...props}
+      />
+    );
+  }
+);
 
 export const Table = {
   Root,
-  Header: TableHeader,
-  Body: TableBody,
-  Footer: TableFooter,
-  Head: TableHead,
-  Row: TableRow,
-  Cell: TableCell,
-  Caption: TableCaption,
-}
+  Header,
+  Body,
+  Footer,
+  Head,
+  Row,
+  Cell,
+  Caption,
+};
