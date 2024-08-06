@@ -1,5 +1,5 @@
-import {tv} from "tailwind-variants";
+import { tv } from "tailwind-variants";
 
 export const largeVariants = tv({
-    base: "font-barlow text-lg text-foreground font-semibold",
-})
+  base: "text-lg text-foreground font-semibold",
+});
