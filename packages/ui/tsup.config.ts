@@ -1,4 +1,4 @@
-import {defineConfig} from 'tsup';
+import { defineConfig } from 'tsup';
 
 export default defineConfig((options) => {
     const formatString = Array.isArray(options.format)
@@ -28,7 +28,7 @@ export default defineConfig((options) => {
             "DropdownMenu/index": "src/components/DropdownMenu/index.tsx",
             "Form/index": "src/components/Form/index.tsx",
             "HoverCard/index": "src/components/HoverCard/index.tsx",
-            "Input/index": "src/components/Input/index.tsx",
+            "Input/index": "src/components/Input/index.ts",
             "InputOtp/index": "src/components/InputOtp/index.tsx",
             "Label/index": "src/components/Label/index.tsx",
             "Menubar/index": "src/components/Menubar/index.tsx",

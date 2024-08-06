@@ -1,0 +1,72 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Tabs > should match the snapshot 1`] = `
+<body>
+  <div>
+    <div
+      data-orientation="horizontal"
+      dir="ltr"
+    >
+      <div
+        aria-orientation="horizontal"
+        class="bg-neutral-200 rounded-[6px] h-9 p-1 text-muted-foreground"
+        data-orientation="horizontal"
+        role="tablist"
+        style="outline: none;"
+        tabindex="0"
+      >
+        <button
+          aria-controls="radix-:r0:-content-account"
+          aria-selected="true"
+          class="inline-flex rounded-[2px] items-center justify-center text-neutral-500 whitespace-nowrap px-3 py-1 text-sm ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:font-medium"
+          data-orientation="horizontal"
+          data-radix-collection-item=""
+          data-state="active"
+          id="radix-:r0:-trigger-account"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          tab trigger 1
+        </button>
+        <button
+          aria-controls="radix-:r0:-content-password"
+          aria-selected="false"
+          class="inline-flex rounded-[2px] items-center justify-center text-neutral-500 whitespace-nowrap px-3 py-1 text-sm ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:font-medium"
+          data-orientation="horizontal"
+          data-radix-collection-item=""
+          data-state="inactive"
+          id="radix-:r0:-trigger-password"
+          role="tab"
+          tabindex="-1"
+          type="button"
+        >
+          tab trigger 2
+        </button>
+      </div>
+      <div
+        aria-labelledby="radix-:r0:-trigger-account"
+        class="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+        data-orientation="horizontal"
+        data-state="active"
+        id="radix-:r0:-content-account"
+        role="tabpanel"
+        style="animation-duration: 0s;"
+        tabindex="0"
+      >
+        tab content 1
+      </div>
+      <div
+        aria-labelledby="radix-:r0:-trigger-password"
+        class="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+        data-orientation="horizontal"
+        data-state="inactive"
+        hidden=""
+        id="radix-:r0:-content-password"
+        role="tabpanel"
+        tabindex="0"
+      />
+    </div>
+  </div>
+</body>
+`;

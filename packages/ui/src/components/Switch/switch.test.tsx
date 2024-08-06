@@ -1,5 +1,5 @@
 import { render, screen, waitFor } from "@testing-library/react";
-import {it, describe, expect, vi} from "vitest"
+import { it, describe, expect, vi } from "vitest";
 import userEvent from "@testing-library/user-event";
 import { Switch } from "..";
 
@@ -52,24 +52,30 @@ describe("Switch", () => {
     expect(checkFn).not.toHaveBeenCalled();
   });
 
-  it('renders the switch with title', () => {
-    const component = render(<Switch.LabelText labelText="O Brasil é caramelo"/>);
-    const labelElement = screen.getByText('O Brasil é caramelo');
+  it("renders the switch with title", () => {
+    const component = render(
+      <Switch.LabelText labelText="O Brasil é caramelo" />
+    );
+    const labelElement = screen.getByText("O Brasil é caramelo");
     expect(labelElement).toBeInTheDocument();
-    const switchElement = screen.getByRole('switch');
+    const switchElement = screen.getByRole("switch");
     expect(switchElement).toBeInTheDocument();
     expect(component.baseElement).toMatchSnapshot();
   });
 
-  it('renders the switch with helper text', () => {
-    const component = render(<Switch.LabelText labelText="Título" helperText="Texto auxiliar ao Switch"/> );
-    const labelElement = screen.getByText('Título');
+  it("renders the switch with helper text", () => {
+    const component = render(
+      <Switch.LabelText
+        labelText="Título"
+        helperText="Texto auxiliar ao Switch"
+      />
+    );
+    const labelElement = screen.getByText("Título");
     expect(labelElement).toBeInTheDocument();
-    const helperTextElement = screen.getByText('Texto auxiliar ao Switch');
+    const helperTextElement = screen.getByText("Texto auxiliar ao Switch");
     expect(helperTextElement).toBeInTheDocument();
-    const switchElement = screen.getByRole('switch');
+    const switchElement = screen.getByRole("switch");
     expect(switchElement).toBeInTheDocument();
     expect(component.baseElement).toMatchSnapshot();
   });
 });
-

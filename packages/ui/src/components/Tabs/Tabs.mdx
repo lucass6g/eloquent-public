@@ -1,0 +1,500 @@
+import {Meta, Canvas, Controls} from "@storybook/blocks"
+import * as TabsStories from "./Tabs.stories"
+import { Table } from "../Table"
+import {Popover} from "../Popover"
+import {Info} from "lucide-react"
+
+# Tabs
+
+Um conjunto de seções de conteúdo em camadas, conhecidas como painéis de guias, que são exibidas uma de cada vez.
+
+<Meta of={TabsStories}/>
+
+<Canvas of={TabsStories.TabsDemo}/>
+
+<Controls/>
+
+### Anatomia
+
+Importe todas as peças e junte-as.
+
+```tsx
+import * as Tabs from '@eloquent';
+
+export default () => (
+  <Tabs.Root>
+    <Tabs.List>
+      <Tabs.Trigger />
+    </Tabs.List>
+    <Tabs.Content />
+  </Tabs.Root>
+);
+```
+## API Reference
+
+### Tabs.Root
+
+Contém todas as partes componentes das guias.
+
+<Table.Root>
+  <Table.Header>
+    <Table.Row>
+      <Table.Head>Props</Table.Head>
+      <Table.Head>Type</Table.Head>
+      <Table.Head>Default</Table.Head>
+    </Table.Row>
+  </Table.Header>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell>
+        <Popover.Root>
+          <Popover.Trigger className="flex items-center gap-1">
+            <code className="text-xs font-semibold">asChild</code>
+            <Info size="1rem" className="m-0 p-0" />
+          </Popover.Trigger>
+          <Popover.Content>
+            Altere o elemento renderizado padrão para aquele passado como filho, mesclando seus adereços e comportamento.
+          </Popover.Content>
+        </Popover.Root>
+      </Table.Cell>
+      <Table.Cell>boolean</Table.Cell>
+      <Table.Cell>false</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>
+        <Popover.Root>
+          <Popover.Trigger className="flex items-center gap-1">
+            <code className="text-xs font-semibold">defaultValue</code>
+            <Info size="1rem" className="m-0 p-0" />
+          </Popover.Trigger>
+          <Popover.Content>
+            O valor da guia que deve estar ativa quando renderizada inicialmente. Use quando não precisar controlar o estado das guias.
+          </Popover.Content>
+        </Popover.Root>
+      </Table.Cell>
+      <Table.Cell>string</Table.Cell>
+      <Table.Cell>-</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>
+        <Popover.Root>
+          <Popover.Trigger className="flex items-center gap-1">
+            <code className="text-xs font-semibold">value</code>
+            <Info size="1rem" className="m-0 p-0" />
+          </Popover.Trigger>
+          <Popover.Content>
+            O valor controlado da guia a ser ativada. Deve ser usado em conjunto com onValueChange.
+          </Popover.Content>
+        </Popover.Root>
+      </Table.Cell>
+      <Table.Cell>string</Table.Cell>
+      <Table.Cell>-</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>
+        <Popover.Root>
+          <Popover.Trigger className="flex items-center gap-1">
+            <code className="text-xs font-semibold">onValueChange</code>
+            <Info size="1rem" className="m-0 p-0" />
+          </Popover.Trigger>
+          <Popover.Content>
+            O valor da guia que deve estar ativa quando renderizada inicialmente. Use quando não precisar controlar o estado das guias.
+          </Popover.Content>
+        </Popover.Root>
+      </Table.Cell>
+      <Table.Cell>
+        <Popover.Root>
+          <Popover.Trigger className="flex items-center gap-1">
+            <code className="text-xs">function</code>
+            <Info size="1rem" className="m-0 p-0" />
+          </Popover.Trigger>
+          <Popover.Content>
+            <code>(value: string) => void</code>
+          </Popover.Content>
+        </Popover.Root>
+      </Table.Cell>
+      <Table.Cell>-</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>
+        <Popover.Root>
+          <Popover.Trigger className="flex items-center gap-1">
+            <code className="text-xs font-semibold">orientation</code>
+            <Info size="1rem" className="m-0 p-0" />
+          </Popover.Trigger>
+          <Popover.Content>
+            A orientação do componente.
+          </Popover.Content>
+        </Popover.Root>
+      </Table.Cell>
+      <Table.Cell>
+        <Popover.Root>
+          <Popover.Trigger className="flex items-center gap-1">
+            <code className="text-xs">enum</code>
+            <Info size="1rem" className="m-0 p-0" />
+          </Popover.Trigger>
+          <Popover.Content className="w-fit">
+            <code>"horizontal" | "vertical" | undefined</code>
+          </Popover.Content>
+        </Popover.Root>
+      </Table.Cell>
+      <Table.Cell>"horizontal"</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>
+        <Popover.Root>
+          <Popover.Trigger className="flex items-center gap-1">
+            <code className="text-xs font-semibold">dir</code>
+            <Info size="1rem" className="m-0 p-0" />
+          </Popover.Trigger>
+          <Popover.Content>
+            A direção de leitura das guias. Se omitido, herda globalmente de DirectionProvider ou assume o modo de leitura LTR (da esquerda para a direita).
+          </Popover.Content>
+        </Popover.Root>
+      </Table.Cell>
+      <Table.Cell>
+        <Popover.Root>
+          <Popover.Trigger className="flex items-center gap-1">
+            <code className="text-xs">enum</code>
+            <Info size="1rem" className="m-0 p-0" />
+          </Popover.Trigger>
+          <Popover.Content>
+            <code>"ltr" | "rtl"</code>
+          </Popover.Content>
+        </Popover.Root>
+      </Table.Cell>
+      <Table.Cell>-</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>
+        <Popover.Root>
+          <Popover.Trigger className="flex items-center gap-1">
+            <code className="text-xs font-semibold">activationMode</code>
+            <Info size="1rem" className="m-0 p-0" />
+          </Popover.Trigger>
+          <Popover.Content>
+            Quando automático, as guias são ativadas ao receber o foco. Quando manual, as guias são ativadas quando clicadas.
+          </Popover.Content>
+        </Popover.Root>
+      </Table.Cell>
+      <Table.Cell>
+        <Popover.Root>
+          <Popover.Trigger className="flex items-center gap-1">
+            <code className="text-xs">enum</code>
+            <Info size="1rem" className="m-0 p-0" />
+          </Popover.Trigger>
+          <Popover.Content>
+            <code>"automatic" | "manual"</code>
+          </Popover.Content>
+        </Popover.Root>
+      </Table.Cell>
+      <Table.Cell>"automatic"</Table.Cell>
+    </Table.Row>
+  </Table.Body>
+</Table.Root>
+
+<Table.Root>
+  <Table.Header>
+    <Table.Row>
+      <Table.Head>Data attribute</Table.Head>
+      <Table.Head>Values</Table.Head>
+    </Table.Row>
+  </Table.Header>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell>[data-orientation]</Table.Cell>
+      <Table.Cell>"vertical" | "horizontal"</Table.Cell>
+    </Table.Row>
+  </Table.Body>
+</Table.Root>
+
+### Tabs.List
+
+Contém os triggers alinhados ao longo da borda do conteúdo ativo.
+
+<Table.Root>
+  <Table.Header>
+    <Table.Row>
+      <Table.Head>Props</Table.Head>
+      <Table.Head>Type</Table.Head>
+      <Table.Head>Default</Table.Head>
+    </Table.Row>
+  </Table.Header>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell>
+        <Popover.Root>
+          <Popover.Trigger className="flex items-center gap-1">
+            <code className="text-xs font-semibold">asChild</code>
+            <Info size="1rem" className="m-0 p-0" />
+          </Popover.Trigger>
+          <Popover.Content>
+            Altere o elemento renderizado padrão para aquele passado como filho, mesclando seus adereços e comportamento.
+          </Popover.Content>
+        </Popover.Root>
+      </Table.Cell>
+      <Table.Cell>boolean</Table.Cell>
+      <Table.Cell>false</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>
+        <Popover.Root>
+          <Popover.Trigger className="flex items-center gap-1">
+            <code className="text-xs font-semibold">loop</code>
+            <Info size="1rem" className="m-0 p-0" />
+          </Popover.Trigger>
+          <Popover.Content>
+            Quando verdadeiro, a navegação pelo teclado irá percorrer da última guia para a primeira e vice-versa.
+          </Popover.Content>
+        </Popover.Root>
+      </Table.Cell>
+      <Table.Cell>boolean</Table.Cell>
+      <Table.Cell>true</Table.Cell>
+    </Table.Row>
+  </Table.Body>
+</Table.Root>
+
+<Table.Root>
+  <Table.Header>
+    <Table.Row>
+      <Table.Head>Data attribute</Table.Head>
+      <Table.Head>Values</Table.Head>
+    </Table.Row>
+  </Table.Header>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell>[data-orientation]</Table.Cell>
+      <Table.Cell>"vertical" | "horizontal"</Table.Cell>
+    </Table.Row>
+  </Table.Body>
+</Table.Root>
+
+### Tabs.Trigger
+
+O botão que ativa seu conteúdo associado.
+
+<Table.Root>
+  <Table.Header>
+    <Table.Row>
+      <Table.Head>Props</Table.Head>
+      <Table.Head>Type</Table.Head>
+      <Table.Head>Default</Table.Head>
+    </Table.Row>
+  </Table.Header>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell>
+        <Popover.Root>
+          <Popover.Trigger className="flex items-center gap-1">
+            <code className="text-xs font-semibold">asChild</code>
+            <Info size="1rem" className="m-0 p-0" />
+          </Popover.Trigger>
+          <Popover.Content>
+            Altere o elemento renderizado padrão para aquele passado como filho, mesclando seus adereços e comportamento.
+          </Popover.Content>
+        </Popover.Root>
+      </Table.Cell>
+      <Table.Cell>boolean</Table.Cell>
+      <Table.Cell>false</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>
+        <Popover.Root>
+          <Popover.Trigger className="flex items-center gap-1">
+            <code className="text-xs font-semibold">value*</code>
+            <Info size="1rem" className="m-0 p-0" />
+          </Popover.Trigger>
+          <Popover.Content>
+           Um valor exclusivo que associa o trigger a um conteúdo.
+          </Popover.Content>
+        </Popover.Root>
+      </Table.Cell>
+      <Table.Cell>string</Table.Cell>
+      <Table.Cell>-</Table.Cell>
+    </Table.Row>
+      <Table.Row>
+      <Table.Cell>
+        <Popover.Root>
+          <Popover.Trigger className="flex items-center gap-1">
+            <code className="text-xs font-semibold">disabled</code>
+            <Info size="1rem" className="m-0 p-0" />
+          </Popover.Trigger>
+          <Popover.Content>
+           Quando verdadeiro, impede que o usuário interaja com a guia.
+          </Popover.Content>
+        </Popover.Root>
+      </Table.Cell>
+      <Table.Cell>boolean</Table.Cell>
+      <Table.Cell>false</Table.Cell>
+    </Table.Row>
+  </Table.Body>
+</Table.Root>
+
+<Table.Root>
+  <Table.Header>
+    <Table.Row>
+      <Table.Head>Data attribute</Table.Head>
+      <Table.Head>Values</Table.Head>
+    </Table.Row>
+  </Table.Header>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell>[data-state]</Table.Cell>
+      <Table.Cell>"active" | "inactive"</Table.Cell>
+    </Table.Row>
+      <Table.Row>
+        <Table.Cell>[data-disabled]</Table.Cell>
+        <Table.Cell>Presente quando desativado</Table.Cell>
+    </Table.Row>
+      <Table.Row>
+        <Table.Cell>[data-orientation]</Table.Cell>
+        <Table.Cell>"vertical" | "horizontal"</Table.Cell>
+    </Table.Row>
+  </Table.Body>
+</Table.Root>
+
+### Tabs.Content
+
+Contém o conteúdo associado a cada trigger.
+
+<Table.Root>
+  <Table.Header>
+    <Table.Row>
+      <Table.Head>Props</Table.Head>
+      <Table.Head>Type</Table.Head>
+      <Table.Head>Default</Table.Head>
+    </Table.Row>
+  </Table.Header>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell>
+        <Popover.Root>
+          <Popover.Trigger className="flex items-center gap-1">
+            <code className="text-xs font-semibold">asChild</code>
+            <Info size="1rem" className="m-0 p-0" />
+          </Popover.Trigger>
+          <Popover.Content>
+            Altere o elemento renderizado padrão para aquele passado como filho, mesclando seus adereços e comportamento.
+          </Popover.Content>
+        </Popover.Root>
+      </Table.Cell>
+      <Table.Cell>boolean</Table.Cell>
+      <Table.Cell>false</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+      <Table.Cell>
+        <Popover.Root>
+          <Popover.Trigger className="flex items-center gap-1">
+            <code className="text-xs font-semibold">value*</code>
+            <Info size="1rem" className="m-0 p-0" />
+          </Popover.Trigger>
+          <Popover.Content>
+           Um valor exclusivo que associa o conteúdo a um trigger.
+          </Popover.Content>
+        </Popover.Root>
+      </Table.Cell>
+      <Table.Cell>string</Table.Cell>
+      <Table.Cell>-</Table.Cell>
+    </Table.Row>
+      <Table.Row>
+      <Table.Cell>
+        <Popover.Root>
+          <Popover.Trigger className="flex items-center gap-1">
+            <code className="text-xs font-semibold">forceMount</code>
+            <Info size="1rem" className="m-0 p-0" />
+          </Popover.Trigger>
+          <Popover.Content>
+           Usado para forçar a montagem quando é necessário mais controle. Útil ao controlar animações com bibliotecas de animação React.
+          </Popover.Content>
+        </Popover.Root>
+      </Table.Cell>
+      <Table.Cell>boolean</Table.Cell>
+      <Table.Cell>-</Table.Cell>
+    </Table.Row>
+  </Table.Body>
+</Table.Root>
+
+<Table.Root>
+  <Table.Header>
+    <Table.Row>
+      <Table.Head>Data attribute</Table.Head>
+      <Table.Head>Values</Table.Head>
+    </Table.Row>
+  </Table.Header>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell>[data-state]</Table.Cell>
+      <Table.Cell>"active" | "inactive"</Table.Cell>
+    </Table.Row>
+      <Table.Row>
+        <Table.Cell>[data-orientation]</Table.Cell>
+        <Table.Cell>"vertical" | "horizontal"</Table.Cell>
+    </Table.Row>
+  </Table.Body>
+</Table.Root>
+
+### Exemplos
+
+Você pode criar guias verticais usando o suporte de orientação.
+
+```tsx
+import * as Tabs from '@eloquent';
+
+export default () => (
+  <Tabs.Root defaultValue="tab1" orientation="vertical">
+    <Tabs.List aria-label="tabs example">
+      <Tabs.Trigger value="tab1">One</Tabs.Trigger>
+      <Tabs.Trigger value="tab2">Two</Tabs.Trigger>
+      <Tabs.Trigger value="tab3">Three</Tabs.Trigger>
+    </Tabs.List>
+    <Tabs.Content value="tab1">Tab one content</Tabs.Content>
+    <Tabs.Content value="tab2">Tab two content</Tabs.Content>
+    <Tabs.Content value="tab3">Tab three content</Tabs.Content>
+  </Tabs.Root>
+);
+```
+
+### Acessibilidade
+
+Adere ao [padrão de design Tabs WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/tabs).
+
+Interações de teclado
+
+<Table.Root>
+  <Table.Header>
+    <Table.Row>
+      <Table.Head>Key</Table.Head>
+      <Table.Head>Description</Table.Head>
+    </Table.Row>
+  </Table.Header>
+  <Table.Body>
+    <Table.Row>
+      <Table.Cell>Tab</Table.Cell>
+      <Table.Cell>Quando o foco passa para as guias, foca o trigger ativo. Quando um trigger está em foco, move o foco para o conteúdo ativo.</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+        <Table.Cell>ArrowDown</Table.Cell>
+        <Table.Cell>Move o foco para o próximo trigger dependendo da orientação e ativa o conteúdo associado.</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+        <Table.Cell>ArrowRight</Table.Cell>
+        <Table.Cell>Move o foco para o próximo trigger dependendo da orientação e ativa o conteúdo associado.</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+        <Table.Cell>ArrowUp</Table.Cell>
+        <Table.Cell>Move o foco para o próximo trigger dependendo da orientação e ativa o conteúdo associado.</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+        <Table.Cell>ArrowLeft</Table.Cell>
+        <Table.Cell>Move o foco para o próximo trigger dependendo da orientação e ativa o conteúdo associado.</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+        <Table.Cell>Home</Table.Cell>
+        <Table.Cell>Move o foco para o primeiro trigger e ativa o conteúdo associado.</Table.Cell>
+    </Table.Row>
+    <Table.Row>
+        <Table.Cell>End</Table.Cell>
+        <Table.Cell>Move o foco para o último trigger e ativa o conteúdo associado.</Table.Cell>
+    </Table.Row>
+  </Table.Body>
+</Table.Root>
