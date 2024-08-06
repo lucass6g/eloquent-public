@@ -7,7 +7,7 @@ export const accordionVariants = tv({
       "data-[disabled]:opacity-50",
     ],
     accordionTriggerVariants: [
-      "flex flex-1 items-center justify-between py-4 text-primary text-sm font-semibold transition-all",
+      "flex flex-1 items-center justify-between py-4 text-primary text-base font-semibold transition-all",
       "hover:underline",
       "[&[data-state=open]>svg]:rotate-180",
       "hover:data-[disabled]:no-underline",
