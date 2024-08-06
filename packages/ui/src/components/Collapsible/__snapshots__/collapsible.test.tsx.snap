@@ -1,0 +1,68 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Collapsible component > should render the Collapsible component and toggle content visibility 1`] = `
+<body>
+  <div>
+    <div
+      class="mb-1 space-y-2 [&>[data-disabled]]:opacity-50"
+      data-state="open"
+    >
+      <button
+        aria-controls="radix-:r0:"
+        aria-expanded="true"
+        class=""
+        data-state="open"
+        type="button"
+      >
+        <div
+          class="ml-4 flex items-center justify-between space-x-4 [&>button>svg]:text-green-dark-500 [&>button>svg]:w-[16px] [&>button>svg]:h-[16px]"
+        >
+          <h4
+            class="text-sm text-left font-bold text-green-dark-500"
+          >
+            @peduarte marcou 3 repositórios com estrela
+          </h4>
+          <button
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 disabled:cursor-not-allowed text-sm font-medium antialiased leading-4 p-0 m-0 border-none bg-transparent shadow-none text-secondary-foreground hover:shadow-none hover:bg-transparent disabled:bg-transparent disabled:shadow-none"
+          >
+            <svg
+              class="lucide lucide-chevrons-up-down"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m7 15 5 5 5-5"
+              />
+              <path
+                d="m7 9 5-5 5 5"
+              />
+            </svg>
+          </button>
+        </div>
+      </button>
+      <div
+        data-content="true"
+      >
+        @eloquent/react
+      </div>
+      <div
+        class="space-y-2 [&>div]:rounded-[6px] [&>div]:border [&>div]:px-4 [&>div]:py-3 [&>div]:text-sm [&>div]:text-neutral-500 w-[400px]"
+        data-state="open"
+        id="radix-:r0:"
+        style=""
+      >
+        <div>
+          @eloquent/tokens
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
