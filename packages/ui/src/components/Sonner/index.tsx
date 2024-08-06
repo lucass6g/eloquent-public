@@ -2,11 +2,13 @@
 
 import { useTheme } from "next-themes"
 import { Toaster as Sonner } from "sonner"
+import { sonnerSlots } from "./variants"
 
 type ToasterProps = React.ComponentProps<typeof Sonner>
 
 export const SonnerToaster = ({ ...props }: ToasterProps) => {
   const { theme = "system" } = useTheme()
+  const {  actionButtonSyle, cancelButtonStyle, descriptionStyle, toastStyle} = sonnerSlots();
 
   return (
     <Sonner
@@ -15,12 +17,12 @@ export const SonnerToaster = ({ ...props }: ToasterProps) => {
       toastOptions={{
         classNames: {
           toast:
-            "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg",
-          description: "group-[.toast]:text-muted-foreground",
+            toastStyle(),
+          description: descriptionStyle(),
           actionButton:
-            "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground",
+            actionButtonSyle(),
           cancelButton:
-            "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground",
+            cancelButtonStyle(),
         },
       }}
       {...props}

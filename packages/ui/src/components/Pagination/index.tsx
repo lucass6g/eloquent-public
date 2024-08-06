@@ -6,7 +6,8 @@ import {
 } from "@radix-ui/react-icons"
 
 import { cn } from "@eloquent/styles"
-import { ButtonProps, buttonVariants } from "../Button"
+import { buttonVariants } from "../Button/variants"
+import { ButtonProps } from "../Button/Button.props"
 
 const Root = ({ className, ...props }: React.ComponentProps<"nav">) => (
   <nav
