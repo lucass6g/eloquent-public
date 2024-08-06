@@ -4,7 +4,7 @@ exports[`Caption > should match the snapshot 1`] = `
 <body>
   <div>
     <h6
-      class="font-barlow text-foreground font-normal text-sm"
+      class="text-foreground font-normal text-sm"
     />
   </div>
 </body>

@@ -1,14 +1,14 @@
-import {tv} from "tailwind-variants";
+import { tv } from "tailwind-variants";
 
 export const captionVariants = tv({
-    base: "font-barlow text-md text-foreground font-normal",
-    variants: {
-        size: {
-            default: "text-sm",
-            sm: "text-xs",
-        }
+  base: "text-md text-foreground font-normal",
+  variants: {
+    size: {
+      default: "text-sm",
+      sm: "text-xs",
     },
-    defaultVariants: {
-        size: "default"
-    }
-})
+  },
+  defaultVariants: {
+    size: "default",
+  },
+});

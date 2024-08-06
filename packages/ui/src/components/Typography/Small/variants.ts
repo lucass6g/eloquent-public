@@ -1,14 +1,14 @@
-import {tv} from "tailwind-variants";
+import { tv } from "tailwind-variants";
 
 export const smallVariants = tv({
-    base: "font-barlow text-sm text-foreground",
-    variants: {
-        variant: {
-            default: " font-medium",
-            regular: "font-normal",
-        }
+  base: "text-md text-foreground font-normal",
+  variants: {
+    size: {
+      default: "text-sm",
+      sm: "text-xs",
     },
-    defaultVariants: {
-        variant: "default"
-    }
-})
+  },
+  defaultVariants: {
+    size: "default",
+  },
+});

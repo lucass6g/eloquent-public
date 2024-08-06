@@ -12,6 +12,7 @@ import {
   RED,
   YELLOW,
 } from "../../tokens/src/colors";
+
 export const defaultTailwindConfig = {
   content: ["node_modules/@eloquent/ui/dist/**/*.{js,ts,jsx,tsx,mdx}"],
   darkMode: ["class"],
@@ -77,7 +78,7 @@ export const defaultTailwindConfig = {
         yellow: YELLOW,
       },
       fontFamily: {
-        barlow: ["Barlow", "sans-serif"],
+        sans: ["Barlow", "sans-serif"],
         redonda: ["Redonda", "sans-serif"],
       },
       borderRadius: {

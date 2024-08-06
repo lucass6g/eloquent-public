@@ -1,0 +1,83 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ScrollArea Component > renders horizontal scrollbar 1`] = `
+<body>
+  <div>
+    <div
+      class="relative overflow-hidden w-96 whitespace-nowrap rounded-[6px] border"
+      data-testid="scroll-area"
+      dir="ltr"
+      style="position: relative; --radix-scroll-area-corner-width: 0px; --radix-scroll-area-corner-height: 0px;"
+    >
+      <style>
+        [data-radix-scroll-area-viewport]{scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;}[data-radix-scroll-area-viewport]::-webkit-scrollbar{display:none}
+      </style>
+      <div
+        class="h-full w-full rounded-[inherit]"
+        data-radix-scroll-area-viewport=""
+        style="overflow-x: scroll; overflow-y: scroll;"
+      >
+        <div
+          style="min-width: 100%; display: table;"
+        >
+          <div
+            class="flex w-max space-x-4 p-4"
+          >
+            O Design System é uma iniciativa para escalar a forma como projetamos e desenvolvemos interfaces e produtos digitais na Elo. Todos os componentes foram projetados para serem reutilizados de acordo com a necessidade. Nosso objetivo é garantir consistência, acessibilidade e qualidade.
+          </div>
+          <div
+            class="flex touch-none select-none transition-colors h-2.5 flex-col border-t border-t-transparent p-[1px]"
+            data-orientation="horizontal"
+            data-testid="scrollbar"
+            style="position: absolute; bottom: 0px; left: 0px; --radix-scroll-area-thumb-width: 18px;"
+          />
+        </div>
+      </div>
+      <div
+        class="flex touch-none select-none transition-colors h-full w-2.5 border-l border-l-transparent p-[1px]"
+        data-orientation="vertical"
+        style="position: absolute; top: 0px; right: 0px; --radix-scroll-area-thumb-height: 18px;"
+      />
+    </div>
+  </div>
+</body>
+`;
+
+exports[`ScrollArea Component > renders vertical scrollbar 1`] = `
+<body>
+  <div>
+    <div
+      class="relative overflow-hidden h-[200px] w-[350px] rounded-[6px] border p-4"
+      data-testid="scroll-area"
+      dir="ltr"
+      style="position: relative; --radix-scroll-area-corner-width: 0px; --radix-scroll-area-corner-height: 0px;"
+    >
+      <style>
+        [data-radix-scroll-area-viewport]{scrollbar-width:none;-ms-overflow-style:none;-webkit-overflow-scrolling:touch;}[data-radix-scroll-area-viewport]::-webkit-scrollbar{display:none}
+      </style>
+      <div
+        class="h-full w-full rounded-[inherit]"
+        data-radix-scroll-area-viewport=""
+        style="overflow-x: hidden; overflow-y: scroll;"
+      >
+        <div
+          style="min-width: 100%; display: table;"
+        >
+          O Design System é uma iniciativa para escalar a forma como projetamos e desenvolvemos interfaces e produtos digitais na Elo. Todos os componentes foram projetados para serem reutilizados de acordo com a necessidade. Nosso objetivo é garantir consistência, acessibilidade e qualidade.
+          <div
+            class="flex touch-none select-none transition-colors h-full w-2.5 border-l border-l-transparent p-[1px]"
+            data-orientation="vertical"
+            data-testid="scrollbar"
+            style="position: absolute; top: 0px; right: 0px; --radix-scroll-area-thumb-height: 18px;"
+          />
+        </div>
+      </div>
+      <div
+        class="flex touch-none select-none transition-colors h-full w-2.5 border-l border-l-transparent p-[1px]"
+        data-orientation="vertical"
+        style="position: absolute; top: 0px; right: 0px; --radix-scroll-area-thumb-height: 18px;"
+      />
+    </div>
+  </div>
+</body>
+`;
