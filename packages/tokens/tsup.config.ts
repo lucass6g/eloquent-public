@@ -2,12 +2,14 @@ import { defineConfig } from 'tsup';
 
 export default defineConfig({
 	name: "@eloquent/tokens",
-	entry: ["index.ts"],
+	entry: ["src/index.ts", "src/colors/index.ts", "src/tailwind.config-preset.js"],
 	outDir: "dist",
-	target: "es2022",
+	target: "esnext",
+	tsconfig: "tsconfig.json",
 	format: ["cjs", "esm"],
 	splitting: false,
 	sourcemap: true,
 	clean: true,
+	treeshake: true,
 	dts: true,
 })

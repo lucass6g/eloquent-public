@@ -2,7 +2,8 @@
   "extends":  "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./dist/esm",
-    "moduleResolution": "Bundler"
+    "moduleResolution": "Bundler",
+    "typeRoots": []
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],
 }

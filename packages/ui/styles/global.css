@@ -1,0 +1,8 @@
+@import '../../../packages/styles/src/theme.css' layer(theme);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+
+

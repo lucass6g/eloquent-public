@@ -1,0 +1,61 @@
+{
+  "name": "documentation",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm generate:examples && next dev -p 3335",
+    "start": "next start",
+    "clean": "rimraf .turbo node_modules .next",
+    "generate:examples": "node src/scripts/generateExamples.mjs",
+    "lint": "next lint",
+    "lint:fix": "next lint --fix",
+    "preview": "pnpm generate:examples && next build && next start -p 3000",
+    "typecheck": "tsc --pretty --noEmit"
+  },
+  "dependencies": {
+    "@eloquent/styles": "workspace:*",
+    "@eloquent/ui": "workspace:*",
+    "@headlessui/react": "^2.0.4",
+    "@iconicicons/react": "^1.5.1",
+    "@lemonsqueezy/wedges": "^1.3.1",
+    "@radix-ui/react-navigation-menu": "^1.1.4",
+    "@radix-ui/react-scroll-area": "^1.0.5",
+    "@radix-ui/react-slot": "^1.0.2",
+    "fathom-client": "^3.7.0",
+    "lucide-react": "^0.400.0",
+    "mdast-util-from-markdown": "^2.0.1",
+    "next": "14.2.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "rimraf": "^5.0.8",
+    "sass": "^1.77.6"
+  },
+  "devDependencies": {
+    "@docsearch/react": "^3.6.0",
+    "@shikijs/transformers": "^1.7.0",
+    "@tailwindcss/typography": "^0.5.13",
+    "@types/hast": "^3.0.4",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/unist": "^3.0.2",
+    "autoprefixer": "^10.4.19",
+    "hast-util-from-html-isomorphic": "^2.0.0",
+    "mdast-util-toc": "^7.1.0",
+    "next-mdx-remote": "^5.0.0",
+    "postcss": "^8",
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-pretty-code": "^0.13.2",
+    "rehype-slug": "^6.0.0",
+    "remark": "^15.0.1",
+    "remark-gfm": "^4.0.0",
+    "remark-smartypants": "^3.0.1",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5",
+    "unist-builder": "^4.0.0",
+    "unist-util-visit": "^5.0.0"
+  },
+  "peerDependencies": {
+    "react-hook-form": "^7.52.1"
+  }
+}

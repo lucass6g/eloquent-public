@@ -4,12 +4,12 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
 	plugins: [react()],
 	test: {
+		globals: true,
 		environment: "jsdom",
-		reporters: ["html", "json"],
-		setupFiles: ["./setup.ts"],
+		setupFiles: ["setupTests.ts"],
 		coverage: {
 			provider: "istanbul",
-			exclude: ["style/**", "src/lib/**", "**/styles.ts", "**.config.**"],
+			exclude: ["style/**", "src/lib/**", "**/styles.ts", "**.config.**", "**.stories.**"],
 			reportsDirectory: "./coverage",
 			reporter: ["text-summary", "html", "json", "lcov"],
 		},

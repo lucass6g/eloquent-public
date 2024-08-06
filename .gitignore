@@ -1,17 +1,42 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+### Example user template template
+### Example user template
 
-# dependencies
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+### react template
+.DS_*
+*.log
+logs
+**/*.backup.*
+**/*.back.*
+
 node_modules
-.pnp
+bower_components
+
+*.sublime*
+
+psd
+thumb
+sketch
+
+### NextJS template
+# dependencies
+/node_modules
+/.pnp
 .pnp.js
 
 # testing
-coverage
+**/**/coverage
 
 # next.js
-.next/
-out/
-build
+/.next/
+/out/
+
+# production
+/build
 
 # misc
 .DS_Store
@@ -21,24 +46,28 @@ build
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
 
 # local env files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# turbo
-.turbo
+.env*.local
 
 # vercel
 .vercel
 
-.idea
+# typescript
+*.tsbuildinfo
+next-env.d.ts
 
-#
-!/packages/ui/html/
-!/packages/ui/dist/
-/packages/ui/dist/*
-/packages/react/*
+/packages/ui/node_modules/
+/node_modules/
+/packages/tokens/node_modules/*
+/packages/react/node_modules/
+/packages/react/dist/
+/packages/tokens/dist/
+/packages/ui/dist/
+/packages/styles/dist/
+/packages/styles/.turbo/
+/apps/docs/node_modules/
+/node_modules/*
+/.turbo/
+/apps/docs/storybook-static/

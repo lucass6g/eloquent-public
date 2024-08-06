@@ -7,8 +7,6 @@ name: Pipeline-$(SourceBranchName)
 trigger:
   branches:
     include:
-      - ti
-      - dev
       - hml
       - pre-prod
       - main

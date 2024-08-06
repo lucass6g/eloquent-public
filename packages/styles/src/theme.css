@@ -1,0 +1,86 @@
+@import url("https://p.typekit.net/p.css?s=1&k=wvf5kwu&ht=tk&f=1981.1984.2005.2007.2009.22618.22619&a=32411851&app=typekit&e=css");
+@import url("https://use.typekit.net/mfg4ogz.css");
+
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap') format('woff2');
+  font-weight: 500
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap') format('woff2');
+  font-weight: 600
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap') format('woff2');
+  font-weight: 800;
+}
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #033a34;
+
+  --card: #ffffff;
+  --card-foreground: 	#033a34;
+  --popover: #ffffff;
+  --popover-foreground: 	#033a34;
+
+  --primary: 	#033a34;
+  --primary-foreground: 	#ffffff;
+
+  --secondary: #ffffff;
+  --secondary-foreground: #033a34;
+
+  --muted: 	#f4f4f5;
+  --muted-foreground: #033a34;
+
+  --accent: 	#E0E0E0;
+  --accent-foreground: #033a34;
+
+  --destructive: #ef4444;
+  --destructive-foreground: 	#fafafa;
+
+  --border: #e4e4e7;
+
+  --input: #e4e4e7;
+  --ring: 	#033a34;
+  --radius: 2rem;
+}
+
+.dark {
+  --background: 	#033a34;
+  --foreground: 	#ffffff;
+
+  --card: 	#033a34;
+  --card-foreground: 	#fafafa;
+  --popover: 	#033a34;
+  --popover-foreground: 	#033a34;
+
+  --primary: 	#fafafa;
+  --primary-foreground: #033a34;
+
+  --secondary: #033a34;
+  --secondary-foreground: 	#fafafa;
+
+  --muted: #033a34;
+  --muted-foreground: #ffffff;
+
+  --accent: #033a34;
+  --accent-foreground: 	#fafafa;
+
+  --destructive: 	#7f1d1d;
+  --destructive-foreground: 	#fafafa;
+
+  --border: #ffffff;
+  --input: #ffffff;
+  --ring: #ffffff;
+}
+
+.font-clamp {
+  font-size: 10px
+}

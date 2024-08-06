@@ -1,31 +1,15 @@
-import { ParagraphProps }   from '@/components/ui/Typography/Paragraph/Paragraph.ts';
-import { Paragraph }        from './index.tsx';
-import { Meta, StoryObj } from '@storybook/react';
+import { Paragraph } from "./index.tsx";
+import type { ParagraphProps } from "./Paragraph.props.ts";
+import type { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof Paragraph> = {
-	title: 'Typography/Paragraph',
-	component: Paragraph,
-	parameters: {
-		backgrounds: {
-			default: "dark",
-		}
-	},
-	args: {
-		inverse: true,
-		children: 'Paragraph',
-	},
-	argTypes: {
-		inverse: {
-			control: { type: 'boolean' },
-		},
-	},
+const meta: Meta<ParagraphProps> = {
+  title: "Typography/Paragraph",
+  component: Paragraph,
+  args: {
+    children: "O Brasil é caramelo",
+  },
 };
 
 export default meta;
 
-type Story = StoryObj<ParagraphProps>;
-
-export const Default: Story = {
-	name: 'Paragraph',
-	render: ({ ...props }) => <Paragraph {...props}/>
-}
+export const Default: StoryObj<ParagraphProps> = {};
