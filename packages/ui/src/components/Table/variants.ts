@@ -3,16 +3,16 @@ import { tv } from "tailwind-variants";
 export const baseVariants = tv({
   slots: {
     rootWrapperVariants: "relative w-full overflow-auto",
-    rootTableVariants: "w-full caption-bottom text-sm",
-    headerVariants: "[&_tr]:border-b",
-    bodyVariants: "[&_tr:last-child]:border-0",
-    footerVariants: "border-t bg-muted/50 font-medium [&>tr]:last:border-b-0",
+    rootTableVariants: "w-full caption-bottom text-xs",
+    headerVariants: "bg-neutral-200 h-12 overflow-hidden",
+    bodyVariants: "[&_tr]:h-16",
+    footerVariants: "border-t font-medium [&>tr]:last:border-b-0",
     rowVariants:
-      "border-b transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted",
+      "border-t transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted first-of-type:border-0",
     headVariants:
-      "h-10 px-2 text-left align-middle font-medium text-muted-foreground [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
+      "first-of-type:rounded-l-[10px] last-of-type:rounded-r-[10px] px-4 text-left align-middle text-neutral-500 font-medium text-sm [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
     cellVariants:
-      "p-2 align-middle [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
-    captionVariants: "mt-4 text-sm text-muted-foreground",
+      "px-4 align-middle text-neutral-800 font-normal text-sm [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
+    captionVariants: "mt-4 text-xs text-neutral-800 font-normal text-center",
   },
 });

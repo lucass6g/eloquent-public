@@ -45,7 +45,9 @@ const Root = React.forwardRef<RootElement, RootProps>(function EloquentTable(
 
 const Header = React.forwardRef<SectionElement, SectionProps>(
   function EloquentTableHeader({ className, ...props }, ref) {
-    return <thead ref={ref} className={headerVariants(className)} {...props} />;
+    return (
+      <thead ref={ref} className={headerVariants({ className })} {...props} />
+    );
   }
 );
 
