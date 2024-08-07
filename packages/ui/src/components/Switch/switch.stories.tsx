@@ -20,7 +20,7 @@ const meta = {
     docs: {
       description: {
         component: "Um controle que permite ao usuário ligar ou desligar opções apresentadas.",
-    },
+      },
     }
   },
   args: {
@@ -42,9 +42,7 @@ export const DefaultSwitch: Story = {
     return (
       <Switch.Root disabled={disabled}>
         <Switch.Button id="1" />
-        <div className="ml-2 flex flex-col">
-          <Switch.Label htmlFor="1">Teste</Switch.Label>
-        </div>
+        <Switch.Label htmlFor="1">Teste</Switch.Label>
       </Switch.Root>
     )
   },
@@ -69,13 +67,13 @@ export const SwitchWithHelperText: Story = {
     docs: {
       description: {
         story: "Aplicado para adicionar algum um texto de apoio à opção.",
-    },
+      },
     }
   },
   render: () => (
     <Switch.Root>
       <Switch.Button id="1" />
-      <div className="ml-2 flex flex-col">
+      <div className="flex flex-col">
         <Switch.Label htmlFor="1">O Brasil é caramelo</Switch.Label>
         <Switch.HelperText>Texto auxiliar ao Switch</Switch.HelperText>
       </div>
