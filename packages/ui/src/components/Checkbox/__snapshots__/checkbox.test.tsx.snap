@@ -1,0 +1,87 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Checkbox Component > renders the default Checkbox 1`] = `
+<body>
+  <div>
+    <div
+      class="flex-col space-x-2 [&[aria-disabled='true']]:cursor-not-allowed [&[aria-disabled='true']]:opacity-50"
+    >
+      <button
+        aria-checked="true"
+        class="peer h-4 w-4 shrink-0 rounded-[4px] border border-primary shadow focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground"
+        data-state="checked"
+        id="terms"
+        role="checkbox"
+        type="button"
+        value="on"
+      >
+        <span
+          class="flex items-center justify-center text-current"
+          data-state="checked"
+          style="pointer-events: none;"
+        >
+          <svg
+            fill="none"
+            height="15"
+            viewBox="0 0 15 15"
+            width="15"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              clip-rule="evenodd"
+              d="M11.4669 3.72684C11.7558 3.91574 11.8369 4.30308 11.648 4.59198L7.39799 11.092C7.29783 11.2452 7.13556 11.3467 6.95402 11.3699C6.77247 11.3931 6.58989 11.3355 6.45446 11.2124L3.70446 8.71241C3.44905 8.48022 3.43023 8.08494 3.66242 7.82953C3.89461 7.57412 4.28989 7.55529 4.5453 7.78749L6.75292 9.79441L10.6018 3.90792C10.7907 3.61902 11.178 3.53795 11.4669 3.72684Z"
+              fill="currentColor"
+              fill-rule="evenodd"
+            />
+          </svg>
+        </span>
+      </button>
+      <label
+        class="text-sm font-medium text-green-dark-600"
+        for="terms"
+      >
+        Aceitar termos e condições da promoção
+      </label>
+      <p
+        class="pl-4 text-sm text-neutral-500"
+      >
+        Você concorda com nossos Termos de Serviço e Política de Privacidade.
+      </p>
+    </div>
+  </div>
+</body>
+`;
+
+exports[`Checkbox Component > renders the disabled Checkbox 1`] = `
+<body>
+  <div>
+    <div
+      aria-disabled="true"
+      class="flex-col space-x-2 [&[aria-disabled='true']]:cursor-not-allowed [&[aria-disabled='true']]:opacity-50"
+    >
+      <button
+        aria-checked="false"
+        class="peer h-4 w-4 shrink-0 rounded-[4px] border border-primary shadow focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground"
+        data-disabled=""
+        data-state="unchecked"
+        disabled=""
+        id="terms"
+        role="checkbox"
+        type="button"
+        value="on"
+      />
+      <label
+        class="text-sm font-medium text-green-dark-600"
+        for="terms"
+      >
+        Aceitar termos e condições da promoção
+      </label>
+      <p
+        class="pl-4 text-sm text-neutral-500"
+      >
+        Você concorda com nossos Termos de Serviço e Política de Privacidade.
+      </p>
+    </div>
+  </div>
+</body>
+`;

@@ -1,30 +1,69 @@
-"use client";
-
-import * as React from "react";
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
 import { CheckIcon } from "@radix-ui/react-icons";
+import * as LabelPrimitive from "@radix-ui/react-label";
+import * as React from "react";
+import { checkboxStyle, helperTextStyle, indicatorStyle, labelTextStyle, rootStyle } from "./variants";
 export type { CheckboxProps } from "@radix-ui/react-checkbox";
-import { cn } from "@eloquent/styles";
 
-const Checkbox = React.forwardRef<
+
+const Root = React.forwardRef<HTMLDivElement, { disabled?: boolean } & React.HTMLAttributes<HTMLDivElement>>(
+  function RootCheckboxEloquent({ className, disabled, children, ...props }, ref) {
+    return (
+      <div className={rootStyle({ className })} ref={ref} aria-disabled={disabled} {...props}>
+        {children}
+      </div >
+    )
+  }
+)
+
+const CheckboxLabelText = React.forwardRef<
+  React.ElementRef<typeof LabelPrimitive.Root>,
+  React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root>
+>(
+  function CheckboxLabelTextEloquent({ className, ...props }, ref) {
+    return (
+      <LabelPrimitive.Root
+        ref={ref}
+        className={labelTextStyle({ className })}
+        {...props}
+      />
+    )
+  }
+)
+
+const RootCheckbox = React.forwardRef<
   React.ElementRef<typeof CheckboxPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>
->(({ className, ...props }, ref) => (
-  <CheckboxPrimitive.Root
-    ref={ref}
-    className={cn(
-      "peer h-4 w-4 shrink-0 rounded-sm border border-primary shadow focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground",
-      className
-    )}
-    {...props}
-  >
-    <CheckboxPrimitive.Indicator
-      className={cn("flex items-center justify-center text-current")}
+>(function CheckboxEloquent({ className, ...props }, ref) {
+  return (
+    <CheckboxPrimitive.Root
+      ref={ref}
+      className={checkboxStyle({ className })}
+      {...props}
     >
-      <CheckIcon className="h-4 w-4" />
-    </CheckboxPrimitive.Indicator>
-  </CheckboxPrimitive.Root>
-));
-Checkbox.displayName = CheckboxPrimitive.Root.displayName;
+      <CheckboxPrimitive.Indicator
+        className={indicatorStyle()}
+      >
+        <CheckIcon />
+      </CheckboxPrimitive.Indicator>
+    </CheckboxPrimitive.Root>
+  )
+});
 
-export { Checkbox };
+const CheckboxHelperText = React.forwardRef<React.HTMLAttributes<HTMLParagraphElement>, & React.HTMLAttributes<HTMLDivElement>>(
+  function RootCheckboxEloquent({ className, children, ...props }) {
+    return (
+      <p className={helperTextStyle({ className })} {...props}>
+        {children}
+      </p>
+    )
+  }
+)
+
+
+export const Checkbox = {
+  Root: Root,
+  Label: CheckboxLabelText,
+  HelperText: CheckboxHelperText,
+  Button: RootCheckbox
+};
