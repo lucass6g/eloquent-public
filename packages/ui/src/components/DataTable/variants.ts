@@ -5,6 +5,7 @@ export const baseVariants = tv({
     filterWrapperVariants: "flex items-center py-4",
     filterVariants: "max-w-sm",
     tableWrapperVariants: "rounded-md border",
+    tableVariants: "",
     noResultsVariants: "flex items-center justify-center h-64",
     sortHeaderVariants: "flex items-center space-x-2",
     sortHeaderButtonVariants: "-ml-3 h-8 data-[state=open]:bg-accent",

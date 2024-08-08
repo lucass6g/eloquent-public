@@ -1,4 +1,4 @@
-import { HTMLAttributes, useState } from "react";
+import { useState } from "react";
 
 import {
   Column,
@@ -36,11 +36,18 @@ import {
   MixerHorizontalIcon,
 } from "@radix-ui/react-icons";
 import { baseVariants } from "./variants";
+import {
+  DataTableFilterProps,
+  DataTableProps,
+  DataTableRootProps,
+  DataTableSortHeaderProps,
+} from "./DataTable.props";
 
 const {
   filterWrapperVariants,
   filterVariants,
   tableWrapperVariants,
+  tableVariants,
   noResultsVariants,
   sortHeaderVariants,
   sortHeaderButtonVariants,
@@ -51,39 +58,9 @@ const {
   viewOptionsMenuContentVariants,
 } = baseVariants();
 
-interface RootProps<TData, TValue> {
-  hasPagination: boolean;
-  hasViewOptions: boolean;
-  filter?: { column: string; placeholder: string } | null | undefined;
-  columns: ColumnDef<TData, TValue>[];
-  data: TData[];
-  className: string;
-}
-
-interface FilterProps<TData> {
-  table: ReactTable<TData>;
-  placeholder: string;
-
-  column: string;
-}
-
-interface ColumnHeaderProps<TData, TValue>
-  extends HTMLAttributes<HTMLDivElement> {
-  column: Column<TData, TValue>;
-  title: string;
-}
-
-interface PaginationProps<TData> {
-  table: ReactTable<TData>;
-}
-
-interface ViewOptionsProps<TData> {
-  table: ReactTable<TData>;
-}
-
 const ViewOptions = function EloquentDataTableViewOptions<TData>({
   table,
-}: ViewOptionsProps<TData>) {
+}: DataTableProps<TData>) {
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
@@ -127,7 +104,7 @@ const ViewOptions = function EloquentDataTableViewOptions<TData>({
 
 const Pagination = function EloquentDataTablePagination<TData>({
   table,
-}: PaginationProps<TData>) {
+}: DataTableProps<TData>) {
   return (
     <div className="flex items-center justify-between px-2">
       <div className="flex-1 text-sm text-muted-foreground">
@@ -208,7 +185,7 @@ const SortHeader = function EloquentDataTableSortHeader<TData, TValue>({
   column,
   title,
   className,
-}: ColumnHeaderProps<TData, TValue>) {
+}: DataTableSortHeaderProps<TData, TValue>) {
   if (!column.getCanSort()) {
     return <div className={cn(className)}>{title}</div>;
   }
@@ -256,7 +233,7 @@ const Filter = function EloquentDataTableFilter<TData>({
   table,
   column,
   placeholder,
-}: FilterProps<TData>) {
+}: DataTableFilterProps<TData>) {
   return (
     <Input.Root
       placeholder={placeholder}
@@ -270,13 +247,13 @@ const Filter = function EloquentDataTableFilter<TData>({
 };
 
 const Root = function EloquentDataTableRoot<TData, TValue>({
-  columns,
   data,
+  columns,
+  filter,
   hasPagination,
   hasViewOptions,
-  filter,
   className,
-}: RootProps<TData, TValue>) {
+}: DataTableRootProps<TData, TValue>) {
   const [sorting, setSorting] = useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
   const [columnVisibility, setColumnVisibility] = useState<VisibilityState>({});
@@ -314,7 +291,7 @@ const Root = function EloquentDataTableRoot<TData, TValue>({
         {hasViewOptions && <ViewOptions table={table} />}
       </div>
       <div className={tableWrapperVariants()}>
-        <Table.Root className={cn(className)}>
+        <Table.Root className={tableVariants({ className })}>
           <Table.Header>
             {table.getHeaderGroups().map((headerGroup) => (
               <Table.Row key={headerGroup.id}>
@@ -368,7 +345,7 @@ const Root = function EloquentDataTableRoot<TData, TValue>({
   );
 };
 
-export type { ColumnDef };
+export type { Column, ColumnDef, ReactTable };
 
 export const DataTable = {
   Root,
