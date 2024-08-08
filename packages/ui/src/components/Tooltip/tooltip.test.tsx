@@ -33,8 +33,7 @@ describe("Tooltip", () => {
 
     userEvent.hover(screen.getByText("Hover me"));
 
-    expect(await screen.findByText((_, element) => {
-      return element?.textContent === "Tooltip content";
-    })).toBeInTheDocument();
+    const tooltipContent = await screen.findAllByText("Tooltip content");
+    expect(tooltipContent[0]).toBeInTheDocument();
   });
 });
