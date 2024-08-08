@@ -20,18 +20,12 @@ import { Button } from "../Button";
 import { Select } from "../Select";
 import { Input } from "../Input";
 import { DropdownMenu } from "../DropdownMenu";
+import { Pagination } from "../Pagination";
 
 import { cn } from "@eloquent/styles";
-import {
-  ArrowDownIcon,
-  ArrowUpIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-} from "lucide-react";
+import { ArrowDownIcon, ArrowUpIcon } from "lucide-react";
 import {
   CaretSortIcon,
-  DoubleArrowLeftIcon,
-  DoubleArrowRightIcon,
   EyeNoneIcon,
   MixerHorizontalIcon,
 } from "@radix-ui/react-icons";
@@ -53,6 +47,14 @@ const {
   sortHeaderButtonVariants,
   sortHeaderIconsVariants,
   sortHeaderMenuIconsVariants,
+  paginationCounterWrapperVariants,
+  paginationWrapperVariants,
+  paginationSelectedRowsVariants,
+  paginationRowsPerPageWrapperVariants,
+  paginationRowsPerPageVariants,
+  paginationRowsPerPageSelectTriggerVariants,
+  paginationCounterVariants,
+  paginationVariants,
   viewOptionsButtonVariants,
   viewOptionsButtonIconVariants,
   viewOptionsMenuContentVariants,
@@ -102,25 +104,27 @@ const ViewOptions = function EloquentDataTableViewOptions<TData>({
   );
 };
 
-const Pagination = function EloquentDataTablePagination<TData>({
+const DataTablePagination = function EloquentDataTablePagination<TData>({
   table,
 }: DataTableProps<TData>) {
   return (
-    <div className="flex items-center justify-between px-2">
-      <div className="flex-1 text-sm text-muted-foreground">
-        {table.getFilteredSelectedRowModel().rows.length} of{" "}
-        {table.getFilteredRowModel().rows.length} row(s) selected.
-      </div>
-      <div className="flex items-center space-x-6 lg:space-x-8">
-        <div className="flex items-center space-x-2">
-          <p className="text-sm font-medium">Rows per page</p>
+    <div className={paginationWrapperVariants()}>
+      <p className={paginationSelectedRowsVariants()}>
+        {table.getFilteredSelectedRowModel().rows.length} de{" "}
+        {table.getFilteredRowModel().rows.length} linha (s) selecionadas.
+      </p>
+      <div className={paginationCounterWrapperVariants()}>
+        <div className={paginationRowsPerPageWrapperVariants()}>
+          <p className={paginationRowsPerPageVariants()}>Linhas por página</p>
           <Select.Root
             value={`${table.getState().pagination.pageSize}`}
             onValueChange={(value) => {
               table.setPageSize(Number(value));
             }}
           >
-            <Select.Trigger className="h-8 w-[70px]">
+            <Select.Trigger
+              className={paginationRowsPerPageSelectTriggerVariants()}
+            >
               <Select.Value
                 placeholder={table.getState().pagination.pageSize}
               />
@@ -134,47 +138,27 @@ const Pagination = function EloquentDataTablePagination<TData>({
             </Select.Content>
           </Select.Root>
         </div>
-        <div className="flex w-[100px] items-center justify-center text-sm font-medium">
-          Page {table.getState().pagination.pageIndex + 1} of{" "}
+        <p className={paginationCounterVariants()}>
+          Página {table.getState().pagination.pageIndex + 1} de{" "}
           {table.getPageCount()}
-        </div>
-        <div className="flex items-center space-x-2">
-          <Button
-            variant="secondary"
-            className="hidden h-8 w-8 p-0 lg:flex"
-            onClick={() => table.setPageIndex(0)}
-            disabled={!table.getCanPreviousPage()}
-          >
-            <span className="sr-only">Go to first page</span>
-            <DoubleArrowLeftIcon className="h-4 w-4" />
-          </Button>
-          <Button
-            variant="secondary"
-            className="h-8 w-8 p-0"
-            onClick={() => table.previousPage()}
-            disabled={!table.getCanPreviousPage()}
-          >
-            <span className="sr-only">Go to previous page</span>
-            <ChevronLeftIcon className="h-4 w-4" />
-          </Button>
-          <Button
-            variant="secondary"
-            className="h-8 w-8 p-0"
-            onClick={() => table.nextPage()}
-            disabled={!table.getCanNextPage()}
-          >
-            <span className="sr-only">Go to next page</span>
-            <ChevronRightIcon className="h-4 w-4" />
-          </Button>
-          <Button
-            variant="secondary"
-            className="hidden h-8 w-8 p-0 lg:flex"
-            onClick={() => table.setPageIndex(table.getPageCount() - 1)}
-            disabled={!table.getCanNextPage()}
-          >
-            <span className="sr-only">Go to last page</span>
-            <DoubleArrowRightIcon className="h-4 w-4" />
-          </Button>
+        </p>
+        <div className={paginationVariants()}>
+          <Pagination.Root>
+            <Pagination.Content>
+              <Pagination.Item>
+                <Pagination.Previous
+                  onClick={() => table.previousPage()}
+                  isActive={table.getCanPreviousPage()}
+                />
+              </Pagination.Item>
+              <Pagination.Item>
+                <Pagination.Next
+                  onClick={() => table.nextPage()}
+                  isActive={table.getCanNextPage()}
+                />
+              </Pagination.Item>
+            </Pagination.Content>
+          </Pagination.Root>
         </div>
       </div>
     </div>
@@ -340,7 +324,7 @@ const Root = function EloquentDataTableRoot<TData, TValue>({
           </Table.Body>
         </Table.Root>
       </div>
-      {hasPagination && <Pagination table={table} />}
+      {hasPagination && <DataTablePagination table={table} />}
     </>
   );
 };
