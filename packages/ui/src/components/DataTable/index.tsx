@@ -6,6 +6,7 @@ import {
   ColumnFiltersState,
   SortingState,
   Table as ReactTable,
+  Row,
   VisibilityState,
   flexRender,
   getCoreRowModel,
@@ -329,7 +330,7 @@ const Root = function EloquentDataTableRoot<TData, TValue>({
   );
 };
 
-export type { Column, ColumnDef, ReactTable };
+export type { Column, ColumnDef, ReactTable, Row };
 
 export const DataTable = {
   Root,

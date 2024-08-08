@@ -15,6 +15,23 @@ const data = Array(6).fill({
   cell6: "Data Label",
 });
 
+const menuCell = () => (
+  <DropdownMenu.Root>
+    <DropdownMenu.Trigger asChild>
+      <Button variant="none" className="h-8 w-8 p-0">
+        <span className="sr-only">Abrir menu</span>
+        <MoreHorizontal className="h-4 w-4" />
+      </Button>
+    </DropdownMenu.Trigger>
+    <DropdownMenu.Content align="end">
+      <DropdownMenu.Label>Ações</DropdownMenu.Label>
+      <DropdownMenu.Item>Visualizar</DropdownMenu.Item>
+      <DropdownMenu.Item>Editar</DropdownMenu.Item>
+      <DropdownMenu.Item>Apagar</DropdownMenu.Item>
+    </DropdownMenu.Content>
+  </DropdownMenu.Root>
+);
+
 export const columns: ColumnDef<typeof data>[] = [
   {
     id: "select",
@@ -44,30 +61,7 @@ export const columns: ColumnDef<typeof data>[] = [
   })),
   {
     id: "actions",
-    cell: ({ row }) => {
-      const payment = row.original;
-      return (
-        <DropdownMenu.Root>
-          <DropdownMenu.Trigger asChild>
-            <Button variant="none" className="h-8 w-8 p-0">
-              <span className="sr-only">Open menu</span>
-              <MoreHorizontal className="h-4 w-4" />
-            </Button>
-          </DropdownMenu.Trigger>
-          <DropdownMenu.Content align="end">
-            <DropdownMenu.Label>Actions</DropdownMenu.Label>
-            <DropdownMenu.Item
-              onClick={() => navigator.clipboard.writeText(payment.id)}
-            >
-              Copy payment ID
-            </DropdownMenu.Item>
-            <DropdownMenu.Separator />
-            <DropdownMenu.Item>View customer</DropdownMenu.Item>
-            <DropdownMenu.Item>View payment details</DropdownMenu.Item>
-          </DropdownMenu.Content>
-        </DropdownMenu.Root>
-      );
-    },
+    cell: menuCell,
   },
 ];
 

@@ -4,7 +4,7 @@ export const baseVariants = tv({
   slots: {
     filterWrapperVariants: "flex items-center py-4",
     filterVariants: "max-w-sm",
-    tableWrapperVariants: "rounded-md border",
+    tableWrapperVariants: "",
     tableVariants: "",
     noResultsVariants: "flex items-center justify-center h-64",
     sortHeaderVariants: "flex items-center space-x-2",
