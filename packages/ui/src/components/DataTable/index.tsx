@@ -35,6 +35,21 @@ import {
   EyeNoneIcon,
   MixerHorizontalIcon,
 } from "@radix-ui/react-icons";
+import { baseVariants } from "./variants";
+
+const {
+  filterWrapperVariants,
+  filterVariants,
+  tableWrapperVariants,
+  noResultsVariants,
+  sortHeaderVariants,
+  sortHeaderButtonVariants,
+  sortHeaderIconsVariants,
+  sortHeaderMenuIconsVariants,
+  viewOptionsButtonVariants,
+  viewOptionsButtonIconVariants,
+  viewOptionsMenuContentVariants,
+} = baseVariants();
 
 interface RootProps<TData, TValue> {
   hasPagination: boolean;
@@ -42,6 +57,7 @@ interface RootProps<TData, TValue> {
   filter?: { column: string; placeholder: string } | null | undefined;
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
+  className: string;
 }
 
 interface FilterProps<TData> {
@@ -65,21 +81,26 @@ interface ViewOptionsProps<TData> {
   table: ReactTable<TData>;
 }
 
-function ViewOptions<TData>({ table }: ViewOptionsProps<TData>) {
+const ViewOptions = function EloquentDataTableViewOptions<TData>({
+  table,
+}: ViewOptionsProps<TData>) {
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
         <Button
           variant="secondary"
           size="sm"
-          className="ml-auto hidden h-8 lg:flex"
+          className={viewOptionsButtonVariants()}
         >
-          <MixerHorizontalIcon className="mr-2 h-4 w-4" />
+          <MixerHorizontalIcon className={viewOptionsButtonIconVariants()} />
           Visualização
         </Button>
       </DropdownMenu.Trigger>
-      <DropdownMenu.Content align="end" className="w-[150px]">
-        <DropdownMenu.Label>Toggle columns</DropdownMenu.Label>
+      <DropdownMenu.Content
+        align="end"
+        className={viewOptionsMenuContentVariants()}
+      >
+        <DropdownMenu.Label>Colunas</DropdownMenu.Label>
         <DropdownMenu.Separator />
         {table
           .getAllColumns()
@@ -102,9 +123,11 @@ function ViewOptions<TData>({ table }: ViewOptionsProps<TData>) {
       </DropdownMenu.Content>
     </DropdownMenu.Root>
   );
-}
+};
 
-function Pagination<TData>({ table }: PaginationProps<TData>) {
+const Pagination = function EloquentDataTablePagination<TData>({
+  table,
+}: PaginationProps<TData>) {
   return (
     <div className="flex items-center justify-between px-2">
       <div className="flex-1 text-sm text-muted-foreground">
@@ -179,9 +202,9 @@ function Pagination<TData>({ table }: PaginationProps<TData>) {
       </div>
     </div>
   );
-}
+};
 
-function SortHeader<TData, TValue>({
+const SortHeader = function EloquentDataTableSortHeader<TData, TValue>({
   column,
   title,
   className,
@@ -191,45 +214,49 @@ function SortHeader<TData, TValue>({
   }
 
   return (
-    <div className={cn("flex items-center space-x-2", className)}>
+    <div className={sortHeaderVariants({ className })}>
       <DropdownMenu.Root>
         <DropdownMenu.Trigger asChild>
           <Button
             variant="none"
             size="sm"
-            className="-ml-3 h-8 data-[state=open]:bg-accent"
+            className={sortHeaderButtonVariants()}
           >
             <span>{title}</span>
             {column.getIsSorted() === "desc" ? (
-              <ArrowDownIcon className="ml-2 h-4 w-4" />
+              <ArrowDownIcon className={sortHeaderIconsVariants()} />
             ) : column.getIsSorted() === "asc" ? (
-              <ArrowUpIcon className="ml-2 h-4 w-4" />
+              <ArrowUpIcon className={sortHeaderIconsVariants()} />
             ) : (
-              <CaretSortIcon className="ml-2 h-4 w-4" />
+              <CaretSortIcon className={sortHeaderIconsVariants()} />
             )}
           </Button>
         </DropdownMenu.Trigger>
         <DropdownMenu.Content align="start">
           <DropdownMenu.Item onClick={() => column.toggleSorting(false)}>
-            <ArrowUpIcon className="mr-2 h-3.5 w-3.5 text-muted-foreground/70" />
+            <ArrowUpIcon className={sortHeaderMenuIconsVariants()} />
             Asc
           </DropdownMenu.Item>
           <DropdownMenu.Item onClick={() => column.toggleSorting(true)}>
-            <ArrowDownIcon className="mr-2 h-3.5 w-3.5 text-muted-foreground/70" />
+            <ArrowDownIcon className={sortHeaderMenuIconsVariants()} />
             Desc
           </DropdownMenu.Item>
           <DropdownMenu.Separator />
           <DropdownMenu.Item onClick={() => column.toggleVisibility(false)}>
-            <EyeNoneIcon className="mr-2 h-3.5 w-3.5 text-muted-foreground/70" />
+            <EyeNoneIcon className={sortHeaderMenuIconsVariants()} />
             Ocultar
           </DropdownMenu.Item>
         </DropdownMenu.Content>
       </DropdownMenu.Root>
     </div>
   );
-}
+};
 
-function Filter<TData>({ table, column, placeholder }: FilterProps<TData>) {
+const Filter = function EloquentDataTableFilter<TData>({
+  table,
+  column,
+  placeholder,
+}: FilterProps<TData>) {
   return (
     <Input.Root
       placeholder={placeholder}
@@ -237,17 +264,18 @@ function Filter<TData>({ table, column, placeholder }: FilterProps<TData>) {
       onChange={(event) =>
         table.getColumn(`${column}`)?.setFilterValue(event.target.value)
       }
-      className="max-w-sm"
+      className={filterVariants()}
     />
   );
-}
+};
 
-function Root<TData, TValue>({
+const Root = function EloquentDataTableRoot<TData, TValue>({
   columns,
   data,
   hasPagination,
   hasViewOptions,
   filter,
+  className,
 }: RootProps<TData, TValue>) {
   const [sorting, setSorting] = useState<SortingState>([]);
   const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
@@ -275,7 +303,7 @@ function Root<TData, TValue>({
 
   return (
     <>
-      <div className="flex items-center py-4">
+      <div className={filterWrapperVariants()}>
         {filter && (
           <Filter
             placeholder={filter.placeholder}
@@ -285,8 +313,8 @@ function Root<TData, TValue>({
         )}
         {hasViewOptions && <ViewOptions table={table} />}
       </div>
-      <div className="rounded-md border">
-        <Table.Root>
+      <div className={tableWrapperVariants()}>
+        <Table.Root className={cn(className)}>
           <Table.Header>
             {table.getHeaderGroups().map((headerGroup) => (
               <Table.Row key={headerGroup.id}>
@@ -326,9 +354,9 @@ function Root<TData, TValue>({
               <Table.Row>
                 <Table.Cell
                   colSpan={columns.length}
-                  className="h-24 text-center"
+                  className={noResultsVariants()}
                 >
-                  Sem resultados
+                  Sem resultados.
                 </Table.Cell>
               </Table.Row>
             )}
@@ -338,7 +366,7 @@ function Root<TData, TValue>({
       {hasPagination && <Pagination table={table} />}
     </>
   );
-}
+};
 
 export type { ColumnDef };
 
