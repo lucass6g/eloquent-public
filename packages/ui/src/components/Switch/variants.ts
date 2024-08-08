@@ -10,10 +10,9 @@ const switchVariants = tv({
       "disabled:cursor-not-allowed disabled:opacity-50",
     ],
     labelTextStyle: "text-sm ml-2 font-medium text-green-dark-500",
-    helperTextStyle: "text-sm ml-2 text-neutral-500",
     thumbStyle:
       "pointer-events-none block h-4 w-4 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-4 data-[state=unchecked]:translate-x-0",
   },
 });
 
-export const { rootStyle, labelTextStyle, thumbStyle, helperTextStyle, switchButtonStyle } = switchVariants();
+export const { rootStyle, labelTextStyle, thumbStyle, switchButtonStyle } = switchVariants();

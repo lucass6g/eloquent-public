@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Checkbox, type CheckboxProps } from ".";
+import { HelperText } from "../HelperText";
 
 const meta: Meta<CheckboxProps> = {
   title: "Checkbox",
@@ -8,7 +9,7 @@ const meta: Meta<CheckboxProps> = {
     return (<Checkbox.Root disabled={disabled} >
       <Checkbox.Button {...args} id="terms" />
       <Checkbox.Label htmlFor="terms" >Aceitar termos e condições da promoção</Checkbox.Label>
-      <Checkbox.HelperText>Você concorda com nossos Termos de Serviço e Política de Privacidade.</Checkbox.HelperText>
+      <HelperText.Label className="block pl-4 text-sm text-neutral-500">Você concorda com nossos Termos de Serviço e Política de Privacidade.</HelperText.Label>
     </Checkbox.Root>
     )
   },
@@ -63,7 +64,7 @@ export const WithHelperText: Story = {
     <Checkbox.Root >
       <Checkbox.Button {...props} id="terms2" />
       <Checkbox.Label htmlFor="terms2">Aceitar termos e condições da promoção</Checkbox.Label>
-      <Checkbox.HelperText>Você concorda com nossos Termos de Serviço e Política de Privacidade.</Checkbox.HelperText>
+      <HelperText.Label className="block pl-4 text-sm text-neutral-500">Você concorda com nossos Termos de Serviço e Política de Privacidade.</HelperText.Label>
     </Checkbox.Root>
   )
 }

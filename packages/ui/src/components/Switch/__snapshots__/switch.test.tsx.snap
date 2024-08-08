@@ -24,16 +24,16 @@ exports[`Switch > renders the switch with helper text 1`] = `
         class="ml-2 flex flex-col"
       >
         <label
-          class="text-sm font-medium text-green-dark-500"
+          class="text-sm ml-2 font-medium text-green-dark-500"
           for="1"
         >
           O Brasil é caramelo
         </label>
-        <p
+        <span
           class="text-sm text-neutral-500"
         >
           Texto auxiliar ao Switch
-        </p>
+        </span>
       </div>
     </div>
   </div>
@@ -63,7 +63,7 @@ exports[`Switch > renders the switch with title 1`] = `
         class="ml-2 flex flex-col"
       >
         <label
-          class="text-sm font-medium text-green-dark-500"
+          class="text-sm ml-2 font-medium text-green-dark-500"
         >
           O Brasil é caramelo
         </label>

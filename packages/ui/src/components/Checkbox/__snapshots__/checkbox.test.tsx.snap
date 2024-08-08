@@ -42,11 +42,11 @@ exports[`Checkbox Component > renders the default Checkbox 1`] = `
       >
         Aceitar termos e condições da promoção
       </label>
-      <p
-        class="pl-4 text-sm text-neutral-500"
+      <span
+        class="block pl-4 text-sm text-neutral-500"
       >
         Você concorda com nossos Termos de Serviço e Política de Privacidade.
-      </p>
+      </span>
     </div>
   </div>
 </body>
@@ -76,11 +76,11 @@ exports[`Checkbox Component > renders the disabled Checkbox 1`] = `
       >
         Aceitar termos e condições da promoção
       </label>
-      <p
-        class="pl-4 text-sm text-neutral-500"
+      <span
+        class="block pl-4 text-sm text-neutral-500"
       >
         Você concorda com nossos Termos de Serviço e Política de Privacidade.
-      </p>
+      </span>
     </div>
   </div>
 </body>

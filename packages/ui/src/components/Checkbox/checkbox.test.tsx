@@ -1,13 +1,14 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import { Checkbox } from '.';
+import { HelperText } from '../HelperText';
 describe('Checkbox Component', () => {
     it('renders the default Checkbox', () => {
-        const component =  render(
+        const component = render(
             <Checkbox.Root>
                 <Checkbox.Button id="terms" />
                 <Checkbox.Label htmlFor="terms">Aceitar termos e condições da promoção</Checkbox.Label>
-                <Checkbox.HelperText>Você concorda com nossos Termos de Serviço e Política de Privacidade.</Checkbox.HelperText>
+                <HelperText.Label className="block pl-4 text-sm text-neutral-500">Você concorda com nossos Termos de Serviço e Política de Privacidade.</HelperText.Label>
             </Checkbox.Root>
         );
         const checkbox = screen.getByRole('checkbox', { name: /aceitar termos e condições da promoção/i });
@@ -24,7 +25,7 @@ describe('Checkbox Component', () => {
             <Checkbox.Root disabled>
                 <Checkbox.Button disabled id="terms" />
                 <Checkbox.Label htmlFor="terms">Aceitar termos e condições da promoção</Checkbox.Label>
-                <Checkbox.HelperText>Você concorda com nossos Termos de Serviço e Política de Privacidade.</Checkbox.HelperText>
+                <HelperText.Label className="block pl-4 text-sm text-neutral-500">Você concorda com nossos Termos de Serviço e Política de Privacidade.</HelperText.Label>
             </Checkbox.Root>
         );
         const checkbox = screen.getByRole('checkbox', { name: /aceitar termos e condições da promoção/i });
@@ -49,7 +50,7 @@ describe('Checkbox Component', () => {
             <Checkbox.Root>
                 <Checkbox.Button id="terms2" />
                 <Checkbox.Label htmlFor="terms2">Aceitar termos e condições da promoção</Checkbox.Label>
-                <Checkbox.HelperText>Você concorda com nossos Termos de Serviço e Política de Privacidade.</Checkbox.HelperText>
+                <HelperText.Label className="block pl-4 text-sm text-neutral-500">Você concorda com nossos Termos de Serviço e Política de Privacidade.</HelperText.Label>
             </Checkbox.Root>
         );
         const helperText = screen.getByText(/você concorda com nossos termos de serviço e política de privacidade/i);

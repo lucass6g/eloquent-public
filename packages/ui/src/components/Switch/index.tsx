@@ -2,7 +2,7 @@ import * as LabelPrimitive from "@radix-ui/react-label";
 import * as SwitchPrimitives from "@radix-ui/react-switch";
 import * as React from "react";
 
-import { helperTextStyle, labelTextStyle, rootStyle, switchButtonStyle, thumbStyle } from "./variants";
+import { labelTextStyle, rootStyle, switchButtonStyle, thumbStyle } from "./variants";
 
 
 const Root = React.forwardRef<HTMLDivElement, { disabled?: boolean } & React.HTMLAttributes<HTMLDivElement>>(
@@ -32,17 +32,6 @@ const SwitchLabelText = React.forwardRef<
   }
 )
 
-const SwitchHelperText = React.forwardRef<React.HTMLAttributes<HTMLParagraphElement>, & React.HTMLAttributes<HTMLDivElement>>(
-  function SwitchHelperTextEloquent({ className, children, ...props }) {
-    return (
-      <p className={helperTextStyle({ className })} {...props}>
-        {children}
-      </p>
-    )
-  }
-)
-
-
 const SwitchButton = React.forwardRef<
   React.ElementRef<typeof SwitchPrimitives.Root>,
   React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root>
@@ -61,6 +50,5 @@ const SwitchButton = React.forwardRef<
 export const Switch = {
   Root,
   Button: SwitchButton,
-  HelperText: SwitchHelperText,
   Label: SwitchLabelText,
 };

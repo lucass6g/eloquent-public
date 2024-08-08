@@ -2,6 +2,7 @@ import { render, screen, waitFor } from "@testing-library/react";
 import { it, describe, expect, vi } from "vitest";
 import userEvent from "@testing-library/user-event";
 import { Switch } from "..";
+import { HelperText } from "../HelperText";
 
 describe("Switch", () => {
   it("should match the snapshot", () => {
@@ -74,7 +75,7 @@ describe("Switch", () => {
         <Switch.Button id="1" />
         <div className="ml-2 flex flex-col">
           <Switch.Label htmlFor="1">O Brasil é caramelo</Switch.Label>
-          <Switch.HelperText>Texto auxiliar ao Switch</Switch.HelperText>
+          <HelperText.Label>Texto auxiliar ao Switch</HelperText.Label>
         </div>
       </Switch.Root>
     );

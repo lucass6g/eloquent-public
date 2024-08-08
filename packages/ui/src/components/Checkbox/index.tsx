@@ -2,7 +2,7 @@ import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
 import { CheckIcon } from "@radix-ui/react-icons";
 import * as LabelPrimitive from "@radix-ui/react-label";
 import * as React from "react";
-import { checkboxStyle, helperTextStyle, indicatorStyle, labelTextStyle, rootStyle } from "./variants";
+import { checkboxStyle, indicatorStyle, labelTextStyle, rootStyle } from "./variants";
 export type { CheckboxProps } from "@radix-ui/react-checkbox";
 
 
@@ -50,20 +50,8 @@ const RootCheckbox = React.forwardRef<
   )
 });
 
-const CheckboxHelperText = React.forwardRef<React.HTMLAttributes<HTMLParagraphElement>, & React.HTMLAttributes<HTMLDivElement>>(
-  function RootCheckboxEloquent({ className, children, ...props }) {
-    return (
-      <p className={helperTextStyle({ className })} {...props}>
-        {children}
-      </p>
-    )
-  }
-)
-
-
 export const Checkbox = {
   Root: Root,
   Label: CheckboxLabelText,
-  HelperText: CheckboxHelperText,
   Button: RootCheckbox
 };

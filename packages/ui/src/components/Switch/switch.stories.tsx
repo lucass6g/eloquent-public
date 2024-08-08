@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Switch } from ".";
 import { SwitchProps } from "@radix-ui/react-switch";
+import { HelperText } from "../HelperText";
 
 const meta = {
   title: "Switch",
@@ -75,7 +76,7 @@ export const SwitchWithHelperText: Story = {
       <Switch.Button id="1" />
       <div className="flex flex-col">
         <Switch.Label htmlFor="1">O Brasil é caramelo</Switch.Label>
-        <Switch.HelperText>Texto auxiliar ao Switch</Switch.HelperText>
+        <HelperText.Label className="text-sm ml-2 text-neutral-500">Texto auxiliar ao Switch</HelperText.Label>
       </div>
     </Switch.Root>
   ),
