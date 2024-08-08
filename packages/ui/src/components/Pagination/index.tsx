@@ -1,122 +1,128 @@
-import * as React from "react"
+import * as React from "react";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
   DotsHorizontalIcon,
-} from "@radix-ui/react-icons"
+} from "@radix-ui/react-icons";
 
-import { cn } from "@eloquent/styles"
-import { buttonVariants } from "../Button/variants"
-import { ButtonProps } from "../Button/Button.props"
+import { buttonVariants } from "../Button/variants";
+import { baseVariants } from "./variants";
+import {
+  ContentElement,
+  ContentProps,
+  EllipsisProps,
+  ItemElement,
+  ItemProps,
+  LinkProps,
+  RootProps,
+} from "./Pagination.props";
 
-const Root = ({ className, ...props }: React.ComponentProps<"nav">) => (
-  <nav
-    role="navigation"
-    aria-label="pagination"
-    className={cn("mx-auto flex w-full justify-center", className)}
-    {...props}
-  />
-)
-Root.displayName = "Pagination.Root"
+const {
+  rootVariants,
+  contentVariants,
+  previousVariants,
+  nextVariants,
+  ellipsisVariants,
+  iconsVariants,
+} = baseVariants();
 
-const PaginationContent = React.forwardRef<
-  HTMLUListElement,
-  React.ComponentProps<"ul">
->(({ className, ...props }, ref) => (
-  <ul
-    ref={ref}
-    className={cn("flex flex-row items-center gap-1", className)}
-    {...props}
-  />
-))
-PaginationContent.displayName = "Pagination.Content"
+const Root = function EloquentPaginationRoot({
+  className,
+  ...props
+}: RootProps) {
+  return (
+    <nav
+      role="navigation"
+      aria-label="pagination"
+      className={rootVariants({ className })}
+      {...props}
+    />
+  );
+};
 
-const PaginationItem = React.forwardRef<
-  HTMLLIElement,
-  React.ComponentProps<"li">
->(({ className, ...props }, ref) => (
-  <li ref={ref} className={cn("", className)} {...props} />
-))
-PaginationItem.displayName = "Pagination.Item"
+const Content = React.forwardRef<ContentElement, ContentProps>(
+  function EloquentPaginationContent({ className, ...props }, ref) {
+    return (
+      <ul ref={ref} className={contentVariants({ className })} {...props} />
+    );
+  }
+);
 
-type PaginationLinkProps = {
-  isActive?: boolean
-} & Pick<ButtonProps, "size"> &
-  React.ComponentProps<"a">
+const Item = React.forwardRef<ItemElement, ItemProps>(
+  function EloquentPaginationItem({ ...props }, ref) {
+    return <li ref={ref} {...props} />;
+  }
+);
 
-const PaginationLink = ({
+const Link = function EloquentPaginationLink({
   className,
   isActive,
   size = "icon",
   ...props
-}: PaginationLinkProps) => (
-  <a
-    aria-current={isActive ? "page" : undefined}
-    className={cn(
-      buttonVariants({
+}: LinkProps) {
+  return (
+    <a
+      aria-current={isActive ? "page" : undefined}
+      className={buttonVariants({
         variant: isActive ? "secondary" : "icon",
         size,
-      }),
-      className
-    )}
-    {...props}
-  />
-)
-PaginationLink.displayName = "Pagination.Link"
+        className,
+      })}
+      {...props}
+    />
+  );
+};
 
-const PaginationPrevious = ({
+const Previous = function EloquentPaginationPrevious({
   className,
   ...props
-}: React.ComponentProps<typeof PaginationLink>) => (
-  <PaginationLink
-    aria-label="Go to previous page"
-    size="default"
-    className={cn("gap-1 pl-2.5", className)}
-    {...props}
-  >
-    <ChevronLeftIcon className="h-4 w-4" />
-    <span>Previous</span>
-  </PaginationLink>
-)
-PaginationPrevious.displayName = "Pagination.Previous"
+}: LinkProps) {
+  return (
+    <Link
+      aria-label="Página anterior"
+      size="default"
+      className={previousVariants({ className })}
+      {...props}
+    >
+      <ChevronLeftIcon className={iconsVariants({ className })} />
+    </Link>
+  );
+};
 
-const PaginationNext = ({
+const Next = function EloquentPaginationNext({
   className,
   ...props
-}: React.ComponentProps<typeof PaginationLink>) => (
-  <PaginationLink
-    aria-label="Go to next page"
-    size="default"
-    className={cn("gap-1 pr-2.5", className)}
-    {...props}
-  >
-    <span>Next</span>
-    <ChevronRightIcon className="h-4 w-4" />
-  </PaginationLink>
-)
-PaginationNext.displayName = "Pagination.Next"
+}: LinkProps) {
+  return (
+    <Link
+      aria-label="Próxima página"
+      size="default"
+      className={nextVariants({ className })}
+      {...props}
+    >
+      <ChevronRightIcon className={iconsVariants({ className })} />
+    </Link>
+  );
+};
 
-const PaginationEllipsis = ({
+const Ellipsis = function EloquentPaginationEllipsis({
   className,
   ...props
-}: React.ComponentProps<"span">) => (
-  <span
-    aria-hidden
-    className={cn("flex h-9 w-9 items-center justify-center", className)}
-    {...props}
-  >
-    <DotsHorizontalIcon className="h-4 w-4" />
-    <span className="sr-only">More pages</span>
-  </span>
-)
-PaginationEllipsis.displayName = "Pagination.Ellipsis"
+}: EllipsisProps) {
+  return (
+    <span aria-hidden className={ellipsisVariants({ className })} {...props}>
+      <DotsHorizontalIcon className={iconsVariants({ className })} />
+      <span className="sr-only">More pages</span>
+    </span>
+  );
+};
 
 export const Pagination = {
   Root,
-  Content: PaginationContent,
-  Link: PaginationLink,
-  Item: PaginationItem,
-  Previous: PaginationPrevious,
-  Next: PaginationNext,
-  Ellipsis: PaginationEllipsis,
-}
+  Content,
+  Link,
+  Item,
+  Previous,
+  Next,
+  Ellipsis,
+};
