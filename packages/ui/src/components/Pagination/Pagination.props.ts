@@ -1,3 +1,4 @@
+import React from "react";
 import { ButtonProps } from "../Button/Button.props";
 
 export type RootProps = React.ComponentProps<"nav">;
@@ -16,3 +17,13 @@ export type LinkProps = Pick<ButtonProps, "size"> &
   LinkVariantsProps;
 
 export type EllipsisProps = React.ComponentProps<"span">;
+
+export type LabelProps = React.ComponentProps<"span"> & {
+  current: number;
+  total: number;
+};
+
+export type InputProps = React.ComponentProps<"form"> & {
+  current: number;
+  total: number;
+};
