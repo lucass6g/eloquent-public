@@ -9,7 +9,7 @@ export type ContentProps = React.ComponentProps<"ul">;
 export type ItemElement = HTMLLIElement;
 export type ItemProps = React.ComponentProps<"li">;
 
-export type ButtonProps = EloquentButtonProps;
+export type ButtonProps = EloquentButtonProps & { isActive?: boolean };
 
 export type EllipsisProps = React.ComponentProps<"span">;
 

@@ -22,20 +22,19 @@ import {
 } from "./Pagination.props";
 import { Input as EloquentInput } from "../Input";
 import { Button as EloquentButton } from "../Button";
-import { buttonVariants as eloquentButtonVariants } from "../Button/variants";
 
 const {
   rootVariants,
-  contentVariants,
   buttonsVariants,
-  ellipsisVariants,
+  contentVariants,
   ellipsisLabelVariants,
-  labelVariants,
-  formVariants,
-  formTextVariants,
-  formInputVariants,
+  ellipsisVariants,
   formButtonVariants,
+  formInputVariants,
+  formTextVariants,
+  formVariants,
   iconsVariants,
+  labelVariants,
 } = baseVariants();
 
 const Root = function EloquentPaginationRoot({
@@ -71,16 +70,16 @@ const Button = function EloquentPaginationButton({
   disabled,
   size = "icon",
   variant = "icon",
+  isActive = false,
   ...props
 }: ButtonProps) {
   return (
     <EloquentButton
       disabled={disabled}
-      className={eloquentButtonVariants({
-        variant,
-        size,
-        className,
-      })}
+      variant={variant}
+      size={size}
+      data-active={isActive}
+      className={buttonsVariants({ className })}
       {...props}
     />
   );
@@ -91,12 +90,8 @@ const FirstPage = function EloquentPaginationFirstPage({
   ...props
 }: ButtonProps) {
   return (
-    <Button
-      aria-label="Primeira página"
-      className={buttonsVariants({ className })}
-      {...props}
-    >
-      <ChevronsLeft className={iconsVariants({ className })} />
+    <Button aria-label="Primeira página" {...props}>
+      <ChevronsLeft className={iconsVariants()} />
     </Button>
   );
 };
@@ -106,12 +101,8 @@ const Previous = function EloquentPaginationPrevious({
   ...props
 }: ButtonProps) {
   return (
-    <Button
-      aria-label="Página anterior"
-      className={buttonsVariants({ className })}
-      {...props}
-    >
-      <ChevronLeft className={iconsVariants({ className })} />
+    <Button aria-label="Página anterior" {...props}>
+      <ChevronLeft className={iconsVariants()} />
     </Button>
   );
 };
@@ -121,12 +112,8 @@ const LastPage = function EloquentPaginationPrevious({
   ...props
 }: ButtonProps) {
   return (
-    <Button
-      aria-label="Última página"
-      className={buttonsVariants({ className })}
-      {...props}
-    >
-      <ChevronsRight className={iconsVariants({ className })} />
+    <Button aria-label="Última página" {...props}>
+      <ChevronsRight className={iconsVariants()} />
     </Button>
   );
 };
@@ -136,12 +123,8 @@ const Next = function EloquentPaginationNext({
   ...props
 }: ButtonProps) {
   return (
-    <Button
-      aria-label="Próxima página"
-      className={buttonsVariants({ className })}
-      {...props}
-    >
-      <ChevronRight className={iconsVariants({ className })} />
+    <Button aria-label="Próxima página" {...props}>
+      <ChevronRight className={iconsVariants()} />
     </Button>
   );
 };
@@ -152,7 +135,7 @@ const Ellipsis = function EloquentPaginationEllipsis({
 }: EllipsisProps) {
   return (
     <span aria-hidden className={ellipsisVariants({ className })} {...props}>
-      <EllipsisIcon className={iconsVariants({ className })} />
+      <EllipsisIcon className={iconsVariants()} />
       <span className={ellipsisLabelVariants()}>Mais páginas</span>
     </span>
   );
