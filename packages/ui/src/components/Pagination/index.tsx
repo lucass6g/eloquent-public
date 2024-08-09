@@ -162,7 +162,7 @@ const Form = function EloquentPaginationInput({
 }: InputProps) {
   return (
     <form
-      role="navigation"
+      role="form"
       aria-label="pagination"
       className={formVariants({ className })}
       {...props}
