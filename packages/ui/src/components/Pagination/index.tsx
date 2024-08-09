@@ -1,11 +1,12 @@
 import * as React from "react";
+
 import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  DotsHorizontalIcon,
-  DoubleArrowLeftIcon,
-  DoubleArrowRightIcon,
-} from "@radix-ui/react-icons";
+  ChevronLeft,
+  ChevronRight,
+  ChevronsLeft,
+  ChevronsRight,
+  Ellipsis as EllipsisIcon,
+} from "lucide-react";
 
 import { buttonVariants } from "../Button/variants";
 import { baseVariants } from "./variants";
@@ -26,15 +27,14 @@ import { Button } from "../Button";
 const {
   rootVariants,
   contentVariants,
-  previousVariants,
-  nextVariants,
+  linksVariants,
   ellipsisVariants,
   ellipsisLabelVariants,
   labelVariants,
-  withFormVariants,
-  withFormTextVariants,
-  withFormInputVariants,
-  withFormButtonVariants,
+  formVariants,
+  formTextVariants,
+  formInputVariants,
+  formButtonVariants,
   iconsVariants,
 } = baseVariants();
 
@@ -93,10 +93,10 @@ const FirstPage = function EloquentPaginationFirstPage({
     <Link
       aria-label="Primeira página"
       size="icon"
-      className={previousVariants({ className })}
+      className={linksVariants({ className })}
       {...props}
     >
-      <DoubleArrowLeftIcon className={iconsVariants({ className })} />
+      <ChevronsLeft className={iconsVariants({ className })} />
     </Link>
   );
 };
@@ -109,10 +109,10 @@ const Previous = function EloquentPaginationPrevious({
     <Link
       aria-label="Página anterior"
       size="icon"
-      className={previousVariants({ className })}
+      className={linksVariants({ className })}
       {...props}
     >
-      <ChevronLeftIcon className={iconsVariants({ className })} />
+      <ChevronLeft className={iconsVariants({ className })} />
     </Link>
   );
 };
@@ -125,10 +125,10 @@ const LastPage = function EloquentPaginationPrevious({
     <Link
       aria-label="Última página"
       size="icon"
-      className={previousVariants({ className })}
+      className={linksVariants({ className })}
       {...props}
     >
-      <DoubleArrowRightIcon className={iconsVariants({ className })} />
+      <ChevronsRight className={iconsVariants({ className })} />
     </Link>
   );
 };
@@ -141,10 +141,10 @@ const Next = function EloquentPaginationNext({
     <Link
       aria-label="Próxima página"
       size="icon"
-      className={nextVariants({ className })}
+      className={linksVariants({ className })}
       {...props}
     >
-      <ChevronRightIcon className={iconsVariants({ className })} />
+      <ChevronRight className={iconsVariants({ className })} />
     </Link>
   );
 };
@@ -155,7 +155,7 @@ const Ellipsis = function EloquentPaginationEllipsis({
 }: EllipsisProps) {
   return (
     <span aria-hidden className={ellipsisVariants({ className })} {...props}>
-      <DotsHorizontalIcon className={iconsVariants({ className })} />
+      <EllipsisIcon className={iconsVariants({ className })} />
       <span className={ellipsisLabelVariants()}>Mais páginas</span>
     </span>
   );
@@ -174,29 +174,34 @@ const Label = function EloquentPaginationLabel({
   );
 };
 
-const WithForm = function EloquentPaginationInput({
+const Form = function EloquentPaginationInput({
   className,
   current,
   total,
   ...props
 }: InputProps) {
   return (
-    <form className={withFormVariants({ className })} {...props}>
-      <span className={withFormTextVariants()}>Ir para página</span>
+    <form
+      role="navigation"
+      aria-label="pagination"
+      className={formVariants({ className })}
+      {...props}
+    >
+      <span className={formTextVariants()}>Ir para página</span>
       <EloquentInput.Numeric
         min={1}
         max={total}
         value={current}
-        className={withFormInputVariants()}
+        className={formInputVariants()}
       />
-      <span className={withFormTextVariants()}>de {total}</span>
+      <span className={formTextVariants()}>de {total}</span>
       <Button
         size="icon"
         variant="icon"
         type="submit"
-        className={withFormButtonVariants()}
+        className={formButtonVariants()}
       >
-        <ChevronRightIcon className={iconsVariants()} />
+        <ChevronRight className={iconsVariants()} />
       </Button>
     </form>
   );
@@ -213,5 +218,5 @@ export const Pagination = {
   Next,
   Ellipsis,
   Label,
-  WithForm,
+  Form,
 };
