@@ -50,7 +50,7 @@ export const PaginationStory: Story = {
             <Pagination.FirstPage disabled={disabled} />
           </Pagination.Item>
           <Pagination.Item>
-            <Pagination.Previous />
+            <Pagination.Previous onClick={() => console.log("previous")} />
           </Pagination.Item>
           <Pagination.Item>
             <Pagination.Next onClick={() => console.log("next")} />
