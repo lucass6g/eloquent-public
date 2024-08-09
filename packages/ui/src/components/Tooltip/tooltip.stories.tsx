@@ -1,25 +1,29 @@
 import { Meta, StoryObj } from '@storybook/react'
-import {
-    Tooltip,
-    Button
-} from '../'
+import { Tooltip as TooltipPrimitive } from '.'
+import { Button } from '../Button'
 
 const meta = {
-    title: 'Shadcn/tooltip',
-    component: () => (
-        <Tooltip.Provider>
-            <Tooltip.Root>
-                <Tooltip.Trigger asChild>
+    title: 'Tooltip',
+    render: () => (
+        <TooltipPrimitive.Provider>
+            <TooltipPrimitive.Root>
+                <TooltipPrimitive.Trigger asChild>
                     <Button variant="secondary">Hover</Button>
-                </Tooltip.Trigger>
-                <Tooltip.Content>
-                    Add to library
-                </Tooltip.Content>
-            </Tooltip.Root>
-        </Tooltip.Provider>
+                </TooltipPrimitive.Trigger>
+                <TooltipPrimitive.Content >
+                    Texto tooltip
+                </TooltipPrimitive.Content>
+            </TooltipPrimitive.Root>
+        </TooltipPrimitive.Provider>
     ),
+    tags: ['autodocs'],
     parameters: {
         layout: 'centered',
+        docs: {
+            description: {
+                component: 'Um pop-up que exibe informações relacionadas a um elemento quando recebe o foco do teclado ou o mouse passa sobre ele.'
+            },
+        },
     },
 } satisfies Meta<{}>
 
@@ -27,7 +31,20 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-//colors
-export const TooltipDemo: Story = {
+export const Tooltip: Story = {
     args: {},
+    render: () => (
+        <div className='p-6'>
+            <TooltipPrimitive.Provider>
+                <TooltipPrimitive.Root>
+                    <TooltipPrimitive.Trigger asChild>
+                        <Button variant="secondary">Hover</Button>
+                    </TooltipPrimitive.Trigger>
+                    <TooltipPrimitive.Content>
+                        Texto tooltip
+                    </TooltipPrimitive.Content>
+                </TooltipPrimitive.Root>
+            </TooltipPrimitive.Provider>
+        </div>
+    ),
 }
