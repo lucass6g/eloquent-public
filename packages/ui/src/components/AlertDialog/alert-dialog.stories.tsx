@@ -11,25 +11,23 @@ const meta = {
             <>
                 <AlertDialog.Root>
                     <AlertDialog.Trigger data-testid="trigger">
-                        Open
+                        Abrir
                     </AlertDialog.Trigger>
                     <AlertDialog.Content>
                         <AlertDialog.Header>
                             <AlertDialog.Title data-testid="title">
-                                Are you absolutely sure?
+                            Você está certo disso?
                             </AlertDialog.Title>
                             <AlertDialog.Description data-testid="description">
-                                This action cannot be undone. This will
-                                permanently delete your account and remove your
-                                data from our servers.
+                            Esta ação não pode ser desfeita. Isso excluirá permanentemente sua conta e removerá seus dados dos nossos servidores
                             </AlertDialog.Description>
                         </AlertDialog.Header>
                         <AlertDialog.Footer>
                             <AlertDialog.Cancel data-testid="cancel">
-                                Cancel
+                                Cancelar
                             </AlertDialog.Cancel>
                             <AlertDialog.Action data-testid="Action">
-                                Continue
+                                Continuar
                             </AlertDialog.Action>
                         </AlertDialog.Footer>
                     </AlertDialog.Content>
