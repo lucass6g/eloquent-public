@@ -8,7 +8,6 @@ import {
   Ellipsis as EllipsisIcon,
 } from "lucide-react";
 
-import { buttonVariants } from "../Button/variants";
 import { baseVariants } from "./variants";
 import {
   ContentElement,
@@ -18,16 +17,17 @@ import {
   ItemElement,
   ItemProps,
   LabelProps,
-  LinkProps,
+  ButtonProps,
   RootProps,
 } from "./Pagination.props";
 import { Input as EloquentInput } from "../Input";
-import { Button } from "../Button";
+import { Button as EloquentButton } from "../Button";
+import { buttonVariants as eloquentButtonVariants } from "../Button/variants";
 
 const {
   rootVariants,
   contentVariants,
-  linksVariants,
+  buttonsVariants,
   ellipsisVariants,
   ellipsisLabelVariants,
   labelVariants,
@@ -66,17 +66,18 @@ const Item = React.forwardRef<ItemElement, ItemProps>(
   }
 );
 
-const Link = function EloquentPaginationLink({
+const Button = function EloquentPaginationButton({
   className,
-  isActive,
+  disabled,
   size = "icon",
+  variant = "icon",
   ...props
-}: LinkProps) {
+}: ButtonProps) {
   return (
-    <a
-      aria-current={isActive ? "page" : undefined}
-      className={buttonVariants({
-        variant: isActive ? "secondary" : "icon",
+    <EloquentButton
+      disabled={disabled}
+      className={eloquentButtonVariants({
+        variant,
         size,
         className,
       })}
@@ -88,64 +89,60 @@ const Link = function EloquentPaginationLink({
 const FirstPage = function EloquentPaginationFirstPage({
   className,
   ...props
-}: LinkProps) {
+}: ButtonProps) {
   return (
-    <Link
+    <Button
       aria-label="Primeira página"
-      size="icon"
-      className={linksVariants({ className })}
+      className={buttonsVariants({ className })}
       {...props}
     >
       <ChevronsLeft className={iconsVariants({ className })} />
-    </Link>
+    </Button>
   );
 };
 
 const Previous = function EloquentPaginationPrevious({
   className,
   ...props
-}: LinkProps) {
+}: ButtonProps) {
   return (
-    <Link
+    <Button
       aria-label="Página anterior"
-      size="icon"
-      className={linksVariants({ className })}
+      className={buttonsVariants({ className })}
       {...props}
     >
       <ChevronLeft className={iconsVariants({ className })} />
-    </Link>
+    </Button>
   );
 };
 
 const LastPage = function EloquentPaginationPrevious({
   className,
   ...props
-}: LinkProps) {
+}: ButtonProps) {
   return (
-    <Link
+    <Button
       aria-label="Última página"
-      size="icon"
-      className={linksVariants({ className })}
+      className={buttonsVariants({ className })}
       {...props}
     >
       <ChevronsRight className={iconsVariants({ className })} />
-    </Link>
+    </Button>
   );
 };
 
 const Next = function EloquentPaginationNext({
   className,
   ...props
-}: LinkProps) {
+}: ButtonProps) {
   return (
-    <Link
+    <Button
       aria-label="Próxima página"
-      size="icon"
-      className={linksVariants({ className })}
+      className={buttonsVariants({ className })}
       {...props}
     >
       <ChevronRight className={iconsVariants({ className })} />
-    </Link>
+    </Button>
   );
 };
 
@@ -195,12 +192,7 @@ const Form = function EloquentPaginationInput({
         className={formInputVariants()}
       />
       <span className={formTextVariants()}>de {total}</span>
-      <Button
-        size="icon"
-        variant="icon"
-        type="submit"
-        className={formButtonVariants()}
-      >
+      <Button type="submit" className={formButtonVariants()}>
         <ChevronRight className={iconsVariants()} />
       </Button>
     </form>
@@ -210,7 +202,7 @@ const Form = function EloquentPaginationInput({
 export const Pagination = {
   Root,
   Content,
-  Link,
+  Button,
   Item,
   FirstPage,
   Previous,

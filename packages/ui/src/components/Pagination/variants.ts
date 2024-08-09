@@ -4,7 +4,8 @@ export const baseVariants = tv({
   slots: {
     rootVariants: "",
     contentVariants: "flex flex-row items-center gap-1",
-    linksVariants: "gap-1",
+    buttonsVariants:
+      "gap-1 bg-neutral-100 disabled:bg-neutral-100 disabled:text-neutral-400 shadow-none text-neutral-800 hover:bg-neutral-200 focus:bg-neutral-200 active:bg-neutral-200",
     ellipsisVariants: "flex h-9 w-9 items-center justify-center",
     ellipsisLabelVariants: "sr-only",
     labelVariants: "text-accent-foreground font-normal text-sm",
