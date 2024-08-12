@@ -1,10 +1,28 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { StoryObj } from "@storybook/react";
+import {
+  Column,
+  ColumnDef,
+  ColumnFiltersState,
+  SortingState,
+  Table as ReactTable,
+  Row,
+  VisibilityState,
+  flexRender,
+  getCoreRowModel,
+  getFilteredRowModel,
+  getPaginationRowModel,
+  getSortedRowModel,
+  useReactTable,
+} from "@tanstack/react-table";
 import { MoreHorizontal } from "lucide-react";
+import { useState } from "react";
 
 import { Button } from "../Button";
 import { Checkbox } from "../Checkbox";
 import { DropdownMenu } from "../DropdownMenu";
-import { ColumnDef, DataTable } from "./";
+import { Pagination } from "../Pagination";
+import { Table } from "../Table";
+import { DataTable } from ".";
 
 const data = Array(6).fill({
   cell1: "Data Label",
@@ -32,7 +50,7 @@ const menuCell = () => (
   </DropdownMenu.Root>
 );
 
-export const columns: ColumnDef<typeof data>[] = [
+const columns: ColumnDef<typeof data>[] = [
   {
     id: "select",
     header: ({ table }) => (
@@ -65,9 +83,10 @@ export const columns: ColumnDef<typeof data>[] = [
   },
 ];
 
-const meta: any = {
+type DataTableProps = {};
+
+export default {
   title: "Data Table",
-  component: DataTable,
   parameters: {
     docs: {
       description: {
@@ -78,18 +97,107 @@ const meta: any = {
   },
 };
 
-export default meta;
+type Story = StoryObj<DataTableProps>;
 
-type Story = StoryObj<typeof meta>;
+export const PaginationStory: Story = {
+  name: "Data Table",
+  args: {},
+  argTypes: {},
+  render: () => {
+    const [sorting, setSorting] = useState<SortingState>([]);
+    const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
+    const [columnVisibility, setColumnVisibility] = useState<VisibilityState>(
+      {}
+    );
 
-export const DataTableStory: Story = {
-  render: () => (
-    <DataTable.Root
-      columns={columns}
-      data={data}
-      hasPagination
-      hasViewOptions
-      filter={{ column: "cell1", placeholder: "filtre por cell1" }}
-    />
-  ),
+    const [rowSelection, setRowSelection] = useState({});
+    const table = useReactTable({
+      data,
+      columns,
+      getCoreRowModel: getCoreRowModel(),
+      getPaginationRowModel: getPaginationRowModel(),
+      onSortingChange: setSorting,
+      getSortedRowModel: getSortedRowModel(),
+      onColumnFiltersChange: setColumnFilters,
+      getFilteredRowModel: getFilteredRowModel(),
+      onColumnVisibilityChange: setColumnVisibility,
+      onRowSelectionChange: setRowSelection,
+      state: {
+        sorting,
+        columnFilters,
+        columnVisibility,
+        rowSelection,
+      },
+    });
+
+    return (
+      <DataTable.Root>
+        <Table.Root>
+          <Table.Header>
+            {table.getHeaderGroups().map((headerGroup) => (
+              <Table.Row key={headerGroup.id}>
+                {headerGroup.headers.map((header) => {
+                  return (
+                    <Table.Head key={header.id}>
+                      {header.isPlaceholder
+                        ? null
+                        : flexRender(
+                            header.column.columnDef.header,
+                            header.getContext()
+                          )}
+                    </Table.Head>
+                  );
+                })}
+              </Table.Row>
+            ))}
+          </Table.Header>
+          <Table.Body>
+            {table.getRowModel().rows?.length ? (
+              table.getRowModel().rows.map((row) => (
+                <Table.Row
+                  key={row.id}
+                  data-state={row.getIsSelected() && "selected"}
+                >
+                  {row.getVisibleCells().map((cell) => (
+                    <Table.Cell key={cell.id}>
+                      {flexRender(
+                        cell.column.columnDef.cell,
+                        cell.getContext()
+                      )}
+                    </Table.Cell>
+                  ))}
+                </Table.Row>
+              ))
+            ) : (
+              <Table.Row>
+                <Table.Cell colSpan={columns.length} className={"text-center"}>
+                  Sem resultados.
+                </Table.Cell>
+              </Table.Row>
+            )}
+          </Table.Body>
+        </Table.Root>
+        <div className="flex gap-8 mt-2">
+          <DataTable.RowsPerPage table={table} rows={[5, 10, 15, 20]} />
+          <Pagination.Root className="flex items-center gap-4">
+            <Pagination.Label current={1} total={10} />
+            <Pagination.Content>
+              <Pagination.Item>
+                <Pagination.FirstPage disabled={true} />
+              </Pagination.Item>
+              <Pagination.Item>
+                <Pagination.Previous onClick={() => console.log("previous")} />
+              </Pagination.Item>
+              <Pagination.Item>
+                <Pagination.Next onClick={() => console.log("next")} />
+              </Pagination.Item>
+              <Pagination.Item>
+                <Pagination.LastPage onClick={() => console.log("last")} />
+              </Pagination.Item>
+            </Pagination.Content>
+          </Pagination.Root>
+        </div>
+      </DataTable.Root>
+    );
+  },
 };

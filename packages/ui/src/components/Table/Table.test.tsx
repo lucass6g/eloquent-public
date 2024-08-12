@@ -2,7 +2,7 @@ import { it, describe, expect } from "vitest";
 import { render } from "@testing-library/react";
 import { Table } from ".";
 
-describe("Dropdown Menu", () => {
+describe("Table", () => {
   it("should match the snapshot", () => {
     const component = render(
       <Table.Root>
