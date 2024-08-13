@@ -21,13 +21,14 @@ const meta = {
         defaultValue: { summary: "text" },
         type: {
           summary: "string",
-          detail: "'text' | 'password' | 'number' | 'email'"
+          detail: "'text' | 'password' | 'number' | 'email' | 'time'"
         }
       },
       options: [
         "password",
         "text",
-        "email"
+        "email",
+        "time"
       ],
     },
     placeholder: {
