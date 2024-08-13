@@ -32,6 +32,6 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
     name: "Default Label",
     render: () => (
-        <Label>Nome da Página</Label>
+        <Label className='text-feedback-informative'>Nome da Página</Label>
     )
 }
