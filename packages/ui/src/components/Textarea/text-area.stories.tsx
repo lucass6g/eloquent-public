@@ -11,7 +11,7 @@ const meta = {
         layout: 'centered',
         docs: {
             description: {
-                component: 'Description of the component'
+                component: 'Aplicado quando há necessidade de captar muitos dados de texto.'
             },
         },
     },
