@@ -137,3 +137,26 @@ export const SixteenToNine: Story = {
     </div>
   ),
 }
+
+export const Circle: Story = {
+  args: {},
+  name: 'Circle',
+  parameters: {
+    docs: {
+      description: {
+        story: "Exibe o conteúdo em uma forma circular com proporção de 1:1."
+      }
+    }
+  },
+  render: () => (
+    <div className='w-[300px]'>
+      <AspectRatio ratio={1}>
+        <img
+          src="https://via.placeholder.com/300/DEDEDE/DEDEDE"
+          alt="imagem exemplo"
+          className="h-full w-full object-cover rounded-[0.375rem] rounded-full"
+        />
+      </AspectRatio>
+    </div>
+  ),
+}
