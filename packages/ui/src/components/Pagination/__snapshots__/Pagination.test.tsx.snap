@@ -1,0 +1,218 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Pagination > should match the snapshot > default 1`] = `
+<body>
+  <div>
+    <nav
+      aria-label="pagination"
+      role="navigation"
+    >
+      <ul
+        class="flex flex-row items-center gap-1"
+      >
+        <li>
+          <button
+            aria-label="Primeira página"
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 disabled:cursor-not-allowed text-sm antialiased leading-4 p-0 border border-border h-10 w-10 first-child:stroke-primary-foreground gap-1 bg-neutral-100 disabled:bg-neutral-100 shadow-none disabled:text-neutral-400 text-neutral-800 hover:bg-neutral-200 font-normal data-[active=true]:bg-neutral-200 data-[active=true]:font-semibold"
+            data-active="false"
+            disabled=""
+          >
+            <svg
+              class="lucide lucide-chevrons-left h-4 w-4 stroke-[1.5px]"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m11 17-5-5 5-5"
+              />
+              <path
+                d="m18 17-5-5 5-5"
+              />
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            aria-label="Página anterior"
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 disabled:cursor-not-allowed text-sm antialiased leading-4 p-0 border border-border h-10 w-10 first-child:stroke-primary-foreground gap-1 bg-neutral-100 disabled:bg-neutral-100 shadow-none disabled:text-neutral-400 text-neutral-800 hover:bg-neutral-200 font-normal data-[active=true]:bg-neutral-200 data-[active=true]:font-semibold"
+            data-active="false"
+          >
+            <svg
+              class="lucide lucide-chevron-left h-4 w-4 stroke-[1.5px]"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m15 18-6-6 6-6"
+              />
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 disabled:cursor-not-allowed text-sm antialiased leading-4 p-0 border border-border h-10 w-10 first-child:stroke-primary-foreground gap-1 bg-neutral-100 disabled:bg-neutral-100 shadow-none disabled:text-neutral-400 text-neutral-800 hover:bg-neutral-200 font-normal data-[active=true]:bg-neutral-200 data-[active=true]:font-semibold"
+            data-active="true"
+          >
+            1
+          </button>
+        </li>
+        <li>
+          <button
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 disabled:cursor-not-allowed text-sm antialiased leading-4 p-0 border border-border h-10 w-10 first-child:stroke-primary-foreground gap-1 bg-neutral-100 disabled:bg-neutral-100 shadow-none disabled:text-neutral-400 text-neutral-800 hover:bg-neutral-200 font-normal data-[active=true]:bg-neutral-200 data-[active=true]:font-semibold"
+            data-active="false"
+          >
+            2
+          </button>
+        </li>
+        <li>
+          <button
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 disabled:cursor-not-allowed text-sm antialiased leading-4 p-0 border border-border h-10 w-10 first-child:stroke-primary-foreground gap-1 bg-neutral-100 disabled:bg-neutral-100 shadow-none disabled:text-neutral-400 text-neutral-800 hover:bg-neutral-200 font-normal data-[active=true]:bg-neutral-200 data-[active=true]:font-semibold"
+            data-active="false"
+          >
+            3
+          </button>
+        </li>
+        <li>
+          <button
+            aria-label="Próxima página"
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 disabled:cursor-not-allowed text-sm antialiased leading-4 p-0 border border-border h-10 w-10 first-child:stroke-primary-foreground gap-1 bg-neutral-100 disabled:bg-neutral-100 shadow-none disabled:text-neutral-400 text-neutral-800 hover:bg-neutral-200 font-normal data-[active=true]:bg-neutral-200 data-[active=true]:font-semibold"
+            data-active="false"
+          >
+            <svg
+              class="lucide lucide-chevron-right h-4 w-4 stroke-[1.5px]"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m9 18 6-6-6-6"
+              />
+            </svg>
+          </button>
+        </li>
+        <li>
+          <button
+            aria-label="Última página"
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 disabled:cursor-not-allowed text-sm antialiased leading-4 p-0 border border-border h-10 w-10 first-child:stroke-primary-foreground gap-1 bg-neutral-100 disabled:bg-neutral-100 shadow-none disabled:text-neutral-400 text-neutral-800 hover:bg-neutral-200 font-normal data-[active=true]:bg-neutral-200 data-[active=true]:font-semibold"
+            data-active="false"
+          >
+            <svg
+              class="lucide lucide-chevrons-right h-4 w-4 stroke-[1.5px]"
+              fill="none"
+              height="24"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              width="24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="m6 17 5-5-5-5"
+              />
+              <path
+                d="m13 17 5-5-5-5"
+              />
+            </svg>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</body>
+`;
+
+exports[`Pagination > should match the snapshot > form 1`] = `
+<body>
+  <div>
+    <form
+      aria-label="pagination"
+      class="border border-neutral-300 rounded-full pl-4 flex items-center h-12 bg-neutral-100 w-max"
+      role="form"
+    >
+      <span
+        class="text-accent-foreground font-normal text-sm"
+      >
+        Ir para página
+      </span>
+      <input
+        class="flex rounded-[6px] border border-neutral-300 bg-transparent py-1 transition-colors disabled:cursor-not-allowed disabled:opacity-50 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-neutral-400 file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-neutral-500 w-10 h-10 text-center px-0 mx-2 font-medium text-sm text-neutral-800"
+        inputmode="numeric"
+        max="10"
+        min="1"
+        type="text"
+        value="1"
+      />
+      <span
+        class="text-accent-foreground font-normal text-sm"
+      >
+        de 
+        10
+      </span>
+      <button
+        class="inline-flex items-center justify-center whitespace-nowrap rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring focus-visible:ring-offset-1 disabled:cursor-not-allowed text-sm antialiased leading-4 p-0 border-border h-10 w-10 first-child:stroke-primary-foreground gap-1 bg-neutral-100 disabled:bg-neutral-100 shadow-none disabled:text-neutral-400 text-neutral-800 hover:bg-neutral-200 font-normal data-[active=true]:bg-neutral-200 data-[active=true]:font-semibold border-0 ml-1"
+        data-active="false"
+        type="submit"
+      >
+        <svg
+          class="lucide lucide-chevron-right h-4 w-4 stroke-[1.5px]"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="m9 18 6-6-6-6"
+          />
+        </svg>
+      </button>
+    </form>
+  </div>
+</body>
+`;
+
+exports[`Pagination > should match the snapshot > label 1`] = `
+<body>
+  <div>
+    <nav
+      aria-label="pagination"
+      role="navigation"
+    >
+      <span
+        class="text-accent-foreground font-normal text-sm"
+      >
+        Página 
+        1
+         de 
+        10
+      </span>
+    </nav>
+  </div>
+</body>
+`;

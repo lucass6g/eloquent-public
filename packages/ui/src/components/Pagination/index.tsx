@@ -1,122 +1,197 @@
-import * as React from "react"
+import * as React from "react";
+
 import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-  DotsHorizontalIcon,
-} from "@radix-ui/react-icons"
+  ChevronLeft,
+  ChevronRight,
+  ChevronsLeft,
+  ChevronsRight,
+  Ellipsis as EllipsisIcon,
+} from "lucide-react";
 
-import { cn } from "@eloquent/styles"
-import { buttonVariants } from "../Button/variants"
-import { ButtonProps } from "../Button/Button.props"
+import { baseVariants } from "./variants";
+import {
+  ContentElement,
+  ContentProps,
+  EllipsisProps,
+  InputProps,
+  ItemElement,
+  ItemProps,
+  LabelProps,
+  ButtonProps,
+  RootProps,
+} from "./Pagination.props";
+import { Input as EloquentInput } from "../Input";
+import { Button as EloquentButton } from "../Button";
 
-const Root = ({ className, ...props }: React.ComponentProps<"nav">) => (
-  <nav
-    role="navigation"
-    aria-label="pagination"
-    className={cn("mx-auto flex w-full justify-center", className)}
-    {...props}
-  />
-)
-Root.displayName = "Pagination.Root"
+const {
+  rootVariants,
+  buttonsVariants,
+  contentVariants,
+  ellipsisLabelVariants,
+  ellipsisVariants,
+  formButtonVariants,
+  formInputVariants,
+  formTextVariants,
+  formVariants,
+  iconsVariants,
+  labelVariants,
+} = baseVariants();
 
-const PaginationContent = React.forwardRef<
-  HTMLUListElement,
-  React.ComponentProps<"ul">
->(({ className, ...props }, ref) => (
-  <ul
-    ref={ref}
-    className={cn("flex flex-row items-center gap-1", className)}
-    {...props}
-  />
-))
-PaginationContent.displayName = "Pagination.Content"
-
-const PaginationItem = React.forwardRef<
-  HTMLLIElement,
-  React.ComponentProps<"li">
->(({ className, ...props }, ref) => (
-  <li ref={ref} className={cn("", className)} {...props} />
-))
-PaginationItem.displayName = "Pagination.Item"
-
-type PaginationLinkProps = {
-  isActive?: boolean
-} & Pick<ButtonProps, "size"> &
-  React.ComponentProps<"a">
-
-const PaginationLink = ({
+const Root = function EloquentPaginationRoot({
   className,
-  isActive,
+  ...props
+}: RootProps) {
+  return (
+    <nav
+      role="navigation"
+      aria-label="pagination"
+      className={rootVariants({ className })}
+      {...props}
+    />
+  );
+};
+
+const Content = React.forwardRef<ContentElement, ContentProps>(
+  function EloquentPaginationContent({ className, ...props }, ref) {
+    return (
+      <ul ref={ref} className={contentVariants({ className })} {...props} />
+    );
+  }
+);
+
+const Item = React.forwardRef<ItemElement, ItemProps>(
+  function EloquentPaginationItem({ ...props }, ref) {
+    return <li ref={ref} {...props} />;
+  }
+);
+
+const Button = function EloquentPaginationButton({
+  className,
+  disabled,
   size = "icon",
+  variant = "icon",
+  isActive = false,
   ...props
-}: PaginationLinkProps) => (
-  <a
-    aria-current={isActive ? "page" : undefined}
-    className={cn(
-      buttonVariants({
-        variant: isActive ? "secondary" : "icon",
-        size,
-      }),
-      className
-    )}
-    {...props}
-  />
-)
-PaginationLink.displayName = "Pagination.Link"
+}: ButtonProps) {
+  return (
+    <EloquentButton
+      disabled={disabled}
+      variant={variant}
+      size={size}
+      data-active={isActive}
+      className={buttonsVariants({ className })}
+      {...props}
+    />
+  );
+};
 
-const PaginationPrevious = ({
+const FirstPage = function EloquentPaginationFirstPage({
   className,
   ...props
-}: React.ComponentProps<typeof PaginationLink>) => (
-  <PaginationLink
-    aria-label="Go to previous page"
-    size="default"
-    className={cn("gap-1 pl-2.5", className)}
-    {...props}
-  >
-    <ChevronLeftIcon className="h-4 w-4" />
-    <span>Previous</span>
-  </PaginationLink>
-)
-PaginationPrevious.displayName = "Pagination.Previous"
+}: ButtonProps) {
+  return (
+    <Button aria-label="Primeira página" {...props}>
+      <ChevronsLeft className={iconsVariants()} />
+    </Button>
+  );
+};
 
-const PaginationNext = ({
+const Previous = function EloquentPaginationPrevious({
   className,
   ...props
-}: React.ComponentProps<typeof PaginationLink>) => (
-  <PaginationLink
-    aria-label="Go to next page"
-    size="default"
-    className={cn("gap-1 pr-2.5", className)}
-    {...props}
-  >
-    <span>Next</span>
-    <ChevronRightIcon className="h-4 w-4" />
-  </PaginationLink>
-)
-PaginationNext.displayName = "Pagination.Next"
+}: ButtonProps) {
+  return (
+    <Button aria-label="Página anterior" {...props}>
+      <ChevronLeft className={iconsVariants()} />
+    </Button>
+  );
+};
 
-const PaginationEllipsis = ({
+const LastPage = function EloquentPaginationPrevious({
   className,
   ...props
-}: React.ComponentProps<"span">) => (
-  <span
-    aria-hidden
-    className={cn("flex h-9 w-9 items-center justify-center", className)}
-    {...props}
-  >
-    <DotsHorizontalIcon className="h-4 w-4" />
-    <span className="sr-only">More pages</span>
-  </span>
-)
-PaginationEllipsis.displayName = "Pagination.Ellipsis"
+}: ButtonProps) {
+  return (
+    <Button aria-label="Última página" {...props}>
+      <ChevronsRight className={iconsVariants()} />
+    </Button>
+  );
+};
+
+const Next = function EloquentPaginationNext({
+  className,
+  ...props
+}: ButtonProps) {
+  return (
+    <Button aria-label="Próxima página" {...props}>
+      <ChevronRight className={iconsVariants()} />
+    </Button>
+  );
+};
+
+const Ellipsis = function EloquentPaginationEllipsis({
+  className,
+  ...props
+}: EllipsisProps) {
+  return (
+    <span aria-hidden className={ellipsisVariants({ className })} {...props}>
+      <EllipsisIcon className={iconsVariants()} />
+      <span className={ellipsisLabelVariants()}>Mais páginas</span>
+    </span>
+  );
+};
+
+const Label = function EloquentPaginationLabel({
+  className,
+  current,
+  total,
+  ...props
+}: LabelProps) {
+  return (
+    <span className={labelVariants({ className })} {...props}>
+      Página {current} de {total}
+    </span>
+  );
+};
+
+const Form = function EloquentPaginationInput({
+  className,
+  current,
+  total,
+  ...props
+}: InputProps) {
+  return (
+    <form
+      role="form"
+      aria-label="pagination"
+      className={formVariants({ className })}
+      {...props}
+    >
+      <span className={formTextVariants()}>Ir para página</span>
+      <EloquentInput.Numeric
+        min={1}
+        max={total}
+        value={current}
+        className={formInputVariants()}
+      />
+      <span className={formTextVariants()}>de {total}</span>
+      <Button type="submit" className={formButtonVariants()}>
+        <ChevronRight className={iconsVariants()} />
+      </Button>
+    </form>
+  );
+};
 
 export const Pagination = {
   Root,
-  Content: PaginationContent,
-  Link: PaginationLink,
-  Item: PaginationItem,
-  Previous: PaginationPrevious,
-  Next: PaginationNext,
-  Ellipsis: PaginationEllipsis,
-}
+  Content,
+  Button,
+  Item,
+  FirstPage,
+  Previous,
+  LastPage,
+  Next,
+  Ellipsis,
+  Label,
+  Form,
+};
