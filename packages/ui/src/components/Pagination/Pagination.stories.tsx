@@ -97,7 +97,7 @@ export const PaginationButtonsStory: Story = {
   argTypes: {
     isActive: {
       description: "Se é a página atual.",
-      control: { type: "number" },
+      control: { type: "boolean" },
     },
   },
   render: ({ isActive }) => {

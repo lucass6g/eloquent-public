@@ -7,12 +7,10 @@ export const baseVariants = tv({
     headerVariants: "bg-neutral-200 h-12 overflow-hidden",
     bodyVariants: "[&_tr]:h-16",
     footerVariants: "border-t font-medium [&>tr]:last:border-b-0",
-    rowVariants:
-      "border-t transition-colors hover:bg-muted/50 data-[state=selected]:bg-muted first-of-type:border-0",
+    rowVariants: "border-t transition-colors first-of-type:border-0",
     headVariants:
-      "first-of-type:rounded-l-[10px] last-of-type:rounded-r-[10px] px-4 text-left align-middle text-neutral-500 font-medium text-sm [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
-    cellVariants:
-      "px-4 align-middle text-neutral-800 font-normal text-sm [&:has([role=checkbox])]:pr-0 [&>[role=checkbox]]:translate-y-[2px]",
+      "first-of-type:rounded-l-[10px] last-of-type:rounded-r-[10px] px-4 text-left align-middle text-neutral-500 font-medium text-sm",
+    cellVariants: "px-4 align-middle text-neutral-800 font-normal text-sm",
     captionVariants: "mt-4 text-xs text-neutral-800 font-normal text-center",
   },
 });
