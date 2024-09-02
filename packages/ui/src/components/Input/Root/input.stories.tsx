@@ -2,7 +2,6 @@ import { Meta, StoryObj } from "@storybook/react";
 import { Label } from "../../Label";
 import { Input } from "..";
 import { Button } from "../../Button";
-import { InputRootProps } from "./Input.props";
 import { HelperText } from "../../HelperText";
 
 const meta = {
@@ -21,13 +20,31 @@ const meta = {
         defaultValue: { summary: "text" },
         type: {
           summary: "string",
-          detail: "'text' | 'password' | 'number' | 'email'"
         }
       },
       options: [
-        "password",
+        "button",
+        "checkbox",
+        "color",	
+        "date",	
+        "datetime-local",	
+        "email",	
+        "file",	
+        "hidden",	
+        "image",	
+        "month",	
+        "number",	
+        "password",	
+        "radio",	
+        "range",
+        "reset",	
+        "search",	
+        "submit",	
+        "tel",	
         "text",
-        "email"
+        "time",	
+        "url",
+        "week"
       ],
     },
     placeholder: {
@@ -48,7 +65,7 @@ const meta = {
   parameters: {
     layout: "centered",
   },
-} satisfies Meta<InputRootProps>;
+} satisfies Meta<{}>;
 
 export default meta;
 
@@ -118,3 +135,6 @@ export const WithButton: Story = {
     )
   }
 }
+
+
+
