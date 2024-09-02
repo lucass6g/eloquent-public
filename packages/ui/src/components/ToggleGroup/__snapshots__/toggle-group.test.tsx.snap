@@ -1,0 +1,118 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`ToggleGroup Component > should render ToggleGroup component with default values 1`] = `
+<body>
+  <div>
+    <div
+      class="flex items-center justify-center gap-1"
+      dir="ltr"
+      role="group"
+      style="outline: none;"
+      tabindex="0"
+    >
+      <button
+        aria-checked="false"
+        aria-label="Toggle bold"
+        class="inline-flex items-center justify-between rounded-[6px] text-sm font-medium transition-colors hover:bg-muted hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground [&>svg]:mr-2 bg-transparent h-10 px-3 w-[90px]"
+        data-radix-collection-item=""
+        data-state="off"
+        role="radio"
+        tabindex="-1"
+        type="button"
+      >
+        <svg
+          class="lucide lucide-bold h-4 w-4"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 12h9a4 4 0 0 1 0 8H7a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h7a4 4 0 0 1 0 8"
+          />
+        </svg>
+      </button>
+      <button
+        aria-checked="false"
+        aria-label="Toggle italic"
+        class="inline-flex items-center justify-between rounded-[6px] text-sm font-medium transition-colors hover:bg-muted hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground [&>svg]:mr-2 bg-transparent h-10 px-3 w-[90px]"
+        data-radix-collection-item=""
+        data-state="off"
+        role="radio"
+        tabindex="-1"
+        type="button"
+      >
+        <svg
+          class="lucide lucide-italic h-4 w-4"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line
+            x1="19"
+            x2="10"
+            y1="4"
+            y2="4"
+          />
+          <line
+            x1="14"
+            x2="5"
+            y1="20"
+            y2="20"
+          />
+          <line
+            x1="15"
+            x2="9"
+            y1="4"
+            y2="20"
+          />
+        </svg>
+      </button>
+      <button
+        aria-checked="false"
+        aria-label="Toggle strikethrough"
+        class="inline-flex items-center justify-between rounded-[6px] text-sm font-medium transition-colors hover:bg-muted hover:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 data-[state=on]:bg-accent data-[state=on]:text-accent-foreground [&>svg]:mr-2 bg-transparent h-10 px-3 w-[90px]"
+        data-radix-collection-item=""
+        data-state="off"
+        role="radio"
+        tabindex="-1"
+        type="button"
+      >
+        <svg
+          class="lucide lucide-underline h-4 w-4"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 4v6a6 6 0 0 0 12 0V4"
+          />
+          <line
+            x1="4"
+            x2="20"
+            y1="20"
+            y2="20"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</body>
+`;

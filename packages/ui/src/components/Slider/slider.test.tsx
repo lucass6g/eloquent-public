@@ -1,7 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { render, screen } from "@testing-library/react";
 import { Slider } from "./";
-import React from "react";
 
 describe("Slider Component", () => {
   it("renders with default value when no value is provided", () => {
