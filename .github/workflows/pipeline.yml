@@ -1,0 +1,23 @@
+name: Pipeline-CD
+run-name: Pipeline-CD-${{ github.ref_name }}
+
+on:
+  push:
+    branches:
+      - dev
+      - ti
+      - hml
+      - pre-prod
+      - main
+      - master
+  workflow_dispatch:
+  
+jobs:
+ stage:
+    uses: elobr-org/templates/.github/workflows/core-node-k8s-github.yml@main
+    secrets: inherit
+    with:
+      NAMESPACE: 'cross'
+      #SONAR_PROJECT_KEY: 'null'
+      #SONAR_PROJECT_NAME: 'null'
+      

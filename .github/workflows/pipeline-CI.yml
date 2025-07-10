@@ -1,0 +1,21 @@
+name: Pipeline-CI
+run-name: Pipeline-CI-${{ github.ref_name }}
+
+on:
+  push:
+    branches-ignore:
+        - dev
+        - ti
+        - hml
+        - pre-prod
+        - main
+        - master
+  workflow_dispatch:
+  
+jobs:
+ stage:
+    uses: elobr-org/templates/.github/workflows/core-node-ci-github.yml@main
+    secrets: inherit
+    with:
+      #SONAR_PROJECT_KEY: 'null'
+      #SONAR_PROJECT_NAME: 'null'
