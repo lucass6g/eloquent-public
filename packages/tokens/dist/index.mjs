@@ -1,115 +1,30 @@
-// spacing.ts
+// src/spacing.ts
 var SPACING = {
-  "inline-quark": "4px",
-  "inline-nano": "8px",
-  "inline-xxxs": "16px",
-  "inline-xxs": "24px",
-  "inline-xs": "32px",
-  "inline-sm": "40px",
-  "inline-md": "48px",
-  "inline-lg": "64px",
-  "inline-xl": "80px",
-  "inset-quark": "4px",
-  "inset-nano": "8px",
-  "inset-xs": "16px",
-  "inset-sm": "24px",
-  "inset-md": "32px",
-  "inset-lg": "40px",
-  "size-quark": "4px",
-  "size-nano": "8px",
-  "size-xxxs": "16px",
-  "size-xxs": "24px",
-  "size-xs": "32px",
-  "size-sm": "40px",
-  "size-md": "48px",
-  "size-lg": "56px",
-  "size-xl": "64px",
-  "size-xxl": "80px",
-  "size-xxxl": "120px",
-  "size-huge": "160px",
-  "size-giant": "200px",
-  "squish-quark": "4px",
-  "squish-nano": "8px 16",
-  "squish-xs": "16px 24p",
-  "squish-sm": "16px 32p",
-  "stack-quark": "4px",
-  "stack-nano": "8px",
-  "stack-xxxs": "16px",
-  "stack-xxs": "24px",
-  "stack-xs": "32px",
-  "stack-sm": "40px",
-  "stack-md": "48px",
-  "stack-lg": "56px",
-  "stack-xl": "64px",
-  "stack-xxl": "80px",
-  "stack-xxxl": "120px",
-  "stack-huge": "160px",
-  "stack-giant": "200px"
+  "inline-1": "4px",
+  "inline-2": "8px",
+  "inline-4": "16px",
+  "inline-6": "24px",
+  "inline-8": "32px",
+  "inline-10": "40px",
+  "inline-12": "48px",
+  "inline-16": "64px",
+  "inline-20": "80px",
+  "stack-1": "4px",
+  "stack-2": "8px",
+  "stack-4": "16px",
+  "stack-6": "24px",
+  "stack-8": "32px",
+  "stack-10": "40px",
+  "stack-12": "48px",
+  "stack-14": "56px",
+  "stack-16": "64px",
+  "stack-20": "80px",
+  "stack-30": "120px",
+  "stack-40": "160px",
+  "stack-50": "200px"
 };
 
-// colors.ts
-var COLORS = {
-  transparent: "transparent",
-  base: {
-    dark: {
-      pure: "#000000",
-      "01": "#616161",
-      "02": "#474747",
-      "03": "#333333"
-    },
-    light: {
-      pure: "#ffffff",
-      "01": "#f0f0f0",
-      "02": "#e0e0e0",
-      "03": "#bdbdbd"
-    }
-  },
-  feedback: {
-    positive: {
-      pure: "#18dc8e",
-      "01": "#bafde2",
-      "02": "#66f5bc",
-      "03": "#14b273"
-    },
-    negative: {
-      pure: "#fb1964",
-      "01": "#fcbac8",
-      "02": "#fc6988",
-      "03": "#aa0327"
-    },
-    informative: {
-      pure: "#0057ff",
-      "01": "#ccddff",
-      "02": "#669aff",
-      "03": "#003499"
-    }
-  },
-  brand: {
-    primary: {
-      pure: "#ec3413",
-      "01": "#f9cec7",
-      "02": "#f07f6b",
-      "03": "#991700"
-    },
-    secondary: {
-      pure: "#ffcc00",
-      "01": "#fff3c2",
-      "02": "#ffdf61",
-      "03": "#c29b00"
-    },
-    tertiary: {
-      pure: "#00a0de",
-      "01": "#ade4fa",
-      "02": "#55c8f6",
-      "03": "#0075a3"
-    },
-    test: {
-      pure: "#123412"
-    }
-  }
-};
-
-// font.ts
+// src/font.ts
 var FONT_WEIGHT = {
   light: "300",
   regular: "400",
@@ -122,40 +37,47 @@ var FONT_FAMILY = {
   sans: "Inter, sans-serif"
 };
 var FONT_SIZE = {
-  xxxs: "12px",
-  xxs: "14px",
-  xs: "16px",
-  sm: "20px",
-  md: "24px",
-  lg: "32px",
-  xl: "40px",
-  xxl: "48px",
-  xxxl: "56px",
-  display: "64px",
-  giant: "80px"
+  3: "12px",
+  3.5: "14px",
+  4: "16px",
+  5: "20px",
+  6: "24px",
+  8: "32px",
+  10: "40px",
+  12: "48px",
+  14: "56px",
+  16: "64px",
+  20: "80px"
 };
 
-// tailwind.config-preset.ts
-var config = {
-  content: [
-    "node_modules/@eloquent/ui/dist/**/*.{js,ts,jsx,tsx}"
-  ],
-  theme: {
-    extend: {
-      colors: COLORS,
-      fontSize: FONT_SIZE,
-      fontFamily: FONT_FAMILY,
-      fontWeight: FONT_WEIGHT,
-      spacing: SPACING
-    }
-  }
+// src/screens.ts
+var SCREENS = {
+  mobile: "0px",
+  tablet: "600px",
+  laptop: "960px",
+  desktop: "1272px",
+  full: "1680px"
 };
-export {
-  COLORS,
-  FONT_FAMILY,
-  FONT_SIZE,
-  FONT_WEIGHT,
-  SPACING,
-  config as eloquentPreset
+
+// src/border.ts
+var BORDER_WIDTH = {
+  none: "0",
+  "1": "1",
+  "2": "2",
+  "4": "4",
+  "8": "8"
 };
+
+// src/line-height.ts
+var LINE_HEIGHT = {
+  DEFAULT: "100%",
+  tiny: "115%",
+  medium: "120%",
+  large: "135%",
+  distant: "140%",
+  "distant-2": "170%"
+};
+
+export { BORDER_WIDTH, FONT_FAMILY, FONT_SIZE, FONT_WEIGHT, LINE_HEIGHT, SCREENS, SPACING };
+//# sourceMappingURL=out.js.map
 //# sourceMappingURL=index.mjs.map
