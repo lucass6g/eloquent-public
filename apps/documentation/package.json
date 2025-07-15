@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "pnpm generate:examples && next dev -p 3335",
     "start": "next start",
-    "clean": "rimraf .turbo node_modules .next",
+    "clean": "rm -rf .turbo && rm -rf node_modules  && rm -rf .next",
     "generate:examples": "node src/scripts/generateExamples.mjs",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
@@ -24,7 +24,7 @@
     "fathom-client": "^3.7.0",
     "lucide-react": "^0.400.0",
     "mdast-util-from-markdown": "^2.0.1",
-    "next": "14.2.4",
+    "next": "14.2.25",
     "react": "^18",
     "react-dom": "^18",
     "rimraf": "^5.0.8",

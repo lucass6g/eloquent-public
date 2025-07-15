@@ -29,7 +29,7 @@
     "test": "vitest",
     "lint": "eslint src --fix --max-warnings 0",
     "types:check": "tsc",
-    "clean": "rm -f  dist"
+    "clean": "rm -rf dist && rm -rf node_modules"
   },
   "dependencies": {
     "@eloquent/tokens": "workspace:*",
