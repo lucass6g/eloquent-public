@@ -1,4 +1,6 @@
 /// <reference types="vitest" />
+/// <reference types="vitest/config" />
+
 import "@testing-library/jest-dom/vitest";
 import { cleanup } from "@testing-library/react";
 import { afterEach, beforeAll, vi } from "vitest";
