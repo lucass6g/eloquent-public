@@ -1,7 +1,7 @@
 import { it, describe, expect } from "vitest";
 import { render, screen, waitFor } from "@testing-library/react";
 
-import { userEvent } from "@storybook/testing-library";
+import { userEvent } from 'storybook/test';
 import { DropdownMenu } from ".";
 import { LayoutGrid } from "lucide-react";
 import { ReactNode } from "react";

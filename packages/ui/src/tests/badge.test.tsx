@@ -1,5 +1,6 @@
 import { render } from "@testing-library/react";
 import { Badge } from "..";
+import { describe, expect, it } from "vitest";
 
 describe("Badge", () => {
   describe("should match the snapshot", () => {

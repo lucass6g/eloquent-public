@@ -1,6 +1,7 @@
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { Button } from "..";
+import { describe, expect, it, vi } from "vitest";
 
 describe("Button", () => {
   describe("should match the snapshot", () => {
