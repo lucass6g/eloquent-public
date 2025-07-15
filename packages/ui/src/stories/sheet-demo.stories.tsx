@@ -26,7 +26,7 @@ const meta = {
                         <Label htmlFor="name" className="text-right">
                             Name
                         </Label>
-                        <Input
+                        <Input.Root
                             id="name"
                             value="Pedro Duarte"
                             className="col-span-3"
@@ -36,7 +36,7 @@ const meta = {
                         <Label htmlFor="username" className="text-right">
                             Username
                         </Label>
-                        <Input
+                        <Input.Root
                             id="username"
                             value="@peduarte"
                             className="col-span-3"
@@ -88,7 +88,7 @@ export const SheetSideExample: Story = {
                                 <Label htmlFor="name" className="text-right">
                                     Name
                                 </Label>
-                                <Input
+                                <Input.Root
                                     id="name"
                                     value="Pedro Duarte"
                                     className="col-span-3"
@@ -101,7 +101,7 @@ export const SheetSideExample: Story = {
                                 >
                                     Username
                                 </Label>
-                                <Input
+                                <Input.Root
                                     id="username"
                                     value="@peduarte"
                                     className="col-span-3"

@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react-vite'
-import { Button, Label, Input, type InputProps} from '../'
+import { Button, Label, Input} from '../'
 const meta = {
     title: 'Shadcn/input',
-    component: (args) => <Input {...args} />,
+    component: (args) => <Input.Root {...args} />,
     args: {
         type: 'text',
     },
@@ -38,7 +38,7 @@ const meta = {
     parameters: {
         layout: 'centered',
     },
-} satisfies Meta<InputProps>
+} satisfies Meta<React.InputHTMLAttributes<HTMLInputElement>>
 
 export default meta
 
@@ -58,7 +58,7 @@ export const InputFile: Story = {
             <>
                 <div className="grid w-full max-w-sm items-center gap-1.5">
                     <Label htmlFor="picture">Picture</Label>
-                    <Input id="picture" type="file" {...args} />
+                    <Input.Root id="picture" type="file" {...args} />
                 </div>
             </>
         )
@@ -70,7 +70,7 @@ export const InputDisabled: Story = {
         disabled: true,
     },
     render: function (args) {
-        return <Input type="email" placeholder="Email" {...args} />
+        return <Input.Root type="email" placeholder="Email" {...args} />
     },
 }
 
@@ -80,7 +80,7 @@ export const InputWithLabel: Story = {
         return (
             <div className="grid w-full max-w-sm items-center gap-1.5">
                 <Label htmlFor="email">Email</Label>
-                <Input type="email" id="email" placeholder="Email" />
+                <Input.Root type="email" id="email" placeholder="Email" />
             </div>
         )
     },
@@ -91,7 +91,7 @@ export const InputWithButton: Story = {
     render: function () {
         return (
             <div className="flex w-full max-w-sm items-center space-x-2">
-                <Input type="email" placeholder="Email" />
+                <Input.Root type="email" placeholder="Email" />
                 <Button type="submit">Subscribe</Button>
             </div>
         )
