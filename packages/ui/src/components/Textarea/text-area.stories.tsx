@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { Textarea } from '.';
 import { Label } from '../Label';
 import { HelperText } from '../HelperText';

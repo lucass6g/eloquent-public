@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react-vite'
 import { ComboboxDropdownMenu } from '../demo/combobox-dropdown-menu-demo'
 
 const meta = {

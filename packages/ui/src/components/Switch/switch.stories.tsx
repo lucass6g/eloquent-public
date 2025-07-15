@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { Switch } from ".";
 import { SwitchProps } from "@radix-ui/react-switch";
 import { HelperText } from "../HelperText";

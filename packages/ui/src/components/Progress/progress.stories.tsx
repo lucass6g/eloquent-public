@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { ProgressProps } from "@radix-ui/react-progress";
 import { Progress } from ".";
 

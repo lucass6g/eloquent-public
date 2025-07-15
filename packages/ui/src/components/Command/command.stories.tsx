@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { Command } from '.';
 import { ComponentIcon } from 'lucide-react';
 import { useEffect, useState } from 'react';

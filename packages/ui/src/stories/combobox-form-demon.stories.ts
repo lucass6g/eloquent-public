@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react-vite'
 import { ComboboxForm } from '../demo/combobox-with-form-demon'
 
 //documentar meu componente, armazenar, posição do elemento, tipo controls

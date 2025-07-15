@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react-vite'
 import { Button, Label, Input, type InputProps} from '../'
 const meta = {
     title: 'Shadcn/input',

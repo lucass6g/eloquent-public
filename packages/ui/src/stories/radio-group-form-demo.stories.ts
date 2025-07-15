@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react-vite'
 import { RadioGroupFormDemo } from '../demo/radio-group-form-demo'
 
 const meta = {

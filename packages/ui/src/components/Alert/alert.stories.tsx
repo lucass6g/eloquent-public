@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react-vite'
 
 import { VariantProps } from 'class-variance-authority'
 import { Component } from 'lucide-react'

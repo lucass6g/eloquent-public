@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { SonnerToaster } from '.';
 import { toast } from 'sonner';
 import { Button } from '../Button';

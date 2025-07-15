@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/react-vite'
 import { DatePickerForm } from '../../demo/date-picker-with-form'
 
 const meta = {

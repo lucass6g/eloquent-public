@@ -1,4 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react'
+
+import { Meta, StoryObj } from '@storybook/react-vite'
 import { DatePickerWithRange } from '../../demo/date-picker-with-ranger-demo'
 
 //meta
@@ -6,6 +7,7 @@ const meta = {
     title: 'Shadcn/date',
     component: DatePickerWithRange,
     parameters: {},
+    tags: ["!autodocs"],
 } satisfies Meta<typeof DatePickerWithRange>
 
 export default meta

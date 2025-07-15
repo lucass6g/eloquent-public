@@ -1,5 +1,5 @@
 import { Button } from ".";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { LayoutGrid, X } from "lucide-react";
 
 import { ButtonProps, ButtonSize, ButtonVariant } from "./Button.props";

@@ -1,6 +1,6 @@
 import { Small } from "./";
 import type {SmallProps} from "./Small.props.ts";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta: Meta<SmallProps> = {
   title: "Typography/Small",

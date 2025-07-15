@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { Badge } from ".";
 import { badgeVariants } from "./variants";
 import { VariantProps } from "class-variance-authority";

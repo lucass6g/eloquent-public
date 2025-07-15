@@ -1,6 +1,6 @@
 import { Table } from "./";
 import type {TableProps} from "./Table.props.ts";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta: Meta<TableProps> = {
   title: "Typography/Table",

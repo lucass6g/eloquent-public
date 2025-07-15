@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { HoverCard } from '.';
 import { Avatar } from '../Avatar';
 import { CalendarDays } from 'lucide-react';

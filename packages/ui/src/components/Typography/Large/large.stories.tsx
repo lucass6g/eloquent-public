@@ -1,6 +1,6 @@
 import { Large } from "./index.tsx";
 import type { LargeProps } from "./Large.props.ts";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta: Meta<LargeProps> = {
   title: "Typography/Large",

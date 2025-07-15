@@ -1,6 +1,6 @@
 import { Caption } from "./index.tsx";
 import type { CaptionProps } from "./Caption.props.ts";
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
 const meta: Meta<CaptionProps> = {
   title: "Typography/Caption",
