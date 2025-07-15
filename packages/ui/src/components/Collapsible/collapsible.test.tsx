@@ -1,5 +1,5 @@
 import { fireEvent, render, RenderResult, screen } from '@testing-library/react';
-import { describe, expect, it } from 'vitest';
+import { beforeEach, describe, expect, it } from 'vitest';
 import { Collapsible } from '.';
 
 const TRIGGER_TEXT = '@peduarte marcou 3 repositórios com estrela';

@@ -7,10 +7,10 @@ const meta: Meta<SmallProps> = {
   component: Small,
   args: {
     children: "O Brasil é caramelo",
-    variant: "default",
+    size: "default",
   },
   argTypes: {
-    variant: {
+    size: {
       options: ["default", "regular"],
       control: { type: "radio" },
     },

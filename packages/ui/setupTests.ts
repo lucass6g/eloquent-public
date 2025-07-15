@@ -1,7 +1,7 @@
 /// <reference types="vitest" />
 import "@testing-library/jest-dom/vitest";
 import { cleanup } from "@testing-library/react";
-import { afterEach, vi } from "vitest";
+import { afterEach, beforeAll, vi } from "vitest";
 
 global.ResizeObserver = require("resize-observer-polyfill");
 

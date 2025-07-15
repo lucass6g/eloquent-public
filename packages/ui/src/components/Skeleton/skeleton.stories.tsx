@@ -1,4 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react-vite'
+import { buttonVariants } from '../Button/variants'
 import { Skeleton } from '.';
 
 const meta = {
@@ -54,4 +55,32 @@ export const SkeletonCard: Story = {
             },
         }
     },
+}
+
+export const SkeletonCardNotification: Story = {
+    args: {},
+    render: () => (
+        <>
+            <Skeleton className="flex h-64 w-[250px] flex-col gap-2 bg-slate-300 p-5">
+                <div className="flex flex-col gap-2">
+                    <Skeleton className="h-6 w-20 bg-slate-400" />
+                    <Skeleton className="h-4 w-20 bg-slate-400" />
+                </div>
+
+                <Skeleton className="rounred h-16 w-full bg-slate-400 " />
+                <Skeleton className="h-4 w-full bg-slate-400" />
+                <Skeleton className="h-4 w-full bg-slate-400" />
+                <Skeleton className="h-4 w-full bg-slate-400" />
+
+                <Skeleton
+                    className={
+                        buttonVariants({
+                            variant: 'default',
+                            size: 'default',
+                        }) + ' w-full bg-slate-400'
+                    }
+                />
+            </Skeleton>
+        </>
+    ),
 }

@@ -3,7 +3,7 @@ import {Calendar } from ".";
 
 //meta
 const meta = {
-  title: "Date",
+  title: "Calendar",
   component: Calendar,
   parameters: {
     layout: "centered",

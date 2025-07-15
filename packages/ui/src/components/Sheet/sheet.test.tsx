@@ -1,5 +1,5 @@
 import { fireEvent, render, RenderResult, screen } from '@testing-library/react';
-import { it, describe, expect, vi } from "vitest"
+import { it, describe, expect, vi, beforeEach, afterEach } from "vitest"
 import { Sheet } from '.';
 
 const SheetTest = (props: React.ComponentProps<typeof Sheet.Root>) => (
@@ -21,10 +21,10 @@ describe('given a default Sheet', () => {
     let rendered: RenderResult;
     let trigger: HTMLElement;
     let closeButton: HTMLElement;
-    let consoleWarnMock: jest.SpyInstance;
-    let consoleWarnMockFunction: jest.Mock;
-    let consoleErrorMock: jest.SpyInstance;
-    let consoleErrorMockFunction: jest.Mock;
+    let consoleWarnMock: ReturnType<typeof vi.spyOn>;
+    let consoleWarnMockFunction: ReturnType<typeof vi.fn>;
+    let consoleErrorMock: ReturnType<typeof vi.spyOn>;
+    let consoleErrorMockFunction: ReturnType<typeof vi.fn>;
 
     beforeEach(() => {
         consoleWarnMockFunction = vi.fn();

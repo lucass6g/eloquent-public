@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom'
 import { ScrollArea } from '.'
+import { describe, expect, it } from 'vitest'
 
 describe('ScrollArea Component', () => {
     it('renders children inside RootScrollArea', () => {

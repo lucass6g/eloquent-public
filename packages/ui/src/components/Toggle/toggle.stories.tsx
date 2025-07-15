@@ -4,6 +4,7 @@ import { Toggle } from '.';
 
 const meta = {
     title: 'Toggle',
+    tags: ['autodocs'],
     render: (args) => (<Toggle variant='default' {...args}><ComponentIcon /> Label </Toggle>),
     parameters: {
         layout: 'centered',
@@ -68,3 +69,31 @@ export const ToggleDefault: Story = {
         }
     }
 };
+
+
+//colors
+export const ToggleDefaultStyle: Story = {
+    args: { variant: 'default' },
+}
+
+export const ToggleOutlineStyle: Story = {
+    args: { variant: 'outline' },
+}
+
+//sizes
+export const ToggleSizeDefault: Story = {
+    args: { variant: 'default', size: 'default' },
+}
+
+export const ToggleSizeSmall: Story = {
+    args: { variant: 'default', size: 'sm' },
+}
+
+export const ToggleSizeLarge: Story = {
+    args: { variant: 'default', size: 'lg' },
+}
+
+//disabled
+export const ToggleDisabled: Story = {
+    args: { variant: 'default', size: 'default', disabled: true },
+}

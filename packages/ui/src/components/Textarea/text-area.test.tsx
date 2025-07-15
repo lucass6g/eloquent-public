@@ -2,6 +2,7 @@ import { render, screen } from '@testing-library/react';
 import { Label } from '../Label';
 import { Textarea } from '.';
 import { HelperText } from '../HelperText';
+import { describe, expect, it } from 'vitest';
 
 const mockTextAreaComponent = (<div className="w-full gap-1.5">
     <Label htmlFor="message-2" className='text-neutral-800 mb-2'>Título</Label>

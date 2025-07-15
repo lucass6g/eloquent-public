@@ -1,4 +1,4 @@
-import { it, describe, expect } from "vitest"
+import { it, describe, expect, beforeAll, afterAll, beforeEach } from "vitest"
 import { render, RenderResult, screen, waitFor } from '@testing-library/react';
 import { Avatar } from '.';
 

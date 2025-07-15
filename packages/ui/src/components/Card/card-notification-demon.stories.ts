@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react-vite'
-import { CardDemoNotification } from '../../demo/card-notification-demo'
+import { CardDemoNotification } from './card-notification-demo'
 
 const meta = {
     title: 'Card',

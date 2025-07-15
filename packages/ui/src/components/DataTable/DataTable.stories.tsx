@@ -1,11 +1,8 @@
 import { StoryObj } from '@storybook/react-vite';
 import {
-  Column,
   ColumnDef,
   ColumnFiltersState,
   SortingState,
-  Table as ReactTable,
-  Row,
   VisibilityState,
   flexRender,
   getCoreRowModel,
@@ -54,7 +51,7 @@ const columns: ColumnDef<typeof data>[] = [
   {
     id: "select",
     header: ({ table }) => (
-      <Checkbox
+      <Checkbox.Button
         checked={
           table.getIsAllPageRowsSelected() ||
           (table.getIsSomePageRowsSelected() && "indeterminate")
@@ -64,7 +61,7 @@ const columns: ColumnDef<typeof data>[] = [
       />
     ),
     cell: ({ row }) => (
-      <Checkbox
+      <Checkbox.Button
         checked={row.getIsSelected()}
         onCheckedChange={(value) => row.toggleSelected(!!value)}
         aria-label="Select row"

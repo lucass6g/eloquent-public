@@ -40,7 +40,7 @@ export const DefaultStory: Story = {
 export const WithHelper: Story = {
     name: 'Text Area com texto de ajuda',
     args: {},
-    render: (args) => (<div className="w-full gap-1.5">
+    render: () => (<div className="w-full gap-1.5">
         <Label htmlFor="message-2" className='text-neutral-800 mb-2'>Título</Label>
         <Textarea placeholder="Digite sua mensagem aqui." id="message-2" />
         <HelperText.Label className="text-neutral-500">
@@ -58,7 +58,7 @@ export const WithHelper: Story = {
 export const WithTitle: Story = {
     name: 'Text Area com titulo',
     args: {},
-    render: (args) => (<div className="w-full gap-1.5">
+    render: () => (<div className="w-full gap-1.5">
         <Label htmlFor="message-2" className='text-neutral-800 mb-2'>Título</Label>
         <Textarea placeholder="Digite sua mensagem aqui." id="message-2" />
     </div>),
@@ -73,7 +73,7 @@ export const WithTitle: Story = {
 export const WithButton: Story = {
     name: 'Text Area com botão',
     args: {},
-    render: (args) => (<div className="w-[400px] w-full gap-1.5">
+    render: () => (<div className="w-[400px] w-full gap-1.5">
         <Label htmlFor="message-2" className='text-neutral-800 mb-2'>Título</Label>
         <Textarea placeholder="Digite sua mensagem aqui." id="message-2" />
         <Button className='mt-2 w-full'>Enviar</Button>
@@ -89,7 +89,7 @@ export const WithButton: Story = {
 export const WithForm: Story = {
     name: 'Text Area com formulário',
     args: {},
-    render: (args) => (<form className="flex flex-col w-full">
+    render: () => (<form className="flex flex-col w-full">
         <Label htmlFor="message-2" className='text-neutral-800 mb-2'>Título</Label>
         <Textarea placeholder="Digite sua mensagem aqui." className='w-[300px]' id="message-2" />
         <HelperText.Label>
