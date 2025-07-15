@@ -24,6 +24,8 @@
     "clean": "rm -rf dist"
   },
   "devDependencies": {
+    "@storybook/addon-vitest": "^9.0.16",
+    "@storybook/react-vite": "^9.0.16",
     "@testing-library/jest-dom": "^6.4.6",
     "@testing-library/react": "^14.2.1",
     "@testing-library/user-event": "^14.5.2",
@@ -44,7 +46,7 @@
     "tsconfig": "workspace:*",
     "tsup": "^8.1.0",
     "typescript": "^5.4.5",
-    "vitest": "^1.6.0"
+    "vitest": "^3.2.4"
   },
   "dependencies": {
     "@eloquent/react": "workspace:*",
