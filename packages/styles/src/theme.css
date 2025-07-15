@@ -3,24 +3,56 @@
 
 @font-face {
   font-family: "Barlow";
-  src: url("https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap")
-    format("woff2");
+  src: url("./fonts/Barlow/Barlow-Thin.ttf") format("woff2");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Barlow";
+  src: url("./fonts/Barlow/Barlow-ExtraLight.ttf") format("woff2");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("./fonts/Barlow/Barlow-Light.ttf") format("woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("./fonts/Barlow/Barlow-Regular.ttf") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("./fonts/Barlow/Barlow-Medium.ttf") format("woff2");
   font-weight: 500;
 }
 
 @font-face {
   font-family: "Barlow";
-  src: url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap")
-    format("woff2");
+   src: url("./fonts/Barlow/Barlow-SemiBold.ttf") format("woff2");
   font-weight: 600;
 }
 
 @font-face {
   font-family: "Barlow";
-  src: url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800;900&display=swap")
-    format("woff2");
+  src: url("./fonts/Barlow/Barlow-Black.ttf") format("woff2");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("./fonts/Barlow/Barlow-ExtraBold.ttf") format("woff2");
   font-weight: 800;
 }
+@font-face {
+  font-family: "Barlow";
+  src: url("./fonts/Barlow/Barlow-Black.ttf") format("woff2");
+  font-weight: 900;
+}
+
 
 :root {
   --background: #ffffff;

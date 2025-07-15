@@ -1,6 +1,6 @@
 {
   "name": "@eloquent/styles",
-  "version": "1.1.0",
+  "version": "1.2.0-alpha1",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -42,7 +42,7 @@
   "devDependencies": {
     "@types/node": "^20.8.6",
     "tailwindcss": "^3.3.3",
-    "tsup": "^8.1.0"
+    "tsup": "8.1.0"
   },
   "peerDependencies": {
     "tailwindcss": ">=3.0.0 || insiders"
