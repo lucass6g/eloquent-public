@@ -1,0 +1,113 @@
+@import '../../../../packages/styles/src/theme.css' layer(theme);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+
+
+/*.dark .css-11ju8y0,*/
+/*.dark .css-1f9domv,*/
+.dark .css-p1dfi6,
+.dark .sbdocs-preview {
+    background-color: hsla(174, 100%, 11%, 1);
+    color:var(--foreground);
+}
+
+/*BACKGROUND DO CONTEÚDO*/
+.dark .sbdocs-wrapper {
+    background-color: #001810;
+    color: #ffffff;
+}
+
+/*CODE BLOCK*/
+.dark .sbdocs-preview {
+    border: 1px solid var(--border)
+}
+/*Button "Show code" */
+.docblock-code-toggle {
+    background: var(--primary);
+    color: var(--primary-foreground);
+}
+
+.dark div:has(.css-p1dfi60) {
+    background: #76fd00;
+}
+
+/*======*/
+/*.dark .css-qa4clq *:not(button, ol, h1) {*/
+/*    background: var(--background);*/
+/*    color: var(--foreground)*/
+/*}*/
+
+.dark .sbdocs .sbdocs-content .css-qa4clq {
+    /*color: var(--foreground);*/
+    color: #ff0000;
+}
+
+.dark .os-theme-dark {
+    background: var(--background);
+    color: var(--foreground);
+}
+
+/*Título da documentação*/
+.dark .sbdocs-title {
+    color: var(--foreground);
+}
+
+/*.sbdocs-title .sb-unstyled {*/
+/*    background: transparent;*/
+/*}*/
+
+.dark .css-wzniqs {
+    color: var(--foreground);
+}
+
+.dark .docblock-argstable-head {
+    background: var(--background);
+}
+
+.dark .docblock-argstable-head th {
+    color: var(--foreground);
+    border-bottom: 1px solid var(--border) !important;
+}
+
+.dark .docblock-argstable-head th span {
+    color: var(--foreground);
+    border: 1px solid #ffffff;
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+}
+
+.dark #docs-root tbody td {
+    background: var(--background) !important;
+    color: var(--foreground) !important;
+    background: red !important;
+}
+
+.dark #docs-root tbody tr:first-child td:first-child {
+    border-top-left-radius: 0 !important;
+    background: red !important;
+}
+
+.dark #docs-root tbody tr:first-child td:last-child {
+    border-top-right-radius: 0 !important;
+    background: red !important;
+}
+
+.dark #docs-root tbody tr:not(:first-child) {
+    border-top: 1px solid var(--border) !important;
+    background: red !important;
+}
+
+.dark .css-v2ifgj.css-v2ifgj tbody >tr>* {
+    color: var(--foreground);
+    background-color: var(--background);
+    border: 1px solid var(--border);
+}
+
+.dark #control-variant {
+    background-color: #ffffff;
+    color: #000000;
+}

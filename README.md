@@ -18,11 +18,11 @@ Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
 ### Building packages/ui
 
-This example is setup to build `packages/ui` and output the transpiled source and compiled styles to `dist/`. This was chosen to make sharing one `tailwind.config.ts` as easy as possible, and to ensure only the CSS that is used by the current application and its dependencies is generated.
+This example is setup to build `packages/ui` and output the transpiled source and compiled styles to `dist/`. This was chosen to make sharing one `tailwind.config.s` as easy as possible, and to ensure only the CSS that is used by the current application and its dependencies is generated.
 
-Another option is to consume `packages/ui` directly from source without building. If using this option, you will need to update your `tailwind.config.ts` to be aware of your package locations, so it can find all usages of the `tailwindcss` class names.
+Another option is to consume `packages/ui` directly from source without building. If using this option, you will need to update your `tailwind.config.s` to be aware of your package locations, so it can find all usages of the `tailwindcss` class names.
 
-For example, in [tailwind.config.ts](packages/tailwind-config/tailwind.config.js):
+For example, in [tailwind.config.s](packages/tailwind-config/tailwind.config.js):
 
 ```js
   content: [

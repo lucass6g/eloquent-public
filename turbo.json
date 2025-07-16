@@ -1,13 +1,22 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["**/.env.*local"],
-  "pipeline": {
+  "tasks": {
     "build": {
-      "dependsOn": ["^build"],
-      "outputs": ["dist/**", "storybook-static/**", "style.css"]
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        "dist/**",
+        "storybook-static/**"
+      ]
     },
     "lint": {},
     "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "clean": {
       "cache": false,
       "persistent": true
     }

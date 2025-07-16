@@ -1,13 +1,21 @@
 {
   "extends": "../../packages/config/base.tsconfig.json",
-  "include": ["./"],
+  "include": ["."],
   "exclude": ["dist", "build", "node_modules"],
   "compilerOptions": {
-    "forceConsistentCasingInFileNames": false,
-    "rootDir": "./",
-    "baseUrl": "./",
+    "rootDir": "./src",
+    "baseUrl": "./src",
     "paths": {
-      "@/*": ["./"]
-    }
+      "@/*": ["./src/*"]
+    },
+    "target": "ES5",
+    "module": "ESNext",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowJs": true
   }
 }

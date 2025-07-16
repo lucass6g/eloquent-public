@@ -1,0 +1,38 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Icon Container Story > renders with default size 1`] = `
+<body>
+  <div>
+    <div
+      class="[&>svg]:size-6"
+      data-testid="container"
+    >
+      <svg
+        class="lucide lucide-component"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M5.5 8.5 9 12l-3.5 3.5L2 12l3.5-3.5Z"
+        />
+        <path
+          d="m12 2 3.5 3.5L12 9 8.5 5.5 12 2Z"
+        />
+        <path
+          d="M18.5 8.5 22 12l-3.5 3.5L15 12l3.5-3.5Z"
+        />
+        <path
+          d="m12 15 3.5 3.5L12 22l-3.5-3.5L12 15Z"
+        />
+      </svg>
+    </div>
+  </div>
+</body>
+`;

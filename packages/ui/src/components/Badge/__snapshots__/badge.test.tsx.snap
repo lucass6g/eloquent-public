@@ -1,0 +1,31 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Badge Component > applies additional className correctly 1`] = `
+<div
+  class="flex items-center rounded-md border px-2 py-1 text-sm transition-colors border-transparent bg-green-dark-500 text-neutral-100 hover:bg-green-dark-600"
+/>
+`;
+
+exports[`Badge Component > renders correctly with default variant 1`] = `
+<div
+  class="flex items-center rounded-md border px-2 py-1 text-sm transition-colors border-transparent bg-green-dark-500 text-neutral-100"
+/>
+`;
+
+exports[`Badge Component > renders correctly with the 'destructive' variant 1`] = `
+<div
+  class="flex items-center rounded-md border px-2 py-1 text-sm transition-colors border-transparent bg-red-600 text-neutral-100"
+/>
+`;
+
+exports[`Badge Component > renders correctly with the 'outline' variant 1`] = `
+<div
+  class="flex items-center rounded-md border px-2 py-1 text-sm transition-colors border-neutral-300 text-neutral-800"
+/>
+`;
+
+exports[`Badge Component > renders correctly with the 'secondary' variant 1`] = `
+<div
+  class="flex items-center rounded-md border px-2 py-1 text-sm transition-colors border-transparent bg-neutral-200 text-neutral-800"
+/>
+`;

@@ -1,66 +1,70 @@
-'use client'
-import * as AccordionPrimitive   from '@radix-ui/react-accordion'
-import { ChevronDown }           from 'lucide-react';
-import * as React                from 'react'
-import { ComponentProps }                             from 'react'
-import * as Styles                                    from './styles.ts'
-import { Typography }                                 from '../Typography';
-import {AccordionTriggerProps, AccordionContentProps} from './Accordion.ts'
-const Root = (
-	props: ComponentProps<typeof AccordionPrimitive.Root>,
-) => {
-	return <AccordionPrimitive.Root { ...props } />
-}
+"use client";
+
+import * as React from "react";
+import * as AccordionPrimitive from "@radix-ui/react-accordion";
+import { ChevronDownIcon } from "@radix-ui/react-icons";
+import { accordionVariants } from "./variants";
+
+const {
+  accordionItemVariants,
+  accordionTriggerVariants,
+  chevronDownIconVariants,
+  accordionHeaderVariants,
+  accordionContentVariants,
+  accordionChildrenVariants,
+} = accordionVariants();
+
+const AccordionRoot = AccordionPrimitive.Root;
 
 const AccordionItem = React.forwardRef<
-	React.ElementRef<typeof AccordionPrimitive.Item>,
-	ComponentProps<typeof AccordionPrimitive.Item>
->( ( { className, ...props }, ref ) => (
-	<AccordionPrimitive.Item ref={ ref } { ...props }/>
-) )
+  React.ElementRef<typeof AccordionPrimitive.Item>,
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
+>(function AccordionItem({ className, ...props }, ref) {
+  return (
+    <AccordionPrimitive.Item
+      ref={ref}
+      className={accordionItemVariants({ className })}
+      {...props}
+    />
+  );
+});
 
 const AccordionTrigger = React.forwardRef<
-	React.ElementRef<typeof AccordionPrimitive.Trigger>,
-	AccordionTriggerProps
->( ( { children, inverse = false, ...props }, ref ) => (
-	<AccordionPrimitive.Header asChild>
-		<AccordionPrimitive.Trigger
-			ref={ ref }
-			className={ Styles.accordionTriggerClasses() }
-			{ ...props }
-		>
-			<div className={ Styles.accordionDividerClasses( { inverse } ) }/>
-			<div className={ Styles.accordionTriggerContainerClasses() }>
-				<Typography.Heading as="h5" inverse={ inverse } size={ 'small' }>
-					{ children }
-				</Typography.Heading>
-				<div className={ Styles.chevronDownClasses() }>
-					<ChevronDown color={ inverse ? "#FFFFFF" : "#000000" }/>
-				</div>
-			</div>
-		</AccordionPrimitive.Trigger>
-	</AccordionPrimitive.Header>
-) )
-
+  React.ElementRef<typeof AccordionPrimitive.Trigger>,
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Trigger>
+>(function AccordionTrigger({ className, children, ...props }, ref) {
+  return (
+    <AccordionPrimitive.Header className={accordionHeaderVariants()}>
+      <AccordionPrimitive.Trigger
+        ref={ref}
+        className={accordionTriggerVariants({ className })}
+        {...props}
+      >
+        {children}
+        <ChevronDownIcon className={chevronDownIconVariants()} />
+      </AccordionPrimitive.Trigger>
+    </AccordionPrimitive.Header>
+  );
+});
 
 const AccordionContent = React.forwardRef<
-	React.ElementRef<typeof AccordionPrimitive.Content>,
-	AccordionContentProps
->( ( { children, inverse = false, ...props }, ref ) => (
-	<AccordionPrimitive.Content
-		ref={ ref }
-		className={ Styles.accordionContentClasses( { inverse } ) }
-		{ ...props }
-	>
-		<div className="pb-4 pt-0">
-			<Typography.Description inverse={inverse}>{ children }</Typography.Description>
-		</div>
-	</AccordionPrimitive.Content>
-) )
+  React.ElementRef<typeof AccordionPrimitive.Content>,
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
+>(function AccordionContent({ className, children, ...props }, ref) {
+  return (
+    <AccordionPrimitive.Content
+      ref={ref}
+      className={accordionContentVariants({ className })}
+      {...props}
+    >
+      <div className={accordionChildrenVariants({ className })}>{children}</div>
+    </AccordionPrimitive.Content>
+  );
+});
 
 export const Accordion = {
-	Root,
-	Item:    AccordionItem,
-	Trigger: AccordionTrigger,
-	Content: AccordionContent,
-}
+  Root: AccordionRoot,
+  Item: AccordionItem,
+  Trigger: AccordionTrigger,
+  Content: AccordionContent,
+};

@@ -1,0 +1,130 @@
+@import url("https://p.typekit.net/p.css?s=1&k=wvf5kwu&ht=tk&f=1981.1984.2005.2007.2009.22618.22619&a=32411851&app=typekit&e=css");
+@import url("https://use.typekit.net/mfg4ogz.css");
+
+@font-face {
+  font-family: "Barlow";
+  src: url("./fonts/Barlow/Barlow-Thin.ttf") format("woff2");
+  font-weight: 100;
+}
+@font-face {
+  font-family: "Barlow";
+  src: url("./fonts/Barlow/Barlow-ExtraLight.ttf") format("woff2");
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("./fonts/Barlow/Barlow-Light.ttf") format("woff2");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("./fonts/Barlow/Barlow-Regular.ttf") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("./fonts/Barlow/Barlow-Medium.ttf") format("woff2");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Barlow";
+   src: url("./fonts/Barlow/Barlow-SemiBold.ttf") format("woff2");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("./fonts/Barlow/Barlow-Black.ttf") format("woff2");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Barlow";
+  src: url("./fonts/Barlow/Barlow-ExtraBold.ttf") format("woff2");
+  font-weight: 800;
+}
+@font-face {
+  font-family: "Barlow";
+  src: url("./fonts/Barlow/Barlow-Black.ttf") format("woff2");
+  font-weight: 900;
+}
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #003933;
+
+  --card: #ffffff;
+  --card-foreground: #003933;
+
+  --popover: #ffffff;
+  --popover-foreground: #003933;
+
+  --primary: #003933;
+  --primary-hover: #44766e;
+  --primary-foreground: #ffffff;
+
+  --secondary: #ffffff;
+  --secondary-hover: #f5f5f5;
+  --secondary-foreground: #003933;
+
+  --muted: #f4f4f5;
+  --muted-foreground: #003933;
+
+  --accent: #e0e0e0;
+  --accent-foreground: #003933;
+
+  --destructive: #e7422d;
+  --destructive-hover: #ed7767;
+  --destructive-foreground: #fafafa;
+
+  --border: #e0e0e0;
+
+  --input: #e4e4e7;
+  --ring: #003933;
+  --radius: 2rem;
+}
+
+.dark {
+  --background: #003933;
+  --foreground: #ffffff;
+
+  --card: #003933;
+  --card-foreground: #fafafa;
+  --popover: #003933;
+  --popover-foreground: #033a34;
+
+  --primary: #fafafa;
+  --primary-hover: #fafafa;
+  --primary-foreground: #033a34;
+
+  --secondary: #033a34;
+  --secondary-hover: #033a34;
+  --secondary-foreground: #fafafa;
+
+  --muted: #033a34;
+  --muted-foreground: #ffffff;
+
+  --accent: #033a34;
+  --accent-foreground: #fafafa;
+
+  --destructive: #e7422d;
+  --destructive-hover: #e7422d;
+  --destructive-foreground: #fafafa;
+
+  --border: #ffffff;
+  --input: #ffffff;
+  --ring: #ffffff;
+}
+
+.font-redonda {
+  font-family: "Redonda", sans-serif;
+}
+
+.font-clamp {
+  font-size: 10px;
+}

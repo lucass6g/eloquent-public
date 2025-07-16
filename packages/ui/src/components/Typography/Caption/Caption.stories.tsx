@@ -1,36 +1,22 @@
-import { CaptionProps }   from '@/components/ui/Typography/Caption/Caption.ts';
-import { Caption }        from './index.tsx';
-import { Meta, StoryObj } from '@storybook/react';
+import { Caption } from "./index.tsx";
+import type { CaptionProps } from "./Caption.props.ts";
+import type { Meta, StoryObj } from '@storybook/react-vite';
 
-const meta: Meta<typeof Caption> = {
-	title: 'Typography/Caption',
-	component: Caption,
-	parameters: {
-		backgrounds: {
-			default: "dark",
-		}
-	},
-	args: {
-		inverse: true,
-		children: 'Caption',
-		as: 'p',
-	},
-	argTypes: {
-		inverse: {
-			control: { type: 'boolean' },
-		},
-		as: {
-			control: { type: 'select' },
-			options: ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p'],
-		}
-	},
+const meta: Meta<CaptionProps> = {
+  title: "Typography/Caption",
+  component: Caption,
+  args: {
+    children: "O Brasil é caramelo",
+    size: "default",
+  },
+  argTypes: {
+    size: {
+      options: ["default", "sm"],
+      control: { type: "radio" },
+    },
+  }
 };
 
 export default meta;
 
-type Story = StoryObj<CaptionProps>;
-
-export const Default: Story = {
-	name: 'Caption',
-	render: ({ ...props }) => <Caption {...props}/>
-}
+export const Default: StoryObj<CaptionProps> = {};

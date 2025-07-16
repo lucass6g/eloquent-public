@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Caption > should match the snapshot 1`] = `
+<body>
+  <div>
+    <h6
+      class="text-foreground font-normal text-sm"
+    />
+  </div>
+</body>
+`;
