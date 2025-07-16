@@ -1,6 +1,6 @@
 {
   "name": "eloquente-ui",
-  "version": "1.0.0",
+  "version": "2.0.0-alpha",
   "private": false,
   "scripts": {
     "build": "turbo run build",
